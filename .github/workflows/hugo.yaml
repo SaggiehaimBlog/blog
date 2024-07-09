@@ -42,6 +42,9 @@ jobs:
       - name: Install Node.js dependencies
         run: "[[ -f package-lock.json || -f npm-shrinkwrap.json ]] && npm ci || true"
       - name: Build with Hugo
+        # For maximum backward compatibility with Hugo modules
+        HUGO_ENVIRONMENT: production
+        HUGO_ENV: production
         run: |
           hugo \
               --gc \
