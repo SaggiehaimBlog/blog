@@ -2,41 +2,41 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Saggie Haim - Automate Everything</title>
-    <link>//localhost:52063/tags/</link>
+    <link>//localhost:52568/tags/</link>
     <description>Recent content in Tags on Saggie Haim - Automate Everything</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <managingEditor>user@example.com (Hugo Author)</managingEditor>
-    <webMaster>user@example.com (Hugo Author)</webMaster>
+    <managingEditor>contact@saggiehaim.net (Saggie Haim)</managingEditor>
+    <webMaster>contact@saggiehaim.net (Saggie Haim)</webMaster>
     <copyright>Saggie Haim</copyright>
     <lastBuildDate>Wed, 14 Oct 2020 00:00:00 +0000</lastBuildDate>
-    <atom:link href="//localhost:52063/tags/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="//localhost:52568/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Azure</title>
-      <link>//localhost:52063/tags/azure/</link>
-      <pubDate>Wed, 14 Oct 2020 00:00:00 +0000</pubDate><author>user@example.com (Hugo Author)</author>
-      <guid>//localhost:52063/tags/azure/</guid>
+      <link>//localhost:52568/tags/azure/</link>
+      <pubDate>Wed, 14 Oct 2020 00:00:00 +0000</pubDate><author>contact@saggiehaim.net (Saggie Haim)</author>
+      <guid>//localhost:52568/tags/azure/</guid>
       <description></description>
     </item>
     <item>
       <title>Microsoft Sentinel</title>
-      <link>//localhost:52063/tags/microsoft-sentinel/</link>
-      <pubDate>Wed, 14 Oct 2020 00:00:00 +0000</pubDate><author>user@example.com (Hugo Author)</author>
-      <guid>//localhost:52063/tags/microsoft-sentinel/</guid>
+      <link>//localhost:52568/tags/microsoft-sentinel/</link>
+      <pubDate>Wed, 14 Oct 2020 00:00:00 +0000</pubDate><author>contact@saggiehaim.net (Saggie Haim)</author>
+      <guid>//localhost:52568/tags/microsoft-sentinel/</guid>
       <description></description>
     </item>
     <item>
       <title>PowerShell</title>
-      <link>//localhost:52063/tags/powershell/</link>
-      <pubDate>Wed, 14 Oct 2020 00:00:00 +0000</pubDate><author>user@example.com (Hugo Author)</author>
-      <guid>//localhost:52063/tags/powershell/</guid>
+      <link>//localhost:52568/tags/powershell/</link>
+      <pubDate>Wed, 14 Oct 2020 00:00:00 +0000</pubDate><author>contact@saggiehaim.net (Saggie Haim)</author>
+      <guid>//localhost:52568/tags/powershell/</guid>
       <description></description>
     </item>
     <item>
       <title>Themes</title>
-      <link>//localhost:52063/tags/themes/</link>
-      <pubDate>Fri, 14 Aug 2020 00:00:00 +0000</pubDate><author>user@example.com (Hugo Author)</author>
-      <guid>//localhost:52063/tags/themes/</guid>
+      <link>//localhost:52568/tags/themes/</link>
+      <pubDate>Fri, 14 Aug 2020 00:00:00 +0000</pubDate><author>contact@saggiehaim.net (Saggie Haim)</author>
+      <guid>//localhost:52568/tags/themes/</guid>
       <description></description>
     </item>
   </channel>

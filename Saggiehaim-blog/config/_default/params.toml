@@ -1,0 +1,49 @@
+# dir name of your blog content (default is `content/posts`).
+# the list of set content will show up on your index page (baseurl).
+contentTypeName = "posts"
+
+showReadingTime = true
+
+[author]
+  name = "Saggie Haim"
+  email = "contact@saggiehaim.net"
+
+[search]
+  summaryInclude = 180 # show only part of content in search result.
+  minMatchCharLength = 2 # https://www.fusejs.io/api/options.html#minmatchcharlength
+  threshold = 0.3 # https://www.fusejs.io/api/options.html#threshold
+
+[header]
+  logo = "white_logo.png"
+  sticky = true
+
+[menu]
+
+  [[menu.main]]
+    identifier = "post"
+    name = "Post"
+    pageRef = "/posts"
+    weight = 0
+
+  [[menu.main]]
+    identifier = "about"
+    name = "About"
+    pageRef = "/about"
+    weight = 10
+
+[footer]
+  since = 2018
+  poweredby = false
+
+[social_media]
+  [[social_media.items]]
+    enabled = true
+    title = 'Linkedin'
+    icon = 'brand-linkedin'
+    link = 'https://www.linkedin.com/in/saggie/'
+
+  [[social_media.items]]
+    enabled = true
+    title = 'Github'
+    icon = 'brand-github'
+    link = 'https://github.com/SaggehaimBlog'

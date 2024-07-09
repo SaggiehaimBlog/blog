@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Cloud Security on Saggie Haim - Automate Everything</title>
-    <link>//localhost:52063/categories/cloud-security/</link>
+    <link>//localhost:52568/categories/cloud-security/</link>
     <description>Recent content in Cloud Security on Saggie Haim - Automate Everything</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <managingEditor>user@example.com (Hugo Author)</managingEditor>
-    <webMaster>user@example.com (Hugo Author)</webMaster>
+    <managingEditor>contact@saggiehaim.net (Saggie Haim)</managingEditor>
+    <webMaster>contact@saggiehaim.net (Saggie Haim)</webMaster>
     <copyright>Saggie Haim</copyright>
     <lastBuildDate>Wed, 14 Oct 2020 00:00:00 +0000</lastBuildDate>
-    <atom:link href="//localhost:52063/categories/cloud-security/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="//localhost:52568/categories/cloud-security/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Deploy Azure Sentinel to a multi-tenancy environment</title>
-      <link>//localhost:52063/posts/deploy-azure-sentinel-to-a-multi-tenancy-environment/deploy-azure-sentinel-to-a-multi-tenancy-environment/</link>
-      <pubDate>Wed, 14 Oct 2020 00:00:00 +0000</pubDate><author>user@example.com (Hugo Author)</author>
-      <guid>//localhost:52063/posts/deploy-azure-sentinel-to-a-multi-tenancy-environment/deploy-azure-sentinel-to-a-multi-tenancy-environment/</guid>
+      <link>//localhost:52568/posts/deploy-azure-sentinel-to-a-multi-tenancy-environment/deploy-azure-sentinel-to-a-multi-tenancy-environment/</link>
+      <pubDate>Wed, 14 Oct 2020 00:00:00 +0000</pubDate><author>contact@saggiehaim.net (Saggie Haim)</author>
+      <guid>//localhost:52568/posts/deploy-azure-sentinel-to-a-multi-tenancy-environment/deploy-azure-sentinel-to-a-multi-tenancy-environment/</guid>
       <description>For those of you who don&amp;rsquo;t know Azure Sentinel, Azure Sentinel is a scalable, cloud-native, security information event management (SIEM) and security orchestration automated response (SOAR) solution. Azure Sentinel delivers intelligent security analytics and threat intelligence across the enterprise, providing a single solution for alert detection, threat visibility, proactive hunting, and threat response.&#xA;The challenge begins when you have a multi-tenancy environment to monitor, as you need to jump from one tenant to keep up with the incidents.</description>
     </item>
   </channel>

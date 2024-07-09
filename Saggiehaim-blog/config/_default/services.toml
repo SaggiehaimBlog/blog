@@ -1,0 +1,9 @@
+# GA Tracking ID
+[googleAnalytics]
+  ID = ""
+
+[instagram]
+  disableInlineCSS = true
+
+[twitter]
+  disableInlineCSS = true
