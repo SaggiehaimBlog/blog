@@ -37,3 +37,17 @@ theme = "tailwind"
 category = "categories"
 tag = "tags"
 series = "series"
+
+[social_media]
+
+  [[social_media.items]]
+    enabled = true
+    title = 'Linkedin'
+    icon = 'brand-linkedin'
+    link = 'https://www.linkedin.com/in/saggie/'
+
+  [[social_media.items]]
+    enabled = true
+    title = 'Github'
+    icon = 'brand-github'
+    link = 'https://github.com/SaggehaimBlog'
