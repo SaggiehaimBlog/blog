@@ -1,26 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Saggie Haim - Automate Everything</title>
-    <link>http://localhost:65311/blog/</link>
-    <description>Recent content on Saggie Haim - Automate Everything</description>
+    <title>Themes on Saggie Haim - Automate Everything</title>
+    <link>http://localhost:65311/blog/tags/themes/</link>
+    <description>Recent content in Themes on Saggie Haim - Automate Everything</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 14 Aug 2020 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:65311/blog/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:65311/blog/tags/themes/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Image Test</title>
       <link>http://localhost:65311/blog/posts/my-first-post/</link>
       <pubDate>Fri, 14 Aug 2020 00:00:00 +0000</pubDate>
       <guid>http://localhost:65311/blog/posts/my-first-post/</guid>
       <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris fringilla dui eu mi iaculis, sit amet congue lacus porta. Ut nec porta ex. Morbi nec massa sodales, finibus urna et, condimentum odio. Nulla ornare est ac egestas varius. Duis faucibus sapien non risus pretium vestibulum. Ut rutrum lorem ut euismod maximus. Vestibulum metus urna, ultrices nec sapien sit amet, malesuada tincidunt quam. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</description>
-    </item>
-    <item>
-      <title>About</title>
-      <link>http://localhost:65311/blog/about/</link>
-      <pubDate>Thu, 28 Feb 2019 00:00:00 +0000</pubDate>
-      <guid>http://localhost:65311/blog/about/</guid>
-      <description>Written in Go, Hugo is an open source static site generator available under the Apache Licence 2.0. Hugo supports TOML, YAML and JSON data file types, Markdown and HTML content files and uses shortcodes to add rich content. Other notable features are taxonomies, multilingual mode, image processing, custom output formats, HTML/CSS/JS minification and support for Sass SCSS workflows.&#xA;Hugo makes use of a variety of open source projects including:&#xA;https://github.com/yuin/goldmark https://github.</description>
     </item>
   </channel>
 </rss>
