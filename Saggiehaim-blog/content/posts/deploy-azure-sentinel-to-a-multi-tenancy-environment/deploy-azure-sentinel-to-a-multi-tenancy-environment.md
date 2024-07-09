@@ -4,7 +4,7 @@ title = "Deploy Azure Sentinel to a multi-tenancy environment"
 date = "2020-10-14"
 description = "Azure Sentinel is a scalable, cloud-native, SIEM and SOAR solution. The challenge begins when you have a multi-tenancy environment to monitor. Learn how Azure Lighthouse enables cross- and multi-tenant management, automation, and scalability."
 toc = true
-image = "../images/AzureLighthouse.png"
+image = "./images/AzureLighthouse.png"
 tags = [
     "Microsoft Sentinel",
     "PowerShell",
@@ -210,12 +210,12 @@ Then on the top search bar, search for "Deploy a custom template."
 
 On the Custom deployment page, click on **Build your own template in the editor**
 
-![Build your own template]( images/customdeployment.png  "Image of Azure Portal Custom deployment page")
+![Build your own template]( ../images/customdeployment.png  "Image of Azure Portal Custom deployment page")
 
 Next, you will need to replace the empty template with the template I provided.
 The template will add the resources we want to deploy.
 
-![Editing the template]( ./images/savetemplate.png  "Image of Azure Portal editing a template")
+![Editing the template]( ../images/savetemplate.png  "Image of Azure Portal editing a template")
 
 Click **save** when you finished.
 
@@ -226,7 +226,7 @@ the information we will need to provide is:
 + **Resource Group** - The name of the Resources group that we want to deploy the resources to (Create new if you didn't created one)
 + **Workspaces_name** - The name of the Azure Log Analytics workspace
 
-![Fill in the information needed](./images/deploytemplate.png  "Image of Azure Portal with the deployment scope")
+![Fill in the information needed](../images/deploytemplate.png  "Image of Azure Portal with the deployment scope")
 
 Click on **Review + create** to deploy the resources.
 
@@ -360,7 +360,7 @@ click on **save** when you finished.
 
 On the next page, it will ask you to fill in the parameters. Click on **Edit parameters**.
 
-![Editing the parameters](./images/editparamters.png  "Image of Azure Portal editing a template")
+![Editing the parameters](../images/editparamters.png  "Image of Azure Portal editing a template")
 
 in this screen, you will need to copy the following JSON file:
 
@@ -415,13 +415,13 @@ in this screen, you will need to copy the following JSON file:
 }
 ```
 
-![Editing the parameters](./images/saveeditparamaters.png  "Image of Azure Portal editing a template")
+![Editing the parameters](../images/saveeditparamaters.png  "Image of Azure Portal editing a template")
 
 Click **Save** when you finish copying the script.
 
 You'll be sent back to the previous page, but this time, you will have all the parameters filled in from the template lets have a quick overview, so you will understand what you are deploying:
 
-![Lighthouse deployment scope](./images/lighthouseparameters.png  "Image of Azure Portal editing a template")
+![Lighthouse deployment scope](../images/lighthouseparameters.png  "Image of Azure Portal editing a template")
 
 + **Subscription**: The Subscription where we deployed our Log Analytics and Sentinel.
 + **Region**: The Region where we deployed our Log Analytics and Sentinel
@@ -434,7 +434,7 @@ You'll be sent back to the previous page, but this time, you will have all the p
 Now, you can press on **Review + Create** button.
 If all validations pass, you'll be able to deploy the template and successfully onboard your resource group.
 
-![Validation passed and we can deploy the template](./images/validationpass.png  "Image of Azure Portal editing a template")
+![Validation passed and we can deploy the template](../images/validationpass.png  "Image of Azure Portal editing a template")
 
 ## Deploy Using PowerShell
 
