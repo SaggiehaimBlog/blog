@@ -140,7 +140,7 @@ What will happen if we iterate 1 million times?
 Last, we use Start-Threadjob.
 This time finishing in 0.245 seconds!
 
-![ ](../images/SStart-ThreadJob-Impact.jpg  "PowerShell Session Showing measuring a simple iteration with Process explorer.")
+![ ](../images/Start-ThreadJob-Impact.jpg  "PowerShell Session Showing measuring a simple iteration with Process explorer.")
 
 Opposite to the Start-Job method, this time, we stayed in the same process.
 
