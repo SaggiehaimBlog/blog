@@ -31,4 +31,4 @@ Working at CyberProof, and writing about IT in my blog.
 
 ![Aruba ClearPass workshop](../images/Arubaspeaker.jpeg)
 
-Hope you enjoy my blogging! Feel free to [Contact me]()
+Hope you enjoy my blogging! Feel free to [Contact me](/contact)
