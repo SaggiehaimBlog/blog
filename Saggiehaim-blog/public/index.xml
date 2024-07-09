@@ -40,6 +40,13 @@
       <description>PowerShell is the Automator&amp;rsquo;s best friend. I automate everything with PowerShell, and you can also. When it comes to Azure, I can&amp;rsquo;t remember the last time I created a resource in the Portal. I either use PowerShell or IaC to provision resources or modify them.&#xA;In this post, you will learn how to set up a session with Azure to start to interact with Azure Resources.&#xA;Prerequisites Before we start, there are few global prerequisites that you need to meet:</description>
     </item>
     <item>
+      <title>Background Jobs Start Threadjob vs Start Job</title>
+      <link>//localhost:8080/posts/background-jobs-start-threadjob-vs-start-job/background-jobs-start-threadjob-vs-start-job/</link>
+      <pubDate>Sun, 07 Jul 2019 00:00:00 +0000</pubDate><author>contact@saggiehaim.net (Saggie Haim)</author>
+      <guid>//localhost:8080/posts/background-jobs-start-threadjob-vs-start-job/background-jobs-start-threadjob-vs-start-job/</guid>
+      <description>PowerShell can run background jobs with the Start-Job cmdlet. Most of the cmdlet also have -AsJob switch to instantly run the cmdlet as a background job. Each job runs a cmdlet in the background without interacting with the current session. This gives us the ability to perform an action on many targets quicker. This also come with some “downsides”, it’s resource consuming (depend on how many tasks running in the background) as each job is a separated process.</description>
+    </item>
+    <item>
       <title></title>
       <link>//localhost:8080/search/_index.es/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>contact@saggiehaim.net (Saggie Haim)</author>

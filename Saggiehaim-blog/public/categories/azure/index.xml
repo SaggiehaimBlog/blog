@@ -9,12 +9,12 @@
     <managingEditor>contact@saggiehaim.net (Saggie Haim)</managingEditor>
     <webMaster>contact@saggiehaim.net (Saggie Haim)</webMaster>
     <copyright>Saggie Haim</copyright>
-    <lastBuildDate>Tue, 09 Jul 2024 00:50:09 -0700</lastBuildDate>
+    <lastBuildDate>Thu, 02 Apr 2020 00:00:00 +0000</lastBuildDate>
     <atom:link href="//localhost:8080/categories/azure/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>How to Connect to Azure With Powershell</title>
       <link>//localhost:8080/posts/how-to-connect-to-azure-with-powershell/how-to-connect-to-azure-with-powershell/</link>
-      <pubDate>Tue, 09 Jul 2024 00:50:09 -0700</pubDate><author>contact@saggiehaim.net (Saggie Haim)</author>
+      <pubDate>Thu, 02 Apr 2020 00:00:00 +0000</pubDate><author>contact@saggiehaim.net (Saggie Haim)</author>
       <guid>//localhost:8080/posts/how-to-connect-to-azure-with-powershell/how-to-connect-to-azure-with-powershell/</guid>
       <description>PowerShell is the Automator&amp;rsquo;s best friend. I automate everything with PowerShell, and you can also. When it comes to Azure, I can&amp;rsquo;t remember the last time I created a resource in the Portal. I either use PowerShell or IaC to provision resources or modify them.&#xA;In this post, you will learn how to set up a session with Azure to start to interact with Azure Resources.&#xA;Prerequisites Before we start, there are few global prerequisites that you need to meet:</description>
     </item>

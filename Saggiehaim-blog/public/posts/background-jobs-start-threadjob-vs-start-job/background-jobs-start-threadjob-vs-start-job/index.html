@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=8080&amp;path=livereload" data-no-instant defer></script>
+  <title>Background Jobs Start Threadjob vs Start Job :: Saggie Haim - Automate Everything - Example site for hugo-theme-tailwind</title>
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta
+  name="description"
+  content="PowerShell can run background jobs with the Start-Job cmdlet. Most of the cmdlet also have -AsJob switch to instantly run the cmdlet as a background job. Each job runs a cmdlet in the background without interacting with the current session. This gives us the ability to perform an action on many targets quicker. This also come with some “downsides”, it’s resource consuming (depend on how many tasks running in the background) as each job is a separated process."
+/>
+<meta
+  name="keywords"
+  content="hugo, tailwind, tailwindcss, hugo theme, hugo theme tailwind"
+/>
+<meta name="robots" content="noodp" />
+<meta property="og:url" content="//localhost:8080/posts/background-jobs-start-threadjob-vs-start-job/background-jobs-start-threadjob-vs-start-job/">
+  <meta property="og:site_name" content="Saggie Haim - Automate Everything">
+  <meta property="og:title" content="Background Jobs Start Threadjob vs Start Job">
+  <meta property="og:description" content="PowerShell can run background jobs with the Start-Job cmdlet. Most of the cmdlet also have -AsJob switch to instantly run the cmdlet as a background job. Each job runs a cmdlet in the background without interacting with the current session.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2019-07-07T00:00:00+00:00">
+    <meta property="article:modified_time" content="2019-07-07T00:00:00+00:00">
+    <meta property="article:tag" content="PowerShell">
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Background Jobs Start Threadjob vs Start Job">
+  <meta name="twitter:description" content="PowerShell can run background jobs with the Start-Job cmdlet. Most of the cmdlet also have -AsJob switch to instantly run the cmdlet as a background job. Each job runs a cmdlet in the background without interacting with the current session.">
+
+
+<link rel="canonical" href="//localhost:8080/posts/background-jobs-start-threadjob-vs-start-job/background-jobs-start-threadjob-vs-start-job/" />
+
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="stylesheet" href="/css/index.4573e47dcfff49700db206601116cd2f48db1912c244b1d0b312713d4ca4a32e.css">
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+  
+
+</head>
+<body class="flex flex-col min-h-screen w-full bg-slate-50 dark:bg-gray-800">
+    
+<div class="fixed right-0 top-0 z-50 flex items-center justify-center bg-gray-200 p-2 text-sm uppercase text-black sm:bg-red-200 md:bg-yellow-200 lg:bg-green-200 xl:bg-blue-200 2xl:bg-pink-200">
+  <span class="block sm:hidden">all</span>
+  <span class="hidden sm:block md:hidden">sm</span>
+  <span class="hidden md:block lg:hidden">md</span>
+  <span class="hidden lg:block xl:hidden">lg</span>
+  <span class="hidden xl:block 2xl:hidden">xl</span>
+  <span class="hidden 2xl:block">2xl</span>
+</div>
+
+  <header class="flex flex-none justify-center z-10 bg-slate-50 dark:bg-gray-800 sticky top-0">
+    <div class="flex flex-row gap justify-between w-full max-w-4xl lg:max-w-5xl h-12 mt-3">
+  <div class="flex-none ml-2 md:ml-0">
+    <a href="/" class="">
+      <img class="h-12 w-12 rounded-full object-cover bg-gray-100" src="/white_logo.png" alt="logo">
+    </a>
+  </div>
+  <div class="flex-1"></div>
+  <div class="flex-none">
+    
+
+
+
+<nav class="h-full static">
+  <button id="navbar-menu-toggle" type="button" class="inline-flex items-center p-2 text-sm text-slate-800 dark:text-slate-200 rounded-lg md:hidden" aria-controls="navbar-menu" aria-expanded="false">
+    <span class="sr-only">Open main menu</span>
+    <i class="w-8 h-8">
+      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-menu-2" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M4 6l16 0" />
+  <path d="M4 12l16 0" />
+  <path d="M4 18l16 0" />
+</svg>
+
+    </i>
+  </button>
+  <div class="absolute md:static top-16 left-0 right-0 z-50 hidden w-full md:block md:w-auto" id="navbar-menu">
+    <ul class="flex flex-col mx-2 md:mx-0 md:flex-row md:border-0 rounded-sm md:rounded-full px-3 text-base font-medium text-slate-800 dark:text-slate-200 shadow-lg bg-white dark:bg-gray-600 shadow-slate-800/5 dark:shadow-slate-200/5 ring-1 ring-slate-900/5 dark:ring-slate-100/5">
+    
+        <li id="about" class="">
+          <a class="block px-3 py-3 hover:text-emerald-600"
+            href="/about/" title="About">About</a>
+        </li>
+      
+    
+        <li id="post" class="">
+          <a class="block px-3 py-3 hover:text-emerald-600 text-emerald-600"
+            href="/posts/" title="Post">Post</a>
+        </li>
+      
+    
+    </ul>
+  </div>
+</nav>
+
+
+  </div>
+  
+  <div class="flex-none mx-1"></div>
+  
+  <div class="flex-none md:hidden">
+    <a href=/search/ class="inline-flex items-center p-2 text-sm text-slate-800 dark:text-slate-200 rounded-lg" aria-controls="navbar-menu" aria-expanded="false">
+      <span class="sr-only">Search</span>
+      <i class="w-8 h-8">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+    <path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" />
+    <path d="M21 21l-6 -6" />
+</svg>
+
+      </i>
+    </a>
+  </div>
+  <div class="darkmode-toggle flex flex-none mr-2 md:mr-0">
+    <label for="darkmode-toggle" class="flex items-center px-3 cursor-pointer rounded-full bg-gray-100 dark:bg-gray-600" title="Toggle dark mode">
+      <input name="darkmode-toggle" id="darkmode-toggle" type="checkbox" class="sr-only peer" aria-label="Toggle dark mode">
+      <div class="group flex flex-row gap-1 justify-center h-8 px-1 rounded-full bg-white dark:bg-gray-700">
+        <i class="h-6 w-6 flex-none rounded-full bg-yellow-400 place-self-center peer-checked:group-[]:invisible">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brightness-down" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+   <path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path>
+   <path d="M12 5l0 .01"></path>
+   <path d="M17 7l0 .01"></path>
+   <path d="M19 12l0 .01"></path>
+   <path d="M17 17l0 .01"></path>
+   <path d="M12 19l0 .01"></path>
+   <path d="M7 17l0 .01"></path>
+   <path d="M5 12l0 .01"></path>
+   <path d="M7 7l0 .01"></path>
+</svg>
+
+        </i>
+        <i class="h-6 w-6 flex-none rounded-full place-self-center invisible peer-checked:group-[]:visible">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-moon-stars" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+   <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z"></path>
+   <path d="M17 4a2 2 0 0 0 2 2a2 2 0 0 0 -2 2a2 2 0 0 0 -2 -2a2 2 0 0 0 2 -2"></path>
+   <path d="M19 11h2m-1 -1v2"></path>
+</svg>
+
+        </i>
+      </div>
+    </label>
+  </div>
+</div>
+
+  </header>
+  <main class="flex flex-auto justify-center">
+    
+<div class="w-full max-w-4xl lg:max-w-5xl">
+  <div class="flex flex-col mt-6 mx-2 md:mx-0 rounded-lg overflow-hidden shadow-md bg-white dark:bg-gray-700">
+    <div>
+      <a href="/posts/background-jobs-start-threadjob-vs-start-job/background-jobs-start-threadjob-vs-start-job/">
+        <figure>
+    <img class="w-full object-cover h-36 md:h-48 xl:h-60" src="/images/backgroundjobcover.jpg"
+      alt="Background Jobs Start Threadjob vs Start Job" title="Background Jobs Start Threadjob vs Start Job"
+      loading="lazy"
+    >
+  </figure>
+      </a>
+    </div>
+    <div class="flex flex-col gap-y-3 p-6">
+      <h1 class="text-4xl font-semibold text-slate-800 dark:text-slate-100">
+        <a href="/posts/background-jobs-start-threadjob-vs-start-job/background-jobs-start-threadjob-vs-start-job/">Background Jobs Start Threadjob vs Start Job</a>
+      </h1>
+
+      
+      <h2 class="my-4 text-large text-slate-600 dark:text-slate-300">
+        PowerShell can run background jobs with the Start-Job cmdlet. Most of the cmdlet also have -AsJob switch to instantly run the cmdlet as a background job. Each job runs a cmdlet in the background without interacting with the current session.
+      </h2>
+      
+      
+  <ul class="flex flex-row flex-wrap text-slate-500 dark:text-slate-300">
+    
+      
+      <li>
+        <a href="/categories/page/categories/guide/"
+          class="text-sm mr-2 px-2 py-1 rounded border border-emerald-800 bg-emerald-800 text-slate-50">
+          Guide
+        </a>
+      </li>
+      
+      <li>
+        <a href="/categories/page/categories/powershell/"
+          class="text-sm mr-2 px-2 py-1 rounded border border-emerald-800 bg-emerald-800 text-slate-50">
+          PowerShell
+        </a>
+      </li>
+      
+    
+    
+      
+      <li>
+        <a href="/tags/page/tags/powershell/"
+          class="flex flex-row text-sm mr-2 py-1">
+          <i class="h-5 w-5 flex-none">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+   <path d="M5 9l14 0"></path>
+   <path d="M5 15l14 0"></path>
+   <path d="M11 4l-4 16"></path>
+   <path d="M17 4l-4 16"></path>
+</svg>
+
+          </i>
+          <span class="ml-0">PowerShell</span>
+        </a>
+      </li>
+      
+    
+  </ul>
+
+
+
+      <div class="flex flex-col gap-y-1 md:flex-row md:gap-y-0 md:gap-x-4 text-slate-500 dark:text-slate-300">
+  
+  
+  <div class="flex flex-row text-base gap-x-1">
+    <i class="h-6 w-6 flex-none">
+      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+   <path d="M4 7a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12z"></path>
+   <path d="M16 3v4"></path>
+   <path d="M8 3v4"></path>
+   <path d="M4 11h16"></path>
+   <path d="M11 15h1"></path>
+   <path d="M12 15v3"></path>
+</svg>
+
+    </i>
+    <time datetime="2019-07-07T00:00:00&#43;00:00">
+      2019-07-07
+    </time>
+  </div>
+
+  <div class="flex flex-row text-base gap-x-1">
+    <i class="h-6 w-6 flex-none">
+      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hourglass-high" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+   <path d="M6.5 7h11"></path>
+   <path d="M6 20v-2a6 6 0 1 1 12 0v2a1 1 0 0 1 -1 1h-10a1 1 0 0 1 -1 -1z"></path>
+   <path d="M6 4v2a6 6 0 1 0 12 0v-2a1 1 0 0 0 -1 -1h-10a1 1 0 0 0 -1 1z"></path>
+</svg>
+
+    </i>
+    <span>
+      4 minutes to read
+    </span>
+  </div>
+</div>
+
+
+      
+        
+        <section class="prose prose-slate dark:prose-invert w-full max-w-4xl lg:max-w-5xl mt-6">
+          <h2>Table of Contents</h2>
+          <aside><nav id="TableOfContents">
+  <ul>
+    <li><a href="#start-job-or-start-threadjob">Start-Job Or Start-ThreadJob?</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#no-background-jobs">No Background jobs</a></li>
+    <li><a href="#start-job-performance">Start-Job Performance</a></li>
+    <li><a href="#start-threadjob-performance">Start-ThreadJob Performance</a></li>
+  </ul>
+</nav></aside>
+        </section>
+        
+      
+
+      <article class="mt-6 w-full max-w-4xl lg:max-w-5xl prose prose-slate dark:prose-invert prose-quoteless post-content">
+        <p>PowerShell can run background jobs with the Start-Job cmdlet.
+Most of the cmdlet also have -AsJob switch to instantly run the cmdlet as a background job. Each job runs a cmdlet in the background without interacting with the current session. This gives us the ability to perform an action on many targets quicker.
+This also come with some “downsides”, it’s resource consuming (depend on how many tasks running in the background) as each job is a separated process.</p>
+<p>With this in mind, another parallel solution was needed. Threadjob module extends the existing PowerShell BackgroundJob, providing faster and lighter resource consuming while running in the current PowerShell session.</p>
+<p>I choose to write about ThreadJob because this is the adopted solution by the PowerShell Team, but you may find other modules doing the same.</p>
+<h1 id="why-background-jobs">Why background jobs?</h1>
+<p>By default, PowerShell does synchronous execution. Which means that PowerShell will execute one line of code at a time. With background jobs, we can run different lines of code at the same time (Asynchronous).</p>
+<p>For the most parts, we’ll run background jobs each time we have repetitive tasks for numerous targets.
+For example, changing the Active Directory manager attribute for many users, creating a mailbox for list of users, or running the same cmdlet on many servers.</p>
+<h2 id="start-job-or-start-threadjob">Start-Job Or Start-ThreadJob?</h2>
+<p>The answer to this question is very simple and straightforward:</p>
+<p><strong>Start-Threadjob</strong> – When we want to run tasks in the same context. Has better performance.</p>
+<p><strong>Start-Job</strong> – When we need to run something out of the process context. For example, updating PowerShell help in the background. More resources used.</p>
+<h1 id="background-jobs-with-start-job">Background Jobs with Start-Job</h1>
+<p>The Start-Job cmdlet will start a background job. We can use it in the following way:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-PowerShell" data-lang="PowerShell"><span style="display:flex;"><span><span style="color:#75715e">## Start a new Job</span>
+</span></span><span style="display:flex;"><span>Start-Job -Name <span style="color:#e6db74">&#34;Test Job&#34;</span> -ScriptBlock {Write-host <span style="color:#e6db74">&#34;This is a Simple Job&#34;</span>} 
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">## Get Job status</span>
+</span></span><span style="display:flex;"><span>Get-Job 
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">## Receive Job </span>
+</span></span><span style="display:flex;"><span>Get-Job | Receive-Job
+</span></span></code></pre></div><p><div class="not-prose">
+<figure>
+    <img src="../images/Start-Job-2.jpg"
+      alt="Simple Job"  title="PowerShell Session Showing Background Job with Start-Job" 
+      loading="lazy"
+    ><figcaption class="text-sm text-center text-slate-500 dark:text-slate-300">PowerShell Session Showing Background Job with Start-Job</figcaption>
+  </figure></div>
+</p>
+<p>Additionally, as I said in the beginning, Some cmdlet has -Asjob switch. Use Get-Help to check if your cmdlet has the -Asjob switch.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-PowerShell" data-lang="PowerShell"><span style="display:flex;"><span><span style="color:#75715e">## Use -AsJob switch to start a new Job</span>
+</span></span><span style="display:flex;"><span>Get-WmiObject win32_computersystem model -AsJob 
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">## Get Job status</span>
+</span></span><span style="display:flex;"><span>Get-Job 
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">## Receive Job output</span>
+</span></span><span style="display:flex;"><span>Get-Job | Receive-Job
+</span></span></code></pre></div><p><div class="not-prose">
+<figure>
+    <img src="../images/asjob-2.jpg"
+      alt="-Asjob Switch"  title="PowerShell Session Showing Background Job with -AsJob Switch" 
+      loading="lazy"
+    ><figcaption class="text-sm text-center text-slate-500 dark:text-slate-300">PowerShell Session Showing Background Job with -AsJob Switch</figcaption>
+  </figure></div>
+</p>
+<p>Update: Thanks to <a href="https://twitter.com/jkavanagh58" target="_blank" rel="noopener">@jkavanagh58</a>
+ who raised the option to find cmdlet with -Asjob switch with the Get-Command cmdlet.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-PowerShell" data-lang="PowerShell"><span style="display:flex;"><span>Get-Command -ParameterName AsJob
+</span></span></code></pre></div><h1 id="background-jobs-with-start-threadjob">Background Jobs with Start-ThreadJob</h1>
+<p>While Threadjob doesn’t have -AsThread switch.
+Everything else is just the same.
+We use the Start-Threadjob cmdlet and manage the rest same as Start-Job.
+If you don’t use the latest PowerShell Core, you’ll need to install the module first:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-PowerShell" data-lang="PowerShell"><span style="display:flex;"><span>Install-Module -Name ThreadJob -Scope CurrentUser
+</span></span></code></pre></div><p>Afterwards, we will be able to use the Start-ThreadJob cmdlet:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-PowerShell" data-lang="PowerShell"><span style="display:flex;"><span><span style="color:#75715e">## Start a new Thread</span>
+</span></span><span style="display:flex;"><span>Start-ThreadJob -Name <span style="color:#e6db74">&#34;Test Thread&#34;</span> -ScriptBlock {Write-Host <span style="color:#e6db74">&#34;This is a Simple Thread Job&#34;</span>} 
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">## Get Job status</span>
+</span></span><span style="display:flex;"><span>Get-Job 
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">## Receive Job output</span>
+</span></span><span style="display:flex;"><span>Get-Job | Receive-Job
+</span></span></code></pre></div><p><div class="not-prose">
+<figure>
+    <img src="../images/Start-ThreadJob-2.jpg"
+      alt=" "  title="PowerShell Session Showing Background Job with Start-ThreadJob" 
+      loading="lazy"
+    ><figcaption class="text-sm text-center text-slate-500 dark:text-slate-300">PowerShell Session Showing Background Job with Start-ThreadJob</figcaption>
+  </figure></div>
+</p>
+<h1 id="start-job-vs-start-threadjob--performance">Start-Job vs Start-ThreadJob – Performance</h1>
+<p>We learn how to use background jobs and why. Now I want to show you the performance differences.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-PowerShell" data-lang="PowerShell"><span style="display:flex;"><span>Measure-Command {<span style="color:#ae81ff">1</span>.<span style="color:#ae81ff">.10</span> | ForEach-Object {sleep <span style="color:#ae81ff">3</span>}} | Select-Object Totalseconds
+</span></span></code></pre></div><p>This code will pause the shell for 3 seconds ten times.
+I’ll run the same code three times with the following conditions:</p>
+<ul>
+<li>As is with no background jobs</li>
+<li>With Start-Job</li>
+<li>With Start-ThreadJob</li>
+</ul>
+<p>During the tests, we’ll see the difference in each condition. The impact on the operating system and how long it took to execute.</p>
+<h2 id="no-background-jobs">No Background jobs</h2>
+<p>Starting with the obvious, the default behavior when we don’t use any background job.</p>
+<p><div class="not-prose">
+<figure>
+    <img src="../images/No-Job-Impact-1.jpg"
+      alt=" "  title="PowerShell Session Showing measuring a simple iteration with no background jobs." 
+      loading="lazy"
+    ><figcaption class="text-sm text-center text-slate-500 dark:text-slate-300">PowerShell Session Showing measuring a simple iteration with no background jobs.</figcaption>
+  </figure></div>
+</p>
+<p>Running ten times and pausing for three seconds each time, set the benchmark to 30 seconds as expected.</p>
+<h2 id="start-job-performance">Start-Job Performance</h2>
+<p>Now, running with the native Start-Job, we can see the increased performance as it took only 5.4 seconds to finish.</p>
+<p><div class="not-prose">
+<figure>
+    <img src="../images/Start-Job-Impact.jpg"
+      alt=" "  title="PowerShell Session Showing measuring a simple iteration with Process explorer." 
+      loading="lazy"
+    ><figcaption class="text-sm text-center text-slate-500 dark:text-slate-300">PowerShell Session Showing measuring a simple iteration with Process explorer.</figcaption>
+  </figure></div>
+</p>
+<p>However, with each iterate, a new PowerShell process started.
+What will happen if we iterate 1 million times?</p>
+<h2 id="start-threadjob-performance">Start-ThreadJob Performance</h2>
+<p>Last, we use Start-Threadjob.
+This time finishing in 0.245 seconds!</p>
+<p><div class="not-prose">
+<figure>
+    <img src="../images/SStart-ThreadJob-Impact.jpg"
+      alt=" "  title="PowerShell Session Showing measuring a simple iteration with Process explorer." 
+      loading="lazy"
+    ><figcaption class="text-sm text-center text-slate-500 dark:text-slate-300">PowerShell Session Showing measuring a simple iteration with Process explorer.</figcaption>
+  </figure></div>
+</p>
+<p>Opposite to the Start-Job method, this time, we stayed in the same process.</p>
+<h1 id="conclusion">Conclusion</h1>
+<p>While using background jobs in the shell is not a common act.
+It’s not the case when writing scripts. Some times we do care about the performance aspects, and Background jobs can help us.
+We saw both methods and talked about when we use each method.
+Now it’s your time to get familiar with the solutions and speed up your scripts!</p>
+<p>Hope you enjoyed this post!</p>
+
+      </article>
+
+      
+
+
+
+
+    </div>
+  </div>
+</div>
+
+  </main>
+  <footer class="flex flex-none justify-center">
+    <section class="flex flex-col md:flex-row mx-2 md:mx-0 gap-2 md:gap-0 justify-between w-full max-w-4xl lg:max-w-5xl py-6 text-slate-500 dark:text-slate-300">
+  <div class="flex flex-row">
+    
+  
+  
+    <a href="https://www.linkedin.com/in/saggie/" target="_blank" title="Linkedin" class="flex flex-row mr-2">
+      <span class="hidden">Linkedin</span>
+      <i class="h-6 w-6 flex-none"> <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-linkedin" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+   <path d="M4 4m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z"></path>
+   <path d="M8 11l0 5"></path>
+   <path d="M8 8l0 .01"></path>
+   <path d="M12 16l0 -5"></path>
+   <path d="M16 16v-3a2 2 0 0 0 -4 0"></path>
+</svg>
+ </i>
+    </a>
+  
+  
+  
+    <a href="https://github.com/SaggehaimBlog" target="_blank" title="Github" class="flex flex-row mr-2">
+      <span class="hidden">Github</span>
+      <i class="h-6 w-6 flex-none"> <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+   <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5"></path>
+</svg>
+ </i>
+    </a>
+  
+  
+
+
+  </div>
+  <div class="grow"></div>
+  <div class="flex flex-row">
+    <i class="h-6 w-6 flex-none"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+   <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"></path>
+   <path d="M14 9.75a3.016 3.016 0 0 0 -4.163 .173a2.993 2.993 0 0 0 0 4.154a3.016 3.016 0 0 0 4.163 .173"></path>
+</svg>
+</i> 2018 - 2024 Saggie Haim
+    
+  </div>
+  
+</section>
+
+  </footer>
+  <script src="/main.js"></script>
+
+<div class="hidden top-1 right-1" id="code-copy">
+  <i class="h-6 w-6 block">
+    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copy" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M7 7m0 2.667a2.667 2.667 0 0 1 2.667 -2.667h8.666a2.667 2.667 0 0 1 2.667 2.667v8.666a2.667 2.667 0 0 1 -2.667 2.667h-8.666a2.667 2.667 0 0 1 -2.667 -2.667z" />
+  <path d="M4.012 16.737a2.005 2.005 0 0 1 -1.012 -1.737v-10c0 -1.1 .9 -2 2 -2h10c.75 0 1.158 .385 1.5 1" />
+</svg>
+
+  </i>
+</div>
+<div class="hidden top-1 right-1" id="code-copy-done">
+  <i class="h-6 w-6 block">
+    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-check" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M5 12l5 5l10 -10" />
+</svg>
+
+  </i>
+</div><script src="/code-copy.js"></script>
+
+
+
+
+
+</body>
+</html>

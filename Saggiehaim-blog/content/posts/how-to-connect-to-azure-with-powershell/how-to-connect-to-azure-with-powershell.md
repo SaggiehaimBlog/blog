@@ -50,13 +50,11 @@ To install it, you run the following command:
 Install-Module az -AllowClobber -Scope CurrentUser
 ```
 
-
 ### Splatting
 
 In most of the code examples, I use "splatting" to pass the parameters.
 Splatting makes your commands shorter and easier to read.
 You can read more about it [here.](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_splatting?view=powershell-7)
-
 
 ## Connect to Azure with PowerShell
 

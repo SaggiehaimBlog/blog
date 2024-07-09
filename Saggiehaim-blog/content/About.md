@@ -19,7 +19,6 @@ Meanwhile, I vastly improved the security and productivity of Lumenis LTD IT. Pl
 
 These days I teach at CyberControl Academy about Operation systems, Networking, and Security Fundamentals. Working at CyberProof, and writing about IT in my blog.
 
-
 ![Aruba ClearPass workshop](../images/Arubaspeaker.jpeg)
 
-Hope you enjoy my blogging! Feel free to [Contact me]().
+Hope you enjoy my blogging! Feel free to [Contact me]()
