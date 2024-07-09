@@ -19,12 +19,19 @@ series = "series"
 
 [menu]
 [[menu.main]]
-  identifier = "post"
-  name = "Post"
+  identifier = "home"
+  name = "Home"
   pageRef = "/posts"
-  weight = 0
+  weight = 10
 [[menu.main]]
   identifier = "about"
   name = "About"
   pageRef = "/about"
-  weight = 10
+  weight = 20
+[[menu.main]]
+  identifier = "contact"
+  name = "Contact"
+  pageRef = "/contact"
+  weight = 30
+
+

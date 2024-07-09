@@ -19,6 +19,13 @@
       <description>Hi, I’m Saggie, a Cloud Security Solution Director, a blogger and tech trainer. My experience in Microsoft systems, Security, Monitoring and, Networking help me design better projects and solutions.&#xA;I’m motivated by my passion for troubleshooting and Powershell. Eager to keep learning every day. Improving my skill sets to better understand the constraints in every project or the challenges I face every day.&#xA;My hunger for knowledge and love of challenges, helped me build and execute the Enterprise Monitoring solution in Elbit systems.</description>
     </item>
     <item>
+      <title>Contact</title>
+      <link>//localhost:8080/contact/</link>
+      <pubDate>Mon, 08 Jul 2024 00:00:00 +0000</pubDate><author>contact@saggiehaim.net (Saggie Haim)</author>
+      <guid>//localhost:8080/contact/</guid>
+      <description>You can contact me to inquire about the following subjects:&#xA;Speaking and Training You can often find me speaking at companies’ events and small conferences. Often about IT automation, PowerShell, monitoring, and troubleshooting. Besides speaking, I can also conduct training sessions in different levels, from entry levels to advance topics. My Presentations style is combined slides with live demos, you learn the most by trying. I’m trying to avoid the monotonic sessions, hoping to create good interactions with the viewers and getting feedback often.</description>
+    </item>
+    <item>
       <title>Deploy Azure Sentinel to a multi-tenancy environment</title>
       <link>//localhost:8080/posts/deploy-azure-sentinel-to-a-multi-tenancy-environment/deploy-azure-sentinel-to-a-multi-tenancy-environment/</link>
       <pubDate>Wed, 14 Oct 2020 00:00:00 +0000</pubDate><author>contact@saggiehaim.net (Saggie Haim)</author>
