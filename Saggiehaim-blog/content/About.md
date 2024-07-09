@@ -4,6 +4,7 @@ description = "About Saggie Haim"
 date = "2024-07-08"
 aliases = ["about-us", "about-saggie", "contact"]
 author = "Saggie Haim"
+toc = false
 +++
 
 ![Azure Sentinel – Microsoft first MSSP’s event in ILDC](../images/ILDCspeaker.jpeg)

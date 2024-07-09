@@ -2,50 +2,69 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:49659/blog/about/</loc>
+    <loc>//localhost:52063/about/</loc>
     <lastmod>2024-07-08T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:49659/blog/</loc>
+    <loc>//localhost:52063/</loc>
     <lastmod>2024-07-08T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:49659/blog/posts/my-first-post/</loc>
+    <loc>//localhost:52063/tags/azure/</loc>
+    <lastmod>2020-10-14T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>//localhost:52063/categories/</loc>
+    <lastmod>2020-10-14T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>//localhost:52063/categories/cloud-security/</loc>
+    <lastmod>2020-10-14T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>//localhost:52063/posts/deploy-azure-sentinel-to-a-multi-tenancy-environment/deploy-azure-sentinel-to-a-multi-tenancy-environment/</loc>
+    <lastmod>2020-10-14T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>//localhost:52063/tags/microsoft-sentinel/</loc>
+    <lastmod>2020-10-14T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>//localhost:52063/categories/microsoft-sentinel/</loc>
+    <lastmod>2020-10-14T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>//localhost:52063/posts/</loc>
+    <lastmod>2020-10-14T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>//localhost:52063/tags/powershell/</loc>
+    <lastmod>2020-10-14T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>//localhost:52063/tags/</loc>
+    <lastmod>2020-10-14T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>//localhost:52063/posts/my-first-post/</loc>
     <lastmod>2020-08-14T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:49659/blog/posts/</loc>
+    <loc>//localhost:52063/tags/themes/</loc>
     <lastmod>2020-08-14T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:49659/blog/tags/</loc>
-    <lastmod>2020-08-14T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:49659/blog/tags/themes/</loc>
-    <lastmod>2020-08-14T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:49659/blog/search/</loc>
+    <loc>//localhost:52063/search/</loc>
     <priority>0.1</priority>
   </url><url>
-    <loc>http://localhost:49659/blog/search/_index.es/</loc>
+    <loc>//localhost:52063/search/_index.es/</loc>
     <priority>0.1</priority>
   </url><url>
-    <loc>http://localhost:49659/blog/search/_index.fr/</loc>
+    <loc>//localhost:52063/search/_index.fr/</loc>
     <priority>0.1</priority>
   </url><url>
-    <loc>http://localhost:49659/blog/search/_index.hi/</loc>
+    <loc>//localhost:52063/search/_index.hi/</loc>
     <priority>0.1</priority>
   </url><url>
-    <loc>http://localhost:49659/blog/search/_index.jp/</loc>
+    <loc>//localhost:52063/search/_index.jp/</loc>
     <priority>0.1</priority>
   </url><url>
-    <loc>http://localhost:49659/blog/search/_index.pl/</loc>
+    <loc>//localhost:52063/search/_index.pl/</loc>
     <priority>0.1</priority>
   </url><url>
-    <loc>http://localhost:49659/blog/search/_index.ru/</loc>
+    <loc>//localhost:52063/search/_index.ru/</loc>
     <priority>0.1</priority>
   </url><url>
-    <loc>http://localhost:49659/blog/search/_index.zh-cn/</loc>
+    <loc>//localhost:52063/search/_index.zh-cn/</loc>
     <priority>0.1</priority>
   </url><url>
-    <loc>http://localhost:49659/blog/categories/</loc>
-  </url><url>
-    <loc>http://localhost:49659/blog/series/</loc>
+    <loc>//localhost:52063/series/</loc>
   </url>
 </urlset>

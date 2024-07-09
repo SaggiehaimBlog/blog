@@ -2,13 +2,28 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Saggie Haim - Automate Everything</title>
-    <link>http://localhost:49659/blog/categories/</link>
+    <link>//localhost:52063/categories/</link>
     <description>Recent content in Categories on Saggie Haim - Automate Everything</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <managingEditor>user@example.com (Hugo Author)</managingEditor>
     <webMaster>user@example.com (Hugo Author)</webMaster>
     <copyright>Saggie Haim</copyright>
-    <atom:link href="http://localhost:49659/blog/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 14 Oct 2020 00:00:00 +0000</lastBuildDate>
+    <atom:link href="//localhost:52063/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Cloud Security</title>
+      <link>//localhost:52063/categories/cloud-security/</link>
+      <pubDate>Wed, 14 Oct 2020 00:00:00 +0000</pubDate><author>user@example.com (Hugo Author)</author>
+      <guid>//localhost:52063/categories/cloud-security/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Microsoft Sentinel</title>
+      <link>//localhost:52063/categories/microsoft-sentinel/</link>
+      <pubDate>Wed, 14 Oct 2020 00:00:00 +0000</pubDate><author>user@example.com (Hugo Author)</author>
+      <guid>//localhost:52063/categories/microsoft-sentinel/</guid>
+      <description></description>
+    </item>
   </channel>
 </rss>

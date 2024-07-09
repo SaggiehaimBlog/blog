@@ -1,0 +1,52 @@
+baseURL = 'https://saggehaimblog.github.io/blog/'
+languageCode = 'en-us'
+title = 'Saggie Haim - Automate Everything'
+author = "Saggie Haim"
+DefaultContentLanguage = "en"
+copyright = "Saggie Haim"
+paginate = 10
+theme = "tailwind"
+
+[params]
+  # dir name of your blog content (default is `content/posts`).
+  # the list of set content will show up on your index page (baseurl).
+  contentTypeName = "posts"
+
+  [params.header]
+    logo = "white_logo.png"
+
+  [params.footer]
+    since = 2018
+    poweredby = true
+
+[menu]
+
+  [[menu.main]]
+    identifier = "post"
+    name = "Post"
+    pageRef = "/posts"
+    weight = 0
+
+  [[menu.main]]
+    identifier = "about"
+    name = "About"
+    pageRef = "/about"
+    weight = 10
+
+[taxonomies]
+category = "categories"
+tag = "tags"
+series = "series"
+
+[social_media]
+  [[social_media.items]]
+    enabled = true
+    title = 'Linkedin'
+    icon = 'brand-linkedin'
+    link = 'https://www.linkedin.com/in/saggie/'
+
+  [[social_media.items]]
+    enabled = true
+    title = 'Github'
+    icon = 'brand-github'
+    link = 'https://github.com/SaggehaimBlog'

@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=51009&amp;path=livereload" data-no-instant defer></script>
+  <title> :: Saggie Haim - Automate Everything - Example site for hugo-theme-tailwind</title>
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta
+  name="description"
+  content="&lt;!DOCTYPE html&gt; Deploy Azure Sentinel to a multi-tenancy environment - Saggiehaim - Automate Everything Skip to main content Posts Published Update ‌ |||&amp;nbsp;For those of you who don&#39;t know Azure Sentinel, Azure Sentinel is a scalable, cloud-native, security information event management (SIEM) and security orchestration automated response (SOAR) solution.Azure Sentinel delivers intelligent security analytics and threat intelligence across the enterprise, providing a single solution for alert detection, threat visibility, proactive hunting, and threat response."
+/>
+<meta
+  name="keywords"
+  content="hugo, tailwind, tailwindcss, hugo theme, hugo theme tailwind"
+/>
+<meta name="robots" content="noodp" />
+<meta property="og:url" content="//localhost:51009/posts/deploy-azure-senintel-to-a-multi-tenancy-environmnet/images/deploy-azure-sentinel-to-a-multi-tenancy-environment---saggiehaim---automate-everything/">
+  <meta property="og:site_name" content="Saggie Haim - Automate Everything">
+  <meta property="og:title" content="Saggie Haim - Automate Everything">
+  <meta property="og:description" content="&lt;!DOCTYPE html&gt; Deploy Azure Sentinel to a multi-tenancy environment - Saggiehaim - Automate Everything Skip to main content Posts Published Update ‌ ||| For those of you who don&#39;t know Azure Sentinel, Azure Sentinel is a scalable, cloud-native, security information event management (SIEM) and security orchestration automated response (SOAR) solution.Azure Sentinel delivers intelligent security analytics and threat intelligence across the enterprise, providing a single solution for alert detection, threat visibility, proactive hunting, and threat response.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Saggie Haim - Automate Everything">
+  <meta name="twitter:description" content="&lt;!DOCTYPE html&gt; Deploy Azure Sentinel to a multi-tenancy environment - Saggiehaim - Automate Everything Skip to main content Posts Published Update ‌ ||| For those of you who don&#39;t know Azure Sentinel, Azure Sentinel is a scalable, cloud-native, security information event management (SIEM) and security orchestration automated response (SOAR) solution.Azure Sentinel delivers intelligent security analytics and threat intelligence across the enterprise, providing a single solution for alert detection, threat visibility, proactive hunting, and threat response.">
+
+
+<link rel="canonical" href="//localhost:51009/posts/deploy-azure-senintel-to-a-multi-tenancy-environmnet/images/deploy-azure-sentinel-to-a-multi-tenancy-environment---saggiehaim---automate-everything/" />
+
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="stylesheet" href="/css/index.4573e47dcfff49700db206601116cd2f48db1912c244b1d0b312713d4ca4a32e.css">
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+  
+
+</head>
+<body class="flex flex-col min-h-screen w-full bg-slate-50 dark:bg-gray-800">
+    
+<div class="fixed right-0 top-0 z-50 flex items-center justify-center bg-gray-200 p-2 text-sm uppercase text-black sm:bg-red-200 md:bg-yellow-200 lg:bg-green-200 xl:bg-blue-200 2xl:bg-pink-200">
+  <span class="block sm:hidden">all</span>
+  <span class="hidden sm:block md:hidden">sm</span>
+  <span class="hidden md:block lg:hidden">md</span>
+  <span class="hidden lg:block xl:hidden">lg</span>
+  <span class="hidden xl:block 2xl:hidden">xl</span>
+  <span class="hidden 2xl:block">2xl</span>
+</div>
+
+  <header class="flex flex-none justify-center z-10">
+    <div class="flex flex-row gap justify-between w-full max-w-4xl lg:max-w-5xl h-12 mt-3">
+  <div class="flex-none ml-2 md:ml-0">
+    <a href="/" class="">
+      <img class="h-12 w-12 rounded-full object-cover bg-gray-100" src="/white_logo.png" alt="logo">
+    </a>
+  </div>
+  <div class="flex-1"></div>
+  <div class="flex-none">
+    
+
+
+
+<nav class="h-full static">
+  <button id="navbar-menu-toggle" type="button" class="inline-flex items-center p-2 text-sm text-slate-800 dark:text-slate-200 rounded-lg md:hidden" aria-controls="navbar-menu" aria-expanded="false">
+    <span class="sr-only">Open main menu</span>
+    <i class="w-8 h-8">
+      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-menu-2" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M4 6l16 0" />
+  <path d="M4 12l16 0" />
+  <path d="M4 18l16 0" />
+</svg>
+
+    </i>
+  </button>
+  <div class="absolute md:static top-16 left-0 right-0 z-50 hidden w-full md:block md:w-auto" id="navbar-menu">
+    <ul class="flex flex-col mx-2 md:mx-0 md:flex-row md:border-0 rounded-sm md:rounded-full px-3 text-base font-medium text-slate-800 dark:text-slate-200 shadow-lg bg-white dark:bg-gray-600 shadow-slate-800/5 dark:shadow-slate-200/5 ring-1 ring-slate-900/5 dark:ring-slate-100/5">
+    
+        <li id="about" class="">
+          <a class="block px-3 py-3 hover:text-emerald-600"
+            href="/about/" title="About">About</a>
+        </li>
+      
+    
+        <li id="post" class="">
+          <a class="block px-3 py-3 hover:text-emerald-600 text-emerald-600"
+            href="/posts/" title="Post">Post</a>
+        </li>
+      
+    
+    </ul>
+  </div>
+</nav>
+
+
+  </div>
+  
+  <div class="flex-none mx-1"></div>
+  
+  <div class="flex-none md:hidden">
+    <a href=/search/ class="inline-flex items-center p-2 text-sm text-slate-800 dark:text-slate-200 rounded-lg" aria-controls="navbar-menu" aria-expanded="false">
+      <span class="sr-only">Search</span>
+      <i class="w-8 h-8">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+    <path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" />
+    <path d="M21 21l-6 -6" />
+</svg>
+
+      </i>
+    </a>
+  </div>
+  <div class="darkmode-toggle flex flex-none mr-2 md:mr-0">
+    <label for="darkmode-toggle" class="flex items-center px-3 cursor-pointer rounded-full bg-gray-100 dark:bg-gray-600" title="Toggle dark mode">
+      <input name="darkmode-toggle" id="darkmode-toggle" type="checkbox" class="sr-only peer" aria-label="Toggle dark mode">
+      <div class="group flex flex-row gap-1 justify-center h-8 px-1 rounded-full bg-white dark:bg-gray-700">
+        <i class="h-6 w-6 flex-none rounded-full bg-yellow-400 place-self-center peer-checked:group-[]:invisible">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brightness-down" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+   <path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path>
+   <path d="M12 5l0 .01"></path>
+   <path d="M17 7l0 .01"></path>
+   <path d="M19 12l0 .01"></path>
+   <path d="M17 17l0 .01"></path>
+   <path d="M12 19l0 .01"></path>
+   <path d="M7 17l0 .01"></path>
+   <path d="M5 12l0 .01"></path>
+   <path d="M7 7l0 .01"></path>
+</svg>
+
+        </i>
+        <i class="h-6 w-6 flex-none rounded-full place-self-center invisible peer-checked:group-[]:visible">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-moon-stars" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+   <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z"></path>
+   <path d="M17 4a2 2 0 0 0 2 2a2 2 0 0 0 -2 2a2 2 0 0 0 -2 -2a2 2 0 0 0 2 -2"></path>
+   <path d="M19 11h2m-1 -1v2"></path>
+</svg>
+
+        </i>
+      </div>
+    </label>
+  </div>
+</div>
+
+  </header>
+  <main class="flex flex-auto justify-center">
+    
+<div class="w-full max-w-4xl lg:max-w-5xl">
+  <div class="flex flex-col mt-6 mx-2 md:mx-0 rounded-lg overflow-hidden shadow-md bg-white dark:bg-gray-700">
+    <div>
+      <a href="/posts/deploy-azure-senintel-to-a-multi-tenancy-environmnet/images/deploy-azure-sentinel-to-a-multi-tenancy-environment---saggiehaim---automate-everything/">
+        
+      </a>
+    </div>
+    <div class="flex flex-col gap-y-3 p-6">
+      <h1 class="text-4xl font-semibold text-slate-800 dark:text-slate-100">
+        <a href="/posts/deploy-azure-senintel-to-a-multi-tenancy-environmnet/images/deploy-azure-sentinel-to-a-multi-tenancy-environment---saggiehaim---automate-everything/"></a>
+      </h1>
+
+      
+      
+
+
+      <div class="flex flex-col gap-y-1 md:flex-row md:gap-y-0 md:gap-x-4 text-slate-500 dark:text-slate-300">
+  <div class="flex flex-row text-base gap-x-1">
+    <i class="h-6 w-6 flex-none">
+      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hourglass-high" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+   <path d="M6.5 7h11"></path>
+   <path d="M6 20v-2a6 6 0 1 1 12 0v2a1 1 0 0 1 -1 1h-10a1 1 0 0 1 -1 -1z"></path>
+   <path d="M6 4v2a6 6 0 1 0 12 0v-2a1 1 0 0 0 -1 -1h-10a1 1 0 0 0 -1 1z"></path>
+</svg>
+
+    </i>
+    <span>
+      15 minutes to read
+    </span>
+  </div>
+</div>
+
+
+      
+        
+        <section class="prose prose-slate dark:prose-invert w-full max-w-4xl lg:max-w-5xl mt-6">
+          <h2>Table of Contents</h2>
+          <aside></aside>
+        </section>
+        
+      
+
+      <article class="mt-6 w-full max-w-4xl lg:max-w-5xl prose prose-slate dark:prose-invert prose-quoteless post-content">
+        <!DOCTYPE html>
+<!-- saved from url=(0014)about:internet -->
+<html class="no-js" lang="en"><!--<![endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Deploy Azure Sentinel to a multi-tenancy environment - Saggiehaim - Automate Everything</title>
+<meta name="ghost-admin/config/environment" content="%7B%22modulePrefix%22%3A%22ghost-admin%22%2C%22environment%22%3A%22production%22%2C%22rootURL%22%3A%22%2F%22%2C%22locationType%22%3A%22trailing-hash%22%2C%22EmberENV%22%3A%7B%22FEATURES%22%3A%7B%7D%2C%22EXTEND_PROTOTYPES%22%3A%7B%22Date%22%3Afalse%2C%22Array%22%3Atrue%2C%22String%22%3Atrue%2C%22Function%22%3Afalse%7D%2C%22_APPLICATION_TEMPLATE_WRAPPER%22%3Afalse%2C%22_JQUERY_INTEGRATION%22%3Atrue%2C%22_TEMPLATE_ONLY_GLIMMER_COMPONENTS%22%3Atrue%7D%2C%22APP%22%3A%7B%22version%22%3A%223.31%22%2C%22name%22%3A%22ghost-admin%22%7D%2C%22ember-simple-auth%22%3A%7B%7D%2C%22moment%22%3A%7B%22includeTimezone%22%3A%22all%22%7D%2C%22ember-cli-mirage%22%3A%7B%22usingProxy%22%3Afalse%2C%22useDefaultPassthroughs%22%3Atrue%7D%2C%22exportApplicationGlobal%22%3Afalse%2C%22ember-load%22%3A%7B%22loadingIndicatorClass%22%3A%22ember-load-indicator%22%7D%7D">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1, minimal-ui">
+<meta name="pinterest" content="nopin">
+<meta http-equiv="cleartype" content="on">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="apple-mobile-web-app-title" content="Ghost">
+<link rel="shortcut icon" href="https://www.saggiehaim.net/ghost/assets/img/favicon.ico">
+<link rel="apple-touch-icon-precomposed" href="https://www.saggiehaim.net/ghost/assets/img/touch-icon-iphone-d2790931c3477664981061ed9fa5242e.png">
+<link rel="apple-touch-icon-precomposed" sizes="76x76" href="https://www.saggiehaim.net/ghost/assets/img/touch-icon-ipad-3117c0fa950d0fc43c95becef61f4167.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="https://www.saggiehaim.net/ghost/assets/img/small-42ff134f320b8b5a6eca3781c4e4b2db.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="https://www.saggiehaim.net/ghost/assets/img/medium-7359075af28d69523987ff4c0e2067c5.png">
+<meta name="application-name" content="Ghost">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-square70x70logo" content="assets/img/small-42ff134f320b8b5a6eca3781c4e4b2db.png">
+<meta name="msapplication-square150x150logo" content="assets/img/medium-7359075af28d69523987ff4c0e2067c5.png">
+<meta name="msapplication-square310x310logo" content="assets/img/large-bf46e150380a4979a7389b45f5bb479d.png">
+<link rel="stylesheet" href="./Deploy Azure Sentinel to a multi-tenancy environment - Saggiehaim - Automate Everything_files/vendor.min-59d06862d7441e413f92fcc5c41f807e.css">
+<link rel="stylesheet" href="./Deploy Azure Sentinel to a multi-tenancy environment - Saggiehaim - Automate Everything_files/ghost.min-77f6fffdad4f632d189ac7ea76ae9997.css" title="light" disabled="">
+<link id="dark-styles" rel="alternate stylesheet" href="https://www.saggiehaim.net/ghost/assets/ghost-dark-7ca0db005c1563c214d1f9a674ce346d.css" title="dark"><style id="erd_scroll_detection_scrollbar_style">/* Created by the element-resize-detector library. */
+.erd_scroll_detection_container > div::-webkit-scrollbar { display: none; }
+
+.erd_scroll_detection_container_animation_active { -webkit-animation-duration: 0.1s; animation-duration: 0.1s; -webkit-animation-name: erd_scroll_detection_container_animation; animation-name: erd_scroll_detection_container_animation; }
+@-webkit-keyframes erd_scroll_detection_container_animation { 0% { opacity: 1; } 50% { opacity: 0; } 100% { opacity: 1; } }
+@keyframes erd_scroll_detection_container_animation { 0% { opacity: 1; } 50% { opacity: 0; } 100% { opacity: 1; } }</style><link rel="stylesheet" href="./Deploy Azure Sentinel to a multi-tenancy environment - Saggiehaim - Automate Everything_files/font-awesome.min.css"></head>
+<body class="ember-application">
+
+<div id="ember-basic-dropdown-wormhole"></div>
+<script type="text/javascript" async="" src="./Deploy Azure Sentinel to a multi-tenancy environment - Saggiehaim - Automate Everything_files/simplemde-7d23d052a9306b904bb332477de12cd1.js"></script><script src="./Deploy Azure Sentinel to a multi-tenancy environment - Saggiehaim - Automate Everything_files/vendor.min-7db2bd11ae29fc44c51dfce4ad6641c5.js" type="text/javascript"></script>
+<script src="./Deploy Azure Sentinel to a multi-tenancy environment - Saggiehaim - Automate Everything_files/ghost.min-1e3cb8721f8cba88875c1d2c6eb575b1.js" type="text/javascript"></script>
+
+
+<div id="ember3" class="gh-app ember-view">
+    <a href="javascript:;" id="ember4" class="sr-only sr-only-focusable ember-view">Skip to main content</a>
+
+    <aside id="ember5" class="gh-alerts ember-view"><!----></aside>
+
+    <div class="gh-viewport  ">
+<!---->
+        <main class="gh-main gh-main-white" role="main">
+                <section id="ember1008" class="gh-editor gh-view ember-view">
+        <header class="gh-editor-header br2 pe-none  ">
+            <div class="flex items-center pe-auto">
+                    <div class="f8 fw3 lh-copy tracked-2 ma0 pa0 h9 br b--lightgrey pl3 pr4 flex items-center br2 br--left bg-white">
+                        <a href="https://www.saggiehaim.net/ghost/#/posts/?type=published" id="ember1009" class="blue link fw4 flex items-center ember-view">
+                            <svg viewBox="0 0 48 48" class="w3 fill-blue mr1 nudge-right--2"><path fill="#010101" d="M37.802 46.247L12.376 24 37.801 1.753A1 1 0 1036.484.247l-26.286 23a1.004 1.004 0 00.001 1.506l26.286 23a.997.997 0 001.411-.095 1 1 0 00-.094-1.411z"></path></svg>
+                            Posts
+                        </a>
+                    </div>
+                <div class="flex items-center pl4 pr4 f8 nudge-left--1 h9 br2 br--right bg-white">
+                    <span class="fw4 midgrey-l2">
+                        <div>
+        Published
+<!----></div>
+                    </span>
+                </div>
+            </div>
+
+<!---->
+            <section class="view-actions br2 bg-white" style="pointer-events: auto">
+                        <div id="ember1010" class="gh-publishmenu ember-view">    
+      <div id="ember1012" class="ember-view ember-basic-dropdown-trigger  gh-btn gh-btn-outline gh-publishmenu-trigger" role="button" tabindex="0" data-ebd-id="ember1011-trigger" aria-owns="ember-basic-dropdown-content-ember1011" aria-expanded="false">
+    
+        <span>Update <svg viewBox="0 0 48 48"><path fill="#010101" d="M47.658 10.104a.999.999 0 00-1.411.095L24 35.624 1.753 10.2a1 1 0 00-1.506 1.316l23 26.285a.999.999 0 001.506-.001l23-26.285a1 1 0 00-.095-1.411z"></path></svg></span>
+    
+  </div>
+
+
+      <div id="ember-basic-dropdown-content-ember1011" class="ember-basic-dropdown-content-placeholder" style="display: none;"></div>
+
+
+
+
+<!----></div>
+
+                <button class="post-settings" title="Settings" type="button" data-ember-action="" data-ember-action-1013="1013">
+                    <svg viewBox="0 0 24 24"><path d="M8.156 23.988c-.676 0-1.323-.25-1.822-.704a2.702 2.702 0 01-.883-2.128l.072-1.404a1.21 1.21 0 00-1.144-1.269l-.062-.002c-.021 0-.041 0-.062.002l-1.401.071a2.698 2.698 0 01-1.953-.692 2.692 2.692 0 01-.892-1.871c-.043-.817.281-1.6.887-2.149l1.042-.94a1.207 1.207 0 000-1.796L.896 10.16a2.687 2.687 0 01-.885-1.874 2.708 2.708 0 012.834-2.837l1.402.071a1.209 1.209 0 001.271-1.269l-.067-1.406A2.712 2.712 0 018.03.011l.129-.003c.76 0 1.489.323 2.001.886l.941 1.039a1.2 1.2 0 00.835.399l.066.002a1.187 1.187 0 00.892-.398l.95-1.042a2.689 2.689 0 011.871-.887l.136-.003a2.707 2.707 0 012.707 2.847l-.071 1.4a1.21 1.21 0 001.146 1.267l.061.002.057-.001 1.4-.071.138-.003c.672 0 1.316.249 1.815.702.536.486.851 1.152.887 1.874a2.7 2.7 0 01-.889 2.143l-1.042.94a1.2 1.2 0 00-.396.836 1.2 1.2 0 00.396.958l1.042.941c.537.485.853 1.15.89 1.873a2.687 2.687 0 01-.695 1.953 2.72 2.72 0 01-2.015.892l-.131-.003-1.402-.071-.066-.002c-.302 0-.58.108-.806.311a1.194 1.194 0 00-.397.96l.071 1.4a2.698 2.698 0 01-.708 1.953 2.69 2.69 0 01-2.011.882c-.75 0-1.474-.321-1.986-.88l-.944-1.044a1.213 1.213 0 00-1.795 0l-.946 1.042a2.72 2.72 0 01-2.005.883zm-3.839-7.006a2.712 2.712 0 012.704 2.848l-.072 1.4a1.205 1.205 0 001.206 1.26l.059-.001a1.2 1.2 0 00.837-.394l.944-1.04a2.705 2.705 0 012.008-.892c.766 0 1.499.325 2.012.892l.941 1.041c.226.247.552.389.896.389l.049-.001a1.21 1.21 0 001.152-1.262l-.071-1.395a2.688 2.688 0 01.89-2.149 2.697 2.697 0 011.954-.694l1.399.071.069.002a1.2 1.2 0 00.889-.399c.217-.24.327-.55.311-.872a1.199 1.199 0 00-.397-.836l-1.042-.94a2.713 2.713 0 010-4.022l1.042-.94c.27-.244.414-.592.396-.956a1.2 1.2 0 00-.396-.837 1.203 1.203 0 00-.809-.313l-.062.002-1.399.071a2.95 2.95 0 01-.27-.001 2.71 2.71 0 01-2.568-2.84l.071-1.401a1.2 1.2 0 00-.397-.958 1.176 1.176 0 00-.802-.312l-.068.002a1.197 1.197 0 00-.837.397l-.948 1.04a2.703 2.703 0 01-2.01.892l-.138-.003a2.691 2.691 0 01-1.871-.891L9.05 1.902a1.213 1.213 0 00-.894-.394l-.057.001a1.21 1.21 0 00-1.15 1.265l.067 1.4A2.708 2.708 0 014.17 7.018l-1.399-.07-.057-.002a1.21 1.21 0 00-1.205 1.266c.016.322.156.619.395.836l1.041.945a2.713 2.713 0 01-.002 4.021l-1.041.94c-.27.244-.414.594-.395.958a1.204 1.204 0 001.205 1.145c.021 0 .043 0 .064-.002l1.401-.071.14-.002z"></path><path d="M12 17.25c-2.895 0-5.25-2.355-5.25-5.25S9.105 6.75 12 6.75s5.25 2.355 5.25 5.25-2.355 5.25-5.25 5.25zm0-9c-2.068 0-3.75 1.682-3.75 3.75s1.682 3.75 3.75 3.75 3.75-1.682 3.75-3.75S14.068 8.25 12 8.25z"></path></svg>
+                </button>
+            </section>
+        </header>
+
+        <div id="ember1014" class="gh-koenig-editor relative w-100 vh-100 overflow-x-hidden overflow-y-auto z-0 ember-view"><div class="gh-koenig-editor-pane flex flex-column mih-100">
+    <textarea tabindex="1" placeholder="Post Title" id="ember1015" class="gh-editor-title ember-text-area gh-input ember-view" style="resize: none; height: 111px;"></textarea>
+
+    <article id="ember1016" class="koenig-editor w-100 flex-grow relative center mb0 mt0 ember-view" data-kg-has-link-toolbar="true"><div class="koenig-editor__editor-wrapper" data-kg="editor-wrapper">
+    <div class="koenig-editor__editor __mobiledoc-editor" data-gramm="false" data-kg="editor" spellcheck="true" contenteditable="true" data-placeholder="Begin writing your post..." style="caret-color: transparent;"><div>‌<div contenteditable="false" class="__mobiledoc-card"><div id="koenig-editor-card-ember1061">        <div id="ember1062" class="ember-view"><div style="cursor: default; caret-color: auto; " id="ember1063" class="pt2 pb2 pl3 nl3 pr3 nr3 ba b--white relative kg-card-left-border kg-card-hover koenig-card-markdown-rendered kg-card-selected ember-view">    <div id="ember1064" class="sticky-element-container ember-view"><div id="ember1065" class="sticky-element__trigger sticky-element__trigger--top ember-view"></div>
+
+<div class="
+  sticky-element
+  sticky-element--sticky
+  sticky-element--sticky-top
+  " style="position: fixed; top: 24px; width: 738px">
+
+  
+        <svg viewBox="0 0 20 20" class="ih5 absolute stroke-midgrey-l2 mt1 nl15 kg-icon"><path stroke="#9BAEB8" stroke-linecap="round" stroke-linejoin="round" d="M2 14V6l4 4 4-4v8m6-7.93v7.916M13.5 11.5l2.48 2.525L18.5 11.5" fill="none" fill-rule="evenodd"></path></svg>
+    
+
+</div>
+
+  <div id="ember1066" class="sticky-element__trigger sticky-element__trigger--bottom ember-view"></div>
+</div>
+
+
+        <div id="ember1110" class="ember-view">
+            <div id="ember1111" class="ember-view">
+</div>
+
+            <div id="ember1112" class="gh-markdown-editor ember-view">
+                <textarea placeholder="" autofocus="" id="ember1113" class="ember-text-area ember-view" style="display: none;">
+</textarea><div class="editor-toolbar" style="position: fixed; left: 479px; width: 762px"><a title="Bold (Cmd-B)" tabindex="-1" class="fa fa-bold"></a><a title="Italic (Cmd-I)" tabindex="-1" class="fa fa-italic"></a><a title="Heading (Cmd-H)" tabindex="-1" class="fa fa-header"></a><i class="separator">|</i><a title="Quote (Cmd-&#39;)" tabindex="-1" class="fa fa-quote-left"></a><a title="Generic List (Cmd-L)" tabindex="-1" class="fa fa-list-ul"></a><a title="Numbered List (Cmd-⌥-L)" tabindex="-1" class="fa fa-list-ol"></a><i class="separator">|</i><a title="Create Link (Cmd-K)" tabindex="-1" class="fa fa-link"></a><a title="Upload Image(s)" tabindex="-1" class="fa fa-picture-o"></a><a title="Add Image from Unsplash" tabindex="-1" class="fa fa-camera"></a><i class="separator">|</i><a title="Spellcheck (Ctrl-⌥-S)" tabindex="-1" class="fa fa-check"></a><a title="Markdown Guide" tabindex="-1" class="fa fa-question-circle"></a></div><div class="CodeMirror cm-s-paper CodeMirror-wrap CodeMirror-focused"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 13064.2px; left: 0px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;" tabindex="0"></textarea></div><div class="CodeMirror-vscrollbar" tabindex="-1" cm-not-content="true" style="bottom: 0px; width: 18px; pointer-events: none;"><div style="min-width: 1px; height: 0px;"></div></div><div class="CodeMirror-hscrollbar" tabindex="-1" cm-not-content="true" style="height: 18px; pointer-events: none;"><div style="height: 100%; min-height: 1px; width: 0px;"></div></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 30px; min-height: 13091px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-cursors" style="visibility: hidden;"><div class="CodeMirror-cursor" style="left: 0px; top: 13060.2px; height: 22.3984px;">&nbsp;</div></div><div class="CodeMirror-code" role="presentation" style="text-rendering: auto;"><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">For those of you who don't know Azure Sentinel, Azure Sentinel is a scalable, cloud-native, security information event management (SIEM) and security orchestration automated response (SOAR) solution.</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">Azure Sentinel delivers intelligent security analytics and threat intelligence across the enterprise, providing a single solution for alert detection, threat visibility, proactive hunting, and threat response.</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">The challenge begins when you have a multi-tenancy environment to monitor, as you need to jump from one tenant to keep up with the incidents.</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">The deployment and maintenance of Azure Sentinel content are time-consuming, and you can't run cross workspace queries between tenants.</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">But fear not, you can use Azure Lighthouse to ease the management and operation.</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-header cm-header-2">## What is Azure Lighthouse</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">Azure Lighthouse enables cross- and multi-tenant management, allowing for higher automation, scalability, and enhanced governance across resources and tenants.</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">With Azure Lighthouse, you can "expose" resource groups (or subscriptions) with the resources inside, in our case Azure Sentinel and Log Analytics workspaces from all of your tenants to your central management.</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">There are no additional costs associated with using Azure Lighthouse to manage Azure resources, and any Azure customer or partner can use Azure Lighthouse.</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">Azure Lighthouse is also secured by design, as it delegating permissions to Users and/or groups from the central tenant to the resources in other tenants, which means you use the same account and can see and interact only with what exposed to you.</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-image cm-image-marker">!</span><span class="cm-image cm-image-alt-text cm-link">[High Level diagram of Azure Sentinel with Azure Lighthouse]</span><span class="cm-string cm-url">( </span><span class="cm-string cm-url cm-link">https://github.com/SaggehaimBlog/Ghost-Azure/blob/master/content/images/azurelighthouse/AzureLighthouse.png?raw=true</span><span class="cm-string cm-url"> "Image of Azure Sentinel in a multi-tenant environment using Azure Lighthouse")</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-header cm-header-2">## Prerequisites</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">Before we can start, there are a few prerequisites that we need to meet:</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable-2">+ This deployment must be done by a non-guest account in the customer's tenant who has the Owner built-in role for the subscription being onboarded (or which contains the resource groups that are being onboarded)</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable-2">+ The tenant ID of the service provider's tenant (where you will be managing the customer's resources)</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable-2">+ The tenant ID of the customer's tenant (which will have resources managed by the service provider)</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable-2">+ The subscription IDs for each specific subscription in the customer's tenant that will be managed by the service provider (or that contains the resource group(s) that will be managed by the service provider).</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">After fulfilling those prerequisites, we can continue with our guide.</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-header cm-header-2">## Planning our deployment</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-header cm-header-3">### Permissions</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">When deploying Lighthouse, we are delegating permissions to our users.</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">planning before will save us the time later</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">| <span class="cm-strong">**Role**</span> | <span class="cm-strong">**Create and Run Playbook**</span> | <span class="cm-strong">**Create and edit workbooks, analytic rules, and other Azure Sentinel resources**</span> | <span class="cm-strong">**Manage incidents (dismiss, assign etc.)**</span> | <span class="cm-strong">**View data, incidents, dashboards and other Azure Sentinel resources**</span> |</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">|:---|:---:|:---:|:---:|:---:|</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">| Azure Sentinel reader | -- | -- | -- | X |</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">| Azure Sentinel responder | -- | -- | X | X |</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">| Azure Sentinel contributor | -- | X | X | X |</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">| Azure Sentinel contributor + Logic App contributor | X | X | X | X |</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-header cm-header-4">#### Role Definitions</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">To define authorizations, you'll need to know the ID values for each user, user group, or service principal in the service provider tenant to which you want to grant access.</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">You'll also need the role definition ID for each built-in role you want to assign.</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">If you don't have them already, you can retrieve them by running the commands below from within PowerShell:</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment">```PowerShell</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment">Get-AzRoleDefinition | select Name, ID</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment">```</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">To make it easy, here are the ID that we need:</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">| Role Name | Role ID |</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">|---|---|</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">| Reader | <span class="cm-link">acdd72a7</span>-3385-48ef-bd42-f606fba81ae7 |</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">| Azure Sentinel Reader | <span class="cm-link">8d289c81</span>-5878-46d4-8554-54e1e3d8b5cb |</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">| Azure Sentinel Responder | <span class="cm-link">3e150937</span>-b8fe-4cfb-8069-0eaf05ecd056 |</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">| Azure Sentinel Contributor | <span class="cm-link">ab8e14d6</span>-4a74-4a29-9ba8-549422addade |</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">| Logic App Contributor | <span class="cm-link">87a39d53</span>-fc1b-424a-814c-f7e04687dc9e |</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">| Contributor | <span class="cm-link">b24988ac</span>-6180-42a0-ab88-20f7382dd24c |</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">You will use it later in this guide.</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-header cm-header-3">### Security Groups</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">To make management easier, I recommend using Azure AD security groups for each role.</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">This gives you the flexibility to add or remove individual users to the group that has access so that you don't have to repeat the onboarding process to make user changes.</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">You can assign roles to a service principal, which can be useful for automation scenarios.</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">I will use the following groups in this post:</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">| Group Name | Permissions | Description |</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">|---|---|---|</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">| Sentinel_IAC_SG | Contributor | Group that will hold the Service Account that will run the automation's |</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">| SOC_L1_SG | Azure Sentinel Responder | Group for the SOC L1 team, they usually the first to respond to security incidents |</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">| SOC_L2_SG | Azure Sentinel Contributor, Logic App Contributor | Group for the SOC L2, the security analysts. They will deal with escalations, build detection rules and more. |</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">| Executives_SG | Azure Sentinel Reader | Group for the executives, so they can see the security status of the organization. |</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-header cm-header-3">### Optional - Deploy using PowerShell</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">If you want to deploy the templates using PowerShell, you will first need to set up a session to Azure using PowerShell.</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">Here how:</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-header cm-header-4">#### Az Module</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">Azure PowerShell Az module is a PowerShell module for interacting with Azure.</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">Az offers shorter commands, improved stability, and cross-platform support.</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">To install it, you run the following command:</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment">```PowerShell</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment">Install-Module az -AllowClobber -Scope CurrentUser</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment">```</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-header cm-header-4">#### Connect to Azure with PowerShell</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">You need to get your Tenant ID and Subscription ID from the Azure Portal.</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">With this information, you can use the <span class="cm-comment">`Connect-AzAccount`</span> to create a session with Azure:</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment">```PowerShell</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment">$TenantID = 'XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX'</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment">$SubscriptionID = 'XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX'</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment">Connect-AzAccount -TenantId $TenantID -SubscriptionId $SubscriptionID</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment">```</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">Now you can interact with Azure from PowerShell.</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-header cm-header-2">## Deploying Azure Log Analytics and Azure Sentinel</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">If you don't already have Azure Log Analytics and Azure Sentinel deployed, you will need to deploy it.</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">I've created an ARM Template to help you with it:</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment">```json</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment">{</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-comment">"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-comment">"contentVersion": "1.0.0.0",</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-comment">"parameters": {</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-comment">"workspaces_name": {</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-comment">"type": "String"</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-comment">},</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-comment">"retentionInDays": {</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-comment">"defaultValue": "90",</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-comment">"type": "String"</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-comment">},</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-comment">"location": {</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-comment">"type": "string",</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-comment">"defaultValue": "[resourceGroup().location]",</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-comment">"metadata": {</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-comment">"description": "Location for all resources."</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-comment">}</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-comment">}</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-comment">},</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-comment">"variables": {</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-comment">"solutions_SecurityInsights_name": "[concat('SecurityInsights(',parameters('workspaces_name'),')')]"</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-comment">},</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-comment">"resources": [</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-comment">{</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-comment">"name": "[parameters('workspaces_name')]",</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-comment">"type": "Microsoft.OperationalInsights/workspaces",</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-comment">"apiVersion": "2015-11-01-preview",</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-comment">"location": "[parameters('location')]",</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-comment">"properties": {</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-comment">"sku": {</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-comment">"name": "pergb2018"</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-comment">},</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-comment">"features": {</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-comment">"searchVersion": 1</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-comment">},</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-comment">"retentionInDays": "[parameters('retentionInDays')]"</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-comment">}</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-comment">},</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-comment">{</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-comment">"type": "Microsoft.OperationsManagement/solutions",</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-comment">"apiVersion": "2015-11-01-preview",</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-comment">"name": "[variables('solutions_SecurityInsights_name')]",</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-comment">"location": "[parameters('location')]",</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-comment">"dependsOn": [</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-comment">"[resourceId('microsoft.operationalinsights/workspaces', parameters('workspaces_name'))]"</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-comment">],</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-comment">"plan": {</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-comment">"name": "[variables('solutions_SecurityInsights_name')]",</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-comment">"promotionCode": "",</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-comment">"product": "OMSGallery/SecurityInsights",</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-comment">"publisher": "Microsoft"</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-comment">},</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-comment">"properties": {</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-comment">"workspaceResourceId": "[resourceId('microsoft.operationalinsights/workspaces', parameters('workspaces_name'))]",</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-comment">"containedResources": [</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-comment">]</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-comment">}</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-comment">}</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-comment">]</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment">}</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment">```</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">You can deploy it using either PowerShell or Azure Portal:</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-header cm-header-2">## Deploy Using Azure Portal</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">To deploy the template using Azure Portal, first navigate to <span class="cm-link">[Azure Portal]</span><span class="cm-string cm-url">(portal.azure.com)</span> and sign in.</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">Then on the top search bar, search for "Deploy a custom template."</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-image cm-image-marker">!</span><span class="cm-image cm-image-alt-text cm-link">[Navigating to custom deployment]</span><span class="cm-string cm-url">( </span><span class="cm-string cm-url cm-link">https://github.com/SaggehaimBlog/Ghost-Azure/blob/master/content/images/azurelighthouse/azureportalsearch.png?raw=true</span><span class="cm-string cm-url"> "Image of Azure Portal search with a Deploy search, pointing on Deploy a Custom Template")</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">On the Custom deployment page, click on <span class="cm-strong">**Build your own template in the editor**</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-image cm-image-marker">!</span><span class="cm-image cm-image-alt-text cm-link">[Build your own template]</span><span class="cm-string cm-url">( </span><span class="cm-string cm-url cm-link">https://github.com/SaggehaimBlog/Ghost-Azure/blob/master/content/images/azurelighthouse/customdeployment.png?raw=true</span><span class="cm-string cm-url"> "Image of Azure Portal Custom deployment page")</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">Next, you will need to replace the empty template with the template I provided.</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">The template will add the resources we want to deploy.</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-image cm-image-marker">!</span><span class="cm-image cm-image-alt-text cm-link">[Editing the template]</span><span class="cm-string cm-url">( </span><span class="cm-string cm-url cm-link">https://github.com/SaggehaimBlog/Ghost-Azure/blob/master/content/images/azurelighthouse/savetemplate.png?raw=true</span><span class="cm-string cm-url"> "Image of Azure Portal editing a template")</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">Click <span class="cm-strong">**save**</span> when you finished.</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">Last, we need to provide the info for the template.</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">the information we will need to provide is:</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable-2">+ </span><span class="cm-strong cm-variable-2">**Subscription**</span><span class="cm-variable-2"> - The name of the subscription we want to deploy the resources to</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable-2">+ </span><span class="cm-strong cm-variable-2">**Resource Group**</span><span class="cm-variable-2"> - The name of the Resources group that we want to deploy the resources to (Create new if you didn't created one)</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable-2">+ </span><span class="cm-strong cm-variable-2">**Workspaces_name**</span><span class="cm-variable-2"> - The name of the Azure Log Analytics workspace</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-image cm-image-marker">!</span><span class="cm-image cm-image-alt-text cm-link">[Fill in the information needed]</span><span class="cm-string cm-url">( </span><span class="cm-string cm-url cm-link">https://github.com/SaggehaimBlog/Ghost-Azure/blob/master/content/images/azurelighthouse/deploytemplate.png?raw=true</span><span class="cm-string cm-url"> "Image of Azure Portal with the deployment scope")</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">Click on <span class="cm-strong">**Review + create**</span> to deploy the resources.</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-header cm-header-2">## Deploy Using PowerShell</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">To deploy the resources using PowerShell, make sure you first have an active session with PowerShell.</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-header cm-header-3">### Creating a Resource group</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">With the <span class="cm-comment">`New-AzResourceGroup`</span> you can create a new resource group.</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">Inside the Resource group, we will deploy the Log Analytics Workspace and Sentinel, and this is the Resource group we will delegate.</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-quote cm-quote-1">&gt; Every resource in Azure requires a location to be deployed to.</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-quote cm-quote-1">&gt; The location is referring to the Datacenter region.</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-quote cm-quote-1">&gt; In this Guide, I will use the West Europe region.</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment">```PowerShell</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment">New-AzResourceGroup -Name "Sentinel-RG" -Location "WestEurope"</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment">```</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-quote cm-quote-1">&gt; You will get asked for the Log Analytics Workspace name.</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-header cm-header-3">### Deploying the template</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">Because this is an ARM template deployment, We can</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">use the <span class="cm-comment">`New-AzResourceGroupDeployment`</span> cmdlet.</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment">```PowerShell</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment">New-AzResourceGroupDeployment -ResourceGroupName "Sentinel-RG" -TemplateFile .\DeploySentinel.json</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment">```</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-header cm-header-2">## Deploy Azure Lighthouse</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">To deploy Azure Lighthouse, navigate again to "Deploy a custom template."</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">On the Custom deployment page, click on <span class="cm-strong">**Build your own template in the editor.**</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">Next, you will need to replace the empty template, but this time with the following:</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment">```json</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment">{</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-comment">"$schema": "https://schema.management.azure.com/schemas/2018-05-01/subscriptionDeploymentTemplate.json#",</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-comment">"contentVersion": "1.0.0.0",</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-comment">"parameters": {</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-comment">"mspOfferName": {</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-comment">"type": "string",</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-comment">"metadata": {</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-comment">"description": "Specify the name of the offer from the Managed Service Provider"</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-comment">}</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-comment">},</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-comment">"mspOfferDescription": {</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-comment">"type": "string",</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-comment">"metadata": {</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-comment">"description": "Name of the Managed Service Provider offering"</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-comment">}</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-comment">},</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-comment">"managedByTenantId": {</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-comment">"type": "string",</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-comment">"metadata": {</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-comment">"description": "Specify the tenant id of the Managed Service Provider"</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-comment">}</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-comment">},</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-comment">"authorizations": {</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-comment">"type": "array",</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-comment">"metadata": {</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-comment">"description": "Specify an array of objects, containing tuples of Azure Active Directory principalId, a Azure roleDefinitionId, and an optional principalIdDisplayName. The roleDefinition specified is granted to the principalId in the provider's Active Directory and the principalIdDisplayName is visible to customers."</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-comment">}</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-comment">},</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-comment">"rgName": {</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-comment">"type": "string"</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-comment">}</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-comment">},</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-comment">"variables": {</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-comment">"mspRegistrationName": "[guid(parameters('mspOfferName'))]",</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-comment">"mspAssignmentName": "[guid(parameters('rgName'))]"</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-comment">},</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-comment">"resources": [</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-comment">{</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-comment">"type": "Microsoft.ManagedServices/registrationDefinitions",</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-comment">"apiVersion": "2019-06-01",</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-comment">"name": "[variables('mspRegistrationName')]",</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-comment">"properties": {</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-comment">"registrationDefinitionName": "[parameters('mspOfferName')]",</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-comment">"description": "[parameters('mspOfferDescription')]",</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-comment">"managedByTenantId": "[parameters('managedByTenantId')]",</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-comment">"authorizations": "[parameters('authorizations')]"</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-comment">}</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-comment">},</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-comment">{</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-comment">"type": "Microsoft.Resources/deployments",</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-comment">"apiVersion": "2018-05-01",</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-comment">"name": "rgAssignment",</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-comment">"resourceGroup": "[parameters('rgName')]",</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-comment">"dependsOn": [</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-comment">"[resourceId('Microsoft.ManagedServices/registrationDefinitions/', variables('mspRegistrationName'))]"</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-comment">],</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-comment">"properties":{</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-comment">"mode":"Incremental",</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-comment">"template":{</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-comment">"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-comment">"contentVersion": "1.0.0.0",</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-comment">"parameters": {},</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-comment">"resources": [</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-comment">{</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-comment">"type": "Microsoft.ManagedServices/registrationAssignments",</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-comment">"apiVersion": "2019-06-01",</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-comment">"name": "[variables('mspAssignmentName')]",</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-comment">"properties": {</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-comment">"registrationDefinitionId": "[resourceId('Microsoft.ManagedServices/registrationDefinitions/', variables('mspRegistrationName'))]"</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-comment">}</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-comment">}</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-comment">]</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-comment">}</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-comment">}</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-comment">}</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-comment">],</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-comment">"outputs": {</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-comment">"mspOfferName": {</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-comment">"type": "string",</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-comment">"value": "[concat('Managed by', ' ', parameters('mspOfferName'))]"</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-comment">},</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-comment">"authorizations": {</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-comment">"type": "array",</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-comment">"value": "[parameters('authorizations')]"</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-comment">}</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-comment">}</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment">}</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment">```</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">click on <span class="cm-strong">**save**</span> when you finished.</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">On the next page, it will ask you to fill in the parameters. Click on <span class="cm-strong">**Edit parameters**</span>.</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-image cm-image-marker">!</span><span class="cm-image cm-image-alt-text cm-link">[Editing the parameters]</span><span class="cm-string cm-url">( </span><span class="cm-string cm-url cm-link">https://github.com/SaggehaimBlog/Ghost-Azure/blob/master/content/images/azurelighthouse/editparamters.png?raw=true</span><span class="cm-string cm-url"> "Image of Azure Portal editing a template")</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">in this screen, you will need to copy the following JSON file:</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment">```json</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment">{</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-comment">"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-comment">"contentVersion": "1.0.0.0",</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-comment">"parameters": {</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-comment">"mspOfferName": {</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-comment">"value": "SOC Central Services"</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-comment">},</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-comment">"rgName": {</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-comment">"value": "Sentinel-RG"</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-comment">},</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-comment">"mspOfferDescription": {</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-comment">"value": "SOC Central Managed Services"</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-comment">},</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-comment">"managedByTenantId": {</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-comment">"value": "XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX"</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-comment">},</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-comment">"authorizations": {</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-comment">"value": [</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-comment">{</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-comment">"principalId": "XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX",</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-comment">"principalIdDisplayName": "Sentinel_IAC_SG",</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-comment">"roleDefinitionId": "b24988ac-6180-42a0-ab88-20f7382dd24c"</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-comment">},</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-comment">{</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-comment">"principalId": "XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX",</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-comment">"principalIdDisplayName": "SOC_L1_SG",</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-comment">"roleDefinitionId": "3e150937-b8fe-4cfb-8069-0eaf05ecd056"</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-comment">},</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-comment">{</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-comment">"principalId": "XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX",</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-comment">"principalIdDisplayName": "SOC_L2_SG",</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-comment">"roleDefinitionId": "ab8e14d6-4a74-4a29-9ba8-549422addade"</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-comment">},</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-comment">{</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-comment">"principalId": "XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX",</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-comment">"principalIdDisplayName": "SOC_L2_SG",</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-comment">"roleDefinitionId": "87a39d53-fc1b-424a-814c-f7e04687dc9e"</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-comment">},</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-comment">{</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-comment">"principalId": "XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX",</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-comment">"principalIdDisplayName": "Executives_SG",</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-comment">"roleDefinitionId": "acdd72a7-3385-48ef-bd42-f606fba81ae7"</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-comment">}</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-comment">]</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-comment">}</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-comment">}</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment">}</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment">```</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-image cm-image-marker">!</span><span class="cm-image cm-image-alt-text cm-link">[Editing the parameters]</span><span class="cm-string cm-url">( </span><span class="cm-string cm-url cm-link">https://github.com/SaggehaimBlog/Ghost-Azure/blob/master/content/images/azurelighthouse/saveeditparamaters.png?raw=true</span><span class="cm-string cm-url"> "Image of Azure Portal editing a template")</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">Click <span class="cm-strong">**Save**</span> when you finish copying the script.</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">You'll be sent back to the previous page, but this time, you will have all the parameters filled in from the template lets have a quick overview, so you will understand what you are deploying:</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-image cm-image-marker">!</span><span class="cm-image cm-image-alt-text cm-link">[Lighthouse deployment scope]</span><span class="cm-string cm-url">( </span><span class="cm-string cm-url cm-link">https://github.com/SaggehaimBlog/Ghost-Azure/blob/master/content/images/azurelighthouse/lighthouseparameters.png?raw=true</span><span class="cm-string cm-url"> "Image of Azure Portal editing a template")</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable-2">+ </span><span class="cm-strong cm-variable-2">**Subscription**</span><span class="cm-variable-2">: The Subscription where we deployed our Log Analytics and Sentinel.</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable-2">+ </span><span class="cm-strong cm-variable-2">**Region**</span><span class="cm-variable-2">: The Region where we deployed our Log Analytics and Sentinel</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable-2">+ </span><span class="cm-strong cm-variable-2">**Msp Offer Name**</span><span class="cm-variable-2">: The name of the Managed service provider name, you will use it later, choose a good name</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable-2">+ </span><span class="cm-strong cm-variable-2">**Msp Offer Description**</span><span class="cm-variable-2">: The description of the Managed service provider</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable-2">+ </span><span class="cm-strong cm-variable-2">**Managed By Tenant Id**</span><span class="cm-variable-2">: The Tenant Id you delegate permissions to.</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable-2">+ </span><span class="cm-strong cm-variable-2">**Authorizations**</span><span class="cm-variable-2">: The Identities from the Managed services Tenant, and the RBAC roles they will get.</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable-2">+ </span><span class="cm-strong cm-variable-2">**Resource Group**</span><span class="cm-variable-2">: The name of the Resource Group we want to delegate permissions to.</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">Now, you can press on <span class="cm-strong">**Review + Create**</span> button.</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">If all validations pass, you'll be able to deploy the template and successfully onboard your resource group.</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-image cm-image-marker">!</span><span class="cm-image cm-image-alt-text cm-link">[Validation passed and we can deploy the template]</span><span class="cm-string cm-url">( </span><span class="cm-string cm-url cm-link">https://github.com/SaggehaimBlog/Ghost-Azure/blob/master/content/images/azurelighthouse/validationpass.png?raw=true</span><span class="cm-string cm-url"> "Image of Azure Portal editing a template")</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-header cm-header-2">## Deploy Using PowerShell</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">This time we will have also provide the TemplateParameterFile.</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">We use the same <span class="cm-comment">`New-AzResourceGroupDeployment`</span> cmdlet.</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment">```PowerShell</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment">New-AzResourceGroupDeployment -ResourceGroupName "Sentinel-RG" -TemplateFile .\rgDelegatedResourceManagement.json -TemplateParameterFile .\rgDelegatedResourceManagement.parameters.json</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment">```</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-quote cm-quote-1">&gt;</span><span class="cm-strong cm-quote cm-quote-1">**MAKE SURE YOU ARE CONNECTED TO THE RELEVANT TENANT AND SUBSCRIPTION BEFORE DEPLOYMENT!**</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-header cm-header-2">## Verify your deployment</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">To verify you deployed everything as expected, you have a few things you can do.</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-quote cm-quote-1">&gt;It can take up to 10 mins after the deployment completed to see the changes</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-header cm-header-3">### From the manged tenant</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">From the manged tenant, you can navigate to <span class="cm-strong">**Service providers**</span>.</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">In the <span class="cm-strong">**Service providers**</span>, you can navigate to <span class="cm-strong">**Delegations**</span> and see all the delegations in your tenant.</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-header cm-header-3">### From the central tenant</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">From the central tenant, you can navigate to <span class="cm-strong">**My Customers**</span>.</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">In the <span class="cm-strong">**My Customers**</span> page, you can navigate to <span class="cm-strong">**Delegations**</span> or <span class="cm-strong">**Customers**</span> and see all the delegations in your tenant.</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-header cm-header-2">## Summary</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">Azure Lighthouse ease the management of a multi-tenancy environment, and with Microsoft adding a lot of new features for Multiple Azure Sentinel workspaces, Azure Lighthouse is a must.</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">After reading this post, you will know more about Azure Lighthouse and the benefit of using it.</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">You will know how to plan a successful deployment and, of course, how to deploy it.</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre></div></div></div></div></div><div style="position: absolute; height: 30px; width: 1px; border-bottom: 0px solid transparent; top: 13091px;"></div><div class="CodeMirror-gutters" style="display: none; height: 13121px;"></div></div></div><div class="editor-preview-side"></div>
+            
+
+<div style="display:none">
+    <span accept="image/gif,image/jpg,image/jpeg,image/png,image/svg+xml" id="ember1114" class="x-file-input ember-view"><input id="wps4cf" class="x-file--input" multiple="" tabindex="0" accept="image/gif,image/jpg,image/jpeg,image/png,image/svg+xml" type="file">
+<label for="wps4cf">
+    Upload
+</label>
+</span>
+</div>
+
+<!---->
+<!----></div>
+
+            <div id="ember1115" class="ember-view">
+</div>
+
+<!---->
+<!---->        
+</div>
+
+<!---->
+
+<!----></div></div>
+</div></div>‌</div><p><br></p></div>
+</div>
+
+<div style="left: -1000px; pointer-events: none !important" id="ember1017" class="absolute z-999 ember-view"><ul class="kg-action-bar inline-flex items-center pa0 ma0 pl1 pr1 nl1 list br3 shadow-2 bg-darkgrey-d1 white sans-serif f8 fw6 tracked-2 z-999 relative o-0 pop-down" data-kg-toolbar="true" data-kg-allow-clickthrough="true">
+    
+    <li class="ma0 lh-solid">
+        <button title="Bold" class="dib dim-lite link h9 w9 nudge-top--1" type="button" data-ember-action="" data-ember-action-1019="1019">
+            <svg viewBox="0 0 16 16" class="fill-white w4 h4"><path d="M7.412 6.217h1.176c1.276 0 2.236-.773 2.236-1.608 0-.835-.96-1.609-2.236-1.609H5.765v3.217h1.647zM5.765 13H9.47c1.405 0 2.53-1.08 2.53-2.391s-1.124-2.392-2.53-2.392H5.766V13zm-2 0V3H3a1 1 0 010-2h5.588c2.297 0 4.236 1.563 4.236 3.609 0 .877-.357 1.666-.945 2.28C13.15 7.665 14 9.037 14 10.61 14 13.043 11.963 15 9.47 15H3a1 1 0 010-2h.765z" fill="#FFF"></path></svg>
+        </button>
+    </li>
+    <li class="ma0 lh-solid">
+        <button title="Italic" class="dib dim-lite link h9 w9 nudge-top--1" type="button" data-ember-action="" data-ember-action-1020="1020">
+            <svg viewBox="0 0 16 16" class="fill-white w4 h4"><path d="M12.15 3L6.104 13h.811a1 1 0 010 2H2a1 1 0 010-2h1.767L9.813 3H9a1 1 0 010-2h4.915a1 1 0 010 2H12.15z" fill="#FFF"></path></svg>
+        </button>
+    </li>
+        <li class="ma0 lh-solid">
+            <button title="Heading One" class="dib dim-lite link h9 w9 nudge-top--1" type="button" data-ember-action="" data-ember-action-1021="1021">
+                <svg viewBox="0 0 16 16" class="fill-white w4 h4"><path d="M4 7h8V2a1 1 0 012 0v5.897a1.165 1.165 0 010 .206V14a1 1 0 01-2 0V9H4v5a1 1 0 01-2 0V2a1 1 0 012 0v5z" fill="#FFF"></path></svg>
+            </button>
+        </li>
+        <li class="ma0 lh-solid">
+            <button title="Heading Two" class="dib dim-lite link h9 w9 nudge-top--1" type="button" data-ember-action="" data-ember-action-1022="1022">
+                <svg viewBox="0 0 16 16" class="fill-white w4 h4"><path d="M6 8h4V5.483a1 1 0 012 0V13a1 1 0 01-2 0v-3H6v3a1 1 0 01-2 0V5.483a1 1 0 012 0V8z" fill="#FFF"></path></svg>
+            </button>
+        </li>
+
+    <li class="ma0 lh-solid kg-action-bar-divider bg-darkgrey-l2 h5" role="separator"></li>
+
+        <li class="ma0 lh-solid">
+            <button title="Quote" class="dib dim-lite link h9 w9 nudge-top--1" type="button" data-ember-action="" data-ember-action-1023="1023">
+                <svg viewBox="0 0 16 16" class="fill-white w4 h4"><path d="M4 8h2a1 1 0 011 1v4a1 1 0 01-1 1H3a1 1 0 01-1-1V5.082c0-1.176.906-2.12 2.538-2.969a1 1 0 11.924 1.774c-.578.3-.993.589-1.24.847-.168.174-.222.286-.222.348V8zm9 0a1 1 0 011 1v4a1 1 0 01-1 1h-3a1 1 0 01-1-1V5.082c0-1.176.906-2.12 2.538-2.969a1 1 0 11.924 1.774c-.578.3-.993.589-1.24.847-.168.174-.222.286-.222.348V8h2z" fill="#FFF"></path></svg>
+            </button>
+        </li>
+    <li class="ma0 lh-solid">
+        <button title="Link" class="dib dim-lite link h9 w9 nudge-top--1" type="button" data-ember-action="" data-ember-action-1024="1024">
+            <svg viewBox="0 0 16 16" class="fill-white w4 h4"><path d="M6.4 11.688a1.001 1.001 0 011.385 1.444l-1.055 1.01a3.096 3.096 0 01-4.38 0l-.494-.494a3.095 3.095 0 01.001-4.377L5.07 6.058a3.096 3.096 0 014.38 0 1 1 0 01-1.415 1.414 1.097 1.097 0 00-1.551 0l-3.213 3.213a1.098 1.098 0 000 1.55l.494.494a1.102 1.102 0 001.566-.015l1.07-1.026zm3.037-7.212a1 1 0 01-1.389-1.439l1.222-1.18a3.097 3.097 0 014.379 0l.493.494c1.21 1.209 1.21 3.17.013 4.366l-3.237 3.357a3.096 3.096 0 01-4.38 0A1.001 1.001 0 017.954 8.66a1.09 1.09 0 001.537.013l3.238-3.358a1.096 1.096 0 000-1.55l-.494-.493a1.1 1.1 0 00-1.563.012L9.437 4.476z" fill="#FFF"></path></svg>
+        </button>
+    </li>
+
+</ul>
+</div>
+
+<div style="left: -1000px; pointer-events: none !important" id="ember1025" class="absolute z-999 ember-view"><!----></div>
+
+<!---->
+<div data-kg="plus-menu" style="top: 0px" id="ember1026" class="absolute ember-view"><!---->
+<!----></div>
+
+<div style="top: 19455.015625px" id="ember1027" class="absolute ember-view"><!----></div>
+
+<!----></article>
+</div><div class="erd_scroll_detection_container erd_scroll_detection_container_animation_active" style="visibility: hidden; display: inline; width: 0px; height: 0px; z-index: -1; overflow: hidden; margin: 0px; padding: 0px;"><div dir="ltr" class="erd_scroll_detection_container" style="position: absolute; flex: 0 0 auto; overflow: hidden; z-index: -1; visibility: hidden; width: 100%; height: 100%; left: 0px; top: 0px;"><div class="erd_scroll_detection_container" style="position: absolute; flex: 0 0 auto; overflow: hidden; z-index: -1; visibility: hidden; inset: -1px 0px 0px -1px;"><div style="position: absolute; flex: 0 0 auto; overflow: scroll; z-index: -1; visibility: hidden; width: 100%; height: 100%;"><div style="position: absolute; left: 0px; top: 0px; width: 1731px; height: 1009px;"></div></div><div style="position: absolute; flex: 0 0 auto; overflow: scroll; z-index: -1; visibility: hidden; width: 100%; height: 100%;"><div style="position: absolute; width: 200%; height: 200%;"></div></div></div></div></div></div>
+
+        <div class="absolute flex items-center br3 bg-white right-6 bottom-6">
+            <div class="midgrey-l2 f8 pl4 pr3 fw4">
+                2,503 words
+            </div>
+            <a href="https://ghost.org/faq/using-the-editor/" class="flex pa3" target="_blank"><svg viewBox="0 0 20 20" class="w4 h4 stroke-midgrey-l2"><g fill="none" fill-rule="evenodd" stroke="#343F44"><path d="M6.875 8.118c-.003-1.94.963-2.98 2.897-3.122 1.934-.143 3.042.745 3.323 2.664.282 1.92-.525 3.088-2.418 3.507-.446.088-.671.358-.677.812v.928m0 2.086c.139 0 .208.07.208.209 0 .139-.07.208-.208.208-.139 0-.208-.07-.208-.208a.204.204 0 01.208-.208" stroke-linecap="round" stroke-linejoin="round"></path><path d="M19.5 10c0-2.629-.924-4.859-2.782-6.718C14.858 1.424 12.628.5 10 .5c-2.629 0-4.859.924-6.718 2.782C1.424 5.142.5 7.372.5 10c0 2.629.924 4.859 2.782 6.718C5.142 18.576 7.372 19.5 10 19.5c2.629 0 4.859-.924 6.718-2.782 1.858-1.86 2.782-4.09 2.782-6.718z"></path></g></svg></a>
+        </div>
+
+    
+</section>
+
+<!---->
+<!---->
+<!---->
+<!---->
+<!---->
+    <div id="" class="liquid-wormhole-container">  
+</div>
+
+<!---->
+
+        </main>
+
+        <aside id="ember13" class="gh-notifications ember-view"><!----></aside>
+
+        <div id="ember14" class="content-cover ember-view"></div>
+
+        <nav id="ember15" class="gh-mobile-nav-bar ember-view"><a href="https://www.saggiehaim.net/ghost/#/editor/post/" id="ember16" class="ember-view"><svg viewBox="0 0 24 24"><path d="M.748 24a.755.755 0 01-.531-.22.754.754 0 01-.196-.716l1.77-6.905a.84.84 0 01.045-.121.73.73 0 01.151-.223L16.513 1.289A4.355 4.355 0 0119.611 0c1.178 0 2.277.454 3.106 1.279l.029.029a4.367 4.367 0 011.251 3.121 4.356 4.356 0 01-1.32 3.087L8.183 22.01a.735.735 0 01-.231.154.784.784 0 01-.111.042L.933 23.978A.773.773 0 01.748 24zm1.041-1.791l4.41-1.131-3.281-3.275-1.129 4.406zm5.868-1.795l13.02-13.02-4.074-4.074L3.58 16.344l4.077 4.07zM21.736 6.332a2.893 2.893 0 00-.059-3.972l-.02-.02a2.872 2.872 0 00-2.037-.84v-.375l-.001.375a2.873 2.873 0 00-1.954.762l4.071 4.07z" fill-rule="evenodd"></path></svg>New post</a>
+    <a href="https://www.saggiehaim.net/ghost/#/posts/?type=published" id="ember17" class="ember-view"><svg viewBox="0 0 24 24"><path d="M11.246 24a.743.743 0 01-.53-.22.745.745 0 01-.205-.677l.75-3.75a.748.748 0 01.205-.384l7.631-7.63a2.844 2.844 0 012.026-.839 2.873 2.873 0 012.03 4.899l-7.627 7.629a.74.74 0 01-.384.205l-3.749.75a.615.615 0 01-.147.017zm.956-1.706l2.424-.485 7.467-7.469a1.368 1.368 0 00.003-1.932l-.03-.03a1.33 1.33 0 00-.941-.379c-.366 0-.71.142-.968.401l-7.471 7.47-.484 2.424zM2.242 21a2.252 2.252 0 01-2.25-2.25V2.25A2.252 2.252 0 012.242 0h15a2.252 2.252 0 012.25 2.25V9a.75.75 0 01-1.5 0V2.25a.75.75 0 00-.75-.75h-15a.75.75 0 00-.75.75v16.5c0 .414.336.75.75.75h6a.75.75 0 010 1.5h-6z"></path><path d="M8.242 6a.75.75 0 010-1.5h6a.75.75 0 010 1.5h-6zm-3 4.5a.75.75 0 010-1.5h9a.75.75 0 010 1.5h-9zm0 4.5a.75.75 0 010-1.5h7.5a.75.75 0 010 1.5h-7.5z"></path></svg>Posts</a>
+<a href="https://www.saggiehaim.net/ghost/#/staff/" id="ember18" class="gh-nav-main-users ember-view"><svg viewBox="0 0 24 24"><g stroke="#000" stroke-linejoin="round" stroke-miterlimit="10" fill="none"><path d="M4 6.609V8l-2.539.726C.933 8.877.5 9.45.5 10v.5H6m1-3.922V8l2.538.726c.529.151.962.724.962 1.274v.5H5"></path><ellipse cx="5.5" cy="3.771" rx="3" ry="3.271"></ellipse><path d="M8.469 3.198c-.5.5-1.93.476-2.469-.528-1 1-2.625 1-3.434.429M17 6.609V8l-2.539.726c-.528.151-.961.724-.961 1.274v.5H19m1-3.906V8l2.538.726c.529.151.962.724.962 1.274v.5H18"></path><ellipse cx="18.5" cy="3.771" rx="3" ry="3.271"></ellipse><path d="M21.453 3.195c-.5.5-1.914.479-2.453-.525-1 1-2.625 1-3.434.429M10.5 19.609V21l-2.539.726C7.433 21.877 7 22.45 7 23v.5h5.5m1-3.891V21l2.538.726c.529.151.962.724.962 1.274v.5h-5.5"></path><ellipse cx="12" cy="16.771" rx="3" ry="3.271"></ellipse><path d="M14.953 16.17c-.5.5-1.914.503-2.453-.5-1 1-2.625 1-3.434.429"></path><path stroke-linecap="round" d="M4 12.5L6.5 15M20 12.5L17.5 15"></path></g></svg>Staff</a>
+<div role="button" class="gh-mobile-nav-bar-more" data-ember-action="" data-ember-action-19="19"><svg viewBox="0 0 85 87" class="icon-gh"><g fill="currentColor" fill-rule="evenodd"><rect x=".209" y="69.017" width="33.643" height="17.014" rx="4"></rect><rect x="50.672" y="69.017" width="33.622" height="17.014" rx="4"></rect><rect x=".184" y="34.99" width="84.121" height="17.014" rx="4"></rect><rect x=".209" y=".964" width="50.469" height="17.013" rx="4"></rect><rect x="67.494" y=".964" width="16.821" height="17.013" rx="4"></rect></g></svg>More</div>
+
+</nav>
+
+        <div id="ember20" class="ember-view"><!----></div>
+    </div>
+
+<!---->
+<!---->
+</div>
+
+<div id="ember21" class="ember-view">
+</div><div id="ember156" class="liquid-destination default-liquid-destination has-wormholes ember-view">  <div class="liquid-destination-stack">
+<div id="ember1082" class="liquid-child ember-view" style="">      <div id="ember1083" class="ember-view"><div id="ember1028" class=" liquid-wormhole-element" style="visibility: visible;">
+    
+        <div id="ember1029" class="ember-view"><div class="settings-menu-container">
+    <div id="entry-controls">
+        <div class="settings-menu-pane-in settings-menu settings-menu-pane">
+            <div class="settings-menu-header">
+                <h4>Post settings</h4>
+                <button aria-label="Close" class="close settings-menu-header-action" data-ember-action="" data-ember-action-1030="1030">
+                    <svg version="1" viewBox="0 0 24 24"><path d="M12.707 12L23.854.854a.5.5 0 00-.707-.707L12 11.293.854.146a.5.5 0 00-.707.707L11.293 12 .146 23.146a.5.5 0 00.708.708L12 12.707l11.146 11.146a.5.5 0 10.708-.706L12.707 12z"></path></svg><span class="hidden">Close</span>
+                </button>
+            </div>
+            <div class="settings-menu-content">
+                <div id="ember1031" class="ember-view">    <div class="gh-image-uploader -with-image">
+        <div><img src="./Deploy Azure Sentinel to a multi-tenancy environment - Saggiehaim - Automate Everything_files/AzureLighthouse(1).png"></div>
+        <a class="image-cancel" title="Delete" data-ember-action="" data-ember-action-1032="1032">
+            <svg viewBox="0 0 32 32"><path d="M30.688 4H22V.687a.694.694 0 00-.688-.688H10.687a.694.694 0 00-.688.688V4H1.311c-.375 0-.625.313-.625.688s.25.625.625.625h3.375v26c0 .375.25.688.625.688h21.375c.375 0 .625-.313.625-.688v-26h3.375c.375 0 .625-.25.625-.625S31.061 4 30.686 4zM11.313 1.313h9.375v2.688h-9.375zM26 30.688H6V5.313h20zM10.688 9.313a.694.694 0 00-.688.688v15.313c0 .375.313.688.688.688s.625-.313.625-.688V10.001c0-.375-.25-.688-.625-.688zm5.312 0a.694.694 0 00-.688.688v15.313c0 .375.313.688.688.688s.688-.313.688-.688V10.001A.694.694 0 0016 9.313zm4.688.687v15.313c0 .375.25.688.625.688s.688-.313.688-.688V10c0-.375-.313-.688-.688-.688s-.625.313-.625.688z"></path></svg>
+            <span class="hidden">Delete</span>
+        </a>
+    </div>
+</div>
+                <form>
+                <div class="form-group">
+                    <label for="url">Post URL</label>
+                        <a class="post-view-link" target="_blank" href="https://www.saggiehaim.net/deploy-azure-sentinel-to-a-multi-tenancy-environment/">
+                            View post <svg viewBox="0 0 32 32"><path d="M24 24H8V8.062l4-.063v-4H4v24h24v-10h-4zM16 4l4 4-6 6 4 4 6-6 4 4V4z"></path></svg>
+                        </a>
+
+                    <div class="gh-input-icon gh-icon-link">
+                        <svg viewBox="0 0 24 24"><path d="M14.5 12.5l.086.086a2 2 0 002.828 0l3.965-3.964a3.01 3.01 0 000-4.243l-1.758-1.757a3.008 3.008 0 00-4.242 0l-3.965 3.964a2 2 0 000 2.829l.086.085m-2 2l-.086-.085a2 2 0 00-2.828 0l-3.965 3.964a3.01 3.01 0 000 4.243l1.758 1.757a3.008 3.008 0 004.242 0l3.965-3.964a2 2 0 000-2.829L12.5 14.5m-4.389 1.389l7.778-7.778" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" fill="none"></path></svg>
+                        <input name="post-setting-slug" id="url" class="post-setting-slug ember-text-field gh-input ember-view" type="text">
+                    </div>
+                    <p id="ember1033" class="ghost-url-preview description ember-view">www.saggiehaim.net/deploy-azure-sentinel-to-a-multi-tenancy-environment/
+</p>
+                </div>
+
+                <div class="form-group">
+                        <label>Publish date</label>
+                    <div class="gh-date-time-picker">
+        <div class="ember-basic-dropdown">
+      <div id="ember1037" class="ember-view ember-power-calendar">
+        
+      
+          <div id="ember1039" class="ember-view ember-basic-dropdown-trigger ember-basic-dropdown-trigger--in-place ember-power-datepicker-trigger" role="button" tabindex="0" data-ebd-id="ember1036-trigger" aria-owns="ember-basic-dropdown-content-ember1036" aria-expanded="false">
+    
+            <div class="gh-date-time-picker-date ">
+                <input placeholder="YYYY-MM-DD" type="text">
+                <svg version="1" viewBox="0 0 24 24"><path d="M23.5 2H20V.5a.5.5 0 00-.5-.5h-3a.5.5 0 00-.5.5V2H8V.5a.5.5 0 00-.5-.5h-3a.5.5 0 00-.5.5V2H.5a.5.5 0 00-.5.5v21a.5.5 0 00.5.5h23a.5.5 0 00.5-.5v-21a.5.5 0 00-.5-.5zM17 1h2v3h-2V1zM5 1h2v3H5V1zM4 3v1.5a.5.5 0 00.5.5h3a.5.5 0 00.5-.5V3h8v1.5a.5.5 0 00.5.5h3a.5.5 0 00.5-.5V3h3v4H1V3h3zM1 23V8h22v15H1zm20.5-11a.5.5 0 000-1H17V9.5a.5.5 0 00-1 0V11h-4V9.5a.5.5 0 00-1 0V11H7V9.5a.5.5 0 00-1 0V11H2.5a.5.5 0 000 1H6v3H2.5a.5.5 0 000 1H6v3H2.5a.5.5 0 000 1H6v1.5a.5.5 0 001 0V20h4v1.5a.5.5 0 001 0V20h4v1.5a.5.5 0 001 0V20h4.5a.5.5 0 000-1H17v-3h4.5a.5.5 0 000-1H17v-3h4.5zM7 12h4v3H7v-3zm0 7v-3h4v3H7zm9 0h-4v-3h4v3zm0-4h-4v-3h4v3z"></path></svg>
+            </div>
+        
+  </div>
+
+          <div id="ember-basic-dropdown-content-ember1036" class="ember-basic-dropdown-content-placeholder" style="display: none;"></div>
+
+    
+  
+    </div>
+
+</div>
+
+
+    <div class="gh-date-time-picker-time ">
+        <input type="text">
+        <small class="gh-date-time-picker-timezone">(IDT)</small>
+    </div>
+</div>
+<!---->
+<!---->                </div>
+
+                <div class="form-group">
+                    <label for="tag-input">Tags</label>
+                        <div class="ember-basic-dropdown gh-token-input ">
+      <div id="tag-input" class="ember-view ember-basic-dropdown-trigger ember-basic-dropdown-trigger--in-place  ember-power-select-trigger ember-power-select-multiple-trigger " role="button" tabindex="0" data-ebd-id="ember1042-trigger" aria-owns="ember-basic-dropdown-content-ember1042" aria-expanded="false">
+    
+        <ul id="ember-power-select-multiple-options-ember1042" class="ember-power-select-multiple-options sortable-objects ember-view">
+<li title="" draggable="true" id="ember1044" class="ember-power-select-multiple-option tag-token js-draggableObject draggable-object ember-view">                
+          
+    
+        Azure Sentinel
+
+
+        
+                <span role="button" aria-label="remove element" class="ember-power-select-multiple-remove-btn" data-selected-index="0">
+                    <svg version="1" viewBox="0 0 24 24" data-selected-index="0"><path d="M12.707 12L23.854.854a.5.5 0 00-.707-.707L12 11.293.854.146a.5.5 0 00-.707.707L11.293 12 .146 23.146a.5.5 0 00.708.708L12 12.707l11.146 11.146a.5.5 0 10.708-.706L12.707 12z"></path></svg>
+                </span>
+
+</li><li title="" draggable="true" id="ember1045" class="ember-power-select-multiple-option tag-token js-draggableObject draggable-object ember-view">                
+          
+    
+        Powershell
+
+
+        
+                <span role="button" aria-label="remove element" class="ember-power-select-multiple-remove-btn" data-selected-index="1">
+                    <svg version="1" viewBox="0 0 24 24" data-selected-index="1"><path d="M12.707 12L23.854.854a.5.5 0 00-.707-.707L12 11.293.854.146a.5.5 0 00-.707.707L11.293 12 .146 23.146a.5.5 0 00.708.708L12 12.707l11.146 11.146a.5.5 0 10.708-.706L12.707 12z"></path></svg>
+                </span>
+
+</li><li title="" draggable="true" id="ember1046" class="ember-power-select-multiple-option tag-token js-draggableObject draggable-object ember-view">                
+          
+    
+        Azure
+
+
+        
+                <span role="button" aria-label="remove element" class="ember-power-select-multiple-remove-btn" data-selected-index="2">
+                    <svg version="1" viewBox="0 0 24 24" data-selected-index="2"><path d="M12.707 12L23.854.854a.5.5 0 00-.707-.707L12 11.293.854.146a.5.5 0 00-.707.707L11.293 12 .146 23.146a.5.5 0 00.708.708L12 12.707l11.146 11.146a.5.5 0 10.708-.706L12.707 12z"></path></svg>
+                </span>
+
+</li>
+        <input class="ember-power-select-trigger-multiple-input" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" id="ember-power-select-trigger-multiple-input-ember1042" aria-controls="ember-power-select-options-ember1042" style="width: 25px" placeholder="" type="search">
+</ul>
+<span class="ember-power-select-status-icon"></span>
+
+    
+  </div>
+
+      <div id="ember-basic-dropdown-content-ember1042" class="ember-basic-dropdown-content-placeholder" style="display: none;"></div>
+
+</div>
+
+
+
+                </div>
+
+
+<!---->
+
+                <div id="ember1047" class="form-group ember-view">
+                    <label for="custom-excerpt">Excerpt</label>
+                    <textarea name="post-setting-custom-excerpt" id="custom-excerpt" class="post-setting-custom-excerpt ember-text-area gh-input ember-view"></textarea>
+                    <p class="response" hidden="">
+    
+</p>
+
+                </div>
+
+                    <div id="ember1048" class="for-select form-group ember-view">
+                        <label for="author-list">Authors</label>
+                            <div class="ember-basic-dropdown gh-token-input ">
+      <div id="author-list" class="ember-view ember-basic-dropdown-trigger ember-basic-dropdown-trigger--in-place  ember-power-select-trigger ember-power-select-multiple-trigger " role="button" tabindex="0" data-ebd-id="ember1051-trigger" aria-owns="ember-basic-dropdown-content-ember1051" aria-expanded="false">
+    
+        <ul id="ember-power-select-multiple-options-ember1051" class="ember-power-select-multiple-options sortable-objects ember-view">
+<li draggable="true" id="ember1053" class="ember-power-select-multiple-option js-draggableObject draggable-object ember-view">                  
+          
+    
+        Saggie Haim
+
+
+        
+                <span role="button" aria-label="remove element" class="ember-power-select-multiple-remove-btn" data-selected-index="0">
+                    <svg version="1" viewBox="0 0 24 24" data-selected-index="0"><path d="M12.707 12L23.854.854a.5.5 0 00-.707-.707L12 11.293.854.146a.5.5 0 00-.707.707L11.293 12 .146 23.146a.5.5 0 00.708.708L12 12.707l11.146 11.146a.5.5 0 10.708-.706L12.707 12z"></path></svg>
+                </span>
+
+</li>
+        <input class="ember-power-select-trigger-multiple-input" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" id="ember-power-select-trigger-multiple-input-ember1051" aria-controls="ember-power-select-options-ember1051" style="width: 25px" placeholder="" type="search">
+</ul>
+<span class="ember-power-select-status-icon"></span>
+
+    
+  </div>
+
+      <div id="ember-basic-dropdown-content-ember1051" class="ember-basic-dropdown-content-placeholder" style="display: none;"></div>
+
+</div>
+
+
+                        <p class="response" hidden="">
+    
+</p>
+
+                    </div>
+
+                <ul class="nav-list nav-list-block">
+                    <li class="nav-list-item" data-ember-action="" data-ember-action-1054="1054">
+                        <button type="button">
+                            <b>Meta data</b>
+                            <span>Extra content for search engines</span>
+                        </button>
+                        <svg viewBox="0 0 48 48"><path fill="#010101" d="M37.802 23.247l-26.286-23a1 1 0 00-1.317 1.506L35.624 24 10.199 46.247a1 1 0 101.317 1.506l26.286-23a1.001 1.001 0 000-1.506z"></path></svg>
+                    </li>
+                    <li class="nav-list-item" data-ember-action="" data-ember-action-1055="1055">
+                        <button type="button">
+                            <b>Twitter card</b>
+                            <span>Customise structured data for Twitter</span>
+                        </button>
+                        <svg viewBox="0 0 48 48"><path fill="#010101" d="M37.802 23.247l-26.286-23a1 1 0 00-1.317 1.506L35.624 24 10.199 46.247a1 1 0 101.317 1.506l26.286-23a1.001 1.001 0 000-1.506z"></path></svg>
+                    </li>
+                    <li class="nav-list-item" data-ember-action="" data-ember-action-1056="1056">
+                        <button type="button">
+                            <b>Facebook card</b>
+                            <span>Customise Open Graph data</span>
+                        </button>
+                        <svg viewBox="0 0 48 48"><path fill="#010101" d="M37.802 23.247l-26.286-23a1 1 0 00-1.317 1.506L35.624 24 10.199 46.247a1 1 0 101.317 1.506l26.286-23a1.001 1.001 0 000-1.506z"></path></svg>
+                    </li>
+<!---->                    <li class="nav-list-item" data-ember-action="" data-ember-action-1057="1057">
+                        <button type="button">
+                            <b>Code injection</b>
+                            <span>Add styles/scripts to the header &amp; footer</span>
+                        </button>
+                        <svg viewBox="0 0 48 48"><path fill="#010101" d="M37.802 23.247l-26.286-23a1 1 0 00-1.317 1.506L35.624 24 10.199 46.247a1 1 0 101.317 1.506l26.286-23a1.001 1.001 0 000-1.506z"></path></svg>
+                    </li>
+                </ul>
+
+                <div class="form-group for-checkbox">
+                    <label class="checkbox" for="featured" data-ember-action="" data-ember-action-1058="1058">
+                        <input class="gh-input post-settings-featured" type="checkbox">
+                        <span class="input-toggle-component"></span>
+                        <p>Feature this post</p>
+                    </label>
+                </div>
+
+                    <div class="form-group for-select">
+        <label for="author-list">Template</label>
+        <span class="gh-input-icon gh-icon-user">
+            <svg version="1" viewBox="0 0 24 24"><path d="M21.961 6.308l-.108-.162L15.854.147l-.162-.108L15.5 0h-13a.5.5 0 00-.5.5v23a.5.5 0 00.5.5h19a.5.5 0 00.5-.5v-17l-.039-.192zM16 1.707L20.293 6H16V1.707zM3 23V1h12v5.5a.5.5 0 00.5.5H21v16H3zM7.5 8H12a.5.5 0 000-1H7.5a.5.5 0 000 1zm9 2h-9a.5.5 0 000 1h9a.5.5 0 000-1zm-6 3h-3a.5.5 0 000 1h3a.5.5 0 000-1zm0 3h-3a.5.5 0 000 1h3a.5.5 0 000-1zm0 3h-3a.5.5 0 000 1h3a.5.5 0 000-1zm6-6h-4a.5.5 0 00-.5.5v1a.5.5 0 001 0V14h1v5h-1a.5.5 0 000 1h3a.5.5 0 000-1h-1v-5h1v.5a.5.5 0 001 0v-1a.5.5 0 00-.5-.5z"></path></svg>
+            <span class="gh-select ">
+                <select id="ember1068" class="ember-view"><!---->      <option value="">
+    Default
+</option>
+
+      <option value="custom-archive-author">
+    Archive Author
+</option>
+
+      <option value="custom-archive-newsletter">
+    Archive Newsletter
+</option>
+
+      <option value="custom-archive-tags">
+    Archive Tags
+</option>
+
+      <option value="custom-page-about-us">
+    Page About Us
+</option>
+
+      <option value="custom-page-contact">
+    Page Contact
+</option>
+
+      <option value="custom-post-full-header">
+    Post Full Header
+</option>
+
+      <option value="custom-post-image">
+    Post Image
+</option>
+
+      <option value="custom-post-image-single">
+    Post Image Single
+</option>
+
+      <option value="custom-post-not-image">
+    Post Not Image
+</option>
+
+      <option value="custom-post-single">
+    Post Single
+</option>
+
+      <option value="custom-post-video">
+    Post Video
+</option>
+
+</select>
+                <svg viewBox="0 0 26 17"><path d="M.469.18l11.5 13.143L23.469.18" transform="translate(1 2)" stroke-width="3" stroke="#0B0B0A" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+            </span>
+        </span>
+<!---->    </div>
+
+
+                    <button class="gh-btn gh-btn-hover-red gh-btn-icon settings-menu-delete-button" type="button" data-ember-action="" data-ember-action-1060="1060"><span><svg viewBox="0 0 32 32"><path d="M30.688 4H22V.687a.694.694 0 00-.688-.688H10.687a.694.694 0 00-.688.688V4H1.311c-.375 0-.625.313-.625.688s.25.625.625.625h3.375v26c0 .375.25.688.625.688h21.375c.375 0 .625-.313.625-.688v-26h3.375c.375 0 .625-.25.625-.625S31.061 4 30.686 4zM11.313 1.313h9.375v2.688h-9.375zM26 30.688H6V5.313h20zM10.688 9.313a.694.694 0 00-.688.688v15.313c0 .375.313.688.688.688s.625-.313.625-.688V10.001c0-.375-.25-.688-.625-.688zm5.312 0a.694.694 0 00-.688.688v15.313c0 .375.313.688.688.688s.688-.313.688-.688V10.001A.694.694 0 0016 9.313zm4.688.687v15.313c0 .375.25.688.625.688s.688-.313.688-.688V10c0-.375-.313-.688-.688-.688s-.625.313-.625.688z"></path></svg> Delete post</span></button>
+
+                </form>
+            </div>
+        </div>
+
+        <div class="settings-menu-pane-out-right settings-menu settings-menu-pane">
+            <div class="active">
+<!---->            </div>
+        </div>
+    </div>
+</div>
+
+<!----></div>
+    
+  </div></div>
+</div>  </div>
+</div><div id="koenig-drag-drop-ghost-container" style="position: fixed; width: 100%;"></div></body></html>
+      </article>
+
+      
+
+
+
+
+    </div>
+  </div>
+</div>
+
+  </main>
+  <footer class="flex flex-none justify-center">
+    <section class="flex flex-col md:flex-row mx-2 md:mx-0 gap-2 md:gap-0 justify-between w-full max-w-4xl lg:max-w-5xl py-6 text-slate-500 dark:text-slate-300">
+  <div class="flex flex-row">
+    
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+
+  </div>
+  <div class="grow"></div>
+  <div class="flex flex-row">
+    <i class="h-6 w-6 flex-none"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+   <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"></path>
+   <path d="M14 9.75a3.016 3.016 0 0 0 -4.163 .173a2.993 2.993 0 0 0 0 4.154a3.016 3.016 0 0 0 4.163 .173"></path>
+</svg>
+</i> 2018 - 2024 Saggie Haim
+    
+  </div>
+  
+  <div class="flex flex-row">
+    <span class="ml-0 pl-0 md:ml-2 md:pl-2 border-l-0 md:border-l border-slate-300 dark:border-slate-400">
+      Powered by <a href="https://gohugo.io" target="_blank" rel="noopener" class="underline">Hugo</a> <span class="text-red-600">&hearts;</span> <a href="https://github.com/tomowang/hugo-theme-tailwind" target="_blank" rel="noopener" class="underline">Tailwind</a>
+    </span>
+  </div>
+  
+</section>
+
+  </footer>
+  <script src="/main.js"></script>
+
+<div class="hidden top-1 right-1" id="code-copy">
+  <i class="h-6 w-6 block">
+    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copy" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M7 7m0 2.667a2.667 2.667 0 0 1 2.667 -2.667h8.666a2.667 2.667 0 0 1 2.667 2.667v8.666a2.667 2.667 0 0 1 -2.667 2.667h-8.666a2.667 2.667 0 0 1 -2.667 -2.667z" />
+  <path d="M4.012 16.737a2.005 2.005 0 0 1 -1.012 -1.737v-10c0 -1.1 .9 -2 2 -2h10c.75 0 1.158 .385 1.5 1" />
+</svg>
+
+  </i>
+</div>
+<div class="hidden top-1 right-1" id="code-copy-done">
+  <i class="h-6 w-6 block">
+    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-check" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M5 12l5 5l10 -10" />
+</svg>
+
+  </i>
+</div><script src="/code-copy.js"></script>
+
+
+
+
+
+</body>
+</html>

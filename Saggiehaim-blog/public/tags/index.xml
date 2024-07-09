@@ -2,20 +2,41 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Saggie Haim - Automate Everything</title>
-    <link>http://localhost:49659/blog/tags/</link>
+    <link>//localhost:52063/tags/</link>
     <description>Recent content in Tags on Saggie Haim - Automate Everything</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <managingEditor>user@example.com (Hugo Author)</managingEditor>
     <webMaster>user@example.com (Hugo Author)</webMaster>
     <copyright>Saggie Haim</copyright>
-    <lastBuildDate>Fri, 14 Aug 2020 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:49659/blog/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 14 Oct 2020 00:00:00 +0000</lastBuildDate>
+    <atom:link href="//localhost:52063/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Azure</title>
+      <link>//localhost:52063/tags/azure/</link>
+      <pubDate>Wed, 14 Oct 2020 00:00:00 +0000</pubDate><author>user@example.com (Hugo Author)</author>
+      <guid>//localhost:52063/tags/azure/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Microsoft Sentinel</title>
+      <link>//localhost:52063/tags/microsoft-sentinel/</link>
+      <pubDate>Wed, 14 Oct 2020 00:00:00 +0000</pubDate><author>user@example.com (Hugo Author)</author>
+      <guid>//localhost:52063/tags/microsoft-sentinel/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>PowerShell</title>
+      <link>//localhost:52063/tags/powershell/</link>
+      <pubDate>Wed, 14 Oct 2020 00:00:00 +0000</pubDate><author>user@example.com (Hugo Author)</author>
+      <guid>//localhost:52063/tags/powershell/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Themes</title>
-      <link>http://localhost:49659/blog/tags/themes/</link>
+      <link>//localhost:52063/tags/themes/</link>
       <pubDate>Fri, 14 Aug 2020 00:00:00 +0000</pubDate><author>user@example.com (Hugo Author)</author>
-      <guid>http://localhost:49659/blog/tags/themes/</guid>
+      <guid>//localhost:52063/tags/themes/</guid>
       <description></description>
     </item>
   </channel>
