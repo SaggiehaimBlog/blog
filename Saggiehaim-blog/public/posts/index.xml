@@ -2,17 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Saggie Haim - Automate Everything</title>
-    <link>http://localhost:49364/blog/posts/</link>
+    <link>http://localhost:49545/blog/posts/</link>
     <description>Recent content in Posts on Saggie Haim - Automate Everything</description>
     <generator>Hugo</generator>
     <language>en-us</language>
+    <managingEditor>user@example.com (Hugo Author)</managingEditor>
+    <webMaster>user@example.com (Hugo Author)</webMaster>
+    <copyright>Saggie Haim</copyright>
     <lastBuildDate>Fri, 14 Aug 2020 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:49364/blog/posts/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:49545/blog/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Image Test</title>
-      <link>http://localhost:49364/blog/posts/my-first-post/</link>
-      <pubDate>Fri, 14 Aug 2020 00:00:00 +0000</pubDate>
-      <guid>http://localhost:49364/blog/posts/my-first-post/</guid>
+      <link>http://localhost:49545/blog/posts/my-first-post/</link>
+      <pubDate>Fri, 14 Aug 2020 00:00:00 +0000</pubDate><author>user@example.com (Hugo Author)</author>
+      <guid>http://localhost:49545/blog/posts/my-first-post/</guid>
       <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris fringilla dui eu mi iaculis, sit amet congue lacus porta. Ut nec porta ex. Morbi nec massa sodales, finibus urna et, condimentum odio. Nulla ornare est ac egestas varius. Duis faucibus sapien non risus pretium vestibulum. Ut rutrum lorem ut euismod maximus. Vestibulum metus urna, ultrices nec sapien sit amet, malesuada tincidunt quam. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</description>
     </item>
   </channel>
