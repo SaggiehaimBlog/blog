@@ -17,19 +17,17 @@ showReadingTime = true
   logo = "white_logo.png"
   sticky = true
 
-[menu]
 
-  [[menu.main]]
-    identifier = "post"
-    name = "Post"
-    pageRef = "/posts"
-    weight = 0
-
-  [[menu.main]]
-    identifier = "about"
-    name = "About"
-    pageRef = "/about"
-    weight = 10
+[[menu.main]]
+  identifier = "post"
+  name = "Post"
+  pageRef = "/posts"
+  weight = 0
+[[menu.main]]
+  identifier = "about"
+  name = "About"
+  pageRef = "/about"
+  weight = 10
 
 [footer]
   since = 2018
