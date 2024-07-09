@@ -2,13 +2,13 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Saggie Haim - Automate Everything</title>
-    <link>http://localhost:49545/blog/categories/</link>
+    <link>http://localhost:49659/blog/categories/</link>
     <description>Recent content in Categories on Saggie Haim - Automate Everything</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <managingEditor>user@example.com (Hugo Author)</managingEditor>
     <webMaster>user@example.com (Hugo Author)</webMaster>
     <copyright>Saggie Haim</copyright>
-    <atom:link href="http://localhost:49545/blog/categories/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:49659/blog/categories/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

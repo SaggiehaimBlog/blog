@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Saggie Haim - Automate Everything</title>
-    <link>http://localhost:49545/blog/</link>
+    <link>http://localhost:49659/blog/</link>
     <description>Recent content on Saggie Haim - Automate Everything</description>
     <generator>Hugo</generator>
     <language>en-us</language>
@@ -10,68 +10,68 @@
     <webMaster>user@example.com (Hugo Author)</webMaster>
     <copyright>Saggie Haim</copyright>
     <lastBuildDate>Mon, 08 Jul 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:49545/blog/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:49659/blog/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>About</title>
-      <link>http://localhost:49545/blog/about/</link>
+      <link>http://localhost:49659/blog/about/</link>
       <pubDate>Mon, 08 Jul 2024 00:00:00 +0000</pubDate><author>user@example.com (Hugo Author)</author>
-      <guid>http://localhost:49545/blog/about/</guid>
+      <guid>http://localhost:49659/blog/about/</guid>
       <description>Hi, I’m Saggie, a Cloud Security Solution Director, a blogger and tech trainer. My experience in Microsoft systems, Security, Monitoring and, Networking help me design better projects and solutions.&#xA;I’m motivated by my passion for troubleshooting and Powershell. Eager to keep learning every day. Improving my skill sets to better understand the constraints in every project or the challenges I face every day.&#xA;My hunger for knowledge and love of challenges, helped me build and execute the Enterprise Monitoring solution in Elbit systems.</description>
     </item>
     <item>
       <title>Image Test</title>
-      <link>http://localhost:49545/blog/posts/my-first-post/</link>
+      <link>http://localhost:49659/blog/posts/my-first-post/</link>
       <pubDate>Fri, 14 Aug 2020 00:00:00 +0000</pubDate><author>user@example.com (Hugo Author)</author>
-      <guid>http://localhost:49545/blog/posts/my-first-post/</guid>
+      <guid>http://localhost:49659/blog/posts/my-first-post/</guid>
       <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris fringilla dui eu mi iaculis, sit amet congue lacus porta. Ut nec porta ex. Morbi nec massa sodales, finibus urna et, condimentum odio. Nulla ornare est ac egestas varius. Duis faucibus sapien non risus pretium vestibulum. Ut rutrum lorem ut euismod maximus. Vestibulum metus urna, ultrices nec sapien sit amet, malesuada tincidunt quam. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:49545/blog/search/_index.es/</link>
+      <link>http://localhost:49659/blog/search/_index.es/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>user@example.com (Hugo Author)</author>
-      <guid>http://localhost:49545/blog/search/_index.es/</guid>
+      <guid>http://localhost:49659/blog/search/_index.es/</guid>
       <description></description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:49545/blog/search/_index.fr/</link>
+      <link>http://localhost:49659/blog/search/_index.fr/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>user@example.com (Hugo Author)</author>
-      <guid>http://localhost:49545/blog/search/_index.fr/</guid>
+      <guid>http://localhost:49659/blog/search/_index.fr/</guid>
       <description></description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:49545/blog/search/_index.hi/</link>
+      <link>http://localhost:49659/blog/search/_index.hi/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>user@example.com (Hugo Author)</author>
-      <guid>http://localhost:49545/blog/search/_index.hi/</guid>
+      <guid>http://localhost:49659/blog/search/_index.hi/</guid>
       <description></description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:49545/blog/search/_index.jp/</link>
+      <link>http://localhost:49659/blog/search/_index.jp/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>user@example.com (Hugo Author)</author>
-      <guid>http://localhost:49545/blog/search/_index.jp/</guid>
+      <guid>http://localhost:49659/blog/search/_index.jp/</guid>
       <description></description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:49545/blog/search/_index.pl/</link>
+      <link>http://localhost:49659/blog/search/_index.pl/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>user@example.com (Hugo Author)</author>
-      <guid>http://localhost:49545/blog/search/_index.pl/</guid>
+      <guid>http://localhost:49659/blog/search/_index.pl/</guid>
       <description></description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:49545/blog/search/_index.ru/</link>
+      <link>http://localhost:49659/blog/search/_index.ru/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>user@example.com (Hugo Author)</author>
-      <guid>http://localhost:49545/blog/search/_index.ru/</guid>
+      <guid>http://localhost:49659/blog/search/_index.ru/</guid>
       <description></description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:49545/blog/search/_index.zh-cn/</link>
+      <link>http://localhost:49659/blog/search/_index.zh-cn/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>user@example.com (Hugo Author)</author>
-      <guid>http://localhost:49545/blog/search/_index.zh-cn/</guid>
+      <guid>http://localhost:49659/blog/search/_index.zh-cn/</guid>
       <description></description>
     </item>
   </channel>
