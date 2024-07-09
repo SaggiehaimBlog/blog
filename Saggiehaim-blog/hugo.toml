@@ -1,4 +1,4 @@
-baseURL = 'https://example.org/'
+baseURL = 'https://saggehaimblog.github.io/blog/'
 languageCode = 'en-us'
 title = 'Saggie Haim - Automate Everything'
 author = "Saggie Haim"
@@ -22,7 +22,7 @@ enableRobotsTXT = true
 base_color = "bg-gray-800"
 
 #Site description
-description = "Blonde theme for Hugo."
+description = "Saggie Haim Blog"
 
 # The number of articles to be displayed on a single page.
 paginator_pages = "5"
