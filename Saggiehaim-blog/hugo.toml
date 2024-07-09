@@ -17,7 +17,7 @@ theme = "tailwind"
 
   [params.footer]
     since = 2018
-    poweredby = false
+    poweredby = true
 
 [menu]
 
