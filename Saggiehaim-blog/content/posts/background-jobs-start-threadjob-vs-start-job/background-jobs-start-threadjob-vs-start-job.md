@@ -23,14 +23,14 @@ With this in mind, another parallel solution was needed. Threadjob module extend
 
 I choose to write about ThreadJob because this is the adopted solution by the PowerShell Team, but you may find other modules doing the same.
 
-# Why background jobs?
+## Why background jobs?
 
 By default, PowerShell does synchronous execution. Which means that PowerShell will execute one line of code at a time. With background jobs, we can run different lines of code at the same time (Asynchronous).
 
 For the most parts, we’ll run background jobs each time we have repetitive tasks for numerous targets.
 For example, changing the Active Directory manager attribute for many users, creating a mailbox for list of users, or running the same cmdlet on many servers.
 
-## Start-Job Or Start-ThreadJob?
+### Start-Job Or Start-ThreadJob?
 
 The answer to this question is very simple and straightforward:
 
@@ -38,7 +38,7 @@ The answer to this question is very simple and straightforward:
 
 **Start-Job** – When we need to run something out of the process context. For example, updating PowerShell help in the background. More resources used.
 
-# Background Jobs with Start-Job
+## Background Jobs with Start-Job
 
 The Start-Job cmdlet will start a background job. We can use it in the following way:
 
@@ -76,7 +76,7 @@ Update: Thanks to [@jkavanagh58](https://twitter.com/jkavanagh58) who raised the
 Get-Command -ParameterName AsJob
 ```
 
-# Background Jobs with Start-ThreadJob
+## Background Jobs with Start-ThreadJob
 
 While Threadjob doesn’t have -AsThread switch.
 Everything else is just the same.
@@ -102,7 +102,7 @@ Get-Job | Receive-Job
 
 ![ ](../images/Start-ThreadJob-2.jpg  "PowerShell Session Showing Background Job with Start-ThreadJob")
 
-# Start-Job vs Start-ThreadJob – Performance
+## Start-Job vs Start-ThreadJob – Performance
 
 We learn how to use background jobs and why. Now I want to show you the performance differences.
 
@@ -119,7 +119,7 @@ I’ll run the same code three times with the following conditions:
 
 During the tests, we’ll see the difference in each condition. The impact on the operating system and how long it took to execute.
 
-## No Background jobs
+### No Background jobs
 
 Starting with the obvious, the default behavior when we don’t use any background job.
 
@@ -127,7 +127,7 @@ Starting with the obvious, the default behavior when we don’t use any backgrou
 
 Running ten times and pausing for three seconds each time, set the benchmark to 30 seconds as expected.
 
-## Start-Job Performance
+### Start-Job Performance
 
 Now, running with the native Start-Job, we can see the increased performance as it took only 5.4 seconds to finish.
 
@@ -136,7 +136,7 @@ Now, running with the native Start-Job, we can see the increased performance as 
 However, with each iterate, a new PowerShell process started.
 What will happen if we iterate 1 million times?
 
-## Start-ThreadJob Performance
+### Start-ThreadJob Performance
 
 Last, we use Start-Threadjob.
 This time finishing in 0.245 seconds!
@@ -145,7 +145,7 @@ This time finishing in 0.245 seconds!
 
 Opposite to the Start-Job method, this time, we stayed in the same process.
 
-# Conclusion
+## Conclusion
 
 While using background jobs in the shell is not a common act.
 It’s not the case when writing scripts. Some times we do care about the performance aspects, and Background jobs can help us.

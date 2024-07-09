@@ -7,5 +7,7 @@ description = ""
 toc = true
 tags = []
 categories = []
+keywords = []
+image = ""
 +++
 
