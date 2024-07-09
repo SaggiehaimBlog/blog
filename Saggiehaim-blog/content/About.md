@@ -6,7 +6,7 @@ aliases = ["about-us", "about-saggie", "contact"]
 author = "Saggie Haim"
 +++
 
-![Azure Sentinel – Microsoft first MSSP’s event in ILDC](.images/ILDCspeaker.jpeg)
+![Azure Sentinel – Microsoft first MSSP’s event in ILDC](images/ILDCspeaker.jpeg)
 
 Hi, I’m Saggie, a Cloud Security Solution Director, a blogger and tech trainer. My experience in Microsoft systems, Security, Monitoring and, Networking help me design better projects and solutions.
 
@@ -19,6 +19,6 @@ Meanwhile, I vastly improved the security and productivity of Lumenis LTD IT. Pl
 These days I teach at CyberControl Academy about Operation systems, Networking, and Security Fundamentals. Working at CyberProof, and writing about IT in my blog.
 
 
-![Aruba ClearPass workshop](./images/Arubaspeaker.jpeg)
+![Aruba ClearPass workshop](/images/Arubaspeaker.jpeg)
 
 Hope you enjoy my blogging! Feel free to [Contact me]().
