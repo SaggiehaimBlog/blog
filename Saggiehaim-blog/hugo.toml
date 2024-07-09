@@ -19,7 +19,7 @@ enableRobotsTXT = true
 [params]
 # Base color of the website.
 # https://tailwindcss.com/docs/background-color
-base_color = "bg-gray-800"
+base_color = "bg-sky-950"
 
 #Site description
 description = "Saggie Haim Blog"
