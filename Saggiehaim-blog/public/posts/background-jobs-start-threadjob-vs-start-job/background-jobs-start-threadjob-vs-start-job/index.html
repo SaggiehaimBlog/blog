@@ -75,6 +75,38 @@
 
 
 
+<nav class="h-full static">
+  <button id="navbar-menu-toggle" type="button" class="inline-flex items-center p-2 text-sm text-slate-800 dark:text-slate-200 rounded-lg md:hidden" aria-controls="navbar-menu" aria-expanded="false">
+    <span class="sr-only">Open main menu</span>
+    <i class="w-8 h-8">
+      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-menu-2" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M4 6l16 0" />
+  <path d="M4 12l16 0" />
+  <path d="M4 18l16 0" />
+</svg>
+
+    </i>
+  </button>
+  <div class="absolute md:static top-16 left-0 right-0 z-50 hidden w-full md:block md:w-auto" id="navbar-menu">
+    <ul class="flex flex-col mx-2 md:mx-0 md:flex-row md:border-0 rounded-sm md:rounded-full px-3 text-base font-medium text-slate-800 dark:text-slate-200 shadow-lg bg-white dark:bg-gray-600 shadow-slate-800/5 dark:shadow-slate-200/5 ring-1 ring-slate-900/5 dark:ring-slate-100/5">
+    
+        <li id="about" class="">
+          <a class="block px-3 py-3 hover:text-emerald-600"
+            href="/about/" title="About">About</a>
+        </li>
+      
+    
+        <li id="post" class="">
+          <a class="block px-3 py-3 hover:text-emerald-600 text-emerald-600"
+            href="/posts/" title="Post">Post</a>
+        </li>
+      
+    
+    </ul>
+  </div>
+</nav>
+
 
   </div>
   
@@ -238,13 +270,21 @@
           <h2>Table of Contents</h2>
           <aside><nav id="TableOfContents">
   <ul>
-    <li><a href="#start-job-or-start-threadjob">Start-Job Or Start-ThreadJob?</a></li>
-  </ul>
-
-  <ul>
-    <li><a href="#no-background-jobs">No Background jobs</a></li>
-    <li><a href="#start-job-performance">Start-Job Performance</a></li>
-    <li><a href="#start-threadjob-performance">Start-ThreadJob Performance</a></li>
+    <li><a href="#why-background-jobs">Why background jobs?</a>
+      <ul>
+        <li><a href="#start-job-or-start-threadjob">Start-Job Or Start-ThreadJob?</a></li>
+      </ul>
+    </li>
+    <li><a href="#background-jobs-with-start-job">Background Jobs with Start-Job</a></li>
+    <li><a href="#background-jobs-with-start-threadjob">Background Jobs with Start-ThreadJob</a></li>
+    <li><a href="#start-job-vs-start-threadjob--performance">Start-Job vs Start-ThreadJob – Performance</a>
+      <ul>
+        <li><a href="#no-background-jobs">No Background jobs</a></li>
+        <li><a href="#start-job-performance">Start-Job Performance</a></li>
+        <li><a href="#start-threadjob-performance">Start-ThreadJob Performance</a></li>
+      </ul>
+    </li>
+    <li><a href="#conclusion">Conclusion</a></li>
   </ul>
 </nav></aside>
         </section>
@@ -257,15 +297,15 @@ Most of the cmdlet also have -AsJob switch to instantly run the cmdlet as a back
 This also come with some “downsides”, it’s resource consuming (depend on how many tasks running in the background) as each job is a separated process.</p>
 <p>With this in mind, another parallel solution was needed. Threadjob module extends the existing PowerShell BackgroundJob, providing faster and lighter resource consuming while running in the current PowerShell session.</p>
 <p>I choose to write about ThreadJob because this is the adopted solution by the PowerShell Team, but you may find other modules doing the same.</p>
-<h1 id="why-background-jobs">Why background jobs?</h1>
+<h2 id="why-background-jobs">Why background jobs?</h2>
 <p>By default, PowerShell does synchronous execution. Which means that PowerShell will execute one line of code at a time. With background jobs, we can run different lines of code at the same time (Asynchronous).</p>
 <p>For the most parts, we’ll run background jobs each time we have repetitive tasks for numerous targets.
 For example, changing the Active Directory manager attribute for many users, creating a mailbox for list of users, or running the same cmdlet on many servers.</p>
-<h2 id="start-job-or-start-threadjob">Start-Job Or Start-ThreadJob?</h2>
+<h3 id="start-job-or-start-threadjob">Start-Job Or Start-ThreadJob?</h3>
 <p>The answer to this question is very simple and straightforward:</p>
 <p><strong>Start-Threadjob</strong> – When we want to run tasks in the same context. Has better performance.</p>
 <p><strong>Start-Job</strong> – When we need to run something out of the process context. For example, updating PowerShell help in the background. More resources used.</p>
-<h1 id="background-jobs-with-start-job">Background Jobs with Start-Job</h1>
+<h2 id="background-jobs-with-start-job">Background Jobs with Start-Job</h2>
 <p>The Start-Job cmdlet will start a background job. We can use it in the following way:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-PowerShell" data-lang="PowerShell"><span style="display:flex;"><span><span style="color:#75715e">## Start a new Job</span>
 </span></span><span style="display:flex;"><span>Start-Job -Name <span style="color:#e6db74">&#34;Test Job&#34;</span> -ScriptBlock {Write-host <span style="color:#e6db74">&#34;This is a Simple Job&#34;</span>} 
@@ -303,7 +343,7 @@ For example, changing the Active Directory manager attribute for many users, cre
 <p>Update: Thanks to <a href="https://twitter.com/jkavanagh58" target="_blank" rel="noopener">@jkavanagh58</a>
  who raised the option to find cmdlet with -Asjob switch with the Get-Command cmdlet.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-PowerShell" data-lang="PowerShell"><span style="display:flex;"><span>Get-Command -ParameterName AsJob
-</span></span></code></pre></div><h1 id="background-jobs-with-start-threadjob">Background Jobs with Start-ThreadJob</h1>
+</span></span></code></pre></div><h2 id="background-jobs-with-start-threadjob">Background Jobs with Start-ThreadJob</h2>
 <p>While Threadjob doesn’t have -AsThread switch.
 Everything else is just the same.
 We use the Start-Threadjob cmdlet and manage the rest same as Start-Job.
@@ -326,7 +366,7 @@ If you don’t use the latest PowerShell Core, you’ll need to install the modu
     ><figcaption class="text-sm text-center text-slate-500 dark:text-slate-300">PowerShell Session Showing Background Job with Start-ThreadJob</figcaption>
   </figure></div>
 </p>
-<h1 id="start-job-vs-start-threadjob--performance">Start-Job vs Start-ThreadJob – Performance</h1>
+<h2 id="start-job-vs-start-threadjob--performance">Start-Job vs Start-ThreadJob – Performance</h2>
 <p>We learn how to use background jobs and why. Now I want to show you the performance differences.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-PowerShell" data-lang="PowerShell"><span style="display:flex;"><span>Measure-Command {<span style="color:#ae81ff">1</span>.<span style="color:#ae81ff">.10</span> | ForEach-Object {sleep <span style="color:#ae81ff">3</span>}} | Select-Object Totalseconds
 </span></span></code></pre></div><p>This code will pause the shell for 3 seconds ten times.
@@ -337,7 +377,7 @@ I’ll run the same code three times with the following conditions:</p>
 <li>With Start-ThreadJob</li>
 </ul>
 <p>During the tests, we’ll see the difference in each condition. The impact on the operating system and how long it took to execute.</p>
-<h2 id="no-background-jobs">No Background jobs</h2>
+<h3 id="no-background-jobs">No Background jobs</h3>
 <p>Starting with the obvious, the default behavior when we don’t use any background job.</p>
 <p><div class="not-prose">
 <figure>
@@ -348,7 +388,7 @@ I’ll run the same code three times with the following conditions:</p>
   </figure></div>
 </p>
 <p>Running ten times and pausing for three seconds each time, set the benchmark to 30 seconds as expected.</p>
-<h2 id="start-job-performance">Start-Job Performance</h2>
+<h3 id="start-job-performance">Start-Job Performance</h3>
 <p>Now, running with the native Start-Job, we can see the increased performance as it took only 5.4 seconds to finish.</p>
 <p><div class="not-prose">
 <figure>
@@ -360,7 +400,7 @@ I’ll run the same code three times with the following conditions:</p>
 </p>
 <p>However, with each iterate, a new PowerShell process started.
 What will happen if we iterate 1 million times?</p>
-<h2 id="start-threadjob-performance">Start-ThreadJob Performance</h2>
+<h3 id="start-threadjob-performance">Start-ThreadJob Performance</h3>
 <p>Last, we use Start-Threadjob.
 This time finishing in 0.245 seconds!</p>
 <p><div class="not-prose">
@@ -372,7 +412,7 @@ This time finishing in 0.245 seconds!</p>
   </figure></div>
 </p>
 <p>Opposite to the Start-Job method, this time, we stayed in the same process.</p>
-<h1 id="conclusion">Conclusion</h1>
+<h2 id="conclusion">Conclusion</h2>
 <p>While using background jobs in the shell is not a common act.
 It’s not the case when writing scripts. Some times we do care about the performance aspects, and Background jobs can help us.
 We saw both methods and talked about when we use each method.

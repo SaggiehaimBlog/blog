@@ -78,6 +78,38 @@ Like any other cloud services, you can automate most of the Azure Sentinel deplo
 
 
 
+<nav class="h-full static">
+  <button id="navbar-menu-toggle" type="button" class="inline-flex items-center p-2 text-sm text-slate-800 dark:text-slate-200 rounded-lg md:hidden" aria-controls="navbar-menu" aria-expanded="false">
+    <span class="sr-only">Open main menu</span>
+    <i class="w-8 h-8">
+      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-menu-2" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M4 6l16 0" />
+  <path d="M4 12l16 0" />
+  <path d="M4 18l16 0" />
+</svg>
+
+    </i>
+  </button>
+  <div class="absolute md:static top-16 left-0 right-0 z-50 hidden w-full md:block md:w-auto" id="navbar-menu">
+    <ul class="flex flex-col mx-2 md:mx-0 md:flex-row md:border-0 rounded-sm md:rounded-full px-3 text-base font-medium text-slate-800 dark:text-slate-200 shadow-lg bg-white dark:bg-gray-600 shadow-slate-800/5 dark:shadow-slate-200/5 ring-1 ring-slate-900/5 dark:ring-slate-100/5">
+    
+        <li id="about" class="">
+          <a class="block px-3 py-3 hover:text-emerald-600"
+            href="/about/" title="About">About</a>
+        </li>
+      
+    
+        <li id="post" class="">
+          <a class="block px-3 py-3 hover:text-emerald-600 text-emerald-600"
+            href="/posts/" title="Post">Post</a>
+        </li>
+      
+    
+    </ul>
+  </div>
+</nav>
+
 
   </div>
   
@@ -275,34 +307,16 @@ Like any other cloud services, you can automate most of the Azure Sentinel deplo
           <h2>Table of Contents</h2>
           <aside><nav id="TableOfContents">
   <ul>
-    <li><a href="#prerequisites">Prerequisites</a></li>
-    <li><a href="#azure-sentinel-automation-tools">Azure Sentinel Automation tools</a>
+    <li><a href="#automate-azure-sentinel-deployment">Automate Azure Sentinel Deployment</a>
       <ul>
-        <li><a href="#powershell-v7">PowerShell V7</a></li>
-        <li><a href="#az-module">Az Module</a></li>
-        <li><a href="#azsentinel-module">AzSentinel Module</a></li>
-        <li><a href="#splatting">Splatting</a></li>
+        <li><a href="#prerequisites">Prerequisites</a></li>
+        <li><a href="#azure-sentinel-automation-tools">Azure Sentinel Automation tools</a></li>
+        <li><a href="#connect-to-azure-with-powershell">Connect to Azure with PowerShell</a></li>
+        <li><a href="#a-step-by-step-to-a-fully-automated-deployment">A Step by Step To a Fully Automated Deployment</a></li>
+        <li><a href="#plan-first-succeed-later">Plan first, Succeed later</a></li>
+        <li><a href="#summary">Summary</a></li>
       </ul>
     </li>
-    <li><a href="#connect-to-azure-with-powershell">Connect to Azure with PowerShell</a></li>
-    <li><a href="#a-step-by-step-to-a-fully-automated-deployment">A Step by Step To a Fully Automated Deployment</a>
-      <ul>
-        <li><a href="#resource-group">Resource Group</a></li>
-        <li><a href="#log-analytics">Log Analytics</a></li>
-        <li><a href="#azure-sentinel">Azure Sentinel</a></li>
-        <li><a href="#azure-sentinel-saved-queries">Azure Sentinel Saved Queries</a></li>
-        <li><a href="#hunting-queries">Hunting Queries</a></li>
-        <li><a href="#alerts-rules">Alerts Rules</a></li>
-        <li><a href="#playbooks-and-workbooks">Playbooks and Workbooks</a></li>
-      </ul>
-    </li>
-    <li><a href="#plan-first-succeed-later">Plan first, Succeed later</a>
-      <ul>
-        <li><a href="#folder-structure">Folder Structure</a></li>
-        <li><a href="#connecting-securely-to-azure">Connecting Securely To Azure</a></li>
-      </ul>
-    </li>
-    <li><a href="#summary">Summary</a></li>
   </ul>
 </nav></aside>
         </section>
@@ -310,12 +324,12 @@ Like any other cloud services, you can automate most of the Azure Sentinel deplo
       
 
       <article class="mt-6 w-full max-w-4xl lg:max-w-5xl prose prose-slate dark:prose-invert prose-quoteless post-content">
-        <h1 id="automate-azure-sentinel-deployment">Automate Azure Sentinel Deployment</h1>
+        <h2 id="automate-azure-sentinel-deployment">Automate Azure Sentinel Deployment</h2>
 <p>Azure Sentinel is a scalable, cloud-native, security information event management (SIEM) and security orchestration automated response (SOAR) solution.
 Azure Sentinel delivers intelligent security analytics and threat intelligence across the enterprise, providing a single solution for alert detection, threat visibility, proactive hunting, and threat response.</p>
 <p>Like any other cloud services, you can automate most of the Azure Sentinel deployment and configuration.
 And in this post, you will learn how to automate the core components of Azure Sentinel.</p>
-<h2 id="prerequisites">Prerequisites</h2>
+<h3 id="prerequisites">Prerequisites</h3>
 <p>Before we start, there are few global prerequisites that you need to meet:</p>
 <ul>
 <li>Active Azure Subscription, if you don&rsquo;t have one, create a <a href="https://azure.microsoft.com/free/?WT.mc_id=A261C142F" target="_blank" rel="noopener">free account</a>
@@ -324,27 +338,27 @@ And in this post, you will learn how to automate the core components of Azure Se
 <li>PowerShell V7, if you don&rsquo;t have it installed, install it from the <a href="https://github.com/PowerShell/PowerShell" target="_blank" rel="noopener">GitHub Repository</a>
 .</li>
 </ul>
-<h2 id="azure-sentinel-automation-tools">Azure Sentinel Automation tools</h2>
+<h3 id="azure-sentinel-automation-tools">Azure Sentinel Automation tools</h3>
 <p>Bringing the right set of tools to the mission allows you to provide the best solution in the shortest time.
 Before you begin in your journey, spend some time getting familiar with the following tools:</p>
-<h3 id="powershell-v7">PowerShell V7</h3>
+<h4 id="powershell-v7">PowerShell V7</h4>
 <p>PowerShell V7 is a cross-platform task automation and configuration management framework, consisting of a command-line shell and scripting language.
 Make sure you installed it on your system.</p>
-<h3 id="az-module">Az Module</h3>
+<h4 id="az-module">Az Module</h4>
 <p>Azure PowerShell Az module is a PowerShell module for interacting with Azure.
 Az offers shorter commands, improved stability, and cross-platform support.</p>
 <p>To install it, you run the following command:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-PowerShell" data-lang="PowerShell"><span style="display:flex;"><span>Install-Module az -AllowClobber -Scope CurrentUser
-</span></span></code></pre></div><h3 id="azsentinel-module">AzSentinel Module</h3>
+</span></span></code></pre></div><h4 id="azsentinel-module">AzSentinel Module</h4>
 <p>AzSentinel is a module built by Wortel, and it will help us automate a few of the processes.</p>
 <p>You install the AzSentinel Module with the following command:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-PowerSHell" data-lang="PowerSHell"><span style="display:flex;"><span>Install-Module AzSentinel -Scope CurrentUser -Force
-</span></span></code></pre></div><h3 id="splatting">Splatting</h3>
+</span></span></code></pre></div><h4 id="splatting">Splatting</h4>
 <p>In most of the code examples, I use &ldquo;splatting&rdquo; to pass the parameters.
 Splatting makes your commands shorter and easier to read.
 You can read more about it <a href="https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_splatting?view=powershell-7" target="_blank" rel="noopener">here.</a>
 </p>
-<h2 id="connect-to-azure-with-powershell">Connect to Azure with PowerShell</h2>
+<h3 id="connect-to-azure-with-powershell">Connect to Azure with PowerShell</h3>
 <p>You also need to set up a session to Azure from PowerShell, and you can create one with the Az module.</p>
 <p>You need to get your Tenant ID and Subscription ID from the Azure Portal.</p>
 <p>With this information, you can use the <code>Connect-AzAccount</code> to create a session with Azure:</p>
@@ -352,7 +366,7 @@ You can read more about it <a href="https://docs.microsoft.com/en-us/powershell/
 </span></span><span style="display:flex;"><span>$SubscriptionID = <span style="color:#e6db74">&#39;XXXX-XXXX-XXXX-XXXX&#39;</span>
 </span></span><span style="display:flex;"><span>Connect-AzAccount -TenantId $TenantID -SubscriptionId $SubscriptionID
 </span></span></code></pre></div><p>You can now interact with Azure from PowerShell and start your journey to automate Azure Sentinel.</p>
-<h2 id="a-step-by-step-to-a-fully-automated-deployment">A Step by Step To a Fully Automated Deployment</h2>
+<h3 id="a-step-by-step-to-a-fully-automated-deployment">A Step by Step To a Fully Automated Deployment</h3>
 <p>Every automation process starts with multiple small automated processes.
 In this post, you will learn how to provision the following components with PowerShell:</p>
 <ul>
@@ -367,7 +381,7 @@ In this post, you will learn how to provision the following components with Powe
 </ul>
 <p><strong>Azure Log Analytics, Azure Sentinel, and Logic Apps are all paid services.</strong></p>
 <p>Each component is a piece in the puzzle that builds a fully up and running Azure Sentinel, ready to monitor every environment.</p>
-<h3 id="resource-group">Resource Group</h3>
+<h4 id="resource-group">Resource Group</h4>
 <p>The resource group is a container that holds related resources for an Azure solution.
 In Azure, you logically group related resources to deploy, manage, and maintain them as a single entity.
 With the <code>New-AzResourceGroup</code>, you can create a new resource group.</p>
@@ -380,7 +394,7 @@ In this guide, I will use the West Europe region.</strong></p>
 </span></span><span style="display:flex;"><span>}
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>New-AzResourceGroup @Parms
-</span></span></code></pre></div><h3 id="log-analytics">Log Analytics</h3>
+</span></span></code></pre></div><h4 id="log-analytics">Log Analytics</h4>
 <p>Log Analytics is a service that helps you collect and analyze data generated by resources in your cloud and on-premises environments.
 It gives you real-time insights using integrated search and custom dashboards to readily analyze millions of records across all of your workloads and servers regardless of their physical location.</p>
 <p>Azure Sentinel run on Log Analytics workspace, and use it to store all security-related data.
@@ -393,7 +407,7 @@ With that said, Log Analytics is the first resource we need to provision.</p>
 </span></span><span style="display:flex;"><span>}
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>New-AzOperationalInsightsWorkspace @Parms
-</span></span></code></pre></div><h3 id="azure-sentinel">Azure Sentinel</h3>
+</span></span></code></pre></div><h4 id="azure-sentinel">Azure Sentinel</h4>
 <p>After provisioning Log Analytics, you can continue and on-board Azure Sentinel.</p>
 <p>Use the <code>Set-AzSentinel</code> to provision the Log Analytics Workspace:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-PowerShell" data-lang="PowerShell"><span style="display:flex;"><span>$Parms = @{
@@ -402,7 +416,7 @@ With that said, Log Analytics is the first resource we need to provision.</p>
 </span></span><span style="display:flex;"><span>}
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>Set-AzSentinel @Parms
-</span></span></code></pre></div><h3 id="azure-sentinel-saved-queries">Azure Sentinel Saved Queries</h3>
+</span></span></code></pre></div><h4 id="azure-sentinel-saved-queries">Azure Sentinel Saved Queries</h4>
 <p>Until this point, you only provisioned &ldquo;Infrastructure.&rdquo;
 By enabling Azure Sentinel, you can now start the &ldquo;configuration&rdquo; part, and add content to your Azure Sentinel.</p>
 <p>When we talk about SIEM and monitoring big data as an essential skill to have, it is the ability to extract the relevant information from the sea of data.</p>
@@ -467,7 +481,7 @@ It allows you to manage your content inside a git repository, manage versions, a
 </span></span><span style="display:flex;"><span>}
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>New-AzOperationalInsightsSavedSearch @param
-</span></span></code></pre></div><h3 id="hunting-queries">Hunting Queries</h3>
+</span></span></code></pre></div><h4 id="hunting-queries">Hunting Queries</h4>
 <p>Hunting queries help you find suspicious activity in your environment.
 While many are likely to return legitimate activity or potentially malicious activity, they can guide your hunting.
 If you are confident with the results after running these queries, you could consider turning some or all of them
@@ -497,7 +511,7 @@ into Azure Sentinel Analytics to alert on.</p>
 </span></span><span style="display:flex;"><span>}
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>Import-AzSentinelHuntingRule @Parms
-</span></span></code></pre></div><h3 id="alerts-rules">Alerts Rules</h3>
+</span></span></code></pre></div><h4 id="alerts-rules">Alerts Rules</h4>
 <p>Alert rules are queries that defined to trigger incidents.
 You use them to raise incidents when security incidents happen in your environment.
 Just like Hunting queries, you store your alerts rules in a JSON file.</p>
@@ -546,7 +560,7 @@ Just like Hunting queries, you store your alerts rules in a JSON file.</p>
 </span></span><span style="display:flex;"><span>}
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>Import-AzSentinelAlertRule @Parms
-</span></span></code></pre></div><h3 id="playbooks-and-workbooks">Playbooks and Workbooks</h3>
+</span></span></code></pre></div><h4 id="playbooks-and-workbooks">Playbooks and Workbooks</h4>
 <p>Playbooks use Azure Logic Apps to respond to incidents automatically.
 Logic Apps are a native resource in ARM, and therefore we can automate its deployment with ARM templates.</p>
 <p>Azure Sentinel allows you to create custom workbooks across your data.
@@ -563,9 +577,9 @@ Use the <code>New-AzResourceGroupDeployment</code> cmdlet to deploy either Workb
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>New-AzResourceGroupDeployment @Parms
 </span></span></code></pre></div><p><strong>Take into account that the deployment will fail if a workbook with the same name already exists.</strong></p>
-<h2 id="plan-first-succeed-later">Plan first, Succeed later</h2>
+<h3 id="plan-first-succeed-later">Plan first, Succeed later</h3>
 <p>You&rsquo;ve learned how to provision each component and how to deploy your content, now it&rsquo;s time to prepare the content and learn how to connect securely to Azure to automate the deployment from start to end correctly.</p>
-<h3 id="folder-structure">Folder Structure</h3>
+<h4 id="folder-structure">Folder Structure</h4>
 <p>First, I want to explain about folder structure.
 When you have different files, I like to organize them in folders, so it&rsquo;s easy to manage them and use them in the automation process.
 In this case, we have five different resources, so, I recommend the following structure:</p>
@@ -593,7 +607,7 @@ For example, to import all your AlertRules, you can do the following:</p>
 </span></span><span style="display:flex;"><span>        Write-Error <span style="color:#e6db74">&#34;Unable to import Alert Rule: </span>$($ErrorMessage)<span style="color:#e6db74">&#34;</span>
 </span></span><span style="display:flex;"><span>    }
 </span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><h3 id="connecting-securely-to-azure">Connecting Securely To Azure</h3>
+</span></span></code></pre></div><h4 id="connecting-securely-to-azure">Connecting Securely To Azure</h4>
 <p>Another important topic is how we authenticate to Azure securely.
 If you paid attention when you created a session with Azure for the first time, using your credential, it asked you to sign in with <em>one timed password</em> in the Microsoft portal.
 One time passwords are not the behavior we want when we automate things, as it required human intervention.
@@ -630,7 +644,7 @@ You convert the password to secure string and save it to a file (I recommend cha
 </span></span><span style="display:flex;"><span>    Write-Error <span style="color:#e6db74">&#34;Unable to connect to Azure: </span>$($ErrorMessage)<span style="color:#e6db74">&#34;</span>
 </span></span><span style="display:flex;"><span>    exit
 </span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><h2 id="summary">Summary</h2>
+</span></span></code></pre></div><h3 id="summary">Summary</h3>
 <p>Azure Sentinel is the &ldquo;next-gen&rdquo; SIEM in the cloud, and if you are into security, Mastering Azure Sentinel is a must.
 Combining the cloud capabilities, with a SIEM that is managed by code, gives you endless possibilities to protect your critical assets.
 In this post, you have learned about Azure Sentinel, the components, and how to automate a deployment securely.
