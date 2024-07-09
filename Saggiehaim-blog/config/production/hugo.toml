@@ -1,4 +1,4 @@
-baseURL = 'https://saggehaimblog.github.io/blog/'
+baseURL = 'https://www.saggiehaim.net/'
 theme = "tailwind"
 
 languageCode = 'en-us'
