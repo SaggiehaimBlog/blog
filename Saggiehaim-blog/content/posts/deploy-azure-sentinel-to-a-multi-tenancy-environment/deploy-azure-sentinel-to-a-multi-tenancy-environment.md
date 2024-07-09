@@ -4,7 +4,7 @@ title = "Deploy Azure Sentinel to a multi-tenancy environment"
 date = "2020-10-14"
 description = "Azure Sentinel is a scalable, cloud-native, SIEM and SOAR solution. The challenge begins when you have a multi-tenancy environment to monitor. Learn how Azure Lighthouse enables cross- and multi-tenant management, automation, and scalability."
 toc = true
-image = "./images/AzureLighthouse.png"
+image = "/images/AzureLighthouse.png"
 tags = [
     "Microsoft Sentinel",
     "PowerShell",
