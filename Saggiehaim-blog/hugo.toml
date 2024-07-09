@@ -13,11 +13,11 @@ theme = "tailwind"
   contentTypeName = "posts"
 
   [params.header]
-    logo = "logo.webp"
+    logo = "white_logo.png"
 
   [params.footer]
-    since = 2023
-    poweredby = true
+    since = 2018
+    poweredby = false
 
 [menu]
 
