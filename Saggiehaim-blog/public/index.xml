@@ -9,8 +9,15 @@
     <managingEditor>contact@saggiehaim.net (Saggie Haim)</managingEditor>
     <webMaster>contact@saggiehaim.net (Saggie Haim)</webMaster>
     <copyright>Saggie Haim</copyright>
-    <lastBuildDate>Mon, 08 Jul 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 09 Jul 2024 12:19:55 -0700</lastBuildDate>
     <atom:link href="//localhost:8080/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Sorting Group Policy</title>
+      <link>//localhost:8080/posts/sorting-group-policy/sorting-group-policy/</link>
+      <pubDate>Tue, 09 Jul 2024 12:19:55 -0700</pubDate><author>contact@saggiehaim.net (Saggie Haim)</author>
+      <guid>//localhost:8080/posts/sorting-group-policy/sorting-group-policy/</guid>
+      <description></description>
+    </item>
     <item>
       <title>About</title>
       <link>//localhost:8080/about/</link>
@@ -47,11 +54,32 @@
       <description>PowerShell is the Automator&amp;rsquo;s best friend. I automate everything with PowerShell, and you can also. When it comes to Azure, I can&amp;rsquo;t remember the last time I created a resource in the Portal. I either use PowerShell or IaC to provision resources or modify them.&#xA;In this post, you will learn how to set up a session with Azure to start to interact with Azure Resources.&#xA;Prerequisites Before we start, there are few global prerequisites that you need to meet:</description>
     </item>
     <item>
+      <title>Install Powershell 7 on Wsl and Ubuntu</title>
+      <link>//localhost:8080/posts/install-powershell-7-on-wsl-and-ubuntu/install-powershell-7-on-wsl-and-ubuntu/</link>
+      <pubDate>Sun, 16 Feb 2020 00:00:00 +0000</pubDate><author>contact@saggiehaim.net (Saggie Haim)</author>
+      <guid>//localhost:8080/posts/install-powershell-7-on-wsl-and-ubuntu/install-powershell-7-on-wsl-and-ubuntu/</guid>
+      <description>With PowerShell 7, we get the best PowerShell edition, most importantly, it’s cross-platform! While last time we installed the latest PowerShell 7 on a container, sometimes we don’t want just a plain environment with PowerShell, sometimes we want a to add other tools, change system configurations or use different Linux Distros.&#xA;That is why we use WSL.&#xA;What is WSL? WSL or Windows Subsystem for Linux is a feature that lets us run full Linux distributions on top of our Windows OS without the overhead of running virtualization tools.</description>
+    </item>
+    <item>
       <title>Background Jobs Start Threadjob vs Start Job</title>
       <link>//localhost:8080/posts/background-jobs-start-threadjob-vs-start-job/background-jobs-start-threadjob-vs-start-job/</link>
       <pubDate>Sun, 07 Jul 2019 00:00:00 +0000</pubDate><author>contact@saggiehaim.net (Saggie Haim)</author>
       <guid>//localhost:8080/posts/background-jobs-start-threadjob-vs-start-job/background-jobs-start-threadjob-vs-start-job/</guid>
       <description>PowerShell can run background jobs with the Start-Job cmdlet. Most of the cmdlet also have -AsJob switch to instantly run the cmdlet as a background job. Each job runs a cmdlet in the background without interacting with the current session. This gives us the ability to perform an action on many targets quicker. This also come with some “downsides”, it’s resource consuming (depend on how many tasks running in the background) as each job is a separated process.</description>
+    </item>
+    <item>
+      <title>Running Powershell Core in a Container</title>
+      <link>//localhost:8080/posts/running-powershell-core-in-a-container/running-powershell-core-in-a-container/</link>
+      <pubDate>Sun, 12 May 2019 00:00:00 +0000</pubDate><author>contact@saggiehaim.net (Saggie Haim)</author>
+      <guid>//localhost:8080/posts/running-powershell-core-in-a-container/running-powershell-core-in-a-container/</guid>
+      <description>With Powershell V7 on the verge, the importance of building solutions that are cross-platforms in Powershell is bigger. One of the issues we have while running tests, is that our Powershell environment is not “clean” as in other computers. That’s where Powershell Core in a container gets in the picture.&#xA;We install a lot of modules, software and other things that our target audience or servers won’t share. Our solution could act differently in those environments.</description>
+    </item>
+    <item>
+      <title>Build Gui for Powershell</title>
+      <link>//localhost:8080/posts/build-gui-for-powershell/build-gui-for-powershell/</link>
+      <pubDate>Wed, 20 Feb 2019 00:00:00 +0000</pubDate><author>contact@saggiehaim.net (Saggie Haim)</author>
+      <guid>//localhost:8080/posts/build-gui-for-powershell/build-gui-for-powershell/</guid>
+      <description>Hey everyone! Today I want to talk about GUI for PowerShell. You probably wonder why? PowerShell is all about the CLI and moving away from the GUI. but sometimes, a GUI for our scripts can be very useful.&#xA;Every Company has HelpDesk team, other System Admins that don’t know PowerShell at all, or non-technical staff. While I will encourage them to learn, I can’t make them. As a result, I need to provide them with a GUI for some of the tools or solutions.</description>
     </item>
     <item>
       <title></title>

@@ -40,10 +40,31 @@
       <description></description>
     </item>
     <item>
+      <title>WSL</title>
+      <link>//localhost:8080/categories/wsl/</link>
+      <pubDate>Sun, 16 Feb 2020 00:00:00 +0000</pubDate><author>contact@saggiehaim.net (Saggie Haim)</author>
+      <guid>//localhost:8080/categories/wsl/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>Guide</title>
       <link>//localhost:8080/categories/guide/</link>
       <pubDate>Sun, 07 Jul 2019 00:00:00 +0000</pubDate><author>contact@saggiehaim.net (Saggie Haim)</author>
       <guid>//localhost:8080/categories/guide/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Automation</title>
+      <link>//localhost:8080/categories/automation/</link>
+      <pubDate>Sun, 12 May 2019 00:00:00 +0000</pubDate><author>contact@saggiehaim.net (Saggie Haim)</author>
+      <guid>//localhost:8080/categories/automation/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Docker</title>
+      <link>//localhost:8080/categories/docker/</link>
+      <pubDate>Sun, 12 May 2019 00:00:00 +0000</pubDate><author>contact@saggiehaim.net (Saggie Haim)</author>
+      <guid>//localhost:8080/categories/docker/</guid>
       <description></description>
     </item>
   </channel>
