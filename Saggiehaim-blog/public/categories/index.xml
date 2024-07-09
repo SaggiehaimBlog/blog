@@ -67,5 +67,12 @@
       <guid>//localhost:8080/categories/docker/</guid>
       <description></description>
     </item>
+    <item>
+      <title>Group Policy</title>
+      <link>//localhost:8080/categories/group-policy/</link>
+      <pubDate>Thu, 10 Jan 2019 00:00:00 +0000</pubDate><author>contact@saggiehaim.net (Saggie Haim)</author>
+      <guid>//localhost:8080/categories/group-policy/</guid>
+      <description></description>
+    </item>
   </channel>
 </rss>

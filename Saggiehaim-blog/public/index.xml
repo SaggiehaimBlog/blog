@@ -9,15 +9,8 @@
     <managingEditor>contact@saggiehaim.net (Saggie Haim)</managingEditor>
     <webMaster>contact@saggiehaim.net (Saggie Haim)</webMaster>
     <copyright>Saggie Haim</copyright>
-    <lastBuildDate>Tue, 09 Jul 2024 12:19:55 -0700</lastBuildDate>
+    <lastBuildDate>Mon, 08 Jul 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="//localhost:8080/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Sorting Group Policy</title>
-      <link>//localhost:8080/posts/sorting-group-policy/sorting-group-policy/</link>
-      <pubDate>Tue, 09 Jul 2024 12:19:55 -0700</pubDate><author>contact@saggiehaim.net (Saggie Haim)</author>
-      <guid>//localhost:8080/posts/sorting-group-policy/sorting-group-policy/</guid>
-      <description></description>
-    </item>
     <item>
       <title>About</title>
       <link>//localhost:8080/about/</link>
@@ -80,6 +73,13 @@
       <pubDate>Wed, 20 Feb 2019 00:00:00 +0000</pubDate><author>contact@saggiehaim.net (Saggie Haim)</author>
       <guid>//localhost:8080/posts/build-gui-for-powershell/build-gui-for-powershell/</guid>
       <description>Hey everyone! Today I want to talk about GUI for PowerShell. You probably wonder why? PowerShell is all about the CLI and moving away from the GUI. but sometimes, a GUI for our scripts can be very useful.&#xA;Every Company has HelpDesk team, other System Admins that don’t know PowerShell at all, or non-technical staff. While I will encourage them to learn, I can’t make them. As a result, I need to provide them with a GUI for some of the tools or solutions.</description>
+    </item>
+    <item>
+      <title>Sorting Group Policy</title>
+      <link>//localhost:8080/posts/sorting-group-policy/sorting-group-policy/</link>
+      <pubDate>Thu, 10 Jan 2019 00:00:00 +0000</pubDate><author>contact@saggiehaim.net (Saggie Haim)</author>
+      <guid>//localhost:8080/posts/sorting-group-policy/sorting-group-policy/</guid>
+      <description>So, this is the first post for 2019! Happy new year!Today I want to talk about a painful topic, the Group Policy. It’s almost the same in every company. it’s historical, contain a lot of Group Policy and if you ever try to touch it, half of the systems stop working.&#xA;Its ok burning meme Last week I saw a post from my good friend Omer a Microsoft PFE, as he talked about Common Mistakes in Active Directory and Domain Services .</description>
     </item>
     <item>
       <title></title>

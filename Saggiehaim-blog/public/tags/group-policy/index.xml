@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Group Policy on Saggie Haim - Automate Everything</title>
+    <link>//localhost:8080/tags/group-policy/</link>
+    <description>Recent content in Group Policy on Saggie Haim - Automate Everything</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <managingEditor>contact@saggiehaim.net (Saggie Haim)</managingEditor>
+    <webMaster>contact@saggiehaim.net (Saggie Haim)</webMaster>
+    <copyright>Saggie Haim</copyright>
+    <lastBuildDate>Thu, 10 Jan 2019 00:00:00 +0000</lastBuildDate>
+    <atom:link href="//localhost:8080/tags/group-policy/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Sorting Group Policy</title>
+      <link>//localhost:8080/posts/sorting-group-policy/sorting-group-policy/</link>
+      <pubDate>Thu, 10 Jan 2019 00:00:00 +0000</pubDate><author>contact@saggiehaim.net (Saggie Haim)</author>
+      <guid>//localhost:8080/posts/sorting-group-policy/sorting-group-policy/</guid>
+      <description>So, this is the first post for 2019! Happy new year!Today I want to talk about a painful topic, the Group Policy. It’s almost the same in every company. it’s historical, contain a lot of Group Policy and if you ever try to touch it, half of the systems stop working.&#xA;Its ok burning meme Last week I saw a post from my good friend Omer a Microsoft PFE, as he talked about Common Mistakes in Active Directory and Domain Services .</description>
+    </item>
+  </channel>
+</rss>

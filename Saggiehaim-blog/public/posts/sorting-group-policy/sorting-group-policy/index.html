@@ -7,25 +7,31 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta
   name="description"
-  content=""
+  content="So, this is the first post for 2019! Happy new year!Today I want to talk about a painful topic, the Group Policy. It’s almost the same in every company. it’s historical, contain a lot of Group Policy and if you ever try to touch it, half of the systems stop working.
+Its ok burning meme Last week I saw a post from my good friend Omer a Microsoft PFE, as he talked about Common Mistakes in Active Directory and Domain Services ."
 />
 <meta
   name="keywords"
-  content="Saggiehaim, PowerShell, Azure, Saggie Haim, Automate Everything, Microsoft Sentinel"
+  content="Sort GPO, Group Policy, PowerShell, Automation, GPO issue, Sort Group Policy, Organize GPO, Organize Group Policy"
 />
 <meta name="robots" content="noodp" />
 <meta property="og:url" content="//localhost:8080/posts/sorting-group-policy/sorting-group-policy/">
   <meta property="og:site_name" content="Saggie Haim - Automate Everything">
   <meta property="og:title" content="Sorting Group Policy">
+  <meta property="og:description" content="Group Policy. It’s almost the same in every company. it’s historical, contain a lot of Group Policy and if you ever try to touch it, half of the systems stop working.">
   <meta property="og:locale" content="en_us">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
-    <meta property="article:published_time" content="2024-07-09T12:19:55-07:00">
-    <meta property="article:modified_time" content="2024-07-09T12:19:55-07:00">
+    <meta property="article:published_time" content="2019-01-10T00:00:00+00:00">
+    <meta property="article:modified_time" content="2019-01-10T00:00:00+00:00">
+    <meta property="article:tag" content="Group Policy">
+    <meta property="article:tag" content="PowerShell">
+    <meta property="article:tag" content="Automation">
 
 
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Sorting Group Policy">
+  <meta name="twitter:description" content="Group Policy. It’s almost the same in every company. it’s historical, contain a lot of Group Policy and if you ever try to touch it, half of the systems stop working.">
 
 
 <link rel="canonical" href="//localhost:8080/posts/sorting-group-policy/sorting-group-policy/" />
@@ -169,7 +175,7 @@
     <div>
       <a href="/posts/sorting-group-policy/sorting-group-policy/">
         <figure>
-    <img class="w-full object-cover h-36 md:h-48 xl:h-60" src="../images"
+    <img class="w-full object-cover h-36 md:h-48 xl:h-60" src="../images/GPOFeaturedImage.png"
       alt="Sorting Group Policy" title="Sorting Group Policy"
       loading="lazy"
     >
@@ -182,7 +188,85 @@
       </h1>
 
       
+      <h2 class="my-4 text-large text-slate-600 dark:text-slate-300">
+        Group Policy. It’s almost the same in every company. it’s historical, contain a lot of Group Policy and if you ever try to touch it, half of the systems stop working.
+      </h2>
       
+      
+  <ul class="flex flex-row flex-wrap text-slate-500 dark:text-slate-300">
+    
+      
+      <li>
+        <a href="/categories/page/categories/group-policy/"
+          class="text-sm mr-2 px-2 py-1 rounded border border-emerald-800 bg-emerald-800 text-slate-50">
+          Group Policy
+        </a>
+      </li>
+      
+      <li>
+        <a href="/categories/page/categories/powershell/"
+          class="text-sm mr-2 px-2 py-1 rounded border border-emerald-800 bg-emerald-800 text-slate-50">
+          PowerShell
+        </a>
+      </li>
+      
+    
+    
+      
+      <li>
+        <a href="/tags/page/tags/group-policy/"
+          class="flex flex-row text-sm mr-2 py-1">
+          <i class="h-5 w-5 flex-none">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+   <path d="M5 9l14 0"></path>
+   <path d="M5 15l14 0"></path>
+   <path d="M11 4l-4 16"></path>
+   <path d="M17 4l-4 16"></path>
+</svg>
+
+          </i>
+          <span class="ml-0">Group Policy</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/tags/page/tags/powershell/"
+          class="flex flex-row text-sm mr-2 py-1">
+          <i class="h-5 w-5 flex-none">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+   <path d="M5 9l14 0"></path>
+   <path d="M5 15l14 0"></path>
+   <path d="M11 4l-4 16"></path>
+   <path d="M17 4l-4 16"></path>
+</svg>
+
+          </i>
+          <span class="ml-0">PowerShell</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/tags/page/tags/automation/"
+          class="flex flex-row text-sm mr-2 py-1">
+          <i class="h-5 w-5 flex-none">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+   <path d="M5 9l14 0"></path>
+   <path d="M5 15l14 0"></path>
+   <path d="M11 4l-4 16"></path>
+   <path d="M17 4l-4 16"></path>
+</svg>
+
+          </i>
+          <span class="ml-0">Automation</span>
+        </a>
+      </li>
+      
+    
+  </ul>
+
 
 
       <div class="flex flex-col gap-y-1 md:flex-row md:gap-y-0 md:gap-x-4 text-slate-500 dark:text-slate-300">
@@ -201,8 +285,8 @@
 </svg>
 
     </i>
-    <time datetime="2024-07-09T12:19:55-07:00">
-      2024-07-09
+    <time datetime="2019-01-10T00:00:00&#43;00:00">
+      2019-01-10
     </time>
   </div>
 
@@ -217,7 +301,7 @@
 
     </i>
     <span>
-      0 minutes to read
+      7 minutes to read
     </span>
   </div>
 </div>
@@ -227,13 +311,322 @@
         
         <section class="prose prose-slate dark:prose-invert w-full max-w-4xl lg:max-w-5xl mt-6">
           <h2>Table of Contents</h2>
-          <aside><nav id="TableOfContents"></nav></aside>
+          <aside><nav id="TableOfContents">
+  <ul>
+    <li><a href="#the-target">The Target</a></li>
+    <li><a href="#disabled-gpos">Disabled GPO’s</a>
+      <ul>
+        <li><a href="#the-issue">the issue</a></li>
+        <li><a href="#the-function">The Function</a></li>
+      </ul>
+    </li>
+    <li><a href="#empty-gpos">Empty GPO’s</a>
+      <ul>
+        <li><a href="#the-issue-1">The issue</a></li>
+        <li><a href="#the-function-1">The Function</a></li>
+      </ul>
+    </li>
+    <li><a href="#unlinked-gpos">Unlinked GPO’s</a>
+      <ul>
+        <li><a href="#the-issue-2">The issue</a></li>
+        <li><a href="#the-function-2">The function</a></li>
+      </ul>
+    </li>
+    <li><a href="#missing-permissions">Missing Permissions</a>
+      <ul>
+        <li><a href="#the-issue-3">The Issue</a></li>
+        <li><a href="#the-function-3">The Function</a></li>
+      </ul>
+    </li>
+    <li><a href="#doing-it-safe">Doing it Safe</a>
+      <ul>
+        <li><a href="#backup-gpos">Backup GPO&rsquo;s</a></li>
+        <li><a href="#restore-gpo">Restore-GPO</a></li>
+      </ul>
+    </li>
+    <li><a href="#conclusion">Conclusion</a></li>
+  </ul>
+</nav></aside>
         </section>
         
       
 
       <article class="mt-6 w-full max-w-4xl lg:max-w-5xl prose prose-slate dark:prose-invert prose-quoteless post-content">
-        
+        <p>So, this is the first post for 2019! Happy new year!Today I want to talk about a painful topic, the Group Policy.
+It’s almost the same in every company. it’s historical, contain a lot of Group Policy and if you ever try to touch it, half of the systems stop working.</p>
+<p><div class="not-prose">
+<figure>
+    <img src="../images/GPOFeatureImage.jpg"
+      alt=" "  title="Its ok burning meme" 
+      loading="lazy"
+    ><figcaption class="text-sm text-center text-slate-500 dark:text-slate-300">Its ok burning meme</figcaption>
+  </figure></div>
+</p>
+<p>Last week I saw a post from my good friend Omer a Microsoft PFE, as he talked about <a href="https://blogs.technet.microsoft.com/meamcs/2018/12/31/most-common-mistakes-in-active-directory-and-domain-services-part-1/" target="_blank" rel="noopener">Common Mistakes in Active Directory and Domain Services</a>
+.
+He points out that Removing “Authenticated Users” from the GPO Object Security Filtering is a bad thing.
+he also provided a PowerShell script to find GPO’s without “Authenticated Users” permissions.</p>
+<p>After running his GPO script, I saw that there few GPO’s that needed to sort.
+It gave me the motivation to analyze my entire environment, as a result, I created a few scripts.</p>
+<h2 id="the-target">The Target</h2>
+<p>Firstly, before I start, I’m writing down what I need to look for:</p>
+<ul>
+<li>Disabled GPO’s</li>
+<li>Empty GPO’s</li>
+<li>Unlinked GPO’s</li>
+<li>Missing permissions GPO’s (Based on Omer Script)</li>
+</ul>
+<p>I wrote all tests together in one script, but later decided to divide them to functions, so I can run each test individually and in the future create a complete Group Policy Report utilizing those functions.
+Therefore let’s deep dive on each test.</p>
+<h2 id="disabled-gpos">Disabled GPO’s</h2>
+<p>In this test, we will look for GPO’s with User, Computer or both setting disabled.</p>
+<h3 id="the-issue">the issue</h3>
+<p>Technically, there is no issue with GPO with disabled settings.
+But if both of them is disabled, then its unused GPO.
+We probably don’t need them. If only User or Computer disabled, then it&rsquo;s a “red flag” and we need to make sure we are not “losing” configuration.
+Maybe we can merge the settings with another GPO?</p>
+<h3 id="the-function">The Function</h3>
+<p>This will check if there are any settings disabled and return the GPO&rsquo;s.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-PowerShell" data-lang="PowerShell"><span style="display:flex;"><span><span style="color:#66d9ef">function</span> Get-GPODisabled {
+</span></span><span style="display:flex;"><span>    [cmdletbinding()]
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">param</span> (
+</span></span><span style="display:flex;"><span>    )
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">try</span> {
+</span></span><span style="display:flex;"><span>        Write-Verbose -Message <span style="color:#e6db74">&#34;Importing GroupPolicy module&#34;</span>
+</span></span><span style="display:flex;"><span>        Import-Module GroupPolicy -ErrorAction Stop
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">catch</span> {
+</span></span><span style="display:flex;"><span>        Write-Error -Message <span style="color:#e6db74">&#34;GroupPolicy Module not found. Make sure RSAT (Remote Server Admin Tools) is installed&#34;</span>
+</span></span><span style="display:flex;"><span>        exit
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    $DisabledGPO = New-Object System.Collections.ArrayList
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">try</span> {
+</span></span><span style="display:flex;"><span>        Write-Verbose -Message <span style="color:#e6db74">&#34;Importing GroupPolicy Policies&#34;</span>  
+</span></span><span style="display:flex;"><span>        $GPOs = Get-GPO -All  
+</span></span><span style="display:flex;"><span>        Write-Verbose -Message <span style="color:#e6db74">&#34;Found &#39;</span>$($GPOs.Count)<span style="color:#e6db74">&#39; policies to check&#34;</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">catch</span> {
+</span></span><span style="display:flex;"><span>        Write-Error -Message <span style="color:#e6db74">&#34;Can&#39;t Load GPO&#39;s Please make sure you have connection to the Domain Controllers&#34;</span>
+</span></span><span style="display:flex;"><span>        exit
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">ForEach</span> ($gpo  <span style="color:#66d9ef">in</span> $GPOs) { 
+</span></span><span style="display:flex;"><span>        Write-Verbose -Message <span style="color:#e6db74">&#34;Checking &#39;</span>$($gpo.DisplayName)<span style="color:#e6db74">&#39; status&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">switch</span> ($gpo.GpoStatus) {
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;ComputerSettingsDisabled&#34;</span> {$DisabledGPO += <span style="color:#e6db74">&#34;in &#39;</span>$($gpo.DisplayName)<span style="color:#e6db74">&#39; the Computer Settings Disabled&#34;</span>}
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;UserSettingsDisabled&#34;</span> {$DisabledGPO += <span style="color:#e6db74">&#34;in &#39;</span>$($gpo.DisplayName)<span style="color:#e6db74">&#39; the User Settings Disabled&#34;</span>}
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;AllSettingsDisabled&#34;</span> {$DisabledGPO += <span style="color:#e6db74">&#34;in &#39;</span>$($gpo.DisplayName)<span style="color:#e6db74">&#39; All Settings Disabled&#34;</span>}
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (($DisabledGPO).Count <span style="color:#f92672">-ne</span> <span style="color:#ae81ff">0</span>) {
+</span></span><span style="display:flex;"><span>        Write-Host <span style="color:#e6db74">&#34;The Following GPO&#39;s have settings disabled:&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> $DisabledGPO
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">else</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;No GPO&#39;s with setting disabled Found&#34;</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p><div class="not-prose">
+<figure>
+    <img src="../images/image-1.png"
+      alt="Result of the Get-GPODisabled"  title="PowerShell Terminal with the result of running the Get-GPODisabled" 
+      loading="lazy"
+    ><figcaption class="text-sm text-center text-slate-500 dark:text-slate-300">PowerShell Terminal with the result of running the Get-GPODisabled</figcaption>
+  </figure></div>
+</p>
+<h2 id="empty-gpos">Empty GPO’s</h2>
+<p>In this test, we will look for empty GPO’s, that means that the GPO has no setting configured on it.</p>
+<h3 id="the-issue-1">The issue</h3>
+<p>Empty GPO’s are useless and just adding more overhead.
+We don’t need them in our environment.</p>
+<h3 id="the-function-1">The Function</h3>
+<p>This function will check if there is GPO with the User or Computers settings empty.
+one common mistake people do, is they check the “User version” and “Computer version”, while it true that a new GPO start with version 0 on both of them and changed in each modification.
+but if you take an old GPO and remove all settings, the version won’t reset to 0, and you will miss those GPO’s!</p>
+<p><div class="not-prose">
+<figure>
+    <img src="../images/GPO.png"
+      alt="Empty GPO with computer version 4."  title="Example of GPO settings" 
+      loading="lazy"
+    ><figcaption class="text-sm text-center text-slate-500 dark:text-slate-300">Example of GPO settings</figcaption>
+  </figure></div>
+</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-PowerShell" data-lang="PowerShell"><span style="display:flex;"><span><span style="color:#66d9ef">function</span> Get-GPOEmpty {
+</span></span><span style="display:flex;"><span>    [cmdletbinding()]
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">param</span> (
+</span></span><span style="display:flex;"><span>    )
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">try</span> {
+</span></span><span style="display:flex;"><span>        Write-Verbose -Message <span style="color:#e6db74">&#34;Importing GroupPolicy module&#34;</span>
+</span></span><span style="display:flex;"><span>        Import-Module GroupPolicy -ErrorAction Stop
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">catch</span> {
+</span></span><span style="display:flex;"><span>        Write-Error -Message <span style="color:#e6db74">&#34;GroupPolicy Module not found. Make sure RSAT (Remote Server Admin Tools) is installed&#34;</span>
+</span></span><span style="display:flex;"><span>        exit
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    $EmptyGPO = New-Object System.Collections.ArrayList
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">try</span> {
+</span></span><span style="display:flex;"><span>        Write-Verbose -Message <span style="color:#e6db74">&#34;Importing GroupPolicy Policies&#34;</span>  
+</span></span><span style="display:flex;"><span>        $GPOs = Get-GPO -All  
+</span></span><span style="display:flex;"><span>        Write-Verbose -Message <span style="color:#e6db74">&#34;Found &#39;</span>$($GPOs.Count)<span style="color:#e6db74">&#39; policies to check&#34;</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">catch</span> {
+</span></span><span style="display:flex;"><span>        Write-Error -Message <span style="color:#e6db74">&#34;Can&#39;t Load GPO&#39;s Please make sure you have connection to the Domain Controllers&#34;</span>
+</span></span><span style="display:flex;"><span>        exit
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">ForEach</span> ($gpo  <span style="color:#66d9ef">in</span> $GPOs) { 
+</span></span><span style="display:flex;"><span>        Write-Verbose -Message <span style="color:#e6db74">&#34;Checking &#39;</span>$($gpo.DisplayName)<span style="color:#e6db74">&#39; status&#34;</span>
+</span></span><span style="display:flex;"><span>        &amp;<span style="color:#75715e">#91;xml]$GPOXMLReport = $gpo | Get-GPOReport -ReportType xml</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> ($null <span style="color:#f92672">-eq</span> $GPOXMLReport.gpo.User.ExtensionData <span style="color:#f92672">-and</span> $null <span style="color:#f92672">-eq</span> $GPOXMLReport.gpo.Computer.ExtensionData) {
+</span></span><span style="display:flex;"><span>            $EmptyGPO += $gpo
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (($EmptyGPO).Count <span style="color:#f92672">-ne</span> <span style="color:#ae81ff">0</span>) {
+</span></span><span style="display:flex;"><span>        Write-Host <span style="color:#e6db74">&#34;The Following GPO&#39;s are empty:&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> $EmptyGPO.DisplayName
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">else</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;No Empty GPO&#39;s Found&#34;</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p><div class="not-prose">
+<figure>
+    <img src="../images/image-2.png"
+      alt="Result of the Get-GPOEmpty"  title="PowerShell Terminal with the result of running the Get-GPOEmpty" 
+      loading="lazy"
+    ><figcaption class="text-sm text-center text-slate-500 dark:text-slate-300">PowerShell Terminal with the result of running the Get-GPOEmpty</figcaption>
+  </figure></div>
+</p>
+<h2 id="unlinked-gpos">Unlinked GPO’s</h2>
+<p>In this test, we will have the most results, as it&rsquo;s the most common case.
+Unlinked GPO’s are GPO’s that not linked to any domain, site or OU.</p>
+<h3 id="the-issue-2">The issue</h3>
+<p>Unlinked GPO’s are not an “issue” but most of the time, they are useless overhead to manage and track.
+In my company, there was GPO’s from 2008. I guess we won’t use it anymore 😒</p>
+<h3 id="the-function-2">The function</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-PowerShell" data-lang="PowerShell"><span style="display:flex;"><span><span style="color:#66d9ef">function</span> Get-GPOUnlinked {
+</span></span><span style="display:flex;"><span>    [cmdletbinding()]
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">param</span> ()
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">try</span> {
+</span></span><span style="display:flex;"><span>        Write-Verbose -Message <span style="color:#e6db74">&#34;Importing GroupPolicy module&#34;</span>
+</span></span><span style="display:flex;"><span>        Import-Module GroupPolicy -ErrorAction Stop
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">catch</span> {
+</span></span><span style="display:flex;"><span>        Write-Error -Message <span style="color:#e6db74">&#34;GroupPolicy Module not found. Make sure RSAT (Remote Server Admin Tools) is installed&#34;</span>
+</span></span><span style="display:flex;"><span>        exit
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    $UnlinkedGPO = New-Object System.Collections.ArrayList
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">try</span> {
+</span></span><span style="display:flex;"><span>        Write-Verbose -Message <span style="color:#e6db74">&#34;Importing GroupPolicy Policies&#34;</span>  
+</span></span><span style="display:flex;"><span>        $GPOs = Get-GPO -All  
+</span></span><span style="display:flex;"><span>        Write-Verbose -Message <span style="color:#e6db74">&#34;Found &#39;</span>$($GPOs.Count)<span style="color:#e6db74">&#39; policies to check&#34;</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">catch</span> {
+</span></span><span style="display:flex;"><span>        Write-Error -Message <span style="color:#e6db74">&#34;Can&#39;t Load GPO&#39;s Please make sure you have connection to the Domain Controllers&#34;</span>
+</span></span><span style="display:flex;"><span>        exit
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">ForEach</span> ($gpo  <span style="color:#66d9ef">in</span> $GPOs) { 
+</span></span><span style="display:flex;"><span>        Write-Verbose -Message <span style="color:#e6db74">&#34;Checking &#39;</span>$($gpo.DisplayName)<span style="color:#e6db74">&#39; link&#34;</span>
+</span></span><span style="display:flex;"><span>        &amp;<span style="color:#75715e">#91;xml]$GPOXMLReport = $gpo | Get-GPOReport -ReportType xml</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> ($null <span style="color:#f92672">-eq</span> $GPOXMLReport.GPO.LinksTo) { 
+</span></span><span style="display:flex;"><span>            $UnlinkedGPO += $gpo
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (($UnlinkedGPO).Count <span style="color:#f92672">-ne</span> <span style="color:#ae81ff">0</span>) {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> $UnlinkedGPO.DisplayName
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">else</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> Write-Host <span style="color:#e6db74">&#34;No Unlinked GPO found&#34;</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p><div class="not-prose">
+<figure>
+    <img src="../images/image-3.png"
+      alt="Result of the Get-GPOUnlinked"  title="PowerShell Terminal with the result of running the Get-GPOUnlinked" 
+      loading="lazy"
+    ><figcaption class="text-sm text-center text-slate-500 dark:text-slate-300">PowerShell Terminal with the result of running the Get-GPOUnlinked</figcaption>
+  </figure></div>
+</p>
+<h2 id="missing-permissions">Missing Permissions</h2>
+<p>Here we will test to see if there are GPO’s with missing Read permissions to the “Authenticated Users” or “Domain Computers” groups.</p>
+<h3 id="the-issue-3">The Issue</h3>
+<p>This test is based on Omer post I shared before, so I recommend you give it a read if you haven’t yet.
+he explains it better than me 😃</p>
+<h3 id="the-function-3">The Function</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-PowerShell" data-lang="PowerShell"><span style="display:flex;"><span><span style="color:#66d9ef">function</span> Get-GPOMissingPermissions {
+</span></span><span style="display:flex;"><span>    [cmdletbinding()]
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">param</span> ()
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">try</span> {
+</span></span><span style="display:flex;"><span>        Write-Verbose -Message <span style="color:#e6db74">&#34;Importing GroupPolicy module&#34;</span>
+</span></span><span style="display:flex;"><span>        Import-Module GroupPolicy -ErrorAction Stop
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">catch</span> {
+</span></span><span style="display:flex;"><span>        Write-Error -Message <span style="color:#e6db74">&#34;GroupPolicy Module not found. Make sure RSAT (Remote Server Admin Tools) is installed&#34;</span>
+</span></span><span style="display:flex;"><span>        exit
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    $MissingPermissionsGPOArray = New-Object System.Collections.ArrayList
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">try</span> {
+</span></span><span style="display:flex;"><span>        Write-Verbose -Message <span style="color:#e6db74">&#34;Importing GroupPolicy Policies&#34;</span>  
+</span></span><span style="display:flex;"><span>        $GPOs = Get-GPO -All  
+</span></span><span style="display:flex;"><span>        Write-Verbose -Message <span style="color:#e6db74">&#34;Found &#39;</span>$($GPOs.Count)<span style="color:#e6db74">&#39; policies to check&#34;</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">catch</span> {
+</span></span><span style="display:flex;"><span>        Write-Error -Message <span style="color:#e6db74">&#34;Can&#39;t Load GPO&#39;s Please make sure you have connection to the Domain Controllers&#34;</span>
+</span></span><span style="display:flex;"><span>        exit
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">ForEach</span> ($gpo  <span style="color:#66d9ef">in</span> $GPOs) { 
+</span></span><span style="display:flex;"><span>        Write-Verbose -Message <span style="color:#e6db74">&#34;Checking &#39;</span>$($gpo.DisplayName)<span style="color:#e6db74">&#39; status&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">If</span> ($GPO.User.Enabled) {
+</span></span><span style="display:flex;"><span>            $GPOPermissionForAuthUsers = Get-GPPermission -Guid $GPO.Id -All | Select-Object -ExpandProperty Trustee | Where-Object {$_.Name <span style="color:#f92672">-eq</span> <span style="color:#e6db74">&#34;Authenticated Users&#34;</span>}
+</span></span><span style="display:flex;"><span>            $GPOPermissionForDomainComputers = Get-GPPermission -Guid $GPO.Id -All | Select-Object -ExpandProperty Trustee | Where-Object {$_.Name <span style="color:#f92672">-eq</span> <span style="color:#e6db74">&#34;Domain Computers&#34;</span>}
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">If</span> (!$GPOPermissionForAuthUsers <span style="color:#f92672">-and</span> !$GPOPermissionForDomainComputers) {
+</span></span><span style="display:flex;"><span>                $MissingPermissionsGPOArray += $gpo
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (($MissingPermissionsGPOArray).Count <span style="color:#f92672">-ne</span> <span style="color:#ae81ff">0</span>) {
+</span></span><span style="display:flex;"><span>        Write-Host <span style="color:#e6db74">&#34;The following GPO&#39;s do not grant any permissions to the &#39;Authenticated Users&#39; Or &#39;Domain Computers&#39; Group&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> $MissingPermissionsGPOArray.DisplayName
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">else</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> &amp;<span style="color:#75715e">#91;string]&#34;No GPO&#39;s with missing permissions to the &#39;Authenticated Users&#39; or &#39;Domain Computers&#39; groups found &#34;</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p><div class="not-prose">
+<figure>
+    <img src="../images/image-4.png"
+      alt="Result of the Get-GPOMissingPermissions"  title="PowerShell Terminal with the result of running the Get-GPOMissingPermissions" 
+      loading="lazy"
+    ><figcaption class="text-sm text-center text-slate-500 dark:text-slate-300">PowerShell Terminal with the result of running the Get-GPOMissingPermissions</figcaption>
+  </figure></div>
+</p>
+<h2 id="doing-it-safe">Doing it Safe</h2>
+<p>Before you make any changes, I highly recommend you to backup any GPO before you change or delete.
+If you hear people scream and shout outside, just restore the GPO.</p>
+<h3 id="backup-gpos">Backup GPO&rsquo;s</h3>
+<p>While you can easily backup GPO’s over the GUI, we love PowerShell more.
+so we will do it with PowerShell.</p>
+<p>To backup all GPO’s or specific ones, just run the following cmdlet:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-PowerShell" data-lang="PowerShell"><span style="display:flex;"><span><span style="color:#75715e">## Backup All GPO&#39;s</span>
+</span></span><span style="display:flex;"><span>Backup-Gpo -All -Path <span style="color:#e6db74">&#34;Location&#34;</span>
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span><span style="color:#75715e">## Backup specific GPO</span>
+</span></span><span style="display:flex;"><span>Backup-Gpo -Name <span style="color:#e6db74">&#34;GPO NAME&#34;</span> -Path <span style="color:#e6db74">&#34;Location&#34;</span> -Comment <span style="color:#e6db74">&#34;Comment&#34;</span> 
+</span></span></code></pre></div><h3 id="restore-gpo">Restore-GPO</h3>
+<p>If we want to restore deleted or changed GPO, we can use the following cmdlet:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-PowerShell" data-lang="PowerShell"><span style="display:flex;"><span><span style="color:#75715e">## Restore All GPO&#39;s</span>
+</span></span><span style="display:flex;"><span>Restore-GPO -All -Domain <span style="color:#e6db74">&#34;Domain Name&#34;</span> -Path <span style="color:#e6db74">&#34;Backups Location&#34;</span>
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span><span style="color:#75715e">## Restore specific GPO</span>
+</span></span><span style="display:flex;"><span>Restore-GPO -Name <span style="color:#e6db74">&#34;GPO NAME&#34;</span> -Path <span style="color:#e6db74">&#34;Backup Location
+</span></span></span></code></pre></div><p>Restore-GPO only support restoring GPO’s of the <strong>same</strong> domain!</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>In conclusion, we learned what we need to search.
+We saw the functions that will help us find the GPO’s.
+And we learned to backup and restore GPO’s.
+It’s time to sort the group policy mess! in the future, I hope to release the full GPO environment report, so stay tuned and good luck!</p>
+<p>You can find all the code on <a href="https://github.com/Saggiehaim/PS-GPO-Tools" target="_blank" rel="noopener">GitHub</a>
+</p>
+
       </article>
 
       
@@ -295,6 +688,27 @@
 
   </footer>
   <script src="/main.js"></script>
+
+<div class="hidden top-1 right-1" id="code-copy">
+  <i class="h-6 w-6 block">
+    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copy" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M7 7m0 2.667a2.667 2.667 0 0 1 2.667 -2.667h8.666a2.667 2.667 0 0 1 2.667 2.667v8.666a2.667 2.667 0 0 1 -2.667 2.667h-8.666a2.667 2.667 0 0 1 -2.667 -2.667z" />
+  <path d="M4.012 16.737a2.005 2.005 0 0 1 -1.012 -1.737v-10c0 -1.1 .9 -2 2 -2h10c.75 0 1.158 .385 1.5 1" />
+</svg>
+
+  </i>
+</div>
+<div class="hidden top-1 right-1" id="code-copy-done">
+  <i class="h-6 w-6 block">
+    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-check" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M5 12l5 5l10 -10" />
+</svg>
+
+  </i>
+</div><script src="/code-copy.js"></script>
+
 
 
 
