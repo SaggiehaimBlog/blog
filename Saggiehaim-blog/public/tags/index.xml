@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Saggie Haim - Automate Everything</title>
-    <link>http://localhost:65435/blog/tags/</link>
+    <link>http://localhost:49364/blog/tags/</link>
     <description>Recent content in Tags on Saggie Haim - Automate Everything</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 14 Aug 2020 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:65435/blog/tags/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:49364/blog/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Themes</title>
-      <link>http://localhost:65435/blog/tags/themes/</link>
+      <link>http://localhost:49364/blog/tags/themes/</link>
       <pubDate>Fri, 14 Aug 2020 00:00:00 +0000</pubDate>
-      <guid>http://localhost:65435/blog/tags/themes/</guid>
+      <guid>http://localhost:49364/blog/tags/themes/</guid>
       <description></description>
     </item>
   </channel>

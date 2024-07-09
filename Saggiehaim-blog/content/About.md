@@ -1,25 +1,24 @@
 +++
 title = "About"
-description = "Hugo, the world's fastest framework for building websites"
-date = "2019-02-28"
-aliases = ["about-us", "about-hugo", "contact"]
-author = "Hugo Authors"
+description = "About Saggie Haim"
+date = "2024-07-08"
+aliases = ["about-us", "about-saggie", "contact"]
+author = "Saggie Haim"
 +++
 
-Written in Go, Hugo is an open source static site generator available under the [Apache Licence 2.0.](https://github.com/gohugoio/hugo/blob/master/LICENSE) Hugo supports TOML, YAML and JSON data file types, Markdown and HTML content files and uses shortcodes to add rich content. Other notable features are taxonomies, multilingual mode, image processing, custom output formats, HTML/CSS/JS minification and support for Sass SCSS workflows.
+![Azure Sentinel – Microsoft first MSSP’s event in ILDC](../img/ILDCspeaker.jpeg)
 
-Hugo makes use of a variety of open source projects including:
+Hi, I’m Saggie, a Cloud Security Solution Director, a blogger and tech trainer. My experience in Microsoft systems, Security, Monitoring and, Networking help me design better projects and solutions.
 
-* https://github.com/yuin/goldmark
-* https://github.com/alecthomas/chroma
-* https://github.com/muesli/smartcrop
-* https://github.com/spf13/cobra
-* https://github.com/spf13/viper
+I’m motivated by my passion for troubleshooting and Powershell. Eager to keep learning every day. Improving my skill sets to better understand the constraints in every project or the challenges I face every day.
 
-Hugo is ideal for blogs, corporate websites, creative portfolios, online magazines, single page applications or even a website with thousands of pages.
+My hunger for knowledge and love of challenges, helped me build and execute the Enterprise Monitoring solution in Elbit systems. Where we implemented the Microsoft SCOM, monitored the entire company. This project helped raise the total uptime of the businesses applications. And to find to the root cause for common issues. I also led the troubleshooting team in the company. Helped developers and systems admins find the cause of performance and malfunction issues.
 
-Hugo is for people who want to hand code their own website without worrying about setting up complicated runtimes, dependencies and databases.
+Meanwhile, I vastly improved the security and productivity of Lumenis LTD IT. Planning and implementing vast projects as changing the entire networking. moving from flat network to full segmentation and implementing Aruba latest Wireless, Switches and NAC solutions supporting 802.1X and GRE Tunneling. Doing a complete overview of the enterprise domain environment, and providing automation solutions such as User-Life Cycle events and more.
 
-Websites built with Hugo are extremelly fast, secure and can be deployed anywhere including, AWS, GitHub Pages, Heroku, Netlify and any other hosting provider.
+These days I teach at CyberControl Academy about Operation systems, Networking, and Security Fundamentals. Working at CyberProof, and writing about IT in my blog.
 
-Learn more and contribute on [GitHub](https://github.com/gohugoio).
+
+![Aruba ClearPass workshop](../img/Arubaspeaker.jpeg)
+
+Hope you enjoy my blogging! Feel free to [Contact me]().
