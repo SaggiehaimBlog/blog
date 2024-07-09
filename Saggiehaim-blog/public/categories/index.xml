@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Saggie Haim - Automate Everything</title>
-    <link>//localhost:52568/categories/</link>
+    <link>//localhost:52880/categories/</link>
     <description>Recent content in Categories on Saggie Haim - Automate Everything</description>
     <generator>Hugo</generator>
     <language>en-us</language>
@@ -10,19 +10,19 @@
     <webMaster>contact@saggiehaim.net (Saggie Haim)</webMaster>
     <copyright>Saggie Haim</copyright>
     <lastBuildDate>Wed, 14 Oct 2020 00:00:00 +0000</lastBuildDate>
-    <atom:link href="//localhost:52568/categories/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="//localhost:52880/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Cloud Security</title>
-      <link>//localhost:52568/categories/cloud-security/</link>
+      <link>//localhost:52880/categories/cloud-security/</link>
       <pubDate>Wed, 14 Oct 2020 00:00:00 +0000</pubDate><author>contact@saggiehaim.net (Saggie Haim)</author>
-      <guid>//localhost:52568/categories/cloud-security/</guid>
+      <guid>//localhost:52880/categories/cloud-security/</guid>
       <description></description>
     </item>
     <item>
       <title>Microsoft Sentinel</title>
-      <link>//localhost:52568/categories/microsoft-sentinel/</link>
+      <link>//localhost:52880/categories/microsoft-sentinel/</link>
       <pubDate>Wed, 14 Oct 2020 00:00:00 +0000</pubDate><author>contact@saggiehaim.net (Saggie Haim)</author>
-      <guid>//localhost:52568/categories/microsoft-sentinel/</guid>
+      <guid>//localhost:52880/categories/microsoft-sentinel/</guid>
       <description></description>
     </item>
   </channel>
