@@ -39,7 +39,6 @@ tag = "tags"
 series = "series"
 
 [social_media]
-
   [[social_media.items]]
     enabled = true
     title = 'Linkedin'
