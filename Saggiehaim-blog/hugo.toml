@@ -20,6 +20,6 @@ enableEmoji = true
 
 [taxonomies]
 category = "categories"
-tag = "tags"
-series = "series"
+# tag = "tags"
+# series = "series"
 

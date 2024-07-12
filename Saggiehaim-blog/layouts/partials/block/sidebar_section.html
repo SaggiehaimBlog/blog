@@ -1,0 +1,26 @@
+{{- $taxonomy := .Taxonomy -}}
+{{- $context := .Context -}}
+{{- $limit := .Limit -}}
+{{ $icon := (index site.Params.taxonomies.icons $taxonomy) | default "tags" }}
+
+<section class="flex flex-col w-full gap-y-3 pl-6 py-3 mt-6 text-slate-800 dark:text-slate-200">
+  <div class=" place-self-center ">
+    <a class="flex flex-row" href='{{ (site.GetPage $taxonomy).RelPermalink }}'>
+
+      <h2 class="pl-1 uppercase">
+        {{ T (printf "taxonomies.%s" $taxonomy) | safeHTML }}
+      </h2>
+    </a>
+  </div>
+
+  <ul class="flex flex-col flex-wrap"> 
+    {{ range first 5 $context.ByCount }}
+    <li class="mt-2 mr-2 flex items-center saturate-150 rightness-50 blur-up rounded" style="background-image: url('/images/TAG_BG-1.png'); background-size: 100% 100%; background-position: center; background-repeat: no-repeat; min-width: 310px; min-height: 90px;"> 
+      <a href="{{ .Page.RelPermalink }}"
+        class="block w-full justify-center rounded px-2 py-1 text-lg font-bold tracking-wide text-slate-200 dark:text-slate-300 ring-slate-50/5 dark:ring-slate-50/5">
+        {{ .Page.Title }}
+      </a>
+    </li>
+    {{ end }}
+  </ul>
+</section>
