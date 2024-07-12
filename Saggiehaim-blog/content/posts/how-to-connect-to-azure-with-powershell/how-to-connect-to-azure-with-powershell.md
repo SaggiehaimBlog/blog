@@ -2,7 +2,7 @@
 author = "Saggie Haim"
 title = 'How to Connect to Azure With Powershell'
 date = 2020-04-02
-image = "../images/howtoconnecttoazure.jpeg"
+image = "/images/howtoconnecttoazure.jpeg"
 draft = false
 description = "PowerShell is the Automator's best friend. I automate everything with PowerShell, and you can also. When it comes to Azure, I can't remember the last time I created a resource in the Portal. I either use PowerShell or IaC to provision resources or modify them."
 toc = false

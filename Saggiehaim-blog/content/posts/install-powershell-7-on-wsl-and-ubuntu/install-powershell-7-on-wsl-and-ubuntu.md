@@ -20,7 +20,7 @@ keywords = [
     "Docker",
     "WSL"
 ]
-image = "../images/psonwslcover.jpg"
+image = "/images/psonwslcover.jpg"
 +++
 
 

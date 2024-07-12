@@ -24,7 +24,7 @@ keywords = [
     "Run PowerShell on docker",
     "Docker",
 ]
-image = "../images/pwscorecontainercover.jpg"
+image = "/images/pwscorecontainercover.jpg"
 +++
 
 With [Powershell V7](https://devblogs.microsoft.com/powershell/the-next-release-of-powershell-powershell-7/) on the verge, the importance of building solutions that are cross-platforms in Powershell is bigger.

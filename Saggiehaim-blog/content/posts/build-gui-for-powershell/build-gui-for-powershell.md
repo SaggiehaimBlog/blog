@@ -17,7 +17,7 @@ keywords = [
     "PowerShell GUI",
     "Automation"
 ]
-image = "../images/pwshguicover.jpg"
+image = "/images/pwshguicover.jpg"
 +++
 
 Hey everyone! Today I want to talk about GUI for PowerShell.

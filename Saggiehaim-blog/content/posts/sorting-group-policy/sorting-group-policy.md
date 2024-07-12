@@ -24,7 +24,7 @@ keywords = [
     "Organize GPO",
     "Organize Group Policy",
 ]
-image = "../images/GPOFeaturedImage.png"
+image = "/images/GPOFeaturedImage.png"
 +++
 
 So, this is the first post for 2019! Happy new year!Today I want to talk about a painful topic, the Group Policy.
