@@ -1,3 +1,7 @@
 baseURL = 'localhost'
 theme = "tailwind"
 
+[taxonomies]
+category = "categories"
+tags = "tags"
+#series = "series"

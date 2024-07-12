@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posttags on Saggie Haim - Automate Everything</title>
+    <link>//localhost:8080/posttags/</link>
+    <description>Recent content in Posttags on Saggie Haim - Automate Everything</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <managingEditor>contact@saggiehaim.net (Saggie Haim)</managingEditor>
+    <webMaster>contact@saggiehaim.net (Saggie Haim)</webMaster>
+    <copyright>Saggie Haim</copyright>
+    <atom:link href="//localhost:8080/posttags/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>
