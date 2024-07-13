@@ -1,8 +1,8 @@
 +++
 author = "Saggie Haim"
 title = 'Create Vmware Snapshots Report'
-date = 2024-07-12T13:30:54-07:00
-draft = true
+date = 2018-10-28
+draft = false
 description = "In this post, I share how I used PowerShell and PowerCLI to manage VMware ESXi snapshots during a recent trip to Japan. Follow my step-by-step guide to connect to vCenter, retrieve snapshot data, and generate detailed HTML reports, ensuring efficient snapshot management and avoiding storage issues."
 toc = true
 tags = [

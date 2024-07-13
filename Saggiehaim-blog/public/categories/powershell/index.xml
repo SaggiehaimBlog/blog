@@ -9,15 +9,8 @@
     <managingEditor>contact@saggiehaim.net (Saggie Haim)</managingEditor>
     <webMaster>contact@saggiehaim.net (Saggie Haim)</webMaster>
     <copyright>Saggie Haim</copyright>
-    <lastBuildDate>Fri, 12 Jul 2024 13:30:54 -0700</lastBuildDate>
+    <lastBuildDate>Thu, 02 Apr 2020 00:00:00 +0000</lastBuildDate>
     <atom:link href="//localhost:8080/categories/powershell/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Create Vmware Snapshots Report</title>
-      <link>//localhost:8080/posts/create-vmware-snapshots-report/create-vmware-snapshots-report/</link>
-      <pubDate>Fri, 12 Jul 2024 13:30:54 -0700</pubDate><author>contact@saggiehaim.net (Saggie Haim)</author>
-      <guid>//localhost:8080/posts/create-vmware-snapshots-report/create-vmware-snapshots-report/</guid>
-      <description>Konichiwa Yujin,&#xA;Sorry for not posting for so long, I been to Japan for a work trip. While Japan is amazing, the state of the ESXi in the office wasn’t so great. The ESXi crushed, and after investigation, we notice that he had no free space on HDD’s, which was weird. we have 100TB, and only 4 VM’s. the first suspect? Snapshots!&#xA;Japanese Garden building Snapshots are great, but they can be your worst enemy if you don’t use them correctly.</description>
-    </item>
     <item>
       <title>How to Connect to Azure With Powershell</title>
       <link>//localhost:8080/posts/how-to-connect-to-azure-with-powershell/how-to-connect-to-azure-with-powershell/</link>
@@ -73,6 +66,13 @@
       <pubDate>Wed, 28 Nov 2018 00:00:00 +0000</pubDate><author>contact@saggiehaim.net (Saggie Haim)</author>
       <guid>//localhost:8080/posts/powershell-history/powershell-history/</guid>
       <description>Howdy folks! How are you today?&#xA;After my last post, I had to prepare for my trip to the USA, had to visit two of our offices and set up a new one. Unfortunately, the big California fire started… so things ware little tense during my stay, hope everyone is safe over there!&#xA;While working there, my colleague asks me about some cmdlets I ran in the last site we visited.</description>
+    </item>
+    <item>
+      <title>Create Vmware Snapshots Report</title>
+      <link>//localhost:8080/posts/create-vmware-snapshots-report/create-vmware-snapshots-report/</link>
+      <pubDate>Sun, 28 Oct 2018 00:00:00 +0000</pubDate><author>contact@saggiehaim.net (Saggie Haim)</author>
+      <guid>//localhost:8080/posts/create-vmware-snapshots-report/create-vmware-snapshots-report/</guid>
+      <description>Konichiwa Yujin,&#xA;Sorry for not posting for so long, I been to Japan for a work trip. While Japan is amazing, the state of the ESXi in the office wasn’t so great. The ESXi crushed, and after investigation, we notice that he had no free space on HDD’s, which was weird. we have 100TB, and only 4 VM’s. the first suspect? Snapshots!&#xA;Japanese Garden building Snapshots are great, but they can be your worst enemy if you don’t use them correctly.</description>
     </item>
   </channel>
 </rss>
