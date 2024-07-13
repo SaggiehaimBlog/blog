@@ -9,8 +9,22 @@
     <managingEditor>contact@saggiehaim.net (Saggie Haim)</managingEditor>
     <webMaster>contact@saggiehaim.net (Saggie Haim)</webMaster>
     <copyright>Saggie Haim</copyright>
-    <lastBuildDate>Wed, 14 Oct 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 12 Jul 2024 13:30:54 -0700</lastBuildDate>
     <atom:link href="//localhost:8080/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>PowerShell</title>
+      <link>//localhost:8080/categories/powershell/</link>
+      <pubDate>Fri, 12 Jul 2024 13:30:54 -0700</pubDate><author>contact@saggiehaim.net (Saggie Haim)</author>
+      <guid>//localhost:8080/categories/powershell/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>VMware</title>
+      <link>//localhost:8080/categories/vmware/</link>
+      <pubDate>Fri, 12 Jul 2024 13:30:54 -0700</pubDate><author>contact@saggiehaim.net (Saggie Haim)</author>
+      <guid>//localhost:8080/categories/vmware/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Cloud Security</title>
       <link>//localhost:8080/categories/cloud-security/</link>
@@ -30,13 +44,6 @@
       <link>//localhost:8080/categories/azure/</link>
       <pubDate>Thu, 02 Apr 2020 00:00:00 +0000</pubDate><author>contact@saggiehaim.net (Saggie Haim)</author>
       <guid>//localhost:8080/categories/azure/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>PowerShell</title>
-      <link>//localhost:8080/categories/powershell/</link>
-      <pubDate>Thu, 02 Apr 2020 00:00:00 +0000</pubDate><author>contact@saggiehaim.net (Saggie Haim)</author>
-      <guid>//localhost:8080/categories/powershell/</guid>
       <description></description>
     </item>
     <item>
@@ -72,6 +79,13 @@
       <link>//localhost:8080/categories/group-policy/</link>
       <pubDate>Thu, 10 Jan 2019 00:00:00 +0000</pubDate><author>contact@saggiehaim.net (Saggie Haim)</author>
       <guid>//localhost:8080/categories/group-policy/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>SharePoint</title>
+      <link>//localhost:8080/categories/sharepoint/</link>
+      <pubDate>Mon, 24 Dec 2018 00:00:00 +0000</pubDate><author>contact@saggiehaim.net (Saggie Haim)</author>
+      <guid>//localhost:8080/categories/sharepoint/</guid>
       <description></description>
     </item>
   </channel>

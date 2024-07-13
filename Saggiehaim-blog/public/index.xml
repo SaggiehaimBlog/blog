@@ -9,8 +9,15 @@
     <managingEditor>contact@saggiehaim.net (Saggie Haim)</managingEditor>
     <webMaster>contact@saggiehaim.net (Saggie Haim)</webMaster>
     <copyright>Saggie Haim</copyright>
-    <lastBuildDate>Mon, 08 Jul 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 12 Jul 2024 13:30:54 -0700</lastBuildDate>
     <atom:link href="//localhost:8080/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Create Vmware Snapshots Report</title>
+      <link>//localhost:8080/posts/create-vmware-snapshots-report/create-vmware-snapshots-report/</link>
+      <pubDate>Fri, 12 Jul 2024 13:30:54 -0700</pubDate><author>contact@saggiehaim.net (Saggie Haim)</author>
+      <guid>//localhost:8080/posts/create-vmware-snapshots-report/create-vmware-snapshots-report/</guid>
+      <description>Konichiwa Yujin,&#xA;Sorry for not posting for so long, I been to Japan for a work trip. While Japan is amazing, the state of the ESXi in the office wasn’t so great. The ESXi crushed, and after investigation, we notice that he had no free space on HDD’s, which was weird. we have 100TB, and only 4 VM’s. the first suspect? Snapshots!&#xA;Japanese Garden building Snapshots are great, but they can be your worst enemy if you don’t use them correctly.</description>
+    </item>
     <item>
       <title>About</title>
       <link>//localhost:8080/about/</link>
@@ -80,6 +87,20 @@
       <pubDate>Thu, 10 Jan 2019 00:00:00 +0000</pubDate><author>contact@saggiehaim.net (Saggie Haim)</author>
       <guid>//localhost:8080/posts/sorting-group-policy/sorting-group-policy/</guid>
       <description>So, this is the first post for 2019! Happy new year!Today I want to talk about a painful topic, the Group Policy. It’s almost the same in every company. it’s historical, contain a lot of Group Policy and if you ever try to touch it, half of the systems stop working.&#xA;Its ok burning meme Last week I saw a post from my good friend Omer a Microsoft PFE, as he talked about Common Mistakes in Active Directory and Domain Services .</description>
+    </item>
+    <item>
+      <title>Updating Sharepoint Online List With Powershell the Easy Way</title>
+      <link>//localhost:8080/posts/updating-sharepoint-online-list-with-powershell-the-easy-way/updating-sharepoint-online-list-with-powershell-the-easy-way/</link>
+      <pubDate>Mon, 24 Dec 2018 00:00:00 +0000</pubDate><author>contact@saggiehaim.net (Saggie Haim)</author>
+      <guid>//localhost:8080/posts/updating-sharepoint-online-list-with-powershell-the-easy-way/updating-sharepoint-online-list-with-powershell-the-easy-way/</guid>
+      <description>Hey Guys! It’s been a long time since my last post, as I been busy with work trips. But now I’m back! And I want to share with you my experience with PowerShell and SharePoint Online. To be honest, I never worked with SharePoint before. I got a request from the SharePoint team to update a list weekly from a CSV report that HR provides (Weekly employees birthdays, nothing exciting).</description>
+    </item>
+    <item>
+      <title>PowerShell History</title>
+      <link>//localhost:8080/posts/powershell-history/powershell-history/</link>
+      <pubDate>Wed, 28 Nov 2018 00:00:00 +0000</pubDate><author>contact@saggiehaim.net (Saggie Haim)</author>
+      <guid>//localhost:8080/posts/powershell-history/powershell-history/</guid>
+      <description>Howdy folks! How are you today?&#xA;After my last post, I had to prepare for my trip to the USA, had to visit two of our offices and set up a new one. Unfortunately, the big California fire started… so things ware little tense during my stay, hope everyone is safe over there!&#xA;While working there, my colleague asks me about some cmdlets I ran in the last site we visited.</description>
     </item>
     <item>
       <title></title>
