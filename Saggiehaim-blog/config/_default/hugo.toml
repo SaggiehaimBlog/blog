@@ -11,6 +11,11 @@ ignoreErrors = ["error-remote-getjson"]
 enableRobotsTXT = true
 enableEmoji = true
 
+[sitemap]
+  changeFreq = 'weekly'
+  disable = false
+  filename = 'sitemap.xml'
+  priority = -1
 
 [taxonomies]
 category = "categories"
