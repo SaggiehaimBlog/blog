@@ -261,7 +261,7 @@ function Get-account ($EmployeeID) {
 
 ### Generate a Password
 
-Then we need to be able to generate passwords, to do that I’m using my [New Password Generator](https://github.com/Saggiehaim/Powershell/tree/master/New%20Password) core function.
+Then we need to be able to generate passwords, to do that I’m using my [New Password Generator](https://github.com/SaggiehaimBlog/PS-NewPassword) core function.
 
 ```PowerShell
 # Create a new password

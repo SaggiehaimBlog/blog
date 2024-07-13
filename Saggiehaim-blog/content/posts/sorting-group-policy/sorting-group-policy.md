@@ -316,4 +316,4 @@ We saw the functions that will help us find the GPO’s.
 And we learned to backup and restore GPO’s.
 It’s time to sort the group policy mess! in the future, I hope to release the full GPO environment report, so stay tuned and good luck!
 
-You can find all the code on [GitHub](https://github.com/Saggiehaim/PS-GPO-Tools)
+You can find all the code on [GitHub](https://github.com/SaggiehaimBlog/PS-GPO-Tools)
