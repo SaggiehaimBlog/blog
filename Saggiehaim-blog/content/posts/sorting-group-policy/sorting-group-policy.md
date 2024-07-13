@@ -229,6 +229,7 @@ Here we will test to see if there are GPO’s with missing Read permissions to t
 
 This test is based on Omer post I shared before, so I recommend you give it a read if you haven’t yet.
 he explains it better than me 😃
+
 ### The Function
 
 ```PowerShell
