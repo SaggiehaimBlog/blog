@@ -54,8 +54,8 @@ In order to create a Service Account, one shall follow the following guidelines:
 
 - SamAccountName must start with: Srvc
 - Must have a manager (employee who takes responsibility for the account if any anomaly or issue detected)
-- Account must have the following description “Service Account for <Account purpose>”
-- Account office attribute: Must include “Managed by <Employee name> (<Employee ID>)
+- Account must have the following description “Service Account for `<Account purpose>`”
+- Account office attribute: Must include “Managed by `<Employee name> (<Employee ID>)`
 
 Seems like a easy task right? but when you have a team that needs to do it, a few times a week, it becomes error prone quite fast.
 So how can we provide a solution?

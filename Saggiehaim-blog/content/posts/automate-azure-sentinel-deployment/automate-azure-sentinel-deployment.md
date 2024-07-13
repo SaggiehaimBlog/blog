@@ -171,7 +171,7 @@ With KQL, you can run queries inside Log Analytics, and write Sentinel Alerts ru
 Some queries can be significant and complex, and you don't want to write to them again and again.
 You can save your time and keep your queries inside Log Analytics and use them on demand.
 
-__You can organize your saved query inside folders by using the **Category** switch.__
+__You can organize your saved query inside folders by using the Category switch.__
 
 You can push saved queries with the `New-AzOperationalInsightsSavedSearch` command:
 
