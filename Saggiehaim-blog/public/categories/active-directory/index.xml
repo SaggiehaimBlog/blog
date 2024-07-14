@@ -13,9 +13,9 @@
     <atom:link href="//localhost:8080/categories/active-directory/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Assessing New Domain Environment</title>
-      <link>//localhost:8080/posts/assessing-new-domain-environment/assessing-new-domain-environment/</link>
+      <link>//localhost:8080/posts/assessing-new-domain-environment/</link>
       <pubDate>Tue, 25 Sep 2018 00:00:00 +0000</pubDate><author>contact@saggiehaim.net (Saggie Haim)</author>
-      <guid>//localhost:8080/posts/assessing-new-domain-environment/assessing-new-domain-environment/</guid>
+      <guid>//localhost:8080/posts/assessing-new-domain-environment/</guid>
       <description>I had a free day yesterday, and I always love to spend my free time on the Xbox or PlayStation, depends on the mood. So, while I’m rushing and jumping all over Australia with my Lamborghini, I got a phone call, my first instinct was to mute it and continue with my race, but it was a good friend&amp;hellip; so I muted it anyway 😶. When I finished the race, I called him back (yes, I’m a good friend😜).</description>
     </item>
   </channel>

@@ -13,51 +13,51 @@
     <atom:link href="//localhost:8080/tags/automation/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>How to Connect to Azure With Powershell</title>
-      <link>//localhost:8080/posts/how-to-connect-to-azure-with-powershell/how-to-connect-to-azure-with-powershell/</link>
+      <link>//localhost:8080/posts/how-to-connect-to-azure-with-powershell/</link>
       <pubDate>Thu, 02 Apr 2020 00:00:00 +0000</pubDate><author>contact@saggiehaim.net (Saggie Haim)</author>
-      <guid>//localhost:8080/posts/how-to-connect-to-azure-with-powershell/how-to-connect-to-azure-with-powershell/</guid>
+      <guid>//localhost:8080/posts/how-to-connect-to-azure-with-powershell/</guid>
       <description>PowerShell is the Automator&amp;rsquo;s best friend. I automate everything with PowerShell, and you can also. When it comes to Azure, I can&amp;rsquo;t remember the last time I created a resource in the Portal. I either use PowerShell or IaC to provision resources or modify them.&#xA;In this post, you will learn how to set up a session with Azure to start to interact with Azure Resources.&#xA;Prerequisites Before we start, there are few global prerequisites that you need to meet:</description>
     </item>
     <item>
       <title>Running Powershell Core in a Container</title>
-      <link>//localhost:8080/posts/running-powershell-core-in-a-container/running-powershell-core-in-a-container/</link>
+      <link>//localhost:8080/posts/running-powershell-core-in-a-container/</link>
       <pubDate>Sun, 12 May 2019 00:00:00 +0000</pubDate><author>contact@saggiehaim.net (Saggie Haim)</author>
-      <guid>//localhost:8080/posts/running-powershell-core-in-a-container/running-powershell-core-in-a-container/</guid>
+      <guid>//localhost:8080/posts/running-powershell-core-in-a-container/</guid>
       <description>With Powershell V7 on the verge, the importance of building solutions that are cross-platforms in Powershell is bigger. One of the issues we have while running tests, is that our Powershell environment is not “clean” as in other computers. That’s where Powershell Core in a container gets in the picture.&#xA;We install a lot of modules, software and other things that our target audience or servers won’t share. Our solution could act differently in those environments.</description>
     </item>
     <item>
       <title>Sorting Group Policy</title>
-      <link>//localhost:8080/posts/sorting-group-policy/sorting-group-policy/</link>
+      <link>//localhost:8080/posts/sorting-group-policy/</link>
       <pubDate>Thu, 10 Jan 2019 00:00:00 +0000</pubDate><author>contact@saggiehaim.net (Saggie Haim)</author>
-      <guid>//localhost:8080/posts/sorting-group-policy/sorting-group-policy/</guid>
+      <guid>//localhost:8080/posts/sorting-group-policy/</guid>
       <description>So, this is the first post for 2019! Happy new year!Today I want to talk about a painful topic, the Group Policy. It’s almost the same in every company. it’s historical, contain a lot of Group Policy and if you ever try to touch it, half of the systems stop working.&#xA;Its ok burning meme Last week I saw a post from my good friend Omer a Microsoft PFE, as he talked about Common Mistakes in Active Directory and Domain Services .</description>
     </item>
     <item>
       <title>Updating Sharepoint Online List With Powershell the Easy Way</title>
-      <link>//localhost:8080/posts/updating-sharepoint-online-list-with-powershell-the-easy-way/updating-sharepoint-online-list-with-powershell-the-easy-way/</link>
+      <link>//localhost:8080/posts/updating-sharepoint-online-list-with-powershell-the-easy-way/</link>
       <pubDate>Mon, 24 Dec 2018 00:00:00 +0000</pubDate><author>contact@saggiehaim.net (Saggie Haim)</author>
-      <guid>//localhost:8080/posts/updating-sharepoint-online-list-with-powershell-the-easy-way/updating-sharepoint-online-list-with-powershell-the-easy-way/</guid>
+      <guid>//localhost:8080/posts/updating-sharepoint-online-list-with-powershell-the-easy-way/</guid>
       <description>Hey Guys! It’s been a long time since my last post, as I been busy with work trips. But now I’m back! And I want to share with you my experience with PowerShell and SharePoint Online. To be honest, I never worked with SharePoint before. I got a request from the SharePoint team to update a list weekly from a CSV report that HR provides (Weekly employees birthdays, nothing exciting).</description>
     </item>
     <item>
       <title>Create Vmware Snapshots Report</title>
-      <link>//localhost:8080/posts/create-vmware-snapshots-report/create-vmware-snapshots-report/</link>
+      <link>//localhost:8080/posts/create-vmware-snapshots-report/</link>
       <pubDate>Sun, 28 Oct 2018 00:00:00 +0000</pubDate><author>contact@saggiehaim.net (Saggie Haim)</author>
-      <guid>//localhost:8080/posts/create-vmware-snapshots-report/create-vmware-snapshots-report/</guid>
+      <guid>//localhost:8080/posts/create-vmware-snapshots-report/</guid>
       <description>Konichiwa Yujin,&#xA;Sorry for not posting for so long, I been to Japan for a work trip. While Japan is amazing, the state of the ESXi in the office wasn’t so great. The ESXi crushed, and after investigation, we notice that he had no free space on HDD’s, which was weird. we have 100TB, and only 4 VM’s. the first suspect? Snapshots!&#xA;Japanese Garden building Snapshots are great, but they can be your worst enemy if you don’t use them correctly.</description>
     </item>
     <item>
       <title>Creating Powershell Profile</title>
-      <link>//localhost:8080/posts/creating-powershell-profile/creating-powershell-profile/</link>
+      <link>//localhost:8080/posts/creating-powershell-profile/</link>
       <pubDate>Fri, 24 Aug 2018 00:00:00 +0000</pubDate><author>contact@saggiehaim.net (Saggie Haim)</author>
-      <guid>//localhost:8080/posts/creating-powershell-profile/creating-powershell-profile/</guid>
+      <guid>//localhost:8080/posts/creating-powershell-profile/</guid>
       <description>I had a conversation with a friend today, talked about work, he told me that he has some scripts that he uses a lot in his day-to-day job, and thought about creating a script that loads all of them at once. The first thing I told him is “Why don’t you set up a profile?” he waited for a few seconds and told me that he doesn’t know about profiles. If you are reading this and feel the same, this post is for you 🙂 PowerShell profile is a script that runs every time we start the shell.</description>
     </item>
     <item>
       <title>Automating The Network Redesign Process</title>
-      <link>//localhost:8080/posts/automation-network-redesign/automation-network-redesign/</link>
+      <link>//localhost:8080/posts/automation-network-redesign/</link>
       <pubDate>Fri, 17 Aug 2018 00:00:00 +0000</pubDate><author>contact@saggiehaim.net (Saggie Haim)</author>
-      <guid>//localhost:8080/posts/automation-network-redesign/automation-network-redesign/</guid>
+      <guid>//localhost:8080/posts/automation-network-redesign/</guid>
       <description>Namaste! I’m sitting in my hotel room, it’s very late, hoping not to get sick. It’s my first day in India, as my company has an office here in New Delhi. If you wonder why I hope not to get sick, well, this was my dinner today:&#xA;Image of my indian dinner To be honest, it was very nice, not the best I had, but far from my worst one. If you didn’t notice, it had chicken inside.</description>
     </item>
   </channel>

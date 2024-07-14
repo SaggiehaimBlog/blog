@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=8080&amp;path=livereload" data-no-instant defer></script>
+  <title>Automating The Network Redesign Process :: Saggie Haim - Automate Everything - Powershell, DevOps, Security, and automation.</title>
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta
+  name="description"
+  content="Namaste! I’m sitting in my hotel room, it’s very late, hoping not to get sick. It’s my first day in India, as my company has an office here in New Delhi. If you wonder why I hope not to get sick, well, this was my dinner today:
+Image of my indian dinner To be honest, it was very nice, not the best I had, but far from my worst one. If you didn’t notice, it had chicken inside."
+/>
+<meta
+  name="keywords"
+  content="Automate network redesign, Network automation tools, PowerShell network management, IT network redesign, Automated network deployment, Network management with PowerShell, Efficient in network operations, Reduce manual network errors, IT infrastructure automation"
+/>
+<meta name="robots" content="noodp" />
+<meta property="og:url" content="//localhost:8080/posts/automation-network-redesign/">
+  <meta property="og:site_name" content="Saggie Haim - Automate Everything">
+  <meta property="og:title" content="Automating The Network Redesign Process">
+  <meta property="og:description" content="In this blog post, learn how to automate network redesign using PowerShell and other tools. The article guides you through the process of automating network configurations, deployments, and management tasks, enhancing efficiency and reducing manual errors in network operations.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2018-08-17T00:00:00+00:00">
+    <meta property="article:modified_time" content="2018-08-17T00:00:00+00:00">
+    <meta property="article:tag" content="PowerShell">
+    <meta property="article:tag" content="Network Redesign">
+    <meta property="article:tag" content="Automation">
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Automating The Network Redesign Process">
+  <meta name="twitter:description" content="In this blog post, learn how to automate network redesign using PowerShell and other tools. The article guides you through the process of automating network configurations, deployments, and management tasks, enhancing efficiency and reducing manual errors in network operations.">
+
+
+<link rel="canonical" href="//localhost:8080/posts/automation-network-redesign/" />
+
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="stylesheet" href="/css/index.fe774fb74e49df8cc7f1a574367e700bb4eacc0d2a130948a3b2047afc133702.css">
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+  
+
+</head>
+<body class="flex flex-col min-h-screen w-full bg-slate-50 dark:bg-gray-800">
+    
+<div class="fixed right-0 top-0 z-50 flex items-center justify-center bg-gray-200 p-2 text-sm uppercase text-black sm:bg-red-200 md:bg-yellow-200 lg:bg-green-200 xl:bg-blue-200 2xl:bg-pink-200">
+  <span class="block sm:hidden">all</span>
+  <span class="hidden sm:block md:hidden">sm</span>
+  <span class="hidden md:block lg:hidden">md</span>
+  <span class="hidden lg:block xl:hidden">lg</span>
+  <span class="hidden xl:block 2xl:hidden">xl</span>
+  <span class="hidden 2xl:block">2xl</span>
+</div>
+
+  <header class="flex flex-none justify-center z-10 bg-slate-50 dark:bg-gray-800 sticky top-0">
+    <div class="flex flex-row gap justify-between w-full max-w-4xl lg:max-w-5xl my-4">
+  <div class="flex-none ml-2  md:ml-0">
+    <a href="/" class="">
+      <img class="h-13 w-12" src="/white_logo.png" alt="logo">
+    </a>
+  </div>
+  <div class="flex-none mx-1"></div>
+  <div class="flex-none">
+    
+
+
+
+<nav class="h-full static">
+  <button id="navbar-menu-toggle" type="button" class="inline-flex items-center p-2 text-sm text-slate-800 dark:text-slate-200 rounded-lg md:hidden" aria-controls="navbar-menu" aria-expanded="false">
+    <span class="sr-only">Open main menu</span>
+    <i class="w-8 h-8">
+      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-menu-2" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M4 6l16 0" />
+  <path d="M4 12l16 0" />
+  <path d="M4 18l16 0" />
+</svg>
+
+    </i>
+  </button>
+  <div class="absolute md:static top-16 left-0 right-0 z-50 hidden w-full md:block md:w-auto" id="navbar-menu">
+    <ul class="flex flex-col mx-2 md:mx-0 md:flex-row md:border-0 rounded-sm md:rounded-full px-3 text-base font-medium text-slate-800 dark:text-slate-200 shadow-lg bg-white dark:bg-gray-600 shadow-slate-800/5 dark:shadow-slate-200/5 ring-1 ring-slate-900/5 dark:ring-slate-100/5">
+    
+        <li id="home" class="">
+          <a class="block px-3 py-3 hover:text-blue-600  dark:hover:text-blue-400 text-blue-600 dark:text-blue-200"
+            href="/posts/" title="Home">Home</a>
+        </li>
+      
+    
+        <li id="about" class="">
+          <a class="block px-3 py-3 hover:text-blue-600  dark:hover:text-blue-400"
+            href="/about/" title="About">About</a>
+        </li>
+      
+    
+        <li id="contact" class="">
+          <a class="block px-3 py-3 hover:text-blue-600  dark:hover:text-blue-400"
+            href="/contact/" title="Contact">Contact</a>
+        </li>
+      
+    
+    </ul>
+  </div>
+</nav>
+
+
+  </div>
+  <div class="flex-1"></div>
+
+  
+  <div class="flex-none mx-1"></div>
+  
+  <div class="flex-none md:hidden">
+    <a href=/search/ class="inline-flex items-center p-2 text-sm text-slate-800 dark:text-slate-200 rounded-lg" aria-controls="navbar-menu" aria-expanded="false">
+      <span class="sr-only">Search</span>
+      <i class="w-8 h-8">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+    <path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" />
+    <path d="M21 21l-6 -6" />
+</svg>
+
+      </i>
+    </a>
+  </div>
+  <div class="darkmode-toggle flex flex-none mr-2 md:mr-0">
+    <label for="darkmode-toggle" class="flex items-center px-3 cursor-pointer rounded-full bg-gray-100 dark:bg-gray-600" title="Toggle dark mode">
+      <input name="darkmode-toggle" id="darkmode-toggle" type="checkbox" class="sr-only peer" aria-label="Toggle dark mode">
+      <div class="group flex flex-row gap-1 justify-center h-8 px-1 rounded-full bg-white dark:bg-gray-700">
+        <i class="h-6 w-6 flex-none rounded-full bg-yellow-400 place-self-center peer-checked:group-[]:invisible">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brightness-down" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+   <path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path>
+   <path d="M12 5l0 .01"></path>
+   <path d="M17 7l0 .01"></path>
+   <path d="M19 12l0 .01"></path>
+   <path d="M17 17l0 .01"></path>
+   <path d="M12 19l0 .01"></path>
+   <path d="M7 17l0 .01"></path>
+   <path d="M5 12l0 .01"></path>
+   <path d="M7 7l0 .01"></path>
+</svg>
+
+        </i>
+        <i class="h-6 w-6 flex-none rounded-full place-self-center invisible peer-checked:group-[]:visible">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-moon-stars" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+   <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z"></path>
+   <path d="M17 4a2 2 0 0 0 2 2a2 2 0 0 0 -2 2a2 2 0 0 0 -2 -2a2 2 0 0 0 2 -2"></path>
+   <path d="M19 11h2m-1 -1v2"></path>
+</svg>
+
+        </i>
+      </div>
+    </label>
+  </div>
+</div>
+
+  </header>
+  <main class="flex flex-auto justify-center">
+    
+<div class="w-full max-w-4xl lg:max-w-5xl">
+  <div class="flex flex-col mt-6 mx-2 md:mx-0 rounded-lg overflow-hidden shadow-md bg-white dark:bg-gray-700">
+    <div>
+      <a href="/posts/automation-network-redesign/">
+        <picture>
+    <source type="image/webp" srcset="/posts/automation-network-redesign/images/NewSite-977x392_hu8a3fecafeb588d064ea17a3fd05358c6_36667_960x0_resize_q75_h2_box_3.webp 960w" sizes="(min-width: 1024px) 100vw, 50vw" />
+    <source type="image/jpeg" srcset="/posts/automation-network-redesign/images/NewSite-977x392_hu8a3fecafeb588d064ea17a3fd05358c6_36667_960x0_resize_q75_bgffffff_box_3.jpg 960w" sizes="(min-width: 1024px) 100vw, 50vw" />
+    <img class="w-full object-cover h-36 md:h-48 xl:h-60" src="/posts/automation-network-redesign/images/NewSite-977x392_hu8a3fecafeb588d064ea17a3fd05358c6_36667_640x0_resize_q75_bgffffff_box_3.jpg" width="977" height="392" alt="Automating The Network Redesign Process" title="Automating The Network Redesign Process" loading="lazy" />
+  </picture>
+      </a>
+    </div>
+    <div class="flex flex-col gap-y-3 p-6">
+      <h1 class="text-4xl font-semibold text-slate-800 dark:text-slate-100">
+        <a href="/posts/automation-network-redesign/">Automating The Network Redesign Process</a>
+      </h1>
+
+      
+      <h2 class="my-4 text-large text-slate-600 dark:text-slate-300">
+        In this blog post, learn how to automate network redesign using PowerShell and other tools. The article guides you through the process of automating network configurations, deployments, and management tasks, enhancing efficiency and reducing manual errors in network operations.
+      </h2>
+      
+      
+  <ul class="flex flex-row flex-wrap text-slate-500 dark:text-slate-300">
+    
+      
+      <li>
+        <a href="/categories/page/categories/powershell/"
+          class="text-sm mr-2 px-2 py-1 rounded border border-emerald-800 bg-emerald-800 text-slate-50">
+          PowerShell
+        </a>
+      </li>
+      
+    
+    
+      
+      <li>
+        <a href="/tags/page/tags/powershell/"
+          class="flex flex-row text-sm mr-2 py-1">
+          <i class="h-5 w-5 flex-none">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+   <path d="M5 9l14 0"></path>
+   <path d="M5 15l14 0"></path>
+   <path d="M11 4l-4 16"></path>
+   <path d="M17 4l-4 16"></path>
+</svg>
+
+          </i>
+          <span class="ml-0">PowerShell</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/tags/page/tags/network-redesign/"
+          class="flex flex-row text-sm mr-2 py-1">
+          <i class="h-5 w-5 flex-none">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+   <path d="M5 9l14 0"></path>
+   <path d="M5 15l14 0"></path>
+   <path d="M11 4l-4 16"></path>
+   <path d="M17 4l-4 16"></path>
+</svg>
+
+          </i>
+          <span class="ml-0">Network Redesign</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/tags/page/tags/automation/"
+          class="flex flex-row text-sm mr-2 py-1">
+          <i class="h-5 w-5 flex-none">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+   <path d="M5 9l14 0"></path>
+   <path d="M5 15l14 0"></path>
+   <path d="M11 4l-4 16"></path>
+   <path d="M17 4l-4 16"></path>
+</svg>
+
+          </i>
+          <span class="ml-0">Automation</span>
+        </a>
+      </li>
+      
+    
+  </ul>
+
+
+
+      <div class="flex flex-col gap-y-1 md:flex-row md:gap-y-0 md:gap-x-4 text-slate-500 dark:text-slate-300">
+  
+  
+  <div class="flex flex-row text-base gap-x-1">
+    <i class="h-6 w-6 flex-none">
+      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+   <path d="M4 7a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12z"></path>
+   <path d="M16 3v4"></path>
+   <path d="M8 3v4"></path>
+   <path d="M4 11h16"></path>
+   <path d="M11 15h1"></path>
+   <path d="M12 15v3"></path>
+</svg>
+
+    </i>
+    <time datetime="2018-08-17T00:00:00&#43;00:00">
+      2018-08-17
+    </time>
+  </div>
+
+  <div class="flex flex-row text-base gap-x-1">
+    <i class="h-6 w-6 flex-none">
+      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hourglass-high" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+   <path d="M6.5 7h11"></path>
+   <path d="M6 20v-2a6 6 0 1 1 12 0v2a1 1 0 0 1 -1 1h-10a1 1 0 0 1 -1 -1z"></path>
+   <path d="M6 4v2a6 6 0 1 0 12 0v-2a1 1 0 0 0 -1 -1h-10a1 1 0 0 0 -1 1z"></path>
+</svg>
+
+    </i>
+    <span>
+      4 minutes to read
+    </span>
+  </div>
+</div>
+
+
+      
+        
+        <section class="prose prose-slate dark:prose-invert w-full max-w-4xl lg:max-w-5xl mt-6">
+          <h2>Table of Contents</h2>
+          <aside><nav id="TableOfContents">
+  <ul>
+    <li><a href="#gathering-information">Gathering Information</a></li>
+    <li><a href="#creating-the-scopes">Creating the Scopes</a></li>
+    <li><a href="#creating-the-scope-site-and-services-subnets-and-dns-reverse-lookup-zone">Creating the Scope, Site and Services Subnets and DNS reverse lookup zone</a></li>
+  </ul>
+</nav></aside>
+        </section>
+        
+      
+
+      <article class="mt-6 w-full max-w-4xl lg:max-w-5xl prose prose-slate dark:prose-invert prose-quoteless post-content">
+        <p>Namaste!
+I’m sitting in my hotel room, it’s very late, hoping not to get sick.
+It’s my first day in India, as my company has an office here in New Delhi.
+If you wonder why I hope not to get sick, well, this was my dinner today:</p>
+<p><div class="not-prose">
+<figure>
+    <img src="../images/IndiaDinner.jpeg"
+      alt="Would you eat it?"  title="Image of my indian dinner" 
+      loading="lazy"
+    ><figcaption class="text-sm text-center text-slate-500 dark:text-slate-300">Image of my indian dinner</figcaption>
+  </figure></div>
+</p>
+<p>To be honest, it was very nice, not the best I had, but far from my worst one.
+If you didn’t notice, it had chicken inside.</p>
+<p>Part of my job is to take care of the network and NAC.
+So, I’m here to replace the switches, set up new access points and implement the NAC solution.
+Each site has its own class B LAN network, which is not so good, not for security nor administration.
+So, I need to re-design the network.</p>
+<p>To do so, I need to apply a new configuration for the switches, the firewall, the Domain Services and the servers (Client will get new configuration from DHCP).
+Now, if our LAN was simple, with VLANs for Users and Servers, it was easy.
+However, due to the security requirement and the network segregation, we have 17 VLANs to create.</p>
+<p>To do it once its ok, to do it in our 15 sites, it&rsquo;s a pain! So, I said to myself as a true lazy guy: “Saggie, there is no chance you are going to do it again.”
+So, I decided to automate the process.
+First, we need to plan, so I’m sitting down to write the tasks I have to make:</p>
+<ol>
+<li>Create DHCP Scopes</li>
+<li>Set DHCP Server options</li>
+<li>Update Site and services</li>
+<li>Create DNS reverse lookup zone</li>
+</ol>
+<p>Then, I needed to write down the challenges in front of me:</p>
+<ol>
+<li>Each site has its own DC and DHCP Servers</li>
+<li>Each site has its own LAN network</li>
+</ol>
+<p>Now, I could start writing my script.
+So, I divided the script to three sections:</p>
+<h2 id="gathering-information">Gathering Information</h2>
+<p>It necessary to know which DHCP server I want to modify.
+I don’t want to add the scope to the wrong server, it also necessary to know what the Domain Controllers and DNS servers are, the Site name and location and most important, because that why we are here the network segment.
+I’m using the Read-host command to populate the variables easily.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-PowerShell" data-lang="PowerShell"><span style="display:flex;"><span>$DCServer = Read-Host -Prompt <span style="color:#e6db74">&#34;Enter The DC Server FQDN or IP&#34;</span>
+</span></span><span style="display:flex;"><span>$DHCPServer = Read-Host -Prompt <span style="color:#e6db74">&#34;Enter The DHCP Server FQDN or IP&#34;</span>
+</span></span><span style="display:flex;"><span>$NetSeg = Read-Host -Prompt <span style="color:#e6db74">&#34;Enter the Network Sufix (if the network is 10.102.0.1, enter 102)&#34;</span>
+</span></span><span style="display:flex;"><span>$DNSServer01 = Read-host -Prompt <span style="color:#e6db74">&#34;Enter Primary DNS Server&#34;</span>
+</span></span><span style="display:flex;"><span>$DnsServer02 = Read-Host -Prompt <span style="color:#e6db74">&#34;Enter Secondary DNS Server&#34;</span>
+</span></span><span style="display:flex;"><span>$SiteName = Read-Host -Prompt <span style="color:#e6db74">&#34;Enter Site And Services site name&#34;</span>
+</span></span></code></pre></div><h2 id="creating-the-scopes">Creating the Scopes</h2>
+<p>Now, that I have all the information I need for the particular site, I can start building the ‘static’ scopes.
+I’m building an array for each scope, so it will be easy to use it later in the script:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-PowerShell" data-lang="PowerShell"><span style="display:flex;"><span>$FirstScope = [<span style="color:#66d9ef">Ordered</span>]@{
+</span></span><span style="display:flex;"><span>    Name = <span style="color:#e6db74">&#34;Network-1&#34;</span>;
+</span></span><span style="display:flex;"><span>    ScopeId = <span style="color:#e6db74">&#34;10.&#34;</span>+$NetSeg+<span style="color:#e6db74">&#34;.1.0&#34;</span>;
+</span></span><span style="display:flex;"><span>    StartRange = <span style="color:#e6db74">&#34;10.&#34;</span>+$NetSeg+<span style="color:#e6db74">&#34;.1.1&#34;</span>;
+</span></span><span style="display:flex;"><span>    EndRange = <span style="color:#e6db74">&#34;10.&#34;</span>+$netSeg+<span style="color:#e6db74">&#34;.1.254&#34;</span>;
+</span></span><span style="display:flex;"><span>    SubNetMask = <span style="color:#e6db74">&#34;255.255.255.0&#34;</span>;
+</span></span><span style="display:flex;"><span>    Description = <span style="color:#e6db74">&#34;Network-2&#34;</span>;
+</span></span><span style="display:flex;"><span>    LeaseDuration = <span style="color:#e6db74">&#34;3.00:00:00&#34;</span>;
+</span></span><span style="display:flex;"><span>    defaultGateway = <span style="color:#e6db74">&#34;10.&#34;</span>+$NetSeg+<span style="color:#e6db74">&#34;.1.254&#34;</span>
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>$SecondScope = [<span style="color:#66d9ef">Ordered</span>]@{
+</span></span><span style="display:flex;"><span>    Name = <span style="color:#e6db74">&#34;Network-2&#34;</span>;
+</span></span><span style="display:flex;"><span>    ScopeId = <span style="color:#e6db74">&#34;10.&#34;</span>+$NetSeg+<span style="color:#e6db74">&#34;.2.0&#34;</span>;
+</span></span><span style="display:flex;"><span>    StartRange = <span style="color:#e6db74">&#34;10.&#34;</span>+$NetSeg+<span style="color:#e6db74">&#34;.2.1&#34;</span>
+</span></span><span style="display:flex;"><span>    EndRange = <span style="color:#e6db74">&#34;10.&#34;</span>+$netSeg+<span style="color:#e6db74">&#34;.2.254&#34;</span>
+</span></span><span style="display:flex;"><span>    SubNetMask = <span style="color:#e6db74">&#34;255.255.255.0&#34;</span>
+</span></span><span style="display:flex;"><span>    Description = <span style="color:#e6db74">&#34;Network-2&#34;</span>
+</span></span><span style="display:flex;"><span>    LeaseDuration = <span style="color:#e6db74">&#34;3.00:00:00&#34;</span>
+</span></span><span style="display:flex;"><span>    defaultGateway = <span style="color:#e6db74">&#34;10.&#34;</span>+$NetSeg+<span style="color:#e6db74">&#34;.2.254&#34;</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="creating-the-scope-site-and-services-subnets-and-dns-reverse-lookup-zone">Creating the Scope, Site and Services Subnets and DNS reverse lookup zone</h2>
+<p>At this point, we have all the information we need.
+We can start creating the DHCP scope, update the scope options, set DHCP server options, create DNS reverse lookup zone, and create the subnets for AD Site and Services.
+To do that, I’m using the following cmdlets:</p>
+<ul>
+<li><a href="https://docs.microsoft.com/en-us/powershell/module/dhcpserver/add-dhcpserverv4scope?view=win10-ps" target="_blank" rel="noopener">Add-DhcpServerv4Scope</a>
+ – To create the DHCP scopes</li>
+<li><a href="https://docs.microsoft.com/en-us/powershell/module/dhcpserver/set-dhcpserverv4optionvalue?view=win10-ps" target="_blank" rel="noopener">Set-DhcpServerv4OptionValue</a>
+ – To add Scope and server options</li>
+<li><a href="https://docs.microsoft.com/en-us/powershell/module/addsadministration/new-adreplicationsubnet?view=win10-ps" target="_blank" rel="noopener">New-ADReplicationSubnet</a>
+ – To create new subnets in Site And Services</li>
+<li><a href="https://docs.microsoft.com/en-us/powershell/module/dnsserver/add-dnsserverprimaryzone?view=win10-ps" target="_blank" rel="noopener">Add-DnsServerPrimaryZone</a>
+ – To Create new DNS reverse lookup zone</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-PowerShell" data-lang="PowerShell"><span style="display:flex;"><span>ForEach-Object {
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">## creating the Scopes</span>
+</span></span><span style="display:flex;"><span>    Add-DhcpServerV4Scope -Name $_.Name -Description $_.Description -LeaseDuration $_.LeaseDuration -StartRange $_.StartRange -EndRange $_.EndRange -SubnetMask $_.SubNetMask -ComputerName $DHCPServer;
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">## Setting DefaultGateway for each scope</span>
+</span></span><span style="display:flex;"><span>    Set-DhcpServerv4OptionValue -ComputerName $DHCPServer -ScopeId $_.ScopeId -OptionId <span style="color:#ae81ff">03</span> -Value $_.defaultGateway;
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">## create new subnets in Site And Services</span>
+</span></span><span style="display:flex;"><span>    $name = $_.ScopeID + <span style="color:#e6db74">&#34;/24&#34;</span>;
+</span></span><span style="display:flex;"><span>    New-ADReplicationSubnet -Server $DCServer -Name $name -Site $SiteName -Location $SiteName
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">## Create new DNS reverse lookup zone</span>
+</span></span><span style="display:flex;"><span>    Add-DnsServerPrimaryZone -DynamicUpdate Secure -NetworkId $name -ReplicationScope Forest -ComputerName $DCServer
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span><span style="color:#75715e">## Setting DHCP Server Options</span>
+</span></span><span style="display:flex;"><span>Set-DhcpServerV4OptionValue -DnsDomain <span style="color:#e6db74">&#34;Saggiehaim.net&#34;</span> -DnsServer $DnsServer01,$DnsServer02
+</span></span></code></pre></div><p>Now it takes less than 3 seconds to redesign the network entirely.
+Doing some cleaning and working with the firewall team to finish everything.</p>
+<p>It’s important when you write a script, to know who is going to use it.
+In this case, I’m the only one who is going to use it, so I’m not entering any validations to my script.
+If you are creating the script for someone else, it’s important to add some safe switches to make sure everything running correctly.</p>
+<p>I recommend learning the cmdlet, use the links to Microsoft docs, and understand what you are doing.
+Don’t run anything from the post without testing it before!
+Use it on your own risk.</p>
+<p>Hope you enjoyed reading.</p>
+
+      </article>
+
+      
+
+
+
+
+    </div>
+  </div>
+</div>
+
+  </main>
+  <footer class="flex flex-none justify-center">
+    <section class="flex flex-col md:flex-row mx-2 md:mx-0 gap-2 md:gap-0 justify-between w-full max-w-4xl lg:max-w-5xl py-6 text-slate-500 dark:text-slate-300">
+  <div class="flex flex-row">
+    
+  
+  
+    <a href="https://www.linkedin.com/in/saggie/" target="_blank" title="Linkedin" class="flex flex-row mr-2">
+      <span class="hidden">Linkedin</span>
+      <i class="h-6 w-6 flex-none"> <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-linkedin" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+   <path d="M4 4m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z"></path>
+   <path d="M8 11l0 5"></path>
+   <path d="M8 8l0 .01"></path>
+   <path d="M12 16l0 -5"></path>
+   <path d="M16 16v-3a2 2 0 0 0 -4 0"></path>
+</svg>
+ </i>
+    </a>
+  
+  
+  
+    <a href="https://github.com/SaggehaimBlog" target="_blank" title="Github" class="flex flex-row mr-2">
+      <span class="hidden">Github</span>
+      <i class="h-6 w-6 flex-none"> <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+   <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5"></path>
+</svg>
+ </i>
+    </a>
+  
+  
+
+
+  </div>
+  <div class="grow"></div>
+  <div class="flex flex-row">
+    <i class="h-6 w-6 flex-none"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+   <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"></path>
+   <path d="M14 9.75a3.016 3.016 0 0 0 -4.163 .173a2.993 2.993 0 0 0 0 4.154a3.016 3.016 0 0 0 4.163 .173"></path>
+</svg>
+</i> 2018 - 2024 Saggie Haim
+    
+  </div>
+  
+</section>
+
+  </footer>
+  <script src="/main.js"></script>
+
+<div class="hidden top-1 right-1" id="code-copy">
+  <i class="h-6 w-6 block">
+    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copy" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M7 7m0 2.667a2.667 2.667 0 0 1 2.667 -2.667h8.666a2.667 2.667 0 0 1 2.667 2.667v8.666a2.667 2.667 0 0 1 -2.667 2.667h-8.666a2.667 2.667 0 0 1 -2.667 -2.667z" />
+  <path d="M4.012 16.737a2.005 2.005 0 0 1 -1.012 -1.737v-10c0 -1.1 .9 -2 2 -2h10c.75 0 1.158 .385 1.5 1" />
+</svg>
+
+  </i>
+</div>
+<div class="hidden top-1 right-1" id="code-copy-done">
+  <i class="h-6 w-6 block">
+    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-check" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M5 12l5 5l10 -10" />
+</svg>
+
+  </i>
+</div><script src="/code-copy.js"></script>
+
+
+
+
+
+</body>
+</html>

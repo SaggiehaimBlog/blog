@@ -13,9 +13,9 @@
     <atom:link href="//localhost:8080/tags/sharepoint/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Updating Sharepoint Online List With Powershell the Easy Way</title>
-      <link>//localhost:8080/posts/updating-sharepoint-online-list-with-powershell-the-easy-way/updating-sharepoint-online-list-with-powershell-the-easy-way/</link>
+      <link>//localhost:8080/posts/updating-sharepoint-online-list-with-powershell-the-easy-way/</link>
       <pubDate>Mon, 24 Dec 2018 00:00:00 +0000</pubDate><author>contact@saggiehaim.net (Saggie Haim)</author>
-      <guid>//localhost:8080/posts/updating-sharepoint-online-list-with-powershell-the-easy-way/updating-sharepoint-online-list-with-powershell-the-easy-way/</guid>
+      <guid>//localhost:8080/posts/updating-sharepoint-online-list-with-powershell-the-easy-way/</guid>
       <description>Hey Guys! It’s been a long time since my last post, as I been busy with work trips. But now I’m back! And I want to share with you my experience with PowerShell and SharePoint Online. To be honest, I never worked with SharePoint before. I got a request from the SharePoint team to update a list weekly from a CSV report that HR provides (Weekly employees birthdays, nothing exciting).</description>
     </item>
   </channel>

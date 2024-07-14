@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=8080&amp;path=livereload" data-no-instant defer></script>
+  <title>Automate Azure Sentinel Deployment :: Saggie Haim - Automate Everything - Powershell, DevOps, Security, and automation.</title>
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta
+  name="description"
+  content="Automate Azure Sentinel Deployment Azure Sentinel is a scalable, cloud-native, security information event management (SIEM) and security orchestration automated response (SOAR) solution. Azure Sentinel delivers intelligent security analytics and threat intelligence across the enterprise, providing a single solution for alert detection, threat visibility, proactive hunting, and threat response.
+Like any other cloud services, you can automate most of the Azure Sentinel deployment and configuration. And in this post, you will learn how to automate the core components of Azure Sentinel."
+/>
+<meta
+  name="keywords"
+  content="Automate Azure Sentinel, Azure Sentinel deployment, PowerShell Azure Sentinel, Azure security automation, Azure Sentinel setup, Cloud Security monitoring, Automate cloud security, Sentinel deployment script, IT security automation, Azure Sentinel tutorial, Deploy Azure Sentinel, Azure security tools, Azure Sentinel best practices, Cloud Security management, Automating Azure Sentinel"
+/>
+<meta name="robots" content="noodp" />
+<meta property="og:url" content="//localhost:8080/posts/automate-azure-sentinel-deployment/">
+  <meta property="og:site_name" content="Saggie Haim - Automate Everything">
+  <meta property="og:title" content="Automate Azure Sentinel Deployment">
+  <meta property="og:description" content="Like any other cloud services, you can automate most of the Azure Sentinel deployment and configuration. And in this post, you will learn how to automate the core components of Azure Sentinel.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2020-09-01T00:00:00+00:00">
+    <meta property="article:modified_time" content="2020-09-01T00:00:00+00:00">
+    <meta property="article:tag" content="Microsoft Sentinel">
+    <meta property="article:tag" content="PowerShell">
+    <meta property="article:tag" content="Azure">
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Automate Azure Sentinel Deployment">
+  <meta name="twitter:description" content="Like any other cloud services, you can automate most of the Azure Sentinel deployment and configuration. And in this post, you will learn how to automate the core components of Azure Sentinel.">
+
+
+<link rel="canonical" href="//localhost:8080/posts/automate-azure-sentinel-deployment/" />
+
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="stylesheet" href="/css/index.fe774fb74e49df8cc7f1a574367e700bb4eacc0d2a130948a3b2047afc133702.css">
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+  
+
+</head>
+<body class="flex flex-col min-h-screen w-full bg-slate-50 dark:bg-gray-800">
+    
+<div class="fixed right-0 top-0 z-50 flex items-center justify-center bg-gray-200 p-2 text-sm uppercase text-black sm:bg-red-200 md:bg-yellow-200 lg:bg-green-200 xl:bg-blue-200 2xl:bg-pink-200">
+  <span class="block sm:hidden">all</span>
+  <span class="hidden sm:block md:hidden">sm</span>
+  <span class="hidden md:block lg:hidden">md</span>
+  <span class="hidden lg:block xl:hidden">lg</span>
+  <span class="hidden xl:block 2xl:hidden">xl</span>
+  <span class="hidden 2xl:block">2xl</span>
+</div>
+
+  <header class="flex flex-none justify-center z-10 bg-slate-50 dark:bg-gray-800 sticky top-0">
+    <div class="flex flex-row gap justify-between w-full max-w-4xl lg:max-w-5xl my-4">
+  <div class="flex-none ml-2  md:ml-0">
+    <a href="/" class="">
+      <img class="h-13 w-12" src="/white_logo.png" alt="logo">
+    </a>
+  </div>
+  <div class="flex-none mx-1"></div>
+  <div class="flex-none">
+    
+
+
+
+<nav class="h-full static">
+  <button id="navbar-menu-toggle" type="button" class="inline-flex items-center p-2 text-sm text-slate-800 dark:text-slate-200 rounded-lg md:hidden" aria-controls="navbar-menu" aria-expanded="false">
+    <span class="sr-only">Open main menu</span>
+    <i class="w-8 h-8">
+      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-menu-2" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M4 6l16 0" />
+  <path d="M4 12l16 0" />
+  <path d="M4 18l16 0" />
+</svg>
+
+    </i>
+  </button>
+  <div class="absolute md:static top-16 left-0 right-0 z-50 hidden w-full md:block md:w-auto" id="navbar-menu">
+    <ul class="flex flex-col mx-2 md:mx-0 md:flex-row md:border-0 rounded-sm md:rounded-full px-3 text-base font-medium text-slate-800 dark:text-slate-200 shadow-lg bg-white dark:bg-gray-600 shadow-slate-800/5 dark:shadow-slate-200/5 ring-1 ring-slate-900/5 dark:ring-slate-100/5">
+    
+        <li id="home" class="">
+          <a class="block px-3 py-3 hover:text-blue-600  dark:hover:text-blue-400 text-blue-600 dark:text-blue-200"
+            href="/posts/" title="Home">Home</a>
+        </li>
+      
+    
+        <li id="about" class="">
+          <a class="block px-3 py-3 hover:text-blue-600  dark:hover:text-blue-400"
+            href="/about/" title="About">About</a>
+        </li>
+      
+    
+        <li id="contact" class="">
+          <a class="block px-3 py-3 hover:text-blue-600  dark:hover:text-blue-400"
+            href="/contact/" title="Contact">Contact</a>
+        </li>
+      
+    
+    </ul>
+  </div>
+</nav>
+
+
+  </div>
+  <div class="flex-1"></div>
+
+  
+  <div class="flex-none mx-1"></div>
+  
+  <div class="flex-none md:hidden">
+    <a href=/search/ class="inline-flex items-center p-2 text-sm text-slate-800 dark:text-slate-200 rounded-lg" aria-controls="navbar-menu" aria-expanded="false">
+      <span class="sr-only">Search</span>
+      <i class="w-8 h-8">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+    <path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" />
+    <path d="M21 21l-6 -6" />
+</svg>
+
+      </i>
+    </a>
+  </div>
+  <div class="darkmode-toggle flex flex-none mr-2 md:mr-0">
+    <label for="darkmode-toggle" class="flex items-center px-3 cursor-pointer rounded-full bg-gray-100 dark:bg-gray-600" title="Toggle dark mode">
+      <input name="darkmode-toggle" id="darkmode-toggle" type="checkbox" class="sr-only peer" aria-label="Toggle dark mode">
+      <div class="group flex flex-row gap-1 justify-center h-8 px-1 rounded-full bg-white dark:bg-gray-700">
+        <i class="h-6 w-6 flex-none rounded-full bg-yellow-400 place-self-center peer-checked:group-[]:invisible">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brightness-down" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+   <path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path>
+   <path d="M12 5l0 .01"></path>
+   <path d="M17 7l0 .01"></path>
+   <path d="M19 12l0 .01"></path>
+   <path d="M17 17l0 .01"></path>
+   <path d="M12 19l0 .01"></path>
+   <path d="M7 17l0 .01"></path>
+   <path d="M5 12l0 .01"></path>
+   <path d="M7 7l0 .01"></path>
+</svg>
+
+        </i>
+        <i class="h-6 w-6 flex-none rounded-full place-self-center invisible peer-checked:group-[]:visible">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-moon-stars" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+   <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z"></path>
+   <path d="M17 4a2 2 0 0 0 2 2a2 2 0 0 0 -2 2a2 2 0 0 0 -2 -2a2 2 0 0 0 2 -2"></path>
+   <path d="M19 11h2m-1 -1v2"></path>
+</svg>
+
+        </i>
+      </div>
+    </label>
+  </div>
+</div>
+
+  </header>
+  <main class="flex flex-auto justify-center">
+    
+<div class="w-full max-w-4xl lg:max-w-5xl">
+  <div class="flex flex-col mt-6 mx-2 md:mx-0 rounded-lg overflow-hidden shadow-md bg-white dark:bg-gray-700">
+    <div>
+      <a href="/posts/automate-azure-sentinel-deployment/">
+        <picture>
+    <source type="image/webp" srcset="/posts/automate-azure-sentinel-deployment/images/AzureSentinelAutomation_hu20a8840ab13289f4e6611f1e036abd54_212170_960x0_resize_q75_h2_box_3.webp 960w, /posts/automate-azure-sentinel-deployment/images/AzureSentinelAutomation_hu20a8840ab13289f4e6611f1e036abd54_212170_1600x0_resize_q75_h2_box_3.webp 1600w" sizes="(min-width: 1024px) 100vw, 50vw" />
+    <source type="image/jpeg" srcset="/posts/automate-azure-sentinel-deployment/images/AzureSentinelAutomation_hu20a8840ab13289f4e6611f1e036abd54_212170_960x0_resize_q75_bgffffff_box_3.jpg 960w, /posts/automate-azure-sentinel-deployment/images/AzureSentinelAutomation_hu20a8840ab13289f4e6611f1e036abd54_212170_1600x0_resize_q75_bgffffff_box_3.jpg 1600w" sizes="(min-width: 1024px) 100vw, 50vw" />
+    <img class="w-full object-cover h-36 md:h-48 xl:h-60" src="/posts/automate-azure-sentinel-deployment/images/AzureSentinelAutomation_hu20a8840ab13289f4e6611f1e036abd54_212170_640x0_resize_q75_bgffffff_box_3.jpg" width="2154" height="1236" alt="Automate Azure Sentinel Deployment" title="Automate Azure Sentinel Deployment" loading="lazy" />
+  </picture>
+      </a>
+    </div>
+    <div class="flex flex-col gap-y-3 p-6">
+      <h1 class="text-4xl font-semibold text-slate-800 dark:text-slate-100">
+        <a href="/posts/automate-azure-sentinel-deployment/">Automate Azure Sentinel Deployment</a>
+      </h1>
+
+      
+      <h2 class="my-4 text-large text-slate-600 dark:text-slate-300">
+        Like any other cloud services, you can automate most of the Azure Sentinel deployment and configuration. And in this post, you will learn how to automate the core components of Azure Sentinel.
+      </h2>
+      
+      
+  <ul class="flex flex-row flex-wrap text-slate-500 dark:text-slate-300">
+    
+      
+      <li>
+        <a href="/categories/page/categories/cloud-security/"
+          class="text-sm mr-2 px-2 py-1 rounded border border-emerald-800 bg-emerald-800 text-slate-50">
+          Cloud Security
+        </a>
+      </li>
+      
+      <li>
+        <a href="/categories/page/categories/microsoft-sentinel/"
+          class="text-sm mr-2 px-2 py-1 rounded border border-emerald-800 bg-emerald-800 text-slate-50">
+          Microsoft Sentinel
+        </a>
+      </li>
+      
+    
+    
+      
+      <li>
+        <a href="/tags/page/tags/microsoft-sentinel/"
+          class="flex flex-row text-sm mr-2 py-1">
+          <i class="h-5 w-5 flex-none">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+   <path d="M5 9l14 0"></path>
+   <path d="M5 15l14 0"></path>
+   <path d="M11 4l-4 16"></path>
+   <path d="M17 4l-4 16"></path>
+</svg>
+
+          </i>
+          <span class="ml-0">Microsoft Sentinel</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/tags/page/tags/powershell/"
+          class="flex flex-row text-sm mr-2 py-1">
+          <i class="h-5 w-5 flex-none">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+   <path d="M5 9l14 0"></path>
+   <path d="M5 15l14 0"></path>
+   <path d="M11 4l-4 16"></path>
+   <path d="M17 4l-4 16"></path>
+</svg>
+
+          </i>
+          <span class="ml-0">PowerShell</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/tags/page/tags/azure/"
+          class="flex flex-row text-sm mr-2 py-1">
+          <i class="h-5 w-5 flex-none">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+   <path d="M5 9l14 0"></path>
+   <path d="M5 15l14 0"></path>
+   <path d="M11 4l-4 16"></path>
+   <path d="M17 4l-4 16"></path>
+</svg>
+
+          </i>
+          <span class="ml-0">Azure</span>
+        </a>
+      </li>
+      
+    
+  </ul>
+
+
+
+      <div class="flex flex-col gap-y-1 md:flex-row md:gap-y-0 md:gap-x-4 text-slate-500 dark:text-slate-300">
+  
+  
+  <div class="flex flex-row text-base gap-x-1">
+    <i class="h-6 w-6 flex-none">
+      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+   <path d="M4 7a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12z"></path>
+   <path d="M16 3v4"></path>
+   <path d="M8 3v4"></path>
+   <path d="M4 11h16"></path>
+   <path d="M11 15h1"></path>
+   <path d="M12 15v3"></path>
+</svg>
+
+    </i>
+    <time datetime="2020-09-01T00:00:00&#43;00:00">
+      2020-09-01
+    </time>
+  </div>
+
+  <div class="flex flex-row text-base gap-x-1">
+    <i class="h-6 w-6 flex-none">
+      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hourglass-high" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+   <path d="M6.5 7h11"></path>
+   <path d="M6 20v-2a6 6 0 1 1 12 0v2a1 1 0 0 1 -1 1h-10a1 1 0 0 1 -1 -1z"></path>
+   <path d="M6 4v2a6 6 0 1 0 12 0v-2a1 1 0 0 0 -1 -1h-10a1 1 0 0 0 -1 1z"></path>
+</svg>
+
+    </i>
+    <span>
+      10 minutes to read
+    </span>
+  </div>
+</div>
+
+
+      
+        
+        <section class="prose prose-slate dark:prose-invert w-full max-w-4xl lg:max-w-5xl mt-6">
+          <h2>Table of Contents</h2>
+          <aside><nav id="TableOfContents">
+  <ul>
+    <li><a href="#automate-azure-sentinel-deployment">Automate Azure Sentinel Deployment</a>
+      <ul>
+        <li><a href="#prerequisites">Prerequisites</a></li>
+        <li><a href="#azure-sentinel-automation-tools">Azure Sentinel Automation tools</a></li>
+        <li><a href="#connect-to-azure-with-powershell">Connect to Azure with PowerShell</a></li>
+        <li><a href="#a-step-by-step-to-a-fully-automated-deployment">A Step by Step To a Fully Automated Deployment</a></li>
+        <li><a href="#plan-first-succeed-later">Plan first, Succeed later</a></li>
+        <li><a href="#summary">Summary</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></aside>
+        </section>
+        
+      
+
+      <article class="mt-6 w-full max-w-4xl lg:max-w-5xl prose prose-slate dark:prose-invert prose-quoteless post-content">
+        <h2 id="automate-azure-sentinel-deployment">Automate Azure Sentinel Deployment</h2>
+<p>Azure Sentinel is a scalable, cloud-native, security information event management (SIEM) and security orchestration automated response (SOAR) solution.
+Azure Sentinel delivers intelligent security analytics and threat intelligence across the enterprise, providing a single solution for alert detection, threat visibility, proactive hunting, and threat response.</p>
+<p>Like any other cloud services, you can automate most of the Azure Sentinel deployment and configuration.
+And in this post, you will learn how to automate the core components of Azure Sentinel.</p>
+<h3 id="prerequisites">Prerequisites</h3>
+<p>Before we start, there are few global prerequisites that you need to meet:</p>
+<ul>
+<li>Active Azure Subscription, if you don&rsquo;t have one, create a <a href="https://azure.microsoft.com/free/?WT.mc_id=A261C142F" target="_blank" rel="noopener">free account</a>
+ before you begin.</li>
+<li>Contributor permissions to the subscription.</li>
+<li>PowerShell V7, if you don&rsquo;t have it installed, install it from the <a href="https://github.com/PowerShell/PowerShell" target="_blank" rel="noopener">GitHub Repository</a>
+.</li>
+</ul>
+<h3 id="azure-sentinel-automation-tools">Azure Sentinel Automation tools</h3>
+<p>Bringing the right set of tools to the mission allows you to provide the best solution in the shortest time.
+Before you begin in your journey, spend some time getting familiar with the following tools:</p>
+<h4 id="powershell-v7">PowerShell V7</h4>
+<p>PowerShell V7 is a cross-platform task automation and configuration management framework, consisting of a command-line shell and scripting language.
+Make sure you installed it on your system.</p>
+<h4 id="az-module">Az Module</h4>
+<p>Azure PowerShell Az module is a PowerShell module for interacting with Azure.
+Az offers shorter commands, improved stability, and cross-platform support.</p>
+<p>To install it, you run the following command:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-PowerShell" data-lang="PowerShell"><span style="display:flex;"><span>Install-Module az -AllowClobber -Scope CurrentUser
+</span></span></code></pre></div><h4 id="azsentinel-module">AzSentinel Module</h4>
+<p>AzSentinel is a module built by Wortel, and it will help us automate a few of the processes.</p>
+<p>You install the AzSentinel Module with the following command:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-PowerSHell" data-lang="PowerSHell"><span style="display:flex;"><span>Install-Module AzSentinel -Scope CurrentUser -Force
+</span></span></code></pre></div><h4 id="splatting">Splatting</h4>
+<p>In most of the code examples, I use &ldquo;splatting&rdquo; to pass the parameters.
+Splatting makes your commands shorter and easier to read.
+You can read more about it <a href="https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_splatting?view=powershell-7" target="_blank" rel="noopener">here.</a>
+</p>
+<h3 id="connect-to-azure-with-powershell">Connect to Azure with PowerShell</h3>
+<p>You also need to set up a session to Azure from PowerShell, and you can create one with the Az module.</p>
+<p>You need to get your Tenant ID and Subscription ID from the Azure Portal.</p>
+<p>With this information, you can use the <code>Connect-AzAccount</code> to create a session with Azure:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-PowerShell" data-lang="PowerShell"><span style="display:flex;"><span>$TenantID = <span style="color:#e6db74">&#39;XXXX-XXXX-XXXX-XXXX-XXXX&#39;</span>
+</span></span><span style="display:flex;"><span>$SubscriptionID = <span style="color:#e6db74">&#39;XXXX-XXXX-XXXX-XXXX&#39;</span>
+</span></span><span style="display:flex;"><span>Connect-AzAccount -TenantId $TenantID -SubscriptionId $SubscriptionID
+</span></span></code></pre></div><p>You can now interact with Azure from PowerShell and start your journey to automate Azure Sentinel.</p>
+<h3 id="a-step-by-step-to-a-fully-automated-deployment">A Step by Step To a Fully Automated Deployment</h3>
+<p>Every automation process starts with multiple small automated processes.
+In this post, you will learn how to provision the following components with PowerShell:</p>
+<ul>
+<li>Resource Group</li>
+<li>Log Analytics</li>
+<li>Azure Sentinel</li>
+<li>Saved Queries</li>
+<li>Hunting Queries</li>
+<li>Alert Rules</li>
+<li>Playbooks</li>
+<li>Workbooks</li>
+</ul>
+<p><strong>Azure Log Analytics, Azure Sentinel, and Logic Apps are all paid services.</strong></p>
+<p>Each component is a piece in the puzzle that builds a fully up and running Azure Sentinel, ready to monitor every environment.</p>
+<h4 id="resource-group">Resource Group</h4>
+<p>The resource group is a container that holds related resources for an Azure solution.
+In Azure, you logically group related resources to deploy, manage, and maintain them as a single entity.
+With the <code>New-AzResourceGroup</code>, you can create a new resource group.</p>
+<p><strong>Every resource in Azure requires a deployment location.
+The location is referring to the Datacenter region.
+In this guide, I will use the West Europe region.</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-PowerShell" data-lang="PowerShell"><span style="display:flex;"><span>$Parms = @{
+</span></span><span style="display:flex;"><span>    Name     = <span style="color:#e6db74">&#34;Sentinel-RG&#34;</span>
+</span></span><span style="display:flex;"><span>    Location = <span style="color:#e6db74">&#34;WestEurope&#34;</span>
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>New-AzResourceGroup @Parms
+</span></span></code></pre></div><h4 id="log-analytics">Log Analytics</h4>
+<p>Log Analytics is a service that helps you collect and analyze data generated by resources in your cloud and on-premises environments.
+It gives you real-time insights using integrated search and custom dashboards to readily analyze millions of records across all of your workloads and servers regardless of their physical location.</p>
+<p>Azure Sentinel run on Log Analytics workspace, and use it to store all security-related data.
+With that said, Log Analytics is the first resource we need to provision.</p>
+<p>To create a new Log Analytics workspace, you can use the <code>New-AzOperationalInsightsWorkspace</code>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-PowerShell" data-lang="PowerShell"><span style="display:flex;"><span>$Parms = @{
+</span></span><span style="display:flex;"><span>    ResourceGroupName = <span style="color:#e6db74">&#34;Sentinel-RG&#34;</span>
+</span></span><span style="display:flex;"><span>    Name              = <span style="color:#e6db74">&#34;Saggiehaim-Sentinel-WS&#34;</span>
+</span></span><span style="display:flex;"><span>    Location          = <span style="color:#e6db74">&#34;WestEurope&#34;</span>
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>New-AzOperationalInsightsWorkspace @Parms
+</span></span></code></pre></div><h4 id="azure-sentinel">Azure Sentinel</h4>
+<p>After provisioning Log Analytics, you can continue and on-board Azure Sentinel.</p>
+<p>Use the <code>Set-AzSentinel</code> to provision the Log Analytics Workspace:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-PowerShell" data-lang="PowerShell"><span style="display:flex;"><span>$Parms = @{
+</span></span><span style="display:flex;"><span>    SubscriptionId = $SubscriptionID
+</span></span><span style="display:flex;"><span>    WorkspaceName  = <span style="color:#e6db74">&#34;Saggiehaim-Sentinel-WS&#34;</span>
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Set-AzSentinel @Parms
+</span></span></code></pre></div><h4 id="azure-sentinel-saved-queries">Azure Sentinel Saved Queries</h4>
+<p>Until this point, you only provisioned &ldquo;Infrastructure.&rdquo;
+By enabling Azure Sentinel, you can now start the &ldquo;configuration&rdquo; part, and add content to your Azure Sentinel.</p>
+<p>When we talk about SIEM and monitoring big data as an essential skill to have, it is the ability to extract the relevant information from the sea of data.</p>
+<p>In Sentinel, you use the Kusto Language (KQL).
+With KQL, you can run queries inside Log Analytics, and write Sentinel Alerts rules, Hunting rules, Workbooks, and more.</p>
+<p>Some queries can be significant and complex, and you don&rsquo;t want to write to them again and again.
+You can save your time and keep your queries inside Log Analytics and use them on demand.</p>
+<p><strong>You can organize your saved query inside folders by using the Category switch.</strong></p>
+<p>You can push saved queries with the <code>New-AzOperationalInsightsSavedSearch</code> command:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-PowerShell" data-lang="PowerShell"><span style="display:flex;"><span>$query = <span style="color:#e6db74">@&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">// Number of requests
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">// Count the total number of calls across all APIs in the last 24 hours.
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">//Total number of call per resource
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">ApiManagementGatewayLogs
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">| where TimeGenerated &gt; ago(1d)
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">| summarize count(CorrelationId) by _ResourceId
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;@</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$param = @{
+</span></span><span style="display:flex;"><span>    ResourceGroupName = <span style="color:#e6db74">&#34;sentinel-rg&#34;</span>
+</span></span><span style="display:flex;"><span>    WorkspaceName = <span style="color:#e6db74">&#34;Saggiehaim-Sentinel-WS&#34;</span>
+</span></span><span style="display:flex;"><span>    SavedSearchId =  <span style="color:#e6db74">&#34;NumberofAPICallsPerResource&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">## Name of the saved query</span>
+</span></span><span style="display:flex;"><span>    DisplayName = <span style="color:#e6db74">&#34;Number of API calls per resource&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">## The name of the Folder your want to store your saved query</span>
+</span></span><span style="display:flex;"><span>    Category = <span style="color:#e6db74">&#34;API Managment&#34;</span>
+</span></span><span style="display:flex;"><span>    Query = $query
+</span></span><span style="display:flex;"><span>    Version = <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>    Force = $true
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>New-AzOperationalInsightsSavedSearch @param
+</span></span></code></pre></div><p>Another method is to use JSON or YAML files to hold the information.
+This method is the recommended approach.
+It allows you to manage your content inside a git repository, manage versions, and use it in your automated process.</p>
+<p>Here is an example of a JSON file:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-JSON" data-lang="JSON"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&#34;SavedSearchId&#34;</span>: <span style="color:#e6db74">&#34;NumberofAPICallsPerResource&#34;</span>,
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&#34;DisplayName&#34;</span>: <span style="color:#e6db74">&#34;Number of API calls per resource&#34;</span>,
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&#34;Category&#34;</span>: <span style="color:#e6db74">&#34;API Managment&#34;</span>,
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&#34;Query&#34;</span>: <span style="color:#e6db74">&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  // Number of requests
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  // Count the total number of calls across all APIs in the last 24 hours.
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  //Total number of call per resource
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  ApiManagementGatewayLogs
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  | where TimeGenerated &gt; ago(1d)
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  | summarize count(CorrelationId) by _ResourceId&#34;</span>,
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&#34;Version&#34;</span>: <span style="color:#e6db74">&#34;1&#34;</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Now you need to adjust the script accordingly:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-PowerShell" data-lang="PowerShell"><span style="display:flex;"><span>$SavedQuery = Get-Content .\NumberofAPICallsPerResource.json | ConvertFrom-Json
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$param = @{
+</span></span><span style="display:flex;"><span>    ResourceGroupName = <span style="color:#e6db74">&#34;sentinel-rg&#34;</span>
+</span></span><span style="display:flex;"><span>    WorkspaceName = <span style="color:#e6db74">&#34;Saggiehaim-Sentinel-WS&#34;</span>
+</span></span><span style="display:flex;"><span>    SavedSearchId =  $SavedQuery.SavedSearchId
+</span></span><span style="display:flex;"><span>    DisplayName = $SavedQuery.DisplayName
+</span></span><span style="display:flex;"><span>    Category = $SavedQuery.Category
+</span></span><span style="display:flex;"><span>    Query = $SavedQuery.Query
+</span></span><span style="display:flex;"><span>    Version = $SavedQuery.Version
+</span></span><span style="display:flex;"><span>    Force = $true
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>New-AzOperationalInsightsSavedSearch @param
+</span></span></code></pre></div><h4 id="hunting-queries">Hunting Queries</h4>
+<p>Hunting queries help you find suspicious activity in your environment.
+While many are likely to return legitimate activity or potentially malicious activity, they can guide your hunting.
+If you are confident with the results after running these queries, you could consider turning some or all of them
+into Azure Sentinel Analytics to alert on.</p>
+<p>To can create Hunting rules, you can use the `Import-AzSentinelHuntingRule&rsquo; cmdlet.</p>
+<p>First, you create a JSON file containing your hunting rule base on this schema:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-JSON" data-lang="JSON"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;analytics&#34;</span>: [
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;DisplayName&#34;</span>: <span style="color:#e6db74">&#34;Example of Hunting Rule&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;Description&#34;</span>: <span style="color:#e6db74">&#34;This the description of the query.&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;Query&#34;</span>: <span style="color:#e6db74">&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">      // sample query
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">      Syslog
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">      | limit  10  &#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;Tactics&#34;</span>: [
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;Persistence&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;Execution&#34;</span>
+</span></span><span style="display:flex;"><span>      ]
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>  ]
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Now, you can import the Hunting Query into your Azure Sentinel:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-PowerShell" data-lang="PowerShell"><span style="display:flex;"><span>$Parms = @{
+</span></span><span style="display:flex;"><span>    WorkspaceName = <span style="color:#e6db74">&#34;Saggiehaim-Sentinel-WS&#34;</span>
+</span></span><span style="display:flex;"><span>    SettingsFile  = .\exampleHuntingRule.json
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Import-AzSentinelHuntingRule @Parms
+</span></span></code></pre></div><h4 id="alerts-rules">Alerts Rules</h4>
+<p>Alert rules are queries that defined to trigger incidents.
+You use them to raise incidents when security incidents happen in your environment.
+Just like Hunting queries, you store your alerts rules in a JSON file.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-JSON" data-lang="JSON"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;analytics&#34;</span>: [
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;displayName&#34;</span>: <span style="color:#e6db74">&#34;Suspicios activities in Office365&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;description&#34;</span>:
+</span></span><span style="display:flex;"><span>          <span style="color:#e6db74">&#34;Rare office operations executed on one or more mailboxes.&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;severity&#34;</span>: <span style="color:#e6db74">&#34;High&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;enabled&#34;</span>: <span style="color:#66d9ef">true</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;query&#34;</span>: <span style="color:#e6db74">&#34;let timeframe = 1d; OfficeActivity&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;queryFrequency&#34;</span>: <span style="color:#e6db74">&#34;5H&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;queryPeriod&#34;</span>: <span style="color:#e6db74">&#34;5H&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;triggerOperator&#34;</span>: <span style="color:#e6db74">&#34;GreaterThan&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;triggerThreshold&#34;</span>: <span style="color:#ae81ff">5</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;suppressionDuration&#34;</span>: <span style="color:#e6db74">&#34;6H&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;suppressionEnabled&#34;</span>: <span style="color:#66d9ef">false</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;tactics&#34;</span>: [
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;Persistence&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;LateralMovement&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;Collection&#34;</span>
+</span></span><span style="display:flex;"><span>      ],
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;playbookName&#34;</span>: <span style="color:#e6db74">&#34;string&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;aggregationKind&#34;</span>: <span style="color:#e6db74">&#34;string&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;createIncident&#34;</span>: <span style="color:#66d9ef">true</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;groupingConfiguration&#34;</span>: {
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;GroupingConfigurationEnabled&#34;</span>: <span style="color:#66d9ef">true</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;reopenClosedIncident&#34;</span>: <span style="color:#66d9ef">true</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;lookbackDuration&#34;</span>: <span style="color:#e6db74">&#34;PT6H&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;entitiesMatchingMethod&#34;</span>: <span style="color:#e6db74">&#34;string&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;groupByEntities&#34;</span>: [
+</span></span><span style="display:flex;"><span>          <span style="color:#e6db74">&#34;Account&#34;</span>,
+</span></span><span style="display:flex;"><span>          <span style="color:#e6db74">&#34;Ip&#34;</span>,
+</span></span><span style="display:flex;"><span>          <span style="color:#e6db74">&#34;Host&#34;</span>,
+</span></span><span style="display:flex;"><span>          <span style="color:#e6db74">&#34;Url&#34;</span>
+</span></span><span style="display:flex;"><span>        ]
+</span></span><span style="display:flex;"><span>      }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>  ]
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>You can use the <code>Import-AzSentinelAlertRule</code> to import your Alert Rules:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-PowerShell" data-lang="PowerShell"><span style="display:flex;"><span>$Parms = @{
+</span></span><span style="display:flex;"><span>    WorkspaceName = <span style="color:#e6db74">&#34;Saggiehaim-Sentinel-WS&#34;</span>
+</span></span><span style="display:flex;"><span>    SettingsFile  = .\exampleAlertRule.json
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Import-AzSentinelAlertRule @Parms
+</span></span></code></pre></div><h4 id="playbooks-and-workbooks">Playbooks and Workbooks</h4>
+<p>Playbooks use Azure Logic Apps to respond to incidents automatically.
+Logic Apps are a native resource in ARM, and therefore we can automate its deployment with ARM templates.</p>
+<p>Azure Sentinel allows you to create custom workbooks across your data.
+Workbooks visualize and monitor the data and provide versatility in creating custom dashboards.</p>
+<p>Same as Playbooks, Workbooks are native resources in Azure and use ARM templates</p>
+<p><strong>You can find examples to Playbooks and Workbooks on the <a href="https://github.com/Azure/Azure-Sentinel" target="_blank" rel="noopener">Azure Sentinel Community repository</a>
+</strong></p>
+<p>Because this is an ARM template deployment,  you deploy it to the Resource group and not to the Log Analytics Workspace.
+Use the <code>New-AzResourceGroupDeployment</code> cmdlet to deploy either Workbook or Playbook:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-PowerShell" data-lang="PowerShell"><span style="display:flex;"><span>$Parms = @{
+</span></span><span style="display:flex;"><span>    ResourceGroupName = <span style="color:#e6db74">&#34;Sentinel-RG&#34;</span>
+</span></span><span style="display:flex;"><span>    TemplateFile      = .\exampleTemplate.json
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>New-AzResourceGroupDeployment @Parms
+</span></span></code></pre></div><p><strong>Take into account that the deployment will fail if a workbook with the same name already exists.</strong></p>
+<h3 id="plan-first-succeed-later">Plan first, Succeed later</h3>
+<p>You&rsquo;ve learned how to provision each component and how to deploy your content, now it&rsquo;s time to prepare the content and learn how to connect securely to Azure to automate the deployment from start to end correctly.</p>
+<h4 id="folder-structure">Folder Structure</h4>
+<p>First, I want to explain about folder structure.
+When you have different files, I like to organize them in folders, so it&rsquo;s easy to manage them and use them in the automation process.
+In this case, we have five different resources, so, I recommend the following structure:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>Sentinel Automation
+</span></span><span style="display:flex;"><span>├───AlertsRules
+</span></span><span style="display:flex;"><span>├───HuntingRules
+</span></span><span style="display:flex;"><span>├───Playbooks
+</span></span><span style="display:flex;"><span>├───SavedQuery
+</span></span><span style="display:flex;"><span>└───Workbooks
+</span></span></code></pre></div><p>The example above allows us to match the right files to the right cmdlets.
+For example, to import all your AlertRules, you can do the following:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-PowerSHell" data-lang="PowerSHell"><span style="display:flex;"><span>$AlertRules = Get-Item <span style="color:#e6db74">&#34;.\AlertsRules\*&#34;</span> -Filter <span style="color:#e6db74">&#39;*.json&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">foreach</span> ($rule <span style="color:#66d9ef">in</span> $AlertRules) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">try</span> {
+</span></span><span style="display:flex;"><span>        $Parms = @{
+</span></span><span style="display:flex;"><span>            WorkspaceName  = <span style="color:#e6db74">&#34;Saggiehaim-Sentinel-WS&#34;</span>
+</span></span><span style="display:flex;"><span>            SettingsFile   = .\exampleAlertRule.json
+</span></span><span style="display:flex;"><span>            SubscriptionId = $SubscriptionId
+</span></span><span style="display:flex;"><span>            Confirm        = $false
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        Import-AzSentinelAlertRule @Parms
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">catch</span> {
+</span></span><span style="display:flex;"><span>        $ErrorMessage = $_.Exception.Message
+</span></span><span style="display:flex;"><span>        Write-Error <span style="color:#e6db74">&#34;Unable to import Alert Rule: </span>$($ErrorMessage)<span style="color:#e6db74">&#34;</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h4 id="connecting-securely-to-azure">Connecting Securely To Azure</h4>
+<p>Another important topic is how we authenticate to Azure securely.
+If you paid attention when you created a session with Azure for the first time, using your credential, it asked you to sign in with <em>one timed password</em> in the Microsoft portal.
+One time passwords are not the behavior we want when we automate things, as it required human intervention.
+But this is also the expected behavior from a security point of view, right?</p>
+<p>To overcome this, you need to use an App Registration Account.
+If you don&rsquo;t know how to create one, you can follow <a href="https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-authenticate-service-principal-powershell" target="_blank" rel="noopener">this guide.</a>
+</p>
+<p>A little tip: Keeping the password in plain text in scripts is not so safe, so it’s better to secure it.
+The best approach is to use a certificate (in the guide, you will learn how to do it).
+But if you still want to go without a certificate, you can always protect the password.
+You convert the password to secure string and save it to a file (I recommend changing the ACL for the file).</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-PowerShell" data-lang="PowerShell"><span style="display:flex;"><span>$CredsFile = <span style="color:#e6db74">&#34;&lt;Path&gt;\PasswordFile.txt&#34;</span>
+</span></span><span style="display:flex;"><span>Read-Host -AsSecureString | ConvertFrom-SecureString | Out-File $CredsFile
+</span></span></code></pre></div><p>Now you can connect to Azure more securely.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Powershell" data-lang="Powershell"><span style="display:flex;"><span>$TenantID = <span style="color:#e6db74">&#39;XXXX-XXXX-XXXX-XXXX-XXXX&#39;</span>
+</span></span><span style="display:flex;"><span>$SubscriptionID = <span style="color:#e6db74">&#39;XXXX-XXXX-XXXX-XXXX&#39;</span>
+</span></span><span style="display:flex;"><span>$appId = <span style="color:#e6db74">&#39;XXXX-XXXX-XXXX-XXXX&#39;</span>
+</span></span><span style="display:flex;"><span>$securePassword = Get-Content $CredsFile | ConvertTo-SecureString
+</span></span><span style="display:flex;"><span>$credential = New-Object System.Management.Automation.PSCredential (
+</span></span><span style="display:flex;"><span>  $AppId, $securePassword
+</span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$connectAzParams = @{
+</span></span><span style="display:flex;"><span>    ServicePrincipal = $true
+</span></span><span style="display:flex;"><span>    SubscriptionId   = $SubscriptionId
+</span></span><span style="display:flex;"><span>    Tenant           = $TenantId
+</span></span><span style="display:flex;"><span>    Credential       = $credential
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">try</span> {
+</span></span><span style="display:flex;"><span>    Connect-AzAccount @connectAzParams
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">catch</span> {
+</span></span><span style="display:flex;"><span>    $ErrorMessage = $_.Exception.Message
+</span></span><span style="display:flex;"><span>    Write-Error <span style="color:#e6db74">&#34;Unable to connect to Azure: </span>$($ErrorMessage)<span style="color:#e6db74">&#34;</span>
+</span></span><span style="display:flex;"><span>    exit
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="summary">Summary</h3>
+<p>Azure Sentinel is the &ldquo;next-gen&rdquo; SIEM in the cloud, and if you are into security, Mastering Azure Sentinel is a must.
+Combining the cloud capabilities, with a SIEM that is managed by code, gives you endless possibilities to protect your critical assets.
+In this post, you have learned about Azure Sentinel, the components, and how to automate a deployment securely.
+You learned how to sort your content and push it to your Azure Sentinel and manage it with ease.
+Hopefully, this post will help you start with Azure Sentinel and help automate the deployment and maintenance.</p>
+
+      </article>
+
+      
+
+
+
+
+    </div>
+  </div>
+</div>
+
+  </main>
+  <footer class="flex flex-none justify-center">
+    <section class="flex flex-col md:flex-row mx-2 md:mx-0 gap-2 md:gap-0 justify-between w-full max-w-4xl lg:max-w-5xl py-6 text-slate-500 dark:text-slate-300">
+  <div class="flex flex-row">
+    
+  
+  
+    <a href="https://www.linkedin.com/in/saggie/" target="_blank" title="Linkedin" class="flex flex-row mr-2">
+      <span class="hidden">Linkedin</span>
+      <i class="h-6 w-6 flex-none"> <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-linkedin" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+   <path d="M4 4m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z"></path>
+   <path d="M8 11l0 5"></path>
+   <path d="M8 8l0 .01"></path>
+   <path d="M12 16l0 -5"></path>
+   <path d="M16 16v-3a2 2 0 0 0 -4 0"></path>
+</svg>
+ </i>
+    </a>
+  
+  
+  
+    <a href="https://github.com/SaggehaimBlog" target="_blank" title="Github" class="flex flex-row mr-2">
+      <span class="hidden">Github</span>
+      <i class="h-6 w-6 flex-none"> <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+   <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5"></path>
+</svg>
+ </i>
+    </a>
+  
+  
+
+
+  </div>
+  <div class="grow"></div>
+  <div class="flex flex-row">
+    <i class="h-6 w-6 flex-none"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+   <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"></path>
+   <path d="M14 9.75a3.016 3.016 0 0 0 -4.163 .173a2.993 2.993 0 0 0 0 4.154a3.016 3.016 0 0 0 4.163 .173"></path>
+</svg>
+</i> 2018 - 2024 Saggie Haim
+    
+  </div>
+  
+</section>
+
+  </footer>
+  <script src="/main.js"></script>
+
+<div class="hidden top-1 right-1" id="code-copy">
+  <i class="h-6 w-6 block">
+    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copy" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M7 7m0 2.667a2.667 2.667 0 0 1 2.667 -2.667h8.666a2.667 2.667 0 0 1 2.667 2.667v8.666a2.667 2.667 0 0 1 -2.667 2.667h-8.666a2.667 2.667 0 0 1 -2.667 -2.667z" />
+  <path d="M4.012 16.737a2.005 2.005 0 0 1 -1.012 -1.737v-10c0 -1.1 .9 -2 2 -2h10c.75 0 1.158 .385 1.5 1" />
+</svg>
+
+  </i>
+</div>
+<div class="hidden top-1 right-1" id="code-copy-done">
+  <i class="h-6 w-6 block">
+    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-check" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M5 12l5 5l10 -10" />
+</svg>
+
+  </i>
+</div><script src="/code-copy.js"></script>
+
+
+
+
+
+</body>
+</html>

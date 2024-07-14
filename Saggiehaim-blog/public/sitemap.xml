@@ -26,7 +26,7 @@
     <lastmod>2020-10-14T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>//localhost:8080/posts/deploy-azure-sentinel-to-a-multi-tenancy-environment/deploy-azure-sentinel-to-a-multi-tenancy-environment/</loc>
+    <loc>//localhost:8080/posts/deploy-azure-sentinel-to-a-multi-tenancy-environment/</loc>
     <lastmod>2020-10-14T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
@@ -50,7 +50,7 @@
     <lastmod>2020-10-14T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>//localhost:8080/posts/automate-azure-sentinel-deployment/automate-azure-sentinel-deployment/</loc>
+    <loc>//localhost:8080/posts/automate-azure-sentinel-deployment/</loc>
     <lastmod>2020-09-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
@@ -62,7 +62,7 @@
     <lastmod>2020-04-02T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>//localhost:8080/posts/how-to-connect-to-azure-with-powershell/how-to-connect-to-azure-with-powershell/</loc>
+    <loc>//localhost:8080/posts/how-to-connect-to-azure-with-powershell/</loc>
     <lastmod>2020-04-02T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
@@ -70,7 +70,7 @@
     <lastmod>2020-04-02T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>//localhost:8080/posts/install-powershell-7-on-wsl-and-ubuntu/install-powershell-7-on-wsl-and-ubuntu/</loc>
+    <loc>//localhost:8080/posts/install-powershell-7-on-wsl-and-ubuntu/</loc>
     <lastmod>2020-02-16T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
@@ -86,7 +86,7 @@
     <lastmod>2020-02-16T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>//localhost:8080/posts/background-jobs-start-threadjob-vs-start-job/background-jobs-start-threadjob-vs-start-job/</loc>
+    <loc>//localhost:8080/posts/background-jobs-start-threadjob-vs-start-job/</loc>
     <lastmod>2019-07-07T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
@@ -110,11 +110,11 @@
     <lastmod>2019-05-12T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>//localhost:8080/posts/running-powershell-core-in-a-container/running-powershell-core-in-a-container/</loc>
+    <loc>//localhost:8080/posts/running-powershell-core-in-a-container/</loc>
     <lastmod>2019-05-12T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>//localhost:8080/posts/build-gui-for-powershell/build-gui-for-powershell/</loc>
+    <loc>//localhost:8080/posts/build-gui-for-powershell/</loc>
     <lastmod>2019-02-20T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
@@ -126,7 +126,7 @@
     <lastmod>2019-01-10T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>//localhost:8080/posts/sorting-group-policy/sorting-group-policy/</loc>
+    <loc>//localhost:8080/posts/sorting-group-policy/</loc>
     <lastmod>2019-01-10T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
@@ -138,15 +138,15 @@
     <lastmod>2018-12-24T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>//localhost:8080/posts/updating-sharepoint-online-list-with-powershell-the-easy-way/updating-sharepoint-online-list-with-powershell-the-easy-way/</loc>
+    <loc>//localhost:8080/posts/updating-sharepoint-online-list-with-powershell-the-easy-way/</loc>
     <lastmod>2018-12-24T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>//localhost:8080/posts/powershell-history/powershell-history/</loc>
+    <loc>//localhost:8080/posts/powershell-history/</loc>
     <lastmod>2018-11-28T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>//localhost:8080/posts/create-vmware-snapshots-report/create-vmware-snapshots-report/</loc>
+    <loc>//localhost:8080/posts/create-vmware-snapshots-report/</loc>
     <lastmod>2018-10-28T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
@@ -166,7 +166,7 @@
     <lastmod>2018-09-25T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>//localhost:8080/posts/assessing-new-domain-environment/assessing-new-domain-environment/</loc>
+    <loc>//localhost:8080/posts/assessing-new-domain-environment/</loc>
     <lastmod>2018-09-25T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
@@ -182,7 +182,7 @@
     <lastmod>2018-09-16T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>//localhost:8080/posts/update-powershell-help-background/update-powershell-help-background/</loc>
+    <loc>//localhost:8080/posts/update-powershell-help-background/</loc>
     <lastmod>2018-09-16T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
@@ -190,15 +190,15 @@
     <lastmod>2018-09-04T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>//localhost:8080/posts/ditch-cmd-for-powershell/ditch-cmd-for-powershell/</loc>
+    <loc>//localhost:8080/posts/ditch-cmd-for-powershell/</loc>
     <lastmod>2018-09-04T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>//localhost:8080/posts/creating-powershell-profile/creating-powershell-profile/</loc>
+    <loc>//localhost:8080/posts/creating-powershell-profile/</loc>
     <lastmod>2018-08-24T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>//localhost:8080/posts/automation-network-redesign/automation-network-redesign/</loc>
+    <loc>//localhost:8080/posts/automation-network-redesign/</loc>
     <lastmod>2018-08-17T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>

@@ -13,16 +13,16 @@
     <atom:link href="//localhost:8080/categories/microsoft-sentinel/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Deploy Azure Sentinel to a multi-tenancy environment</title>
-      <link>//localhost:8080/posts/deploy-azure-sentinel-to-a-multi-tenancy-environment/deploy-azure-sentinel-to-a-multi-tenancy-environment/</link>
+      <link>//localhost:8080/posts/deploy-azure-sentinel-to-a-multi-tenancy-environment/</link>
       <pubDate>Wed, 14 Oct 2020 00:00:00 +0000</pubDate><author>contact@saggiehaim.net (Saggie Haim)</author>
-      <guid>//localhost:8080/posts/deploy-azure-sentinel-to-a-multi-tenancy-environment/deploy-azure-sentinel-to-a-multi-tenancy-environment/</guid>
+      <guid>//localhost:8080/posts/deploy-azure-sentinel-to-a-multi-tenancy-environment/</guid>
       <description>For those of you who don&amp;rsquo;t know Azure Sentinel, Azure Sentinel is a scalable, cloud-native, security information event management (SIEM) and security orchestration automated response (SOAR) solution. Azure Sentinel delivers intelligent security analytics and threat intelligence across the enterprise, providing a single solution for alert detection, threat visibility, proactive hunting, and threat response.&#xA;The challenge begins when you have a multi-tenancy environment to monitor, as you need to jump from one tenant to keep up with the incidents.</description>
     </item>
     <item>
       <title>Automate Azure Sentinel Deployment</title>
-      <link>//localhost:8080/posts/automate-azure-sentinel-deployment/automate-azure-sentinel-deployment/</link>
+      <link>//localhost:8080/posts/automate-azure-sentinel-deployment/</link>
       <pubDate>Tue, 01 Sep 2020 00:00:00 +0000</pubDate><author>contact@saggiehaim.net (Saggie Haim)</author>
-      <guid>//localhost:8080/posts/automate-azure-sentinel-deployment/automate-azure-sentinel-deployment/</guid>
+      <guid>//localhost:8080/posts/automate-azure-sentinel-deployment/</guid>
       <description>Automate Azure Sentinel Deployment Azure Sentinel is a scalable, cloud-native, security information event management (SIEM) and security orchestration automated response (SOAR) solution. Azure Sentinel delivers intelligent security analytics and threat intelligence across the enterprise, providing a single solution for alert detection, threat visibility, proactive hunting, and threat response.&#xA;Like any other cloud services, you can automate most of the Azure Sentinel deployment and configuration. And in this post, you will learn how to automate the core components of Azure Sentinel.</description>
     </item>
   </channel>

@@ -13,9 +13,9 @@
     <atom:link href="//localhost:8080/categories/wsl/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Install Powershell 7 on Wsl and Ubuntu</title>
-      <link>//localhost:8080/posts/install-powershell-7-on-wsl-and-ubuntu/install-powershell-7-on-wsl-and-ubuntu/</link>
+      <link>//localhost:8080/posts/install-powershell-7-on-wsl-and-ubuntu/</link>
       <pubDate>Sun, 16 Feb 2020 00:00:00 +0000</pubDate><author>contact@saggiehaim.net (Saggie Haim)</author>
-      <guid>//localhost:8080/posts/install-powershell-7-on-wsl-and-ubuntu/install-powershell-7-on-wsl-and-ubuntu/</guid>
+      <guid>//localhost:8080/posts/install-powershell-7-on-wsl-and-ubuntu/</guid>
       <description>With PowerShell 7, we get the best PowerShell edition, most importantly, it’s cross-platform! While last time we installed the latest PowerShell 7 on a container, sometimes we don’t want just a plain environment with PowerShell, sometimes we want a to add other tools, change system configurations or use different Linux Distros.&#xA;That is why we use WSL.&#xA;What is WSL? WSL or Windows Subsystem for Linux is a feature that lets us run full Linux distributions on top of our Windows OS without the overhead of running virtualization tools.</description>
     </item>
   </channel>

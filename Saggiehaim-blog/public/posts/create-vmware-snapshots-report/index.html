@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=8080&amp;path=livereload" data-no-instant defer></script>
+  <title>Create Vmware Snapshots Report :: Saggie Haim - Automate Everything - Powershell, DevOps, Security, and automation.</title>
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta
+  name="description"
+  content="Konichiwa Yujin,
+Sorry for not posting for so long, I been to Japan for a work trip. While Japan is amazing, the state of the ESXi in the office wasn’t so great. The ESXi crushed, and after investigation, we notice that he had no free space on HDD’s, which was weird. we have 100TB, and only 4 VM’s. the first suspect? Snapshots!
+Japanese Garden building Snapshots are great, but they can be your worst enemy if you don’t use them correctly."
+/>
+<meta
+  name="keywords"
+  content="PowerShell, PowerCLI, VMware ESXi, Snapshot management, vCenter, ESXi snapshots, VMware snapshot report, IT administrator, PowerShell script, VMware storage management, PowerShell and VMware, Automate VMware tasks, VMware snapshots issue, Generate HTML reports"
+/>
+<meta name="robots" content="noodp" />
+<meta property="og:url" content="//localhost:8080/posts/create-vmware-snapshots-report/">
+  <meta property="og:site_name" content="Saggie Haim - Automate Everything">
+  <meta property="og:title" content="Create Vmware Snapshots Report">
+  <meta property="og:description" content="In this post, I share how I used PowerShell and PowerCLI to manage VMware ESXi snapshots during a recent trip to Japan. Follow my step-by-step guide to connect to vCenter, retrieve snapshot data, and generate detailed HTML reports, ensuring efficient snapshot management and avoiding storage issues.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2018-10-28T00:00:00+00:00">
+    <meta property="article:modified_time" content="2018-10-28T00:00:00+00:00">
+    <meta property="article:tag" content="PowerShell">
+    <meta property="article:tag" content="VMware">
+    <meta property="article:tag" content="Automation">
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Create Vmware Snapshots Report">
+  <meta name="twitter:description" content="In this post, I share how I used PowerShell and PowerCLI to manage VMware ESXi snapshots during a recent trip to Japan. Follow my step-by-step guide to connect to vCenter, retrieve snapshot data, and generate detailed HTML reports, ensuring efficient snapshot management and avoiding storage issues.">
+
+
+<link rel="canonical" href="//localhost:8080/posts/create-vmware-snapshots-report/" />
+
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="stylesheet" href="/css/index.fe774fb74e49df8cc7f1a574367e700bb4eacc0d2a130948a3b2047afc133702.css">
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+  
+
+</head>
+<body class="flex flex-col min-h-screen w-full bg-slate-50 dark:bg-gray-800">
+    
+<div class="fixed right-0 top-0 z-50 flex items-center justify-center bg-gray-200 p-2 text-sm uppercase text-black sm:bg-red-200 md:bg-yellow-200 lg:bg-green-200 xl:bg-blue-200 2xl:bg-pink-200">
+  <span class="block sm:hidden">all</span>
+  <span class="hidden sm:block md:hidden">sm</span>
+  <span class="hidden md:block lg:hidden">md</span>
+  <span class="hidden lg:block xl:hidden">lg</span>
+  <span class="hidden xl:block 2xl:hidden">xl</span>
+  <span class="hidden 2xl:block">2xl</span>
+</div>
+
+  <header class="flex flex-none justify-center z-10 bg-slate-50 dark:bg-gray-800 sticky top-0">
+    <div class="flex flex-row gap justify-between w-full max-w-4xl lg:max-w-5xl my-4">
+  <div class="flex-none ml-2  md:ml-0">
+    <a href="/" class="">
+      <img class="h-13 w-12" src="/white_logo.png" alt="logo">
+    </a>
+  </div>
+  <div class="flex-none mx-1"></div>
+  <div class="flex-none">
+    
+
+
+
+<nav class="h-full static">
+  <button id="navbar-menu-toggle" type="button" class="inline-flex items-center p-2 text-sm text-slate-800 dark:text-slate-200 rounded-lg md:hidden" aria-controls="navbar-menu" aria-expanded="false">
+    <span class="sr-only">Open main menu</span>
+    <i class="w-8 h-8">
+      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-menu-2" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M4 6l16 0" />
+  <path d="M4 12l16 0" />
+  <path d="M4 18l16 0" />
+</svg>
+
+    </i>
+  </button>
+  <div class="absolute md:static top-16 left-0 right-0 z-50 hidden w-full md:block md:w-auto" id="navbar-menu">
+    <ul class="flex flex-col mx-2 md:mx-0 md:flex-row md:border-0 rounded-sm md:rounded-full px-3 text-base font-medium text-slate-800 dark:text-slate-200 shadow-lg bg-white dark:bg-gray-600 shadow-slate-800/5 dark:shadow-slate-200/5 ring-1 ring-slate-900/5 dark:ring-slate-100/5">
+    
+        <li id="home" class="">
+          <a class="block px-3 py-3 hover:text-blue-600  dark:hover:text-blue-400 text-blue-600 dark:text-blue-200"
+            href="/posts/" title="Home">Home</a>
+        </li>
+      
+    
+        <li id="about" class="">
+          <a class="block px-3 py-3 hover:text-blue-600  dark:hover:text-blue-400"
+            href="/about/" title="About">About</a>
+        </li>
+      
+    
+        <li id="contact" class="">
+          <a class="block px-3 py-3 hover:text-blue-600  dark:hover:text-blue-400"
+            href="/contact/" title="Contact">Contact</a>
+        </li>
+      
+    
+    </ul>
+  </div>
+</nav>
+
+
+  </div>
+  <div class="flex-1"></div>
+
+  
+  <div class="flex-none mx-1"></div>
+  
+  <div class="flex-none md:hidden">
+    <a href=/search/ class="inline-flex items-center p-2 text-sm text-slate-800 dark:text-slate-200 rounded-lg" aria-controls="navbar-menu" aria-expanded="false">
+      <span class="sr-only">Search</span>
+      <i class="w-8 h-8">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+    <path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" />
+    <path d="M21 21l-6 -6" />
+</svg>
+
+      </i>
+    </a>
+  </div>
+  <div class="darkmode-toggle flex flex-none mr-2 md:mr-0">
+    <label for="darkmode-toggle" class="flex items-center px-3 cursor-pointer rounded-full bg-gray-100 dark:bg-gray-600" title="Toggle dark mode">
+      <input name="darkmode-toggle" id="darkmode-toggle" type="checkbox" class="sr-only peer" aria-label="Toggle dark mode">
+      <div class="group flex flex-row gap-1 justify-center h-8 px-1 rounded-full bg-white dark:bg-gray-700">
+        <i class="h-6 w-6 flex-none rounded-full bg-yellow-400 place-self-center peer-checked:group-[]:invisible">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brightness-down" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+   <path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path>
+   <path d="M12 5l0 .01"></path>
+   <path d="M17 7l0 .01"></path>
+   <path d="M19 12l0 .01"></path>
+   <path d="M17 17l0 .01"></path>
+   <path d="M12 19l0 .01"></path>
+   <path d="M7 17l0 .01"></path>
+   <path d="M5 12l0 .01"></path>
+   <path d="M7 7l0 .01"></path>
+</svg>
+
+        </i>
+        <i class="h-6 w-6 flex-none rounded-full place-self-center invisible peer-checked:group-[]:visible">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-moon-stars" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+   <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z"></path>
+   <path d="M17 4a2 2 0 0 0 2 2a2 2 0 0 0 -2 2a2 2 0 0 0 -2 -2a2 2 0 0 0 2 -2"></path>
+   <path d="M19 11h2m-1 -1v2"></path>
+</svg>
+
+        </i>
+      </div>
+    </label>
+  </div>
+</div>
+
+  </header>
+  <main class="flex flex-auto justify-center">
+    
+<div class="w-full max-w-4xl lg:max-w-5xl">
+  <div class="flex flex-col mt-6 mx-2 md:mx-0 rounded-lg overflow-hidden shadow-md bg-white dark:bg-gray-700">
+    <div>
+      <a href="/posts/create-vmware-snapshots-report/">
+        <picture>
+    <source type="image/webp" srcset="/posts/create-vmware-snapshots-report/images/VMSnapshotFeature_hu07ebc57885c20d076f449f1ea5dc1e31_93854_960x0_resize_q75_h2_box_3.webp 960w" sizes="(min-width: 1024px) 100vw, 50vw" />
+    <source type="image/jpeg" srcset="/posts/create-vmware-snapshots-report/images/VMSnapshotFeature_hu07ebc57885c20d076f449f1ea5dc1e31_93854_960x0_resize_q75_bgffffff_box_3.jpg 960w" sizes="(min-width: 1024px) 100vw, 50vw" />
+    <img class="w-full object-cover h-36 md:h-48 xl:h-60" src="/posts/create-vmware-snapshots-report/images/VMSnapshotFeature_hu07ebc57885c20d076f449f1ea5dc1e31_93854_640x0_resize_q75_bgffffff_box_3.jpg" width="977" height="720" alt="Create Vmware Snapshots Report" title="Create Vmware Snapshots Report" loading="lazy" />
+  </picture>
+      </a>
+    </div>
+    <div class="flex flex-col gap-y-3 p-6">
+      <h1 class="text-4xl font-semibold text-slate-800 dark:text-slate-100">
+        <a href="/posts/create-vmware-snapshots-report/">Create Vmware Snapshots Report</a>
+      </h1>
+
+      
+      <h2 class="my-4 text-large text-slate-600 dark:text-slate-300">
+        In this post, I share how I used PowerShell and PowerCLI to manage VMware ESXi snapshots during a recent trip to Japan. Follow my step-by-step guide to connect to vCenter, retrieve snapshot data, and generate detailed HTML reports, ensuring efficient snapshot management and avoiding storage issues.
+      </h2>
+      
+      
+  <ul class="flex flex-row flex-wrap text-slate-500 dark:text-slate-300">
+    
+      
+      <li>
+        <a href="/categories/page/categories/powershell/"
+          class="text-sm mr-2 px-2 py-1 rounded border border-emerald-800 bg-emerald-800 text-slate-50">
+          PowerShell
+        </a>
+      </li>
+      
+      <li>
+        <a href="/categories/page/categories/vmware/"
+          class="text-sm mr-2 px-2 py-1 rounded border border-emerald-800 bg-emerald-800 text-slate-50">
+          VMware
+        </a>
+      </li>
+      
+    
+    
+      
+      <li>
+        <a href="/tags/page/tags/powershell/"
+          class="flex flex-row text-sm mr-2 py-1">
+          <i class="h-5 w-5 flex-none">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+   <path d="M5 9l14 0"></path>
+   <path d="M5 15l14 0"></path>
+   <path d="M11 4l-4 16"></path>
+   <path d="M17 4l-4 16"></path>
+</svg>
+
+          </i>
+          <span class="ml-0">PowerShell</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/tags/page/tags/vmware/"
+          class="flex flex-row text-sm mr-2 py-1">
+          <i class="h-5 w-5 flex-none">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+   <path d="M5 9l14 0"></path>
+   <path d="M5 15l14 0"></path>
+   <path d="M11 4l-4 16"></path>
+   <path d="M17 4l-4 16"></path>
+</svg>
+
+          </i>
+          <span class="ml-0">VMware</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/tags/page/tags/automation/"
+          class="flex flex-row text-sm mr-2 py-1">
+          <i class="h-5 w-5 flex-none">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+   <path d="M5 9l14 0"></path>
+   <path d="M5 15l14 0"></path>
+   <path d="M11 4l-4 16"></path>
+   <path d="M17 4l-4 16"></path>
+</svg>
+
+          </i>
+          <span class="ml-0">Automation</span>
+        </a>
+      </li>
+      
+    
+  </ul>
+
+
+
+      <div class="flex flex-col gap-y-1 md:flex-row md:gap-y-0 md:gap-x-4 text-slate-500 dark:text-slate-300">
+  
+  
+  <div class="flex flex-row text-base gap-x-1">
+    <i class="h-6 w-6 flex-none">
+      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+   <path d="M4 7a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12z"></path>
+   <path d="M16 3v4"></path>
+   <path d="M8 3v4"></path>
+   <path d="M4 11h16"></path>
+   <path d="M11 15h1"></path>
+   <path d="M12 15v3"></path>
+</svg>
+
+    </i>
+    <time datetime="2018-10-28T00:00:00&#43;00:00">
+      2018-10-28
+    </time>
+  </div>
+
+  <div class="flex flex-row text-base gap-x-1">
+    <i class="h-6 w-6 flex-none">
+      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hourglass-high" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+   <path d="M6.5 7h11"></path>
+   <path d="M6 20v-2a6 6 0 1 1 12 0v2a1 1 0 0 1 -1 1h-10a1 1 0 0 1 -1 -1z"></path>
+   <path d="M6 4v2a6 6 0 1 0 12 0v-2a1 1 0 0 0 -1 -1h-10a1 1 0 0 0 -1 1z"></path>
+</svg>
+
+    </i>
+    <span>
+      7 minutes to read
+    </span>
+  </div>
+</div>
+
+
+      
+        
+        <section class="prose prose-slate dark:prose-invert w-full max-w-4xl lg:max-w-5xl mt-6">
+          <h2>Table of Contents</h2>
+          <aside><nav id="TableOfContents">
+  <ul>
+    <li><a href="#prerequisites">Prerequisites</a></li>
+    <li><a href="#step-1--install-powercli">Step 1 – Install PowerCLI</a></li>
+    <li><a href="#step-2--connect-to-the-vcenter-or-esxi">Step 2 – Connect to the VCenter or ESXi</a></li>
+    <li><a href="#step-3--get-all-the-snapshots">Step 3 – Get all the Snapshots</a></li>
+    <li><a href="#step-4--process-the-data">Step 4 – Process the Data</a>
+      <ul>
+        <li><a href="#snapshot-size">Snapshot Size</a></li>
+        <li><a href="#snapshot-created-date">Snapshot Created Date</a></li>
+      </ul>
+    </li>
+    <li><a href="#step-3--create-the-snapshots-report">Step 3 – Create the Snapshots Report</a>
+      <ul>
+        <li><a href="#header-and-style">Header and Style</a></li>
+        <li><a href="#create-title-to-our-table">Create Title to Our Table</a></li>
+        <li><a href="#convert-to-html">Convert to HTML</a></li>
+        <li><a href="#format-the-html-with-conditional-formatting">Format the HTML with Conditional Formatting</a></li>
+      </ul>
+    </li>
+    <li><a href="#step-4--publish-the-snapshots-report">Step 4 – Publish the Snapshots Report</a>
+      <ul>
+        <li><a href="#create-html-file">Create HTML File</a></li>
+        <li><a href="#send-report-over-mail">Send Report Over Mail</a></li>
+      </ul>
+    </li>
+    <li><a href="#step-5--disconnect-from-server">Step 5 – Disconnect from Server</a></li>
+    <li><a href="#conclusion">Conclusion</a></li>
+  </ul>
+</nav></aside>
+        </section>
+        
+      
+
+      <article class="mt-6 w-full max-w-4xl lg:max-w-5xl prose prose-slate dark:prose-invert prose-quoteless post-content">
+        <p>Konichiwa Yujin,</p>
+<p>Sorry for not posting for so long, I been to Japan for a work trip.
+While Japan is amazing, the state of the ESXi in the office wasn’t so great.
+The ESXi crushed, and after investigation, we notice that he had no free space on HDD’s, which was weird.
+we have 100TB, and only 4 VM’s. the first suspect? Snapshots!</p>
+<p><div class="not-prose">
+<figure>
+    <img src="../images/Japan-1024x768.jpeg"
+      alt="One of the many beautiful things in Japan"  title="Japanese Garden building" 
+      loading="lazy"
+    ><figcaption class="text-sm text-center text-slate-500 dark:text-slate-300">Japanese Garden building</figcaption>
+  </figure></div>
+</p>
+<p>Snapshots are great, but they can be your worst enemy if you don’t use them correctly.
+The “issue” with snapshots is that they save your delta’s.
+This means that every change happening on the VM is “recorded” on the snapshot, “another change to revert”.
+As the time pass, the snapshot will grow and grow with the limit set to your free space on HDD’s.</p>
+<p>It easy to set up a snapshot, but it hard to track them, especially when you have a big environment and many “hands” on the system.
+but we have an easy solution, PowerShell.
+We can create a report, that give us all the information needed to manage the snapshots, so let get started!</p>
+<h2 id="prerequisites">Prerequisites</h2>
+<p>Before we can start, please make sure you have the following:</p>
+<ul>
+<li>Access to the VCenter or ESXi (I encourage to create a service account with relevant permissions)</li>
+<li>A server or PC with PowerCLI installed.</li>
+</ul>
+<h2 id="step-1--install-powercli">Step 1 – Install PowerCLI</h2>
+<p>Installing PowerCLI is easy, we can get it directly from the PowerShell Gallery:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-PowerShell" data-lang="PowerShell"><span style="display:flex;"><span>Install-Module -Name VMware.PowerCLI -Scope CurrentUser
+</span></span></code></pre></div><p><div class="not-prose">
+<figure>
+    <img src="../images/Install-PowerCLI.png"
+      alt="Easy as that"  title="Terminal Window with PowerCLI installation" 
+      loading="lazy"
+    ><figcaption class="text-sm text-center text-slate-500 dark:text-slate-300">Terminal Window with PowerCLI installation</figcaption>
+  </figure></div>
+</p>
+<h2 id="step-2--connect-to-the-vcenter-or-esxi">Step 2 – Connect to the VCenter or ESXi</h2>
+<p>Before we can run any command in PowerCLI, we need to connect the VCenter or ESXi.
+To do so we need to use the Connect-VIServer cmdlet:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-PowerShell" data-lang="PowerShell"><span style="display:flex;"><span>Connect-VIServer -Server myvc01 -User <span style="color:#e6db74">&#39;Username&#39;</span> -Password <span style="color:#e6db74">&#39;Password&#39;</span>
+</span></span></code></pre></div><p>If you have any issue with the certificate, you will get a notice now.
+it will be in yellow which state warning and not an error.
+I advise you to fix it, but it’s not necessary for our cause.</p>
+<p>A little tip, keeping the password in plain text in scripts is not so safe, so it’s better to secure it a little bit.
+I don’t like this method either, but this is much safer.
+First, we will convert the password to secure string, and save it to a file (I recommend changing the ACL for the file also).</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-PowerShell" data-lang="PowerShell"><span style="display:flex;"><span>$PasswordFile = <span style="color:#e6db74">&#34;&lt;Path&gt;\PasswordFile.txt&#34;</span>Read-Host -AsSecureString | ConvertFrom-SecureString | Out-File $CredsFile
+</span></span></code></pre></div><p>Now we can connect to the VCenter or ESXi more secure:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-PowerShell" data-lang="PowerShell"><span style="display:flex;"><span>$PasswordFile = <span style="color:#e6db74">&#34;&lt;Path&gt;\PasswordFile.txt&#34;</span>$securePassword = Get-Content 
+</span></span><span style="display:flex;"><span>$PasswordFile | ConvertTo-SecureString$credentials = New-Object System.Management.Automation.PSCredential (<span style="color:#e6db74">&#34;Username&#34;</span>, $securePassword)Connect-VIServer -Server myvc01 -Credential $credentials
+</span></span></code></pre></div><p>Please, do yourself a favor and use this method in your script.</p>
+<h2 id="step-3--get-all-the-snapshots">Step 3 – Get all the Snapshots</h2>
+<p>Snapshots are unique to a specific VM, so first we need to get all the VM’s on the Vcenter or ESXi, to do it we will use the Get-VM cmdlet, then for each VM we will get the snapshots, we will use the Get-Snapshot cmdlet.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-PowerShell" data-lang="PowerShell"><span style="display:flex;"><span>$Snapshots = Get-VM | Get-Snapshot | select Description,Created,VM,SizeMB,SizeGB
+</span></span></code></pre></div><blockquote>
+<p>I only took the properties that I needed.</p>
+</blockquote>
+<h2 id="step-4--process-the-data">Step 4 – Process the Data</h2>
+<p>Now, I’ll be honest with you, you can pipe this to Format-List and you will have a great report to start with.
+But I always love to make my reports better looking.
+So, there are a few things we need to process first.</p>
+<h3 id="snapshot-size">Snapshot Size</h3>
+<p>I will create a simple function that will process the snapshot size (this why I took both SizeMB and SizeGB) and return a nice value.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-PowerShell" data-lang="PowerShell"><span style="display:flex;"><span><span style="color:#66d9ef">function</span> Get-SnapshotSize ($Snapshot) { 
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> ($snapshot.SizeGB <span style="color:#f92672">-ge</span> <span style="color:#e6db74">&#34;1&#34;</span>) {
+</span></span><span style="display:flex;"><span>        $Snapshotsize = [<span style="color:#66d9ef">string</span>]([<span style="color:#66d9ef">math</span>]::Round($snapshot.SizeGB, <span style="color:#ae81ff">3</span>)) + <span style="color:#e6db74">&#34; GB&#34;</span> 
+</span></span><span style="display:flex;"><span>    }   
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">else</span> {
+</span></span><span style="display:flex;"><span>        $Snapshotsize = [<span style="color:#66d9ef">string</span>]([<span style="color:#66d9ef">math</span>]::Round($snapshot.SizeMB, <span style="color:#ae81ff">3</span>)) + <span style="color:#e6db74">&#34; MB&#34;</span> 
+</span></span><span style="display:flex;"><span>    }   
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Return</span> $Snapshotsize 
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="snapshot-created-date">Snapshot Created Date</h3>
+<p>I also want to add some colors to my reports, Convertto-HTML cmdlet doesn’t support conditional formation, so I will process the Created date to style it manually, I decided that snapshots not older than 1 week will be green, snapshots between 1 to 2 weeks will be yellow, and snapshots older than 2 weeks will be red.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-PowerShell" data-lang="PowerShell"><span style="display:flex;"><span><span style="color:#66d9ef">function</span> set-SnapshotDate ($snapshot)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    $greenValue = (get-date).AddDays(<span style="color:#ae81ff">-7</span>)
+</span></span><span style="display:flex;"><span>    $RedValue = (get-date).AddDays(<span style="color:#ae81ff">-14</span>)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> ($snapshot.created <span style="color:#f92672">-gt</span> $greenValue)
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>            $backgroundcolor = <span style="color:#e6db74">&#34;green&#34;</span>
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">elseif</span> ($snapshot.Created <span style="color:#f92672">-lt</span> $greenValue <span style="color:#f92672">-and</span> $snapshot.Created <span style="color:#f92672">-gt</span> $RedValue)
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>            $backgroundcolor = <span style="color:#e6db74">&#34;yellow&#34;</span>
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">else</span> 
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>        $backgroundcolor = <span style="color:#e6db74">&#34;red&#34;</span>
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> $backgroundcolor
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Then, I created another function that will get the HTML data and change the style.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-PowerShell" data-lang="PowerShell"><span style="display:flex;"><span><span style="color:#66d9ef">function</span> Format-HTMLBody ($body)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    $newbody = @()
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">foreach</span> ($line <span style="color:#66d9ef">in</span> $body)
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">## Remove the Format Header</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> ($line <span style="color:#f92672">-like</span> <span style="color:#e6db74">&#34;*&lt;th&gt;Format&lt;/th&gt;*&#34;</span>)
+</span></span><span style="display:flex;"><span>            {
+</span></span><span style="display:flex;"><span>                $line = $line <span style="color:#f92672">-replace</span> <span style="color:#e6db74">&#39;&lt;th&gt;Format&lt;/th&gt;&#39;</span>,<span style="color:#e6db74">&#39;&#39;</span>
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">## Format all the Red rows</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> ($line <span style="color:#f92672">-like</span> <span style="color:#e6db74">&#34;*&lt;td&gt;red&lt;/td&gt;*&#34;</span>)
+</span></span><span style="display:flex;"><span>            {
+</span></span><span style="display:flex;"><span>                $line = $line <span style="color:#f92672">-replace</span> <span style="color:#e6db74">&#39;&lt;td&gt;red&lt;/td&gt;&#39;</span>,<span style="color:#e6db74">&#39;&#39;</span> 
+</span></span><span style="display:flex;"><span>                $line = $line <span style="color:#f92672">-replace</span> <span style="color:#e6db74">&#39;&lt;tr&gt;&#39;</span>,<span style="color:#e6db74">&#39;&lt;tr style=&#34;background-color:Tomato;&#34;&gt;&#39;</span>
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">## Formating all the Yellow Rows</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">elseif</span> ($line <span style="color:#f92672">-like</span> <span style="color:#e6db74">&#34;*&lt;td&gt;yellow&lt;/td&gt;*&#34;</span>)
+</span></span><span style="display:flex;"><span>            {
+</span></span><span style="display:flex;"><span>                $line = $line <span style="color:#f92672">-replace</span> <span style="color:#e6db74">&#39;&lt;td&gt;yellow&lt;/td&gt;&#39;</span>,<span style="color:#e6db74">&#39;&#39;</span> 
+</span></span><span style="display:flex;"><span>                $line = $line <span style="color:#f92672">-replace</span> <span style="color:#e6db74">&#39;&lt;tr&gt;&#39;</span>,<span style="color:#e6db74">&#39;&lt;tr style=&#34;background-color:Orange;&#34;&gt;&#39;</span>
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">## Formating all the Green Rows</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">elseif</span> ($line <span style="color:#f92672">-like</span> <span style="color:#e6db74">&#34;*&lt;td&gt;green&lt;/td&gt;*&#34;</span>)
+</span></span><span style="display:flex;"><span>            {
+</span></span><span style="display:flex;"><span>                $line = $line <span style="color:#f92672">-replace</span> <span style="color:#e6db74">&#39;&lt;td&gt;green&lt;/td&gt;&#39;</span>,<span style="color:#e6db74">&#39;&#39;</span> 
+</span></span><span style="display:flex;"><span>                $line = $line <span style="color:#f92672">-replace</span> <span style="color:#e6db74">&#39;&lt;tr&gt;&#39;</span>,<span style="color:#e6db74">&#39;&lt;tr style=&#34;background-color:MediumSeaGreen;&#34;&gt;&#39;</span>
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">## Building the new HTML file</span>
+</span></span><span style="display:flex;"><span>            $newbody += $line
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> $newbody
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>This is ungentle solution, if you have a better idea, I would love to here!</p>
+<h2 id="step-3--create-the-snapshots-report">Step 3 – Create the Snapshots Report</h2>
+<p>Now that we have all the data we need, we can create the report.
+We will create an HTML report, so it will be easy to use it in different scenarios.</p>
+<h3 id="header-and-style">Header and Style</h3>
+<p>First, we will handle the HTML header and set basic style to our page.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-PowerShell" data-lang="PowerShell"><span style="display:flex;"><span>$date = (get-date -Format d/M/yyyy)
+</span></span><span style="display:flex;"><span>$header =<span style="color:#e6db74">@&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74"> &lt;Title&gt;Snapshot Report - </span>$date<span style="color:#e6db74">&lt;/Title&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">&lt;style&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">body {   font-family: &#39;Helvetica Neue&#39;, Helvetica, Arial;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">         font-size: 14px;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">         line-height: 20px;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">         font-weight: 400;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">         color: black;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    }
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">table{
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  margin: 0 0 40px 0;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  width: 100%;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  display: table;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  border-collapse: collapse;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  border: 1px solid black;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">}
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">th {
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    font-weight: 900;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    color: #ffffff;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    background: black;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">   }
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">td {
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    border: 0px;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    border-bottom: 1px solid black
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    }
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">&lt;/style&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;@</span>
+</span></span></code></pre></div><h3 id="create-title-to-our-table">Create Title to Our Table</h3>
+<p>To add a title before our table:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-PowerShell" data-lang="PowerShell"><span style="display:flex;"><span>$PreContent = <span style="color:#e6db74">&#34;&lt;H1&gt; Snapshot Report for &#34;</span> + $date + <span style="color:#e6db74">&#34;&lt;/H1&gt;&#34;</span>
+</span></span></code></pre></div><h3 id="convert-to-html">Convert to HTML</h3>
+<p>We did everything needed to create our report, now let’s wrap up everything.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-PowerShell" data-lang="PowerShell"><span style="display:flex;"><span>$html = $Snapshots | Select-Object VM, Created, @{Label = <span style="color:#e6db74">&#34;Size&#34;</span>; Expression = { Get-SnapshotSize($_) } }, Description, @{Label = <span style="color:#e6db74">&#34;Format&#34;</span>; Expression = { set-SnapshotDate($_) } } | Sort-Object Created -Descending | ConvertTo-Html -Head $header -PreContent $PreContent
+</span></span></code></pre></div><h3 id="format-the-html-with-conditional-formatting">Format the HTML with Conditional Formatting</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-PowerShell" data-lang="PowerShell"><span style="display:flex;"><span>$Report = Format-HTMLBody ($html)
+</span></span></code></pre></div><h2 id="step-4--publish-the-snapshots-report">Step 4 – Publish the Snapshots Report</h2>
+<p>now that we have our report ready, we need to decide how to publish it.
+either by mail or as an HTML page, you choose.</p>
+<p><div class="not-prose">
+<figure>
+    <img src="../images/VMsSnapshotsReport.png"
+      alt="Example of the report"  title="Image of the report" 
+      loading="lazy"
+    ><figcaption class="text-sm text-center text-slate-500 dark:text-slate-300">Image of the report</figcaption>
+  </figure></div>
+</p>
+<h3 id="create-html-file">Create HTML File</h3>
+<p>If you want to create an HTML file, just pipe your report to out-file</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-PowerShell" data-lang="PowerShell"><span style="display:flex;"><span>$report | out-file -Path &lt;path&gt;
+</span></span></code></pre></div><h3 id="send-report-over-mail">Send Report Over Mail</h3>
+<p>To send the report over mail, we can use the Send-MailMessage cmdlet</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-PowerShell" data-lang="PowerShell"><span style="display:flex;"><span>$MailParam = @{ 
+</span></span><span style="display:flex;"><span> To = <span style="color:#e6db74">&#34;SaggieHaim@saggiehaim.net&#34;</span> 
+</span></span><span style="display:flex;"><span> From = <span style="color:#e6db74">&#34;VCenter@saggiehaim.net&#34;</span>
+</span></span><span style="display:flex;"><span> SmtpServer = <span style="color:#e6db74">&#34;10.0.0.4&#34;</span>
+</span></span><span style="display:flex;"><span> Subject = <span style="color:#e6db74">&#34;VMware Snapshot Report for &#34;</span> + (get-date -Format d/M/yyyy)
+</span></span><span style="display:flex;"><span> body = ([<span style="color:#66d9ef">string</span>]$Report)
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>Send-MailMessage @MailParam -BodyAsHtml
+</span></span></code></pre></div><h2 id="step-5--disconnect-from-server">Step 5 – Disconnect from Server</h2>
+<p>It’s very important to disconnect from the server when we finish.
+Two main reasons, one for security reasons, and two for session limit on VMWare, the limit is set to 100 concurrent sessions, both Idle and active sessions count.
+we can disconnect from the server with the Disconnect-VIServer</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-PowerShell" data-lang="PowerShell"><span style="display:flex;"><span>Disconnect-VIServer -Confirm:$false
+</span></span></code></pre></div><h2 id="conclusion">Conclusion</h2>
+<p>Snapshots are great! but they can do harm! We learned how to generate snapshot reports, to see how old the snapshots are and how much storage they take.
+Decide the frequency you want to run this report, and set a scheduled task, but remember to be secure!
+I will also include the full script if you want, you can download it <a href="https://github.com/Saggiehaim/Powershell/tree/master/VMware%20snapshot%20report" target="_blank" rel="noopener">here</a>
+</p>
+<p>See you next time!</p>
+
+      </article>
+
+      
+
+
+
+
+    </div>
+  </div>
+</div>
+
+  </main>
+  <footer class="flex flex-none justify-center">
+    <section class="flex flex-col md:flex-row mx-2 md:mx-0 gap-2 md:gap-0 justify-between w-full max-w-4xl lg:max-w-5xl py-6 text-slate-500 dark:text-slate-300">
+  <div class="flex flex-row">
+    
+  
+  
+    <a href="https://www.linkedin.com/in/saggie/" target="_blank" title="Linkedin" class="flex flex-row mr-2">
+      <span class="hidden">Linkedin</span>
+      <i class="h-6 w-6 flex-none"> <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-linkedin" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+   <path d="M4 4m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z"></path>
+   <path d="M8 11l0 5"></path>
+   <path d="M8 8l0 .01"></path>
+   <path d="M12 16l0 -5"></path>
+   <path d="M16 16v-3a2 2 0 0 0 -4 0"></path>
+</svg>
+ </i>
+    </a>
+  
+  
+  
+    <a href="https://github.com/SaggehaimBlog" target="_blank" title="Github" class="flex flex-row mr-2">
+      <span class="hidden">Github</span>
+      <i class="h-6 w-6 flex-none"> <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+   <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5"></path>
+</svg>
+ </i>
+    </a>
+  
+  
+
+
+  </div>
+  <div class="grow"></div>
+  <div class="flex flex-row">
+    <i class="h-6 w-6 flex-none"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+   <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"></path>
+   <path d="M14 9.75a3.016 3.016 0 0 0 -4.163 .173a2.993 2.993 0 0 0 0 4.154a3.016 3.016 0 0 0 4.163 .173"></path>
+</svg>
+</i> 2018 - 2024 Saggie Haim
+    
+  </div>
+  
+</section>
+
+  </footer>
+  <script src="/main.js"></script>
+
+<div class="hidden top-1 right-1" id="code-copy">
+  <i class="h-6 w-6 block">
+    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copy" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M7 7m0 2.667a2.667 2.667 0 0 1 2.667 -2.667h8.666a2.667 2.667 0 0 1 2.667 2.667v8.666a2.667 2.667 0 0 1 -2.667 2.667h-8.666a2.667 2.667 0 0 1 -2.667 -2.667z" />
+  <path d="M4.012 16.737a2.005 2.005 0 0 1 -1.012 -1.737v-10c0 -1.1 .9 -2 2 -2h10c.75 0 1.158 .385 1.5 1" />
+</svg>
+
+  </i>
+</div>
+<div class="hidden top-1 right-1" id="code-copy-done">
+  <i class="h-6 w-6 block">
+    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-check" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M5 12l5 5l10 -10" />
+</svg>
+
+  </i>
+</div><script src="/code-copy.js"></script>
+
+
+
+
+
+</body>
+</html>
