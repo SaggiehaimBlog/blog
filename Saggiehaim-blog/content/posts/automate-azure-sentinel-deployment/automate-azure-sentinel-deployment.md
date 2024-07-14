@@ -15,6 +15,23 @@ categories = [
     "Cloud Security",
     "Microsoft Sentinel",
 ]
+keywords = [
+  "Automate Azure Sentinel",
+  "Azure Sentinel deployment",
+  "PowerShell Azure Sentinel",
+  "Azure security automation",
+  "Azure Sentinel setup",
+  "Cloud Security monitoring",
+  "Automate cloud security",
+  "Sentinel deployment script",
+  "IT security automation",
+  "Azure Sentinel tutorial",
+  "Deploy Azure Sentinel",
+  "Azure security tools",
+  "Azure Sentinel best practices",
+  "Cloud Security management",
+  "Automating Azure Sentinel",
+]
 +++
 
 ## Automate Azure Sentinel Deployment

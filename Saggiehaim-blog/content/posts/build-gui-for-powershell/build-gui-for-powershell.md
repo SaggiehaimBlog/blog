@@ -13,9 +13,21 @@ categories = [
     "Automation",
 ]
 keywords = [
-    "PowerShell",
     "PowerShell GUI",
-    "Automation"
+    "PowerShell GUI scripting",
+    "Create GUI PowerShell",
+    "PowerShell Windows Forms",
+    "PowerShell WPF",
+    "GUI automation PowerShell",
+    "PowerShell GUI tutorial",
+    "PowerShell script with GUI",
+    "PowerShell UI design",
+    "Build PowerShell interface",
+    "PowerShell GUI example",
+    "PowerShell graphical interface",
+    "PowerShell GUI tools",
+    "PowerShell XAML",
+    "PowerShell GUI builder",
 ]
 image = "/images/pwshguicover.jpg"
 +++

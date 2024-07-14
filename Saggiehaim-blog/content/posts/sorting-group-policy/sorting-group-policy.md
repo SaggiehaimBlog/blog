@@ -15,14 +15,21 @@ categories = [
     "PowerShell",
 ]
 keywords = [
-    "Sort GPO",
     "Group Policy",
     "PowerShell",
-    "Automation",
-    "GPO issue",
-    "Sort Group Policy",
-    "Organize GPO",
-    "Organize Group Policy",
+    "Group Policy management",
+    "Group Policy Object (GPO)",
+    "Active Directory",
+    "GPO sorting",
+    "IT administration",
+    "Group Policy script",
+    "Automate Group Policy",
+    "GPO PowerShell commands",
+    "Windows server management",
+    "Group Policy tutorial",
+    "Group Policy best practices",
+    "Group Policy automation",
+    "Managing Group Policy",
 ]
 image = "/images/GPOFeaturedImage.png"
 +++

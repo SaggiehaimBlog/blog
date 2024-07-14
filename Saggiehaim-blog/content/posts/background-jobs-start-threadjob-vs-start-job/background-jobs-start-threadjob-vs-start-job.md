@@ -13,6 +13,23 @@ categories = [
     "Guide",
     "PowerShell"
 ]
+keywords = [
+    "PowerShell background jobs",
+    "Start-ThreadJob vs Start-Job",
+    "PowerShell threading",
+    "PowerShell Start-Job",
+    "PowerShell Start-ThreadJob",
+    "Background job management",
+    "PowerShell parallel processing",
+    "PowerShell job automation",
+    "IT administration PowerShell",
+    "PowerShell scripting",
+    "PowerShell performance comparison",
+    "PowerShell cmdlets",
+    "Automate background tasks",
+    "PowerShell job execution",
+    "Thread-based jobs in PowerShell",
+]
 +++
 
 PowerShell can run background jobs with the Start-Job cmdlet.

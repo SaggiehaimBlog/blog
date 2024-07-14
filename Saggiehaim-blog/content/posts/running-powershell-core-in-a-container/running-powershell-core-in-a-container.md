@@ -17,12 +17,21 @@ categories = [
     "Automation",
 ]
 keywords = [
-    "Containers",
-    "PowerShell",
-    "Linux",
-    "Automation",
-    "Run PowerShell on docker",
-    "Docker",
+    "PowerShell Core",
+    "Docker container",
+    "PowerShell in Docker",
+    "Containerized PowerShell",
+    "PowerShell Core setup",
+    "PowerShell Docker image",
+    "Running PowerShell Core",
+    "Docker PowerShell tutorial",
+    "PowerShell containerization",
+    "Azure DevOps Docker",
+    "Containerized applications",
+    "PowerShell automation",
+    "Cross-platform PowerShell",
+    "DevOps tools",
+    "IT administration with Docker",
 ]
 image = "/images/pwscorecontainercover.jpg"
 +++

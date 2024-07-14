@@ -14,6 +14,23 @@ categories = [
     "Cloud Security",
     "Microsoft Sentinel",
 ]
+keywords = [
+    "Deploy Azure Sentinel",
+    "Azure Sentinel multi-tenancy",
+    "Multi-tenant Azure Sentinel",
+    "Azure Sentinel deployment",
+    "PowerShell Azure Sentinel",
+    "Cloud security monitoring",
+    "Azure multi-tenancy setup",
+    "Automate Azure Sentinel",
+    "IT security automation",
+    "Azure Sentinel tutorial",
+    "Multi-tenancy security",
+    "Azure security tools",
+    "Azure Sentinel best practices",
+    "Multi-tenant environment",
+    "Cloud security management"
+]
 +++
 
 For those of you who don't know Azure Sentinel, Azure Sentinel is a scalable, cloud-native, security information event management (SIEM) and security orchestration automated response (SOAR) solution.

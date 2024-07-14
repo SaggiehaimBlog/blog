@@ -15,14 +15,23 @@ categories = [
     "WSL",
 ]
 keywords = [
-    "linux",
-    "PowerShell",
-    "Docker",
-    "WSL"
+    "Install PowerShell 7",
+    "PowerShell 7 on WSL",
+    "PowerShell 7 on Ubuntu",
+    "WSL PowerShell installation",
+    "PowerShell 7 tutorial",
+    "PowerShell 7 commands",
+    "Linux PowerShell 7",
+    "WSL and Ubuntu integration",
+    "Install PowerShell on Linux",
+    "PowerShell scripting on WSL",
+    "Cross-platform PowerShell",
+    "DevOps with PowerShell",
+    "Windows Subsystem for Linux PowerShell",
+    "IT administration with PowerShell",
 ]
 image = "/images/psonwslcover.jpg"
 +++
-
 
 With PowerShell 7, we get the best PowerShell edition, most importantly, it’s cross-platform!
 While last time we installed the latest PowerShell 7 on a container, sometimes we don’t want just a plain environment with PowerShell, sometimes we want a to add other tools, change system configurations or use different Linux Distros.

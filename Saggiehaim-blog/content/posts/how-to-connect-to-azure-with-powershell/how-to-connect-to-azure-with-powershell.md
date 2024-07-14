@@ -15,6 +15,23 @@ categories = [
     "PowerShell",
     "Azure",
 ]
+keywords = [
+    "Connect to Azure PowerShell",
+    "Azure PowerShell",
+    "Connect-AzAccount cmdlet",
+    "Azure login PowerShell",
+    "Azure authentication PowerShell",
+    "PowerShell Azure setup",
+    "Azure management with PowerShell",
+    "Azure Resource Manager",
+    "Interactive login Azure PowerShell",
+    "PowerShell cloud automation",
+    "Sign in to Azure",
+    "PowerShell Azure tutorial",
+    "Azure subscription management",
+    "Azure PowerShell commands",
+    "Secure login Azure PowerShell",
+]
 +++
 
 PowerShell is the Automator's best friend.
