@@ -72,7 +72,7 @@ PS C:\> Test-NetConnection -RemoteAddress www.saggiehaim.net
 
 ## Replacing TelNet
 
-To perform port connectivity with Test-NetConnection, all we need to do is add the **-port** parameter and port number: 
+To perform port connectivity with Test-NetConnection, all we need to do is add the **-port** parameter and port number:
 
 ```PowerShell
 PS C:\> Test-NetConnection -RemoteAddress www.saggiehaim.net -Port 80
