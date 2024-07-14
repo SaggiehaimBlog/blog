@@ -88,5 +88,47 @@
       <guid>//localhost:8080/tags/vmware/</guid>
       <description></description>
     </item>
+    <item>
+      <title>Active Directory</title>
+      <link>//localhost:8080/tags/active-directory/</link>
+      <pubDate>Tue, 25 Sep 2018 00:00:00 +0000</pubDate><author>contact@saggiehaim.net (Saggie Haim)</author>
+      <guid>//localhost:8080/tags/active-directory/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Domain Assessment</title>
+      <link>//localhost:8080/tags/domain-assessment/</link>
+      <pubDate>Tue, 25 Sep 2018 00:00:00 +0000</pubDate><author>contact@saggiehaim.net (Saggie Haim)</author>
+      <guid>//localhost:8080/tags/domain-assessment/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>IT Security</title>
+      <link>//localhost:8080/tags/it-security/</link>
+      <pubDate>Tue, 25 Sep 2018 00:00:00 +0000</pubDate><author>contact@saggiehaim.net (Saggie Haim)</author>
+      <guid>//localhost:8080/tags/it-security/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>PowerShell Help</title>
+      <link>//localhost:8080/tags/powershell-help/</link>
+      <pubDate>Sun, 16 Sep 2018 00:00:00 +0000</pubDate><author>contact@saggiehaim.net (Saggie Haim)</author>
+      <guid>//localhost:8080/tags/powershell-help/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>CMD</title>
+      <link>//localhost:8080/tags/cmd/</link>
+      <pubDate>Tue, 04 Sep 2018 00:00:00 +0000</pubDate><author>contact@saggiehaim.net (Saggie Haim)</author>
+      <guid>//localhost:8080/tags/cmd/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Network Redesign</title>
+      <link>//localhost:8080/tags/network-redesign/</link>
+      <pubDate>Fri, 17 Aug 2018 00:00:00 +0000</pubDate><author>contact@saggiehaim.net (Saggie Haim)</author>
+      <guid>//localhost:8080/tags/network-redesign/</guid>
+      <description></description>
+    </item>
   </channel>
 </rss>

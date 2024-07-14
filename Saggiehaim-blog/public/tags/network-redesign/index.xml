@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Network Redesign on Saggie Haim - Automate Everything</title>
+    <link>//localhost:8080/tags/network-redesign/</link>
+    <description>Recent content in Network Redesign on Saggie Haim - Automate Everything</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <managingEditor>contact@saggiehaim.net (Saggie Haim)</managingEditor>
+    <webMaster>contact@saggiehaim.net (Saggie Haim)</webMaster>
+    <copyright>Saggie Haim</copyright>
+    <lastBuildDate>Fri, 17 Aug 2018 00:00:00 +0000</lastBuildDate>
+    <atom:link href="//localhost:8080/tags/network-redesign/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Automating The Network Redesign Process</title>
+      <link>//localhost:8080/posts/automation-network-redesign/automation-network-redesign/</link>
+      <pubDate>Fri, 17 Aug 2018 00:00:00 +0000</pubDate><author>contact@saggiehaim.net (Saggie Haim)</author>
+      <guid>//localhost:8080/posts/automation-network-redesign/automation-network-redesign/</guid>
+      <description>Namaste! I’m sitting in my hotel room, it’s very late, hoping not to get sick. It’s my first day in India, as my company has an office here in New Delhi. If you wonder why I hope not to get sick, well, this was my dinner today:&#xA;Image of my indian dinner To be honest, it was very nice, not the best I had, but far from my worst one. If you didn’t notice, it had chicken inside.</description>
+    </item>
+  </channel>
+</rss>

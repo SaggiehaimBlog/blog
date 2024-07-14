@@ -8,6 +8,6 @@ toc = true
 tags = []
 categories = []
 keywords = []
-image = ""
+image = "/images/"
 +++
 

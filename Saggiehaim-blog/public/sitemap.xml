@@ -158,6 +158,54 @@
     <lastmod>2018-10-28T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
+    <loc>//localhost:8080/tags/active-directory/</loc>
+    <lastmod>2018-09-25T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>//localhost:8080/categories/active-directory/</loc>
+    <lastmod>2018-09-25T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>//localhost:8080/posts/assessing-new-domain-environment/assessing-new-domain-environment/</loc>
+    <lastmod>2018-09-25T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>//localhost:8080/tags/domain-assessment/</loc>
+    <lastmod>2018-09-25T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>//localhost:8080/tags/it-security/</loc>
+    <lastmod>2018-09-25T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>//localhost:8080/tags/powershell-help/</loc>
+    <lastmod>2018-09-16T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>//localhost:8080/posts/update-powershell-help-background/update-powershell-help-background/</loc>
+    <lastmod>2018-09-16T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>//localhost:8080/tags/cmd/</loc>
+    <lastmod>2018-09-04T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>//localhost:8080/posts/ditch-cmd-for-powershell/ditch-cmd-for-powershell/</loc>
+    <lastmod>2018-09-04T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>//localhost:8080/posts/creating-powershell-profile/creating-powershell-profile/</loc>
+    <lastmod>2018-08-24T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>//localhost:8080/posts/automation-network-redesign/automation-network-redesign/</loc>
+    <lastmod>2018-08-17T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>//localhost:8080/tags/network-redesign/</loc>
+    <lastmod>2018-08-17T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
     <loc>//localhost:8080/search/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.1</priority>

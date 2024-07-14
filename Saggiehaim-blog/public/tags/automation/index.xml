@@ -46,5 +46,19 @@
       <guid>//localhost:8080/posts/create-vmware-snapshots-report/create-vmware-snapshots-report/</guid>
       <description>Konichiwa Yujin,&#xA;Sorry for not posting for so long, I been to Japan for a work trip. While Japan is amazing, the state of the ESXi in the office wasn’t so great. The ESXi crushed, and after investigation, we notice that he had no free space on HDD’s, which was weird. we have 100TB, and only 4 VM’s. the first suspect? Snapshots!&#xA;Japanese Garden building Snapshots are great, but they can be your worst enemy if you don’t use them correctly.</description>
     </item>
+    <item>
+      <title>Creating Powershell Profile</title>
+      <link>//localhost:8080/posts/creating-powershell-profile/creating-powershell-profile/</link>
+      <pubDate>Fri, 24 Aug 2018 00:00:00 +0000</pubDate><author>contact@saggiehaim.net (Saggie Haim)</author>
+      <guid>//localhost:8080/posts/creating-powershell-profile/creating-powershell-profile/</guid>
+      <description>I had a conversation with a friend today, talked about work, he told me that he has some scripts that he uses a lot in his day-to-day job, and thought about creating a script that loads all of them at once. The first thing I told him is “Why don’t you set up a profile?” he waited for a few seconds and told me that he doesn’t know about profiles. If you are reading this and feel the same, this post is for you 🙂 PowerShell profile is a script that runs every time we start the shell.</description>
+    </item>
+    <item>
+      <title>Automating The Network Redesign Process</title>
+      <link>//localhost:8080/posts/automation-network-redesign/automation-network-redesign/</link>
+      <pubDate>Fri, 17 Aug 2018 00:00:00 +0000</pubDate><author>contact@saggiehaim.net (Saggie Haim)</author>
+      <guid>//localhost:8080/posts/automation-network-redesign/automation-network-redesign/</guid>
+      <description>Namaste! I’m sitting in my hotel room, it’s very late, hoping not to get sick. It’s my first day in India, as my company has an office here in New Delhi. If you wonder why I hope not to get sick, well, this was my dinner today:&#xA;Image of my indian dinner To be honest, it was very nice, not the best I had, but far from my worst one. If you didn’t notice, it had chicken inside.</description>
+    </item>
   </channel>
 </rss>

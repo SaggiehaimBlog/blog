@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=8080&amp;path=livereload" data-no-instant defer></script>
+  <title>Ditch Cmd for Powershell :: Saggie Haim - Automate Everything - Powershell, DevOps, Security, and automation.</title>
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta
+  name="description"
+  content="When I started to learn PowerShell, I said to myself “I’m going to do everything in PowerShell”. In the beginning, the simpler stuff like unlocking a locked-out account, or resetting a password, took me 5 minutes. I had to google how to do it on PowerShell, understand what I’m reading and testing it before I’m deleting all organization users.
+With the practice and learning, things become much better and most important, faster."
+/>
+<meta
+  name="keywords"
+  content="Ditch CMD for PowerShell, PowerShell benefits, Command Prompt vs PowerShell, Advanced PowerShell features, Replace CMD with PowerShell, PowerShell scripting advantages, IT automation with PowerShell, PowerShell command example, Why use PowerShell, PowerShell for IT professionals"
+/>
+<meta name="robots" content="noodp" />
+<meta property="og:url" content="//localhost:8080/posts/ditch-cmd-for-powershell/ditch-cmd-for-powershell/">
+  <meta property="og:site_name" content="Saggie Haim - Automate Everything">
+  <meta property="og:title" content="Ditch Cmd for Powershell">
+  <meta property="og:description" content="In this blog post, discover why you should replace CMD with PowerShell. Learn about the advanced features, enhanced scripting capabilities, and superior functionality that PowerShell offers over the traditional Command Prompt, making it the preferred choice for modern IT professionals.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2018-09-04T00:00:00+00:00">
+    <meta property="article:modified_time" content="2018-09-04T00:00:00+00:00">
+    <meta property="article:tag" content="PowerShell">
+    <meta property="article:tag" content="CMD">
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Ditch Cmd for Powershell">
+  <meta name="twitter:description" content="In this blog post, discover why you should replace CMD with PowerShell. Learn about the advanced features, enhanced scripting capabilities, and superior functionality that PowerShell offers over the traditional Command Prompt, making it the preferred choice for modern IT professionals.">
+
+
+<link rel="canonical" href="//localhost:8080/posts/ditch-cmd-for-powershell/ditch-cmd-for-powershell/" />
+
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="stylesheet" href="/css/index.fe774fb74e49df8cc7f1a574367e700bb4eacc0d2a130948a3b2047afc133702.css">
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+  
+
+</head>
+<body class="flex flex-col min-h-screen w-full bg-slate-50 dark:bg-gray-800">
+    
+<div class="fixed right-0 top-0 z-50 flex items-center justify-center bg-gray-200 p-2 text-sm uppercase text-black sm:bg-red-200 md:bg-yellow-200 lg:bg-green-200 xl:bg-blue-200 2xl:bg-pink-200">
+  <span class="block sm:hidden">all</span>
+  <span class="hidden sm:block md:hidden">sm</span>
+  <span class="hidden md:block lg:hidden">md</span>
+  <span class="hidden lg:block xl:hidden">lg</span>
+  <span class="hidden xl:block 2xl:hidden">xl</span>
+  <span class="hidden 2xl:block">2xl</span>
+</div>
+
+  <header class="flex flex-none justify-center z-10 bg-slate-50 dark:bg-gray-800 sticky top-0">
+    <div class="flex flex-row gap justify-between w-full max-w-4xl lg:max-w-5xl my-4">
+  <div class="flex-none ml-2  md:ml-0">
+    <a href="/" class="">
+      <img class="h-13 w-12" src="/white_logo.png" alt="logo">
+    </a>
+  </div>
+  <div class="flex-none mx-1"></div>
+  <div class="flex-none">
+    
+
+
+
+<nav class="h-full static">
+  <button id="navbar-menu-toggle" type="button" class="inline-flex items-center p-2 text-sm text-slate-800 dark:text-slate-200 rounded-lg md:hidden" aria-controls="navbar-menu" aria-expanded="false">
+    <span class="sr-only">Open main menu</span>
+    <i class="w-8 h-8">
+      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-menu-2" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M4 6l16 0" />
+  <path d="M4 12l16 0" />
+  <path d="M4 18l16 0" />
+</svg>
+
+    </i>
+  </button>
+  <div class="absolute md:static top-16 left-0 right-0 z-50 hidden w-full md:block md:w-auto" id="navbar-menu">
+    <ul class="flex flex-col mx-2 md:mx-0 md:flex-row md:border-0 rounded-sm md:rounded-full px-3 text-base font-medium text-slate-800 dark:text-slate-200 shadow-lg bg-white dark:bg-gray-600 shadow-slate-800/5 dark:shadow-slate-200/5 ring-1 ring-slate-900/5 dark:ring-slate-100/5">
+    
+        <li id="home" class="">
+          <a class="block px-3 py-3 hover:text-blue-600  dark:hover:text-blue-400 text-blue-600 dark:text-blue-200"
+            href="/posts/" title="Home">Home</a>
+        </li>
+      
+    
+        <li id="about" class="">
+          <a class="block px-3 py-3 hover:text-blue-600  dark:hover:text-blue-400"
+            href="/about/" title="About">About</a>
+        </li>
+      
+    
+        <li id="contact" class="">
+          <a class="block px-3 py-3 hover:text-blue-600  dark:hover:text-blue-400"
+            href="/contact/" title="Contact">Contact</a>
+        </li>
+      
+    
+    </ul>
+  </div>
+</nav>
+
+
+  </div>
+  <div class="flex-1"></div>
+
+  
+  <div class="flex-none mx-1"></div>
+  
+  <div class="flex-none md:hidden">
+    <a href=/search/ class="inline-flex items-center p-2 text-sm text-slate-800 dark:text-slate-200 rounded-lg" aria-controls="navbar-menu" aria-expanded="false">
+      <span class="sr-only">Search</span>
+      <i class="w-8 h-8">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+    <path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" />
+    <path d="M21 21l-6 -6" />
+</svg>
+
+      </i>
+    </a>
+  </div>
+  <div class="darkmode-toggle flex flex-none mr-2 md:mr-0">
+    <label for="darkmode-toggle" class="flex items-center px-3 cursor-pointer rounded-full bg-gray-100 dark:bg-gray-600" title="Toggle dark mode">
+      <input name="darkmode-toggle" id="darkmode-toggle" type="checkbox" class="sr-only peer" aria-label="Toggle dark mode">
+      <div class="group flex flex-row gap-1 justify-center h-8 px-1 rounded-full bg-white dark:bg-gray-700">
+        <i class="h-6 w-6 flex-none rounded-full bg-yellow-400 place-self-center peer-checked:group-[]:invisible">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brightness-down" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+   <path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path>
+   <path d="M12 5l0 .01"></path>
+   <path d="M17 7l0 .01"></path>
+   <path d="M19 12l0 .01"></path>
+   <path d="M17 17l0 .01"></path>
+   <path d="M12 19l0 .01"></path>
+   <path d="M7 17l0 .01"></path>
+   <path d="M5 12l0 .01"></path>
+   <path d="M7 7l0 .01"></path>
+</svg>
+
+        </i>
+        <i class="h-6 w-6 flex-none rounded-full place-self-center invisible peer-checked:group-[]:visible">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-moon-stars" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+   <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z"></path>
+   <path d="M17 4a2 2 0 0 0 2 2a2 2 0 0 0 -2 2a2 2 0 0 0 -2 -2a2 2 0 0 0 2 -2"></path>
+   <path d="M19 11h2m-1 -1v2"></path>
+</svg>
+
+        </i>
+      </div>
+    </label>
+  </div>
+</div>
+
+  </header>
+  <main class="flex flex-auto justify-center">
+    
+<div class="w-full max-w-4xl lg:max-w-5xl">
+  <div class="flex flex-col mt-6 mx-2 md:mx-0 rounded-lg overflow-hidden shadow-md bg-white dark:bg-gray-700">
+    <div>
+      <a href="/posts/ditch-cmd-for-powershell/ditch-cmd-for-powershell/">
+        <figure>
+    <img class="w-full object-cover h-36 md:h-48 xl:h-60" src="/images/pstocmd-cover.png"
+      alt="Ditch Cmd for Powershell" title="Ditch Cmd for Powershell"
+      loading="lazy"
+    >
+  </figure>
+      </a>
+    </div>
+    <div class="flex flex-col gap-y-3 p-6">
+      <h1 class="text-4xl font-semibold text-slate-800 dark:text-slate-100">
+        <a href="/posts/ditch-cmd-for-powershell/ditch-cmd-for-powershell/">Ditch Cmd for Powershell</a>
+      </h1>
+
+      
+      <h2 class="my-4 text-large text-slate-600 dark:text-slate-300">
+        In this blog post, discover why you should replace CMD with PowerShell. Learn about the advanced features, enhanced scripting capabilities, and superior functionality that PowerShell offers over the traditional Command Prompt, making it the preferred choice for modern IT professionals.
+      </h2>
+      
+      
+  <ul class="flex flex-row flex-wrap text-slate-500 dark:text-slate-300">
+    
+      
+      <li>
+        <a href="/categories/page/categories/powershell/"
+          class="text-sm mr-2 px-2 py-1 rounded border border-emerald-800 bg-emerald-800 text-slate-50">
+          PowerShell
+        </a>
+      </li>
+      
+    
+    
+      
+      <li>
+        <a href="/tags/page/tags/powershell/"
+          class="flex flex-row text-sm mr-2 py-1">
+          <i class="h-5 w-5 flex-none">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+   <path d="M5 9l14 0"></path>
+   <path d="M5 15l14 0"></path>
+   <path d="M11 4l-4 16"></path>
+   <path d="M17 4l-4 16"></path>
+</svg>
+
+          </i>
+          <span class="ml-0">PowerShell</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/tags/page/tags/cmd/"
+          class="flex flex-row text-sm mr-2 py-1">
+          <i class="h-5 w-5 flex-none">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+   <path d="M5 9l14 0"></path>
+   <path d="M5 15l14 0"></path>
+   <path d="M11 4l-4 16"></path>
+   <path d="M17 4l-4 16"></path>
+</svg>
+
+          </i>
+          <span class="ml-0">CMD</span>
+        </a>
+      </li>
+      
+    
+  </ul>
+
+
+
+      <div class="flex flex-col gap-y-1 md:flex-row md:gap-y-0 md:gap-x-4 text-slate-500 dark:text-slate-300">
+  
+  
+  <div class="flex flex-row text-base gap-x-1">
+    <i class="h-6 w-6 flex-none">
+      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+   <path d="M4 7a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12z"></path>
+   <path d="M16 3v4"></path>
+   <path d="M8 3v4"></path>
+   <path d="M4 11h16"></path>
+   <path d="M11 15h1"></path>
+   <path d="M12 15v3"></path>
+</svg>
+
+    </i>
+    <time datetime="2018-09-04T00:00:00&#43;00:00">
+      2018-09-04
+    </time>
+  </div>
+
+  <div class="flex flex-row text-base gap-x-1">
+    <i class="h-6 w-6 flex-none">
+      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hourglass-high" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+   <path d="M6.5 7h11"></path>
+   <path d="M6 20v-2a6 6 0 1 1 12 0v2a1 1 0 0 1 -1 1h-10a1 1 0 0 1 -1 -1z"></path>
+   <path d="M6 4v2a6 6 0 1 0 12 0v-2a1 1 0 0 0 -1 -1h-10a1 1 0 0 0 -1 1z"></path>
+</svg>
+
+    </i>
+    <span>
+      5 minutes to read
+    </span>
+  </div>
+</div>
+
+
+      
+        
+        <section class="prose prose-slate dark:prose-invert w-full max-w-4xl lg:max-w-5xl mt-6">
+          <h2>Table of Contents</h2>
+          <aside><nav id="TableOfContents">
+  <ul>
+    <li><a href="#replacing-ping">Replacing Ping</a></li>
+    <li><a href="#replacing-telnet">Replacing TelNet</a></li>
+    <li><a href="#replacing-tracert">Replacing Tracert</a></li>
+    <li><a href="#replacing-ipconfig">Replacing IPconfig</a></li>
+    <li><a href="#replacing-nslookup">Replacing NSlookup</a></li>
+    <li><a href="#ipconfig-flushdns">Ipconfig /flushdns</a></li>
+    <li><a href="#why-powershell-cmdlets">Why PowerShell Cmdlets?</a></li>
+    <li><a href="#the-power-of-powershell-objects">The Power of PowerShell Objects</a></li>
+  </ul>
+</nav></aside>
+        </section>
+        
+      
+
+      <article class="mt-6 w-full max-w-4xl lg:max-w-5xl prose prose-slate dark:prose-invert prose-quoteless post-content">
+        <p>When I started to learn PowerShell, I said to myself “I’m going to do everything in PowerShell”.
+In the beginning, the simpler stuff like unlocking a locked-out account, or resetting a password, took me 5 minutes.
+I had to google how to do it on PowerShell, understand what I’m reading and testing it before I’m deleting all organization users.</p>
+<p>With the practice and learning, things become much better and most important, faster.
+I sometimes even “race” with my friends to show them how things much simpler and faster with PowerShell.
+Yet, I always found myself going back to CMD for the most basic things. while you can run native CMD commands in PowerShell, you can’t really leverage the info you get.</p>
+<p>I made a list of the CMD commands I use the most:</p>
+<ul>
+<li>ping</li>
+<li>telnet</li>
+<li>tracert</li>
+<li>ipconfig</li>
+<li>nslookup</li>
+<li>ipconfig /flushdns</li>
+</ul>
+<p>Luckily for me, The PowerShell team did a great job, and I needed to learn only one cmdlet for the first three command
+Let me introduce you Test-NetConnection.
+This cmdlet will let us test ports connectivity, ping and traceroute.</p>
+<h2 id="replacing-ping">Replacing Ping</h2>
+<p>The most straightforward use of this command is just Test-NetConnection.
+It will send a ping to a default server, see if you have an internet connection:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-PowerShell" data-lang="PowerShell"><span style="display:flex;"><span>PS C:\&gt; Test-NetConnection
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span>ComputerName <span style="color:#960050;background-color:#1e0010">:</span> internetbeacon.msedge.net
+</span></span><span style="display:flex;"><span>RemoteAddress <span style="color:#960050;background-color:#1e0010">:</span> <span style="color:#ae81ff">13.107</span>.4.52
+</span></span><span style="display:flex;"><span>InterfaceAlias <span style="color:#960050;background-color:#1e0010">:</span> Wi-Fi
+</span></span><span style="display:flex;"><span>SourceAddress <span style="color:#960050;background-color:#1e0010">:</span> <span style="color:#ae81ff">10.91</span>.8.20
+</span></span><span style="display:flex;"><span>PingSucceeded <span style="color:#960050;background-color:#1e0010">:</span> True
+</span></span><span style="display:flex;"><span>PingReplyDetails (RTT) <span style="color:#960050;background-color:#1e0010">:</span> <span style="color:#ae81ff">5</span> ms
+</span></span></code></pre></div><p>To test a specific computer or address you can use the <strong>-RemoteAddress</strong> or <strong>-ComputerName</strong> parameter:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-PowerShell" data-lang="PowerShell"><span style="display:flex;"><span>PS C:\&gt; Test-NetConnection -RemoteAddress www.saggiehaim.net
+</span></span></code></pre></div><h2 id="replacing-telnet">Replacing TelNet</h2>
+<p>To perform port connectivity with Test-NetConnection, all we need to do is add the <strong>-port</strong> parameter and port number:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-PowerShell" data-lang="PowerShell"><span style="display:flex;"><span>PS C:\&gt; Test-NetConnection -RemoteAddress www.saggiehaim.net -Port <span style="color:#ae81ff">80</span>
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span>ComputerName <span style="color:#960050;background-color:#1e0010">:</span> www.saggiehaim.net
+</span></span><span style="display:flex;"><span>RemoteAddress <span style="color:#960050;background-color:#1e0010">:</span> <span style="color:#ae81ff">104.31</span>.92.245
+</span></span><span style="display:flex;"><span>RemotePort <span style="color:#960050;background-color:#1e0010">:</span> <span style="color:#ae81ff">80</span>
+</span></span><span style="display:flex;"><span>InterfaceAlias <span style="color:#960050;background-color:#1e0010">:</span> Wi-Fi
+</span></span><span style="display:flex;"><span>SourceAddress <span style="color:#960050;background-color:#1e0010">:</span> <span style="color:#ae81ff">10.91</span>.8.20
+</span></span><span style="display:flex;"><span>TcpTestSucceeded <span style="color:#960050;background-color:#1e0010">:</span> True
+</span></span></code></pre></div><blockquote>
+<p>we are looking for is the “TcpTestSucceeded,” in this case, the port is open.</p>
+</blockquote>
+<h2 id="replacing-tracert">Replacing Tracert</h2>
+<p>Same as the previous, same command, different parameter.
+This time we will use the <strong>-TraceRoute</strong> parameter</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-PowerShell" data-lang="PowerShell"><span style="display:flex;"><span>PS C:\&gt; Test-NetConnection -TraceRoute www.saggiehaim.net
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span>ComputerName <span style="color:#960050;background-color:#1e0010">:</span> www.saggiehaim.net
+</span></span><span style="display:flex;"><span>RemoteAddress <span style="color:#960050;background-color:#1e0010">:</span> <span style="color:#ae81ff">104.31</span>.93.245
+</span></span><span style="display:flex;"><span>InterfaceAlias <span style="color:#960050;background-color:#1e0010">:</span> Wi-Fi
+</span></span><span style="display:flex;"><span>SourceAddress <span style="color:#960050;background-color:#1e0010">:</span> <span style="color:#ae81ff">192.168</span>.1.106
+</span></span><span style="display:flex;"><span>PingSucceeded <span style="color:#960050;background-color:#1e0010">:</span> True
+</span></span><span style="display:flex;"><span>PingReplyDetails (RTT) <span style="color:#960050;background-color:#1e0010">:</span> <span style="color:#ae81ff">12</span> ms
+</span></span><span style="display:flex;"><span>TraceRoute <span style="color:#960050;background-color:#1e0010">:</span> <span style="color:#ae81ff">192.168</span>.1.1
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">212.179</span>.37.1
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">10.250</span>.1.14
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">212.25</span>.77.10
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">62.219</span>.189.186
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">62.219</span>.33.146
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">104.31</span>.93.245
+</span></span></code></pre></div><h2 id="replacing-ipconfig">Replacing IPconfig</h2>
+<p>To get the IP address, subnet mask and default gateway for each network adapter in the machine, we can use one of the following two cmdlets:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-PowerShell" data-lang="PowerShell"><span style="display:flex;"><span>PS C:\&gt; Get-NetIPConfiguration
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span>InterfaceAlias <span style="color:#960050;background-color:#1e0010">:</span> Local Area Connection
+</span></span><span style="display:flex;"><span>InterfaceIndex <span style="color:#960050;background-color:#1e0010">:</span> <span style="color:#ae81ff">18</span>
+</span></span><span style="display:flex;"><span>InterfaceDescription <span style="color:#960050;background-color:#1e0010">:</span> Realtek PCIe GBE Family Controller
+</span></span><span style="display:flex;"><span>NetProfile.Name <span style="color:#960050;background-color:#1e0010">:</span> Network <span style="color:#ae81ff">6</span>
+</span></span><span style="display:flex;"><span>IPv4Address <span style="color:#960050;background-color:#1e0010">:</span> <span style="color:#ae81ff">192.168</span>.1.101
+</span></span><span style="display:flex;"><span>IPv6DefaultGateway <span style="color:#960050;background-color:#1e0010">:</span> fe80::b88f<span style="color:#960050;background-color:#1e0010">:</span>6eff<span style="color:#960050;background-color:#1e0010">:</span>fe80<span style="color:#960050;background-color:#1e0010">:</span>7e6e
+</span></span><span style="display:flex;"><span>IPv4DefaultGateway <span style="color:#960050;background-color:#1e0010">:</span> <span style="color:#ae81ff">192.168</span>.1.1
+</span></span><span style="display:flex;"><span>DNSServer <span style="color:#960050;background-color:#1e0010">:</span> <span style="color:#ae81ff">192.168</span>.1.1
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">0.0</span>.0.0
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-PowerShell" data-lang="PowerShell"><span style="display:flex;"><span>PS C:\&gt; Get-NetIPAddress
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span>IPAddress <span style="color:#960050;background-color:#1e0010">:</span> fe80::1de1<span style="color:#960050;background-color:#1e0010">:</span>5d1f<span style="color:#960050;background-color:#1e0010">:</span><span style="color:#ae81ff">2818</span><span style="color:#960050;background-color:#1e0010">:</span>48cc<span style="color:#66d9ef">%</span><span style="color:#ae81ff">18</span>
+</span></span><span style="display:flex;"><span>InterfaceIndex <span style="color:#960050;background-color:#1e0010">:</span> <span style="color:#ae81ff">18</span>
+</span></span><span style="display:flex;"><span>InterfaceAlias <span style="color:#960050;background-color:#1e0010">:</span> Local Area Connection
+</span></span><span style="display:flex;"><span>AddressFamily <span style="color:#960050;background-color:#1e0010">:</span> IPv6
+</span></span><span style="display:flex;"><span>Type <span style="color:#960050;background-color:#1e0010">:</span> Unicast
+</span></span><span style="display:flex;"><span>PrefixLength <span style="color:#960050;background-color:#1e0010">:</span> <span style="color:#ae81ff">64</span>
+</span></span><span style="display:flex;"><span>PrefixOrigin <span style="color:#960050;background-color:#1e0010">:</span> WellKnown
+</span></span><span style="display:flex;"><span>SuffixOrigin <span style="color:#960050;background-color:#1e0010">:</span> Link
+</span></span><span style="display:flex;"><span>AddressState <span style="color:#960050;background-color:#1e0010">:</span> Preferred
+</span></span><span style="display:flex;"><span>ValidLifetime <span style="color:#960050;background-color:#1e0010">:</span> Infinite ([<span style="color:#66d9ef">TimeSpan</span>]::MaxValue)
+</span></span><span style="display:flex;"><span>PreferredLifetime <span style="color:#960050;background-color:#1e0010">:</span> Infinite ([<span style="color:#66d9ef">TimeSpan</span>]::MaxValue)
+</span></span><span style="display:flex;"><span>SkipAsSource <span style="color:#960050;background-color:#1e0010">:</span> False
+</span></span><span style="display:flex;"><span>PolicyStore <span style="color:#960050;background-color:#1e0010">:</span> ActiveStore
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span>IPAddress <span style="color:#960050;background-color:#1e0010">:</span> <span style="color:#ae81ff">192.168</span>.1.101
+</span></span><span style="display:flex;"><span>InterfaceIndex <span style="color:#960050;background-color:#1e0010">:</span> <span style="color:#ae81ff">18</span>
+</span></span><span style="display:flex;"><span>InterfaceAlias <span style="color:#960050;background-color:#1e0010">:</span> Local Area Connection
+</span></span><span style="display:flex;"><span>AddressFamily <span style="color:#960050;background-color:#1e0010">:</span> IPv4
+</span></span><span style="display:flex;"><span>Type <span style="color:#960050;background-color:#1e0010">:</span> Unicast
+</span></span><span style="display:flex;"><span>PrefixLength <span style="color:#960050;background-color:#1e0010">:</span> <span style="color:#ae81ff">24</span>
+</span></span><span style="display:flex;"><span>PrefixOrigin <span style="color:#960050;background-color:#1e0010">:</span> Dhcp
+</span></span><span style="display:flex;"><span>SuffixOrigin <span style="color:#960050;background-color:#1e0010">:</span> Dhcp
+</span></span><span style="display:flex;"><span>AddressState <span style="color:#960050;background-color:#1e0010">:</span> Preferred
+</span></span><span style="display:flex;"><span>ValidLifetime <span style="color:#960050;background-color:#1e0010">:</span> <span style="color:#ae81ff">17</span><span style="color:#960050;background-color:#1e0010">:</span><span style="color:#ae81ff">04</span><span style="color:#960050;background-color:#1e0010">:</span><span style="color:#ae81ff">15</span>
+</span></span><span style="display:flex;"><span>PreferredLifetime <span style="color:#960050;background-color:#1e0010">:</span> <span style="color:#ae81ff">17</span><span style="color:#960050;background-color:#1e0010">:</span><span style="color:#ae81ff">04</span><span style="color:#960050;background-color:#1e0010">:</span><span style="color:#ae81ff">15</span>
+</span></span><span style="display:flex;"><span>SkipAsSource <span style="color:#960050;background-color:#1e0010">:</span> False
+</span></span><span style="display:flex;"><span>PolicyStore <span style="color:#960050;background-color:#1e0010">:</span> ActiveStore
+</span></span></code></pre></div><h2 id="replacing-nslookup">Replacing NSlookup</h2>
+<p>Many of us IT pro’s, use the nslookup a lot.
+So, we can do it on PowerShell with the Resolve-DnsName cmdlet:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-PowerShell" data-lang="PowerShell"><span style="display:flex;"><span>PS C:\&gt; Resolve-DnsName www.saggiehaim.net
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span>Name Type TTL Section IPAddress
+</span></span><span style="display:flex;"><span>---- ---- --- ------- ---------
+</span></span><span style="display:flex;"><span>www.saggiehaim.net AAAA <span style="color:#ae81ff">300</span> Answer <span style="color:#ae81ff">2400</span><span style="color:#960050;background-color:#1e0010">:</span>cb00<span style="color:#960050;background-color:#1e0010">:</span><span style="color:#ae81ff">2048</span><span style="color:#960050;background-color:#1e0010">:</span><span style="color:#ae81ff">1</span>::<span style="color:#ae81ff">681f</span><span style="color:#960050;background-color:#1e0010">:</span>5df5
+</span></span><span style="display:flex;"><span>www.saggiehaim.net AAAA <span style="color:#ae81ff">300</span> Answer <span style="color:#ae81ff">2400</span><span style="color:#960050;background-color:#1e0010">:</span>cb00<span style="color:#960050;background-color:#1e0010">:</span><span style="color:#ae81ff">2048</span><span style="color:#960050;background-color:#1e0010">:</span><span style="color:#ae81ff">1</span>::<span style="color:#ae81ff">681f</span><span style="color:#960050;background-color:#1e0010">:</span>5cf5
+</span></span><span style="display:flex;"><span>www.saggiehaim.net A <span style="color:#ae81ff">300</span> Answer <span style="color:#ae81ff">104.31</span>.93.245
+</span></span><span style="display:flex;"><span>www.saggiehaim.net A <span style="color:#ae81ff">300</span> Answer <span style="color:#ae81ff">104.31</span>.92.245
+</span></span></code></pre></div><p>you want to query a specific DNS server, we can use the <strong>-Server</strong> parameter to do it:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-PowerShell" data-lang="PowerShell"><span style="display:flex;"><span>PS C:\&gt; Resolve-DnsName www.saggiehaim.net -Server <span style="color:#ae81ff">1.1</span>.1.1
+</span></span></code></pre></div><h2 id="ipconfig-flushdns">Ipconfig /flushdns</h2>
+<p>Before we delete all the DNS client cache, we can view the cache list to see if it’s needed</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-PowerShell" data-lang="PowerShell"><span style="display:flex;"><span>PS C:\&gt; Get-DnsClientCache
+</span></span></code></pre></div><p>If the list is big, we can look for the particular hostname with the <strong>-Name</strong> or <strong>-Entry</strong> parameters or particular IP address with the <strong>-Data</strong> Parameter</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-PowerShell" data-lang="PowerShell"><span style="display:flex;"><span>PS C:\&gt; Get-DnsClientCache -Entry www.saggiehaim.net
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span>Entry RecordName Record Status Section TimeTo Data Data
+</span></span><span style="display:flex;"><span>Type Live Length
+</span></span><span style="display:flex;"><span>----- ---------- ------ ------ ------- ------ ------ ----
+</span></span><span style="display:flex;"><span>www.saggiehaim.net www.saggiehaim.net A Success Answer <span style="color:#ae81ff">272</span> <span style="color:#ae81ff">4</span> <span style="color:#ae81ff">104.31</span>.93.245
+</span></span><span style="display:flex;"><span>www.saggiehaim.net www.saggiehaim.net A Success Answer <span style="color:#ae81ff">272</span> <span style="color:#ae81ff">4</span> <span style="color:#ae81ff">104.31</span>.92.245
+</span></span><span style="display:flex;"><span>www.saggiehaim.net www.saggiehaim.net A Success Answer <span style="color:#ae81ff">272</span> <span style="color:#ae81ff">4</span> <span style="color:#ae81ff">104.31</span>.93.245
+</span></span><span style="display:flex;"><span>www.saggiehaim.net www.saggiehaim.net A Success Answer <span style="color:#ae81ff">272</span> <span style="color:#ae81ff">4</span> <span style="color:#ae81ff">104.31</span>.92.245
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-PowerShell" data-lang="PowerShell"><span style="display:flex;"><span>PS C:\&gt; Get-DnsClientCache -Data <span style="color:#ae81ff">104.31</span>.92.245
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span>Entry RecordName Record Status Section TimeTo Data Data
+</span></span><span style="display:flex;"><span>Type Live Length
+</span></span><span style="display:flex;"><span>----- ---------- ------ ------ ------- ------ ------ ----
+</span></span><span style="display:flex;"><span>www.saggiehaim.net www.saggiehaim.net A Success Answer <span style="color:#ae81ff">33</span> <span style="color:#ae81ff">4</span> <span style="color:#ae81ff">104.31</span>.92.245
+</span></span><span style="display:flex;"><span>www.saggiehaim.net www.saggiehaim.net A Success Answer <span style="color:#ae81ff">33</span> <span style="color:#ae81ff">4</span> <span style="color:#ae81ff">104.31</span>.92.245
+</span></span><span style="display:flex;"><span>www.saggiehaim.net www.saggiehaim.net A Success Answer <span style="color:#ae81ff">33</span> <span style="color:#ae81ff">4</span> <span style="color:#ae81ff">104.31</span>.92.245
+</span></span><span style="display:flex;"><span>[/code]
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span>To clear the client DNS cache, we can run the Clear-DnsClientCache.
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span>[code lang=<span style="color:#e6db74">&#34;Powershell&#34;</span>]
+</span></span><span style="display:flex;"><span>Clear-DnsClientCache
+</span></span></code></pre></div><h2 id="why-powershell-cmdlets">Why PowerShell Cmdlets?</h2>
+<p>So yes, we can do it with PowerShell cmdlets, but if we can also run the native CMD commands inside PowerShell.
+What is the difference? The truth is that there are no differences if you run it once, manually.
+The real benefits of using the PowerShell cmdlets are when you run them in scripts or doing automation tasks.
+When you use the CMD commands, your output is plain text a String.
+This means that if you want to take specific info from the command, you will have to do a lot of strings manipulations that won’t be useful for 100% of the cases.</p>
+<p><div class="not-prose">
+<figure>
+    <img src="../images/ipconfig.jpg"
+      alt="System.String objects are limited"  title="Image PowerShell terminal" 
+      loading="lazy"
+    ><figcaption class="text-sm text-center text-slate-500 dark:text-slate-300">Image PowerShell terminal</figcaption>
+  </figure></div>
+</p>
+<p>Using the PowerShell cmdlets will return PowerShell Objects, Objects that contain all the information in properties we can query and pass to other cmdlets or functions, or even other scripts.</p>
+<h2 id="the-power-of-powershell-objects">The Power of PowerShell Objects</h2>
+<p>Using the PowerShell cmdlet, we can extract or use specific property.
+Not all properties are showing by default and its worth the time exploring them.
+we can pipeline the command to get-command cmdlet to see the object information.</p>
+<p><div class="not-prose">
+<figure>
+    <img src="../images/psobject.png"
+      alt="PowerShell objects are the future"  title="Image PowerShell terminal" 
+      loading="lazy"
+    ><figcaption class="text-sm text-center text-slate-500 dark:text-slate-300">Image PowerShell terminal</figcaption>
+  </figure></div>
+</p>
+<p>We can choose the properties that interesting to us, for example, I want to see only the interface that performed the ping, and if it’s succeeded or not:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-PowerShell" data-lang="PowerShell"><span style="display:flex;"><span>PS C:\&gt; Test-NetConnection -ComputerName www.saggiehaim.net | select InterfaceAlias,PingSucceeded
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span>InterfaceAlias PingSucceeded
+</span></span><span style="display:flex;"><span>-------------- -------------
+</span></span><span style="display:flex;"><span>Wi-Fi True
+</span></span></code></pre></div><p>Simple as that 🙂 Go out there, give it a try, and remember, practice, practice, practice.
+It’s tough to replace old habits, but it worth the work.</p>
+<p>Hope I helped you take a step closer ditching the CMD for good.</p>
+
+      </article>
+
+      
+
+
+
+
+    </div>
+  </div>
+</div>
+
+  </main>
+  <footer class="flex flex-none justify-center">
+    <section class="flex flex-col md:flex-row mx-2 md:mx-0 gap-2 md:gap-0 justify-between w-full max-w-4xl lg:max-w-5xl py-6 text-slate-500 dark:text-slate-300">
+  <div class="flex flex-row">
+    
+  
+  
+    <a href="https://www.linkedin.com/in/saggie/" target="_blank" title="Linkedin" class="flex flex-row mr-2">
+      <span class="hidden">Linkedin</span>
+      <i class="h-6 w-6 flex-none"> <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-linkedin" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+   <path d="M4 4m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z"></path>
+   <path d="M8 11l0 5"></path>
+   <path d="M8 8l0 .01"></path>
+   <path d="M12 16l0 -5"></path>
+   <path d="M16 16v-3a2 2 0 0 0 -4 0"></path>
+</svg>
+ </i>
+    </a>
+  
+  
+  
+    <a href="https://github.com/SaggehaimBlog" target="_blank" title="Github" class="flex flex-row mr-2">
+      <span class="hidden">Github</span>
+      <i class="h-6 w-6 flex-none"> <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+   <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5"></path>
+</svg>
+ </i>
+    </a>
+  
+  
+
+
+  </div>
+  <div class="grow"></div>
+  <div class="flex flex-row">
+    <i class="h-6 w-6 flex-none"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+   <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"></path>
+   <path d="M14 9.75a3.016 3.016 0 0 0 -4.163 .173a2.993 2.993 0 0 0 0 4.154a3.016 3.016 0 0 0 4.163 .173"></path>
+</svg>
+</i> 2018 - 2024 Saggie Haim
+    
+  </div>
+  
+</section>
+
+  </footer>
+  <script src="/main.js"></script>
+
+<div class="hidden top-1 right-1" id="code-copy">
+  <i class="h-6 w-6 block">
+    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copy" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M7 7m0 2.667a2.667 2.667 0 0 1 2.667 -2.667h8.666a2.667 2.667 0 0 1 2.667 2.667v8.666a2.667 2.667 0 0 1 -2.667 2.667h-8.666a2.667 2.667 0 0 1 -2.667 -2.667z" />
+  <path d="M4.012 16.737a2.005 2.005 0 0 1 -1.012 -1.737v-10c0 -1.1 .9 -2 2 -2h10c.75 0 1.158 .385 1.5 1" />
+</svg>
+
+  </i>
+</div>
+<div class="hidden top-1 right-1" id="code-copy-done">
+  <i class="h-6 w-6 block">
+    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-check" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M5 12l5 5l10 -10" />
+</svg>
+
+  </i>
+</div><script src="/code-copy.js"></script>
+
+
+
+
+
+</body>
+</html>
