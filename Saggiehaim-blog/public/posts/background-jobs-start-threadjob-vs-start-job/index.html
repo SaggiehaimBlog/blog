@@ -323,12 +323,12 @@ For example, changing the Active Directory manager attribute for many users, cre
 </span></span><span style="display:flex;"><span><span style="color:#75715e">## Receive Job </span>
 </span></span><span style="display:flex;"><span>Get-Job | Receive-Job
 </span></span></code></pre></div><p><div class="not-prose">
-<figure>
-    <img src="../images/Start-Job-2.jpg"
-      alt="Simple Job"  title="PowerShell Session Showing Background Job with Start-Job" 
-      loading="lazy"
-    ><figcaption class="text-sm text-center text-slate-500 dark:text-slate-300">PowerShell Session Showing Background Job with Start-Job</figcaption>
-  </figure></div>
+<picture>
+    <source type="image/webp" srcset="/posts/background-jobs-start-threadjob-vs-start-job/images/Start-Job-2_hu8fc17943297d90a7c2c4a6b6771f92bb_65189_320x0_resize_q75_h2_box.webp 320w, /posts/background-jobs-start-threadjob-vs-start-job/images/Start-Job-2_hu8fc17943297d90a7c2c4a6b6771f92bb_65189_640x0_resize_q75_h2_box.webp 640w, /posts/background-jobs-start-threadjob-vs-start-job/images/Start-Job-2_hu8fc17943297d90a7c2c4a6b6771f92bb_65189_960x0_resize_q75_h2_box.webp 960w, /posts/background-jobs-start-threadjob-vs-start-job/images/Start-Job-2_hu8fc17943297d90a7c2c4a6b6771f92bb_65189_1280x0_resize_q75_h2_box.webp 1280w" sizes="(min-width: 1024px) 100vw, 50vw" />
+    <source type="image/jpeg" srcset="/posts/background-jobs-start-threadjob-vs-start-job/images/Start-Job-2_hu8fc17943297d90a7c2c4a6b6771f92bb_65189_320x0_resize_q75_box.jpg 320w, /posts/background-jobs-start-threadjob-vs-start-job/images/Start-Job-2_hu8fc17943297d90a7c2c4a6b6771f92bb_65189_640x0_resize_q75_box.jpg 640w, /posts/background-jobs-start-threadjob-vs-start-job/images/Start-Job-2_hu8fc17943297d90a7c2c4a6b6771f92bb_65189_960x0_resize_q75_box.jpg 960w, /posts/background-jobs-start-threadjob-vs-start-job/images/Start-Job-2_hu8fc17943297d90a7c2c4a6b6771f92bb_65189_1280x0_resize_q75_box.jpg 1280w" sizes="(min-width: 1024px) 100vw, 50vw" />
+    <img class="h-auto max-w-full rounded-lg" src="/posts/background-jobs-start-threadjob-vs-start-job/images/Start-Job-2_hu8fc17943297d90a7c2c4a6b6771f92bb_65189_640x0_resize_q75_box.jpg" width="1291" height="510" alt="Simple Job" title="Simple Job" loading="lazy" />
+  </picture><p class="text-sm text-center text-slate-500 dark:text-slate-300">PowerShell Session Showing Background Job with Start-Job</p>
+</div>
 </p>
 <p>Additionally, as I said in the beginning, Some cmdlet has -Asjob switch. Use Get-Help to check if your cmdlet has the -Asjob switch.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-PowerShell" data-lang="PowerShell"><span style="display:flex;"><span><span style="color:#75715e">## Use -AsJob switch to start a new Job</span>
@@ -340,12 +340,12 @@ For example, changing the Active Directory manager attribute for many users, cre
 </span></span><span style="display:flex;"><span><span style="color:#75715e">## Receive Job output</span>
 </span></span><span style="display:flex;"><span>Get-Job | Receive-Job
 </span></span></code></pre></div><p><div class="not-prose">
-<figure>
-    <img src="../images/asjob-2.jpg"
-      alt="-Asjob Switch"  title="PowerShell Session Showing Background Job with -AsJob Switch" 
-      loading="lazy"
-    ><figcaption class="text-sm text-center text-slate-500 dark:text-slate-300">PowerShell Session Showing Background Job with -AsJob Switch</figcaption>
-  </figure></div>
+<picture>
+    <source type="image/webp" srcset="/posts/background-jobs-start-threadjob-vs-start-job/images/asjob-2_hu23fce9c8cd934e664f4974e4dfdc2c0c_77095_320x0_resize_q75_h2_box.webp 320w, /posts/background-jobs-start-threadjob-vs-start-job/images/asjob-2_hu23fce9c8cd934e664f4974e4dfdc2c0c_77095_640x0_resize_q75_h2_box.webp 640w, /posts/background-jobs-start-threadjob-vs-start-job/images/asjob-2_hu23fce9c8cd934e664f4974e4dfdc2c0c_77095_960x0_resize_q75_h2_box.webp 960w, /posts/background-jobs-start-threadjob-vs-start-job/images/asjob-2_hu23fce9c8cd934e664f4974e4dfdc2c0c_77095_1280x0_resize_q75_h2_box.webp 1280w" sizes="(min-width: 1024px) 100vw, 50vw" />
+    <source type="image/jpeg" srcset="/posts/background-jobs-start-threadjob-vs-start-job/images/asjob-2_hu23fce9c8cd934e664f4974e4dfdc2c0c_77095_320x0_resize_q75_box.jpg 320w, /posts/background-jobs-start-threadjob-vs-start-job/images/asjob-2_hu23fce9c8cd934e664f4974e4dfdc2c0c_77095_640x0_resize_q75_box.jpg 640w, /posts/background-jobs-start-threadjob-vs-start-job/images/asjob-2_hu23fce9c8cd934e664f4974e4dfdc2c0c_77095_960x0_resize_q75_box.jpg 960w, /posts/background-jobs-start-threadjob-vs-start-job/images/asjob-2_hu23fce9c8cd934e664f4974e4dfdc2c0c_77095_1280x0_resize_q75_box.jpg 1280w" sizes="(min-width: 1024px) 100vw, 50vw" />
+    <img class="h-auto max-w-full rounded-lg" src="/posts/background-jobs-start-threadjob-vs-start-job/images/asjob-2_hu23fce9c8cd934e664f4974e4dfdc2c0c_77095_640x0_resize_q75_box.jpg" width="1297" height="585" alt="-Asjob Switch" title="-Asjob Switch" loading="lazy" />
+  </picture><p class="text-sm text-center text-slate-500 dark:text-slate-300">PowerShell Session Showing Background Job with -AsJob Switch</p>
+</div>
 </p>
 <p>Update: Thanks to <a href="https://twitter.com/jkavanagh58" target="_blank" rel="noopener">@jkavanagh58</a>
  who raised the option to find cmdlet with -Asjob switch with the Get-Command cmdlet.</p>
@@ -366,12 +366,12 @@ If you don’t use the latest PowerShell Core, you’ll need to install the modu
 </span></span><span style="display:flex;"><span><span style="color:#75715e">## Receive Job output</span>
 </span></span><span style="display:flex;"><span>Get-Job | Receive-Job
 </span></span></code></pre></div><p><div class="not-prose">
-<figure>
-    <img src="../images/Start-ThreadJob-2.jpg"
-      alt=" "  title="PowerShell Session Showing Background Job with Start-ThreadJob" 
-      loading="lazy"
-    ><figcaption class="text-sm text-center text-slate-500 dark:text-slate-300">PowerShell Session Showing Background Job with Start-ThreadJob</figcaption>
-  </figure></div>
+<picture>
+    <source type="image/webp" srcset="/posts/background-jobs-start-threadjob-vs-start-job/images/Start-ThreadJob-2_hued5f23bed76a5cf109a8f243f2134926_68309_320x0_resize_q75_h2_box.webp 320w, /posts/background-jobs-start-threadjob-vs-start-job/images/Start-ThreadJob-2_hued5f23bed76a5cf109a8f243f2134926_68309_640x0_resize_q75_h2_box.webp 640w, /posts/background-jobs-start-threadjob-vs-start-job/images/Start-ThreadJob-2_hued5f23bed76a5cf109a8f243f2134926_68309_960x0_resize_q75_h2_box.webp 960w, /posts/background-jobs-start-threadjob-vs-start-job/images/Start-ThreadJob-2_hued5f23bed76a5cf109a8f243f2134926_68309_1280x0_resize_q75_h2_box.webp 1280w" sizes="(min-width: 1024px) 100vw, 50vw" />
+    <source type="image/jpeg" srcset="/posts/background-jobs-start-threadjob-vs-start-job/images/Start-ThreadJob-2_hued5f23bed76a5cf109a8f243f2134926_68309_320x0_resize_q75_box.jpg 320w, /posts/background-jobs-start-threadjob-vs-start-job/images/Start-ThreadJob-2_hued5f23bed76a5cf109a8f243f2134926_68309_640x0_resize_q75_box.jpg 640w, /posts/background-jobs-start-threadjob-vs-start-job/images/Start-ThreadJob-2_hued5f23bed76a5cf109a8f243f2134926_68309_960x0_resize_q75_box.jpg 960w, /posts/background-jobs-start-threadjob-vs-start-job/images/Start-ThreadJob-2_hued5f23bed76a5cf109a8f243f2134926_68309_1280x0_resize_q75_box.jpg 1280w" sizes="(min-width: 1024px) 100vw, 50vw" />
+    <img class="h-auto max-w-full rounded-lg" src="/posts/background-jobs-start-threadjob-vs-start-job/images/Start-ThreadJob-2_hued5f23bed76a5cf109a8f243f2134926_68309_640x0_resize_q75_box.jpg" width="1297" height="585" alt=" " title=" " loading="lazy" />
+  </picture><p class="text-sm text-center text-slate-500 dark:text-slate-300">PowerShell Session Showing Background Job with Start-ThreadJob</p>
+</div>
 </p>
 <h2 id="start-job-vs-start-threadjob--performance">Start-Job vs Start-ThreadJob – Performance</h2>
 <p>We learn how to use background jobs and why. Now I want to show you the performance differences.</p>
@@ -387,23 +387,23 @@ I’ll run the same code three times with the following conditions:</p>
 <h3 id="no-background-jobs">No Background jobs</h3>
 <p>Starting with the obvious, the default behavior when we don’t use any background job.</p>
 <p><div class="not-prose">
-<figure>
-    <img src="../images/No-Job-Impact-1.jpg"
-      alt=" "  title="PowerShell Session Showing measuring a simple iteration with no background jobs." 
-      loading="lazy"
-    ><figcaption class="text-sm text-center text-slate-500 dark:text-slate-300">PowerShell Session Showing measuring a simple iteration with no background jobs.</figcaption>
-  </figure></div>
+<picture>
+    <source type="image/webp" srcset="/posts/background-jobs-start-threadjob-vs-start-job/images/No-Job-Impact-1_hu4e5c36e3ed29ac5a513c71d2a07fea94_30214_320x0_resize_q75_h2_box.webp 320w, /posts/background-jobs-start-threadjob-vs-start-job/images/No-Job-Impact-1_hu4e5c36e3ed29ac5a513c71d2a07fea94_30214_640x0_resize_q75_h2_box.webp 640w, /posts/background-jobs-start-threadjob-vs-start-job/images/No-Job-Impact-1_hu4e5c36e3ed29ac5a513c71d2a07fea94_30214_960x0_resize_q75_h2_box.webp 960w" sizes="(min-width: 1024px) 100vw, 50vw" />
+    <source type="image/jpeg" srcset="/posts/background-jobs-start-threadjob-vs-start-job/images/No-Job-Impact-1_hu4e5c36e3ed29ac5a513c71d2a07fea94_30214_320x0_resize_q75_box.jpg 320w, /posts/background-jobs-start-threadjob-vs-start-job/images/No-Job-Impact-1_hu4e5c36e3ed29ac5a513c71d2a07fea94_30214_640x0_resize_q75_box.jpg 640w, /posts/background-jobs-start-threadjob-vs-start-job/images/No-Job-Impact-1_hu4e5c36e3ed29ac5a513c71d2a07fea94_30214_960x0_resize_q75_box.jpg 960w" sizes="(min-width: 1024px) 100vw, 50vw" />
+    <img class="h-auto max-w-full rounded-lg" src="/posts/background-jobs-start-threadjob-vs-start-job/images/No-Job-Impact-1_hu4e5c36e3ed29ac5a513c71d2a07fea94_30214_640x0_resize_q75_box.jpg" width="1179" height="592" alt=" " title=" " loading="lazy" />
+  </picture><p class="text-sm text-center text-slate-500 dark:text-slate-300">PowerShell Session Showing measuring a simple iteration with no background jobs.</p>
+</div>
 </p>
 <p>Running ten times and pausing for three seconds each time, set the benchmark to 30 seconds as expected.</p>
 <h3 id="start-job-performance">Start-Job Performance</h3>
 <p>Now, running with the native Start-Job, we can see the increased performance as it took only 5.4 seconds to finish.</p>
 <p><div class="not-prose">
-<figure>
-    <img src="../images/Start-Job-Impact.jpg"
-      alt=" "  title="PowerShell Session Showing measuring a simple iteration with Process explorer." 
-      loading="lazy"
-    ><figcaption class="text-sm text-center text-slate-500 dark:text-slate-300">PowerShell Session Showing measuring a simple iteration with Process explorer.</figcaption>
-  </figure></div>
+<picture>
+    <source type="image/webp" srcset="/posts/background-jobs-start-threadjob-vs-start-job/images/Start-Job-Impact_hu981058fd0b439b069366afd32f89f368_200045_320x0_resize_q75_h2_box.webp 320w, /posts/background-jobs-start-threadjob-vs-start-job/images/Start-Job-Impact_hu981058fd0b439b069366afd32f89f368_200045_640x0_resize_q75_h2_box.webp 640w, /posts/background-jobs-start-threadjob-vs-start-job/images/Start-Job-Impact_hu981058fd0b439b069366afd32f89f368_200045_960x0_resize_q75_h2_box.webp 960w" sizes="(min-width: 1024px) 100vw, 50vw" />
+    <source type="image/jpeg" srcset="/posts/background-jobs-start-threadjob-vs-start-job/images/Start-Job-Impact_hu981058fd0b439b069366afd32f89f368_200045_320x0_resize_q75_box.jpg 320w, /posts/background-jobs-start-threadjob-vs-start-job/images/Start-Job-Impact_hu981058fd0b439b069366afd32f89f368_200045_640x0_resize_q75_box.jpg 640w, /posts/background-jobs-start-threadjob-vs-start-job/images/Start-Job-Impact_hu981058fd0b439b069366afd32f89f368_200045_960x0_resize_q75_box.jpg 960w" sizes="(min-width: 1024px) 100vw, 50vw" />
+    <img class="h-auto max-w-full rounded-lg" src="/posts/background-jobs-start-threadjob-vs-start-job/images/Start-Job-Impact_hu981058fd0b439b069366afd32f89f368_200045_640x0_resize_q75_box.jpg" width="1179" height="1192" alt=" " title=" " loading="lazy" />
+  </picture><p class="text-sm text-center text-slate-500 dark:text-slate-300">PowerShell Session Showing measuring a simple iteration with Process explorer.</p>
+</div>
 </p>
 <p>However, with each iterate, a new PowerShell process started.
 What will happen if we iterate 1 million times?</p>
@@ -411,12 +411,12 @@ What will happen if we iterate 1 million times?</p>
 <p>Last, we use Start-Threadjob.
 This time finishing in 0.245 seconds!</p>
 <p><div class="not-prose">
-<figure>
-    <img src="../images/Start-ThreadJob-Impact.jpg"
-      alt=" "  title="PowerShell Session Showing measuring a simple iteration with Process explorer." 
-      loading="lazy"
-    ><figcaption class="text-sm text-center text-slate-500 dark:text-slate-300">PowerShell Session Showing measuring a simple iteration with Process explorer.</figcaption>
-  </figure></div>
+<picture>
+    <source type="image/webp" srcset="/posts/background-jobs-start-threadjob-vs-start-job/images/Start-ThreadJob-Impact_hu4fc31b1a2a96dd688f0622cb22142ce7_60227_320x0_resize_q75_h2_box.webp 320w, /posts/background-jobs-start-threadjob-vs-start-job/images/Start-ThreadJob-Impact_hu4fc31b1a2a96dd688f0622cb22142ce7_60227_640x0_resize_q75_h2_box.webp 640w, /posts/background-jobs-start-threadjob-vs-start-job/images/Start-ThreadJob-Impact_hu4fc31b1a2a96dd688f0622cb22142ce7_60227_960x0_resize_q75_h2_box.webp 960w" sizes="(min-width: 1024px) 100vw, 50vw" />
+    <source type="image/jpeg" srcset="/posts/background-jobs-start-threadjob-vs-start-job/images/Start-ThreadJob-Impact_hu4fc31b1a2a96dd688f0622cb22142ce7_60227_320x0_resize_q75_box.jpg 320w, /posts/background-jobs-start-threadjob-vs-start-job/images/Start-ThreadJob-Impact_hu4fc31b1a2a96dd688f0622cb22142ce7_60227_640x0_resize_q75_box.jpg 640w, /posts/background-jobs-start-threadjob-vs-start-job/images/Start-ThreadJob-Impact_hu4fc31b1a2a96dd688f0622cb22142ce7_60227_960x0_resize_q75_box.jpg 960w" sizes="(min-width: 1024px) 100vw, 50vw" />
+    <img class="h-auto max-w-full rounded-lg" src="/posts/background-jobs-start-threadjob-vs-start-job/images/Start-ThreadJob-Impact_hu4fc31b1a2a96dd688f0622cb22142ce7_60227_640x0_resize_q75_box.jpg" width="1177" height="700" alt=" " title=" " loading="lazy" />
+  </picture><p class="text-sm text-center text-slate-500 dark:text-slate-300">PowerShell Session Showing measuring a simple iteration with Process explorer.</p>
+</div>
 </p>
 <p>Opposite to the Start-Job method, this time, we stayed in the same process.</p>
 <h2 id="conclusion">Conclusion</h2>

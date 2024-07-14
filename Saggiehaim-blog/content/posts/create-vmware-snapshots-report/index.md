@@ -40,7 +40,7 @@ While Japan is amazing, the state of the ESXi in the office wasn’t so great.
 The ESXi crushed, and after investigation, we notice that he had no free space on HDD’s, which was weird.
 we have 100TB, and only 4 VM’s. the first suspect? Snapshots!
 
-![One of the many beautiful things in Japan](../images/Japan-1024x768.jpeg  "Japanese Garden building")
+![One of the many beautiful things in Japan](./images/Japan-1024x768.jpeg  "Japanese Garden building")
 
 Snapshots are great, but they can be your worst enemy if you don’t use them correctly.
 The “issue” with snapshots is that they save your delta’s.
@@ -66,7 +66,7 @@ Installing PowerCLI is easy, we can get it directly from the PowerShell Gallery:
 Install-Module -Name VMware.PowerCLI -Scope CurrentUser
 ```
 
-![Easy as that](../images/Install-PowerCLI.png  "Terminal Window with PowerCLI installation")
+![Easy as that](./images/Install-PowerCLI.png  "Terminal Window with PowerCLI installation")
 
 ## Step 2 – Connect to the VCenter or ESXi
 
@@ -264,7 +264,7 @@ $Report = Format-HTMLBody ($html)
 now that we have our report ready, we need to decide how to publish it.
 either by mail or as an HTML page, you choose.
 
-![Example of the report](../images/VMsSnapshotsReport.png  "Image of the report")
+![Example of the report](./images/VMsSnapshotsReport.png  "Image of the report")
 
 ### Create HTML File
 

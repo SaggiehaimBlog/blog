@@ -55,7 +55,7 @@ To enable it, open PowerShell as Administrator and run the following command:
 Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
 ```
 
-![Enable WSL](../images/image.png  "Enable WSL on Windows")
+![Enable WSL](./images/image.png  "Enable WSL on Windows")
 
 Confirm and restart your Computer
 
@@ -72,7 +72,7 @@ To install a Linux distribution from Microsoft Store, follow the following steps
 2. Search for Ubuntu
 3. Click on Get or Install (if you already had it)
 
-![Getting Ubuntu for WSL from Microsoft Store](../images/image-1.png  "Installing Ubuntu for WSL from Microsoft Store")
+![Getting Ubuntu for WSL from Microsoft Store](./images/image-1.png  "Installing Ubuntu for WSL from Microsoft Store")
 
 ### Install WSL Linux Distribution With PowerShell
 
@@ -89,7 +89,7 @@ Now we can use the Add-AppxPackage cmdlet to install our distribution:
 Add-AppxPackage .\Ubuntu.appx
 ```
 
-![Add-AppxPackage](../images/image-2.png  "Using PowerShell to run Add-AppxPackage Cmdlt")
+![Add-AppxPackage](./images/image-2.png  "Using PowerShell to run Add-AppxPackage Cmdlt")
 
 You can find more Linux distributions on [Microsoft Docs](https://docs.microsoft.com/en-us/windows/wsl/install-manual#downloading-distros)
 
@@ -98,11 +98,11 @@ You can find more Linux distributions on [Microsoft Docs](https://docs.microsoft
 Now, we can finally start our Ubuntu for the first time.
 If you downloaded it from the Store, you can press on Lunch, if you installed in with PowerShell you can find it under the **Start Menu**.
 
-![Running WSL for the first time](../images/image-3.png  "Image of PowerShell Terminal Running Ubuntu on WSL for the first time")
+![Running WSL for the first time](./images/image-3.png  "Image of PowerShell Terminal Running Ubuntu on WSL for the first time")
 
 After WSL finish installing our Ubuntu, it will ask us to set up Username and Password for our root user, go ahead and fill in yours.
 
-![Setting up initial configuration](../images/image-4.png  "Image of PowerShell Terminal Setting up initial configuration")
+![Setting up initial configuration](./images/image-4.png  "Image of PowerShell Terminal Setting up initial configuration")
 
 **TIP**: you can now launch Ubuntu directly from your PowerShell session with **wsl.exe**
 
@@ -149,12 +149,12 @@ Add the following line in the end of the file:
 PATH="$PATH:/usr/share/PowerShell"
 ```
 
-![Adding PowerShell folder to our environmental path](../images/image-5.png  "Image of PowerShell Terminal Adding PowerShell folder to our environmental path")
+![Adding PowerShell folder to our environmental path](./images/image-5.png  "Image of PowerShell Terminal Adding PowerShell folder to our environmental path")
 
 All that left now, is to restart WSL, and run **pwsh**!
 congrats, you just run PowerShell 7 on Ubuntu inside your Windows 10 device!
 
-![PowerShell 7 on Ubuntu](../images/image-7.png  "Image of PowerShell Terminal with PowerShell 7 on Ubuntu")
+![PowerShell 7 on Ubuntu](./images/image-7.png  "Image of PowerShell Terminal with PowerShell 7 on Ubuntu")
 
 ### Clean up
 

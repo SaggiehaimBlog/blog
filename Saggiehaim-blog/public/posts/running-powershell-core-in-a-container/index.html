@@ -396,24 +396,24 @@ Microsoft created an image with <a href="https://hub.docker.com/_/microsoft-powe
 We use the Docker pull command to get the image we want:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker pull mcr.microsoft.com/powershell:latest
 </span></span></code></pre></div><p><div class="not-prose">
-<figure>
-    <img src="../images/image-pull.jpg"
-      alt="Docker engine will now pull the image from Docker repository"  title="PowerShell terminal running the Docker pull command" 
-      loading="lazy"
-    ><figcaption class="text-sm text-center text-slate-500 dark:text-slate-300">PowerShell terminal running the Docker pull command</figcaption>
-  </figure></div>
+<picture>
+    <source type="image/webp" srcset="/posts/running-powershell-core-in-a-container/images/image-pull_hu0bd5c68d17bcd190a10f9e7dc78b5283_40383_320x0_resize_q75_h2_box.webp 320w, /posts/running-powershell-core-in-a-container/images/image-pull_hu0bd5c68d17bcd190a10f9e7dc78b5283_40383_640x0_resize_q75_h2_box.webp 640w, /posts/running-powershell-core-in-a-container/images/image-pull_hu0bd5c68d17bcd190a10f9e7dc78b5283_40383_960x0_resize_q75_h2_box.webp 960w" sizes="(min-width: 1024px) 100vw, 50vw" />
+    <source type="image/jpeg" srcset="/posts/running-powershell-core-in-a-container/images/image-pull_hu0bd5c68d17bcd190a10f9e7dc78b5283_40383_320x0_resize_q75_box.jpg 320w, /posts/running-powershell-core-in-a-container/images/image-pull_hu0bd5c68d17bcd190a10f9e7dc78b5283_40383_640x0_resize_q75_box.jpg 640w, /posts/running-powershell-core-in-a-container/images/image-pull_hu0bd5c68d17bcd190a10f9e7dc78b5283_40383_960x0_resize_q75_box.jpg 960w" sizes="(min-width: 1024px) 100vw, 50vw" />
+    <img class="h-auto max-w-full rounded-lg" src="/posts/running-powershell-core-in-a-container/images/image-pull_hu0bd5c68d17bcd190a10f9e7dc78b5283_40383_640x0_resize_q75_box.jpg" width="1230" height="312" alt="Docker engine will now pull the image from Docker repository" title="Docker engine will now pull the image from Docker repository" loading="lazy" />
+  </picture><p class="text-sm text-center text-slate-500 dark:text-slate-300">PowerShell terminal running the Docker pull command</p>
+</div>
 </p>
 <h3 id="starting-a-powershell-core-in-a-container">Starting a Powershell Core in a container</h3>
 <p>After pulling the image, we can create containers based on the image.
 To create a container we run the following command:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker run --name ps-core -it mcr.microsoft.com/powershell:latest
 </span></span></code></pre></div><p><div class="not-prose">
-<figure>
-    <img src="../images/run-container.jpg"
-      alt="Easy as this"  title="PowerShell terminal running the Docker Run command" 
-      loading="lazy"
-    ><figcaption class="text-sm text-center text-slate-500 dark:text-slate-300">PowerShell terminal running the Docker Run command</figcaption>
-  </figure></div>
+<picture>
+    <source type="image/webp" srcset="/posts/running-powershell-core-in-a-container/images/run-container_hua43a646e256c4d6255ad9d1604c6d730_30537_320x0_resize_q75_h2_box.webp 320w, /posts/running-powershell-core-in-a-container/images/run-container_hua43a646e256c4d6255ad9d1604c6d730_30537_640x0_resize_q75_h2_box.webp 640w, /posts/running-powershell-core-in-a-container/images/run-container_hua43a646e256c4d6255ad9d1604c6d730_30537_960x0_resize_q75_h2_box.webp 960w" sizes="(min-width: 1024px) 100vw, 50vw" />
+    <source type="image/jpeg" srcset="/posts/running-powershell-core-in-a-container/images/run-container_hua43a646e256c4d6255ad9d1604c6d730_30537_320x0_resize_q75_box.jpg 320w, /posts/running-powershell-core-in-a-container/images/run-container_hua43a646e256c4d6255ad9d1604c6d730_30537_640x0_resize_q75_box.jpg 640w, /posts/running-powershell-core-in-a-container/images/run-container_hua43a646e256c4d6255ad9d1604c6d730_30537_960x0_resize_q75_box.jpg 960w" sizes="(min-width: 1024px) 100vw, 50vw" />
+    <img class="h-auto max-w-full rounded-lg" src="/posts/running-powershell-core-in-a-container/images/run-container_hua43a646e256c4d6255ad9d1604c6d730_30537_640x0_resize_q75_box.jpg" width="1225" height="238" alt="Easy as this" title="Easy as this" loading="lazy" />
+  </picture><p class="text-sm text-center text-slate-500 dark:text-slate-300">PowerShell terminal running the Docker Run command</p>
+</div>
 </p>
 <p>Congratulation! you now have a clean Powershell core in a container 😎</p>
 <h2 id="aftermath">Aftermath</h2>
@@ -428,12 +428,12 @@ We add the -a switch to list both running and stopped containers.
 Copy the ID of the container, and pass it to the Docker rm command:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker rm &lt;Container ID&gt;
 </span></span></code></pre></div><p><div class="not-prose">
-<figure>
-    <img src="../images/delete-container.jpg"
-      alt="Removing containers"  title="PowerShell terminal running the Docker rm command" 
-      loading="lazy"
-    ><figcaption class="text-sm text-center text-slate-500 dark:text-slate-300">PowerShell terminal running the Docker rm command</figcaption>
-  </figure></div>
+<picture>
+    <source type="image/webp" srcset="/posts/running-powershell-core-in-a-container/images/delete-container_hu716a58870794884db63eb892d069a7eb_36551_320x0_resize_q75_h2_box.webp 320w, /posts/running-powershell-core-in-a-container/images/delete-container_hu716a58870794884db63eb892d069a7eb_36551_640x0_resize_q75_h2_box.webp 640w, /posts/running-powershell-core-in-a-container/images/delete-container_hu716a58870794884db63eb892d069a7eb_36551_960x0_resize_q75_h2_box.webp 960w, /posts/running-powershell-core-in-a-container/images/delete-container_hu716a58870794884db63eb892d069a7eb_36551_1280x0_resize_q75_h2_box.webp 1280w, /posts/running-powershell-core-in-a-container/images/delete-container_hu716a58870794884db63eb892d069a7eb_36551_1600x0_resize_q75_h2_box.webp 1600w" sizes="(min-width: 1024px) 100vw, 50vw" />
+    <source type="image/jpeg" srcset="/posts/running-powershell-core-in-a-container/images/delete-container_hu716a58870794884db63eb892d069a7eb_36551_320x0_resize_q75_box.jpg 320w, /posts/running-powershell-core-in-a-container/images/delete-container_hu716a58870794884db63eb892d069a7eb_36551_640x0_resize_q75_box.jpg 640w, /posts/running-powershell-core-in-a-container/images/delete-container_hu716a58870794884db63eb892d069a7eb_36551_960x0_resize_q75_box.jpg 960w, /posts/running-powershell-core-in-a-container/images/delete-container_hu716a58870794884db63eb892d069a7eb_36551_1280x0_resize_q75_box.jpg 1280w, /posts/running-powershell-core-in-a-container/images/delete-container_hu716a58870794884db63eb892d069a7eb_36551_1600x0_resize_q75_box.jpg 1600w" sizes="(min-width: 1024px) 100vw, 50vw" />
+    <img class="h-auto max-w-full rounded-lg" src="/posts/running-powershell-core-in-a-container/images/delete-container_hu716a58870794884db63eb892d069a7eb_36551_640x0_resize_q75_box.jpg" width="1608" height="193" alt="Removing containers" title="Removing containers" loading="lazy" />
+  </picture><p class="text-sm text-center text-slate-500 dark:text-slate-300">PowerShell terminal running the Docker rm command</p>
+</div>
 </p>
 <h3 id="keep-the-container">Keep the container</h3>
 <p>If we decided to keep the container, we can re-use it at any time.
@@ -443,12 +443,12 @@ If it’s not running, we can start it with the command Docker start.</p>
 </span></span></code></pre></div><p>Now in order to interact with it, we use the Docker attach command.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker attach ps-core
 </span></span></code></pre></div><p><div class="not-prose">
-<figure>
-    <img src="../images/Container-attach-1.jpg"
-      alt="And we are in again"  title="PowerShell terminal running the Docker attach command" 
-      loading="lazy"
-    ><figcaption class="text-sm text-center text-slate-500 dark:text-slate-300">PowerShell terminal running the Docker attach command</figcaption>
-  </figure></div>
+<picture>
+    <source type="image/webp" srcset="/posts/running-powershell-core-in-a-container/images/Container-attach-1_huebaf35b5e4385e436ec9e9441470924d_7119_320x0_resize_q75_h2_box.webp 320w, /posts/running-powershell-core-in-a-container/images/Container-attach-1_huebaf35b5e4385e436ec9e9441470924d_7119_640x0_resize_q75_h2_box.webp 640w, /posts/running-powershell-core-in-a-container/images/Container-attach-1_huebaf35b5e4385e436ec9e9441470924d_7119_960x0_resize_q75_h2_box.webp 960w, /posts/running-powershell-core-in-a-container/images/Container-attach-1_huebaf35b5e4385e436ec9e9441470924d_7119_1280x0_resize_q75_h2_box.webp 1280w, /posts/running-powershell-core-in-a-container/images/Container-attach-1_huebaf35b5e4385e436ec9e9441470924d_7119_1600x0_resize_q75_h2_box.webp 1600w" sizes="(min-width: 1024px) 100vw, 50vw" />
+    <source type="image/jpeg" srcset="/posts/running-powershell-core-in-a-container/images/Container-attach-1_huebaf35b5e4385e436ec9e9441470924d_7119_320x0_resize_q75_box.jpg 320w, /posts/running-powershell-core-in-a-container/images/Container-attach-1_huebaf35b5e4385e436ec9e9441470924d_7119_640x0_resize_q75_box.jpg 640w, /posts/running-powershell-core-in-a-container/images/Container-attach-1_huebaf35b5e4385e436ec9e9441470924d_7119_960x0_resize_q75_box.jpg 960w, /posts/running-powershell-core-in-a-container/images/Container-attach-1_huebaf35b5e4385e436ec9e9441470924d_7119_1280x0_resize_q75_box.jpg 1280w, /posts/running-powershell-core-in-a-container/images/Container-attach-1_huebaf35b5e4385e436ec9e9441470924d_7119_1600x0_resize_q75_box.jpg 1600w" sizes="(min-width: 1024px) 100vw, 50vw" />
+    <img class="h-auto max-w-full rounded-lg" src="/posts/running-powershell-core-in-a-container/images/Container-attach-1_huebaf35b5e4385e436ec9e9441470924d_7119_640x0_resize_q75_box.jpg" width="1608" height="127" alt="And we are in again" title="And we are in again" loading="lazy" />
+  </picture><p class="text-sm text-center text-slate-500 dark:text-slate-300">PowerShell terminal running the Docker attach command</p>
+</div>
 </p>
 <h2 id="conclusion">Conclusion</h2>
 <p>This is only the tip of the iceberg, and containers are a fascinating technology.

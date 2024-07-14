@@ -40,7 +40,7 @@ Every Company has HelpDesk team, other System Admins that don’t know PowerShel
 While I will encourage them to learn, I can’t make them.
 As a result, I need to provide them with a GUI for some of the tools or solutions.
 
-![ ](../images/oldladymeme.jpg  "Old Lady meme")
+![ ](./images/oldladymeme.jpg  "Old Lady meme")
 
 First of all, let’s talk about PowerShell GUI.
 In fact, There is no such thing “PowerShell GUI” in the PowerShell world, The GUI part is part of the .NET world (which PowerShell built upon).
@@ -79,7 +79,7 @@ In addition, I want to send emails for confirmations and audit.
 First, I like to start with the GUI design, it will make it easier to know what functions I need to build in my script.
 For small tasks like this, I love to use [POSHGUI](https://poshgui.com/), it’s a web tool that let you build Winforms GUI for PowerShell in minutes.
 
-![My Service Account creation GUI](../images/ServiceAccountGUI.jpg  "Image of my Service Account creation GUI")
+![My Service Account creation GUI](./images/ServiceAccountGUI.jpg  "Image of my Service Account creation GUI")
 
 I won’t include the “Office” attribute as I have all the information needed to update it myself.
 

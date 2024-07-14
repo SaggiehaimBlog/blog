@@ -293,12 +293,12 @@ Unfortunately, the big California fire started… so things ware little tense du
 <p>While working there, my colleague asks me about some cmdlets I ran in the last site we visited.
 I had a few PowerShell Sessions open, and I wasn’t sure in which one I ran the cmdlets, so I had to bring my investigator glasses.</p>
 <p><div class="not-prose">
-<figure>
-    <img src="../images/invest.jpg"
-      alt="I will see myself out"  title="bad eel joke meme" 
-      loading="lazy"
-    ><figcaption class="text-sm text-center text-slate-500 dark:text-slate-300">bad eel joke meme</figcaption>
-  </figure></div>
+<picture>
+    <source type="image/webp" srcset="/posts/powershell-history/images/invest_hufe1dcaef583f13d799aaf9486736d00f_59397_320x0_resize_q75_h2_box.webp 320w" sizes="(min-width: 1024px) 100vw, 50vw" />
+    <source type="image/jpeg" srcset="/posts/powershell-history/images/invest_hufe1dcaef583f13d799aaf9486736d00f_59397_320x0_resize_q75_box.jpg 320w" sizes="(min-width: 1024px) 100vw, 50vw" />
+    <img class="h-auto max-w-full rounded-lg" src="/posts/powershell-history/images/invest_hufe1dcaef583f13d799aaf9486736d00f_59397_640x0_resize_q75_box.jpg" width="607" height="451" alt="I will see myself out" title="I will see myself out" loading="lazy" />
+  </picture><p class="text-sm text-center text-slate-500 dark:text-slate-300">bad eel joke meme</p>
+</div>
 </p>
 <p>So, let’s talk about PowerShell history. Technically, PowerShell has two type of commands history.
 One is the command line buffer, which is part of the graphical terminal application.
@@ -318,12 +318,12 @@ Not what you looked for? press F8 again to further search the list.</p>
 <h4 id="how-to-change-the-buffer-size">how to change the buffer size?</h4>
 <p>We can increase the size of the buffer easily if we want, but pressing the right click on the PowerShell Title Bar, select “Defaults”, under the “Options” tab, change the value under “Buffer Size”</p>
 <p><div class="not-prose">
-<figure>
-    <img src="../images/buffer.png"
-      alt=" "  title="PowerShell Terminal buffer setting" 
-      loading="lazy"
-    ><figcaption class="text-sm text-center text-slate-500 dark:text-slate-300">PowerShell Terminal buffer setting</figcaption>
-  </figure></div>
+<picture>
+    <source type="image/webp" srcset="/posts/powershell-history/images/buffer_hu4947be71f62cbbb3608a8a61bf420065_10403_320x0_resize_q75_h2_box_3.webp 320w, /posts/powershell-history/images/buffer_hu4947be71f62cbbb3608a8a61bf420065_10403_640x0_resize_q75_h2_box_3.webp 640w, /posts/powershell-history/images/buffer_hu4947be71f62cbbb3608a8a61bf420065_10403_960x0_resize_q75_h2_box_3.webp 960w" sizes="(min-width: 1024px) 100vw, 50vw" />
+    <source type="image/jpeg" srcset="/posts/powershell-history/images/buffer_hu4947be71f62cbbb3608a8a61bf420065_10403_320x0_resize_q75_bgffffff_box_3.jpg 320w, /posts/powershell-history/images/buffer_hu4947be71f62cbbb3608a8a61bf420065_10403_640x0_resize_q75_bgffffff_box_3.jpg 640w, /posts/powershell-history/images/buffer_hu4947be71f62cbbb3608a8a61bf420065_10403_960x0_resize_q75_bgffffff_box_3.jpg 960w" sizes="(min-width: 1024px) 100vw, 50vw" />
+    <img class="h-auto max-w-full rounded-lg" src="/posts/powershell-history/images/buffer_hu4947be71f62cbbb3608a8a61bf420065_10403_640x0_resize_q75_bgffffff_box_3.jpg" width="979" height="216" alt=" " title=" " loading="lazy" />
+  </picture><p class="text-sm text-center text-slate-500 dark:text-slate-300">PowerShell Terminal buffer setting</p>
+</div>
 </p>
 <h3 id="powershell-history-cmdlet">PowerShell History Cmdlet</h3>
 <p>Windows PowerShell itself keeps a history of the commands you have typed in.
@@ -361,12 +361,12 @@ When we export the history, the file includes the data that displayed when we fo
 First, we need to check the ID of the cmdlet we want to run from history, then we can use the following:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-PowerShell" data-lang="PowerShell"><span style="display:flex;"><span>Invoke-History -Id <span style="color:#75715e">#</span>
 </span></span></code></pre></div><p><div class="not-prose">
-<figure>
-    <img src="../images/invoke.png"
-      alt="Invoke-History in action "  title="PowerShell Terminal running the Invoke-History" 
-      loading="lazy"
-    ><figcaption class="text-sm text-center text-slate-500 dark:text-slate-300">PowerShell Terminal running the Invoke-History</figcaption>
-  </figure></div>
+<picture>
+    <source type="image/webp" srcset="/posts/powershell-history/images/invoke_hu5b9e035fd721b685aecf38d290ce4f2e_9493_320x0_resize_q75_h2_box_3.webp 320w, /posts/powershell-history/images/invoke_hu5b9e035fd721b685aecf38d290ce4f2e_9493_640x0_resize_q75_h2_box_3.webp 640w, /posts/powershell-history/images/invoke_hu5b9e035fd721b685aecf38d290ce4f2e_9493_960x0_resize_q75_h2_box_3.webp 960w" sizes="(min-width: 1024px) 100vw, 50vw" />
+    <source type="image/jpeg" srcset="/posts/powershell-history/images/invoke_hu5b9e035fd721b685aecf38d290ce4f2e_9493_320x0_resize_q75_bgffffff_box_3.jpg 320w, /posts/powershell-history/images/invoke_hu5b9e035fd721b685aecf38d290ce4f2e_9493_640x0_resize_q75_bgffffff_box_3.jpg 640w, /posts/powershell-history/images/invoke_hu5b9e035fd721b685aecf38d290ce4f2e_9493_960x0_resize_q75_bgffffff_box_3.jpg 960w" sizes="(min-width: 1024px) 100vw, 50vw" />
+    <img class="h-auto max-w-full rounded-lg" src="/posts/powershell-history/images/invoke_hu5b9e035fd721b685aecf38d290ce4f2e_9493_640x0_resize_q75_bgffffff_box_3.jpg" width="1219" height="177" alt="Invoke-History in action " title="Invoke-History in action " loading="lazy" />
+  </picture><p class="text-sm text-center text-slate-500 dark:text-slate-300">PowerShell Terminal running the Invoke-History</p>
+</div>
 </p>
 <p>If needed, we can run more than one cmdlet:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-PowerShell" data-lang="PowerShell"><span style="display:flex;"><span><span style="color:#75715e">## Choosing specific cmdlets</span>

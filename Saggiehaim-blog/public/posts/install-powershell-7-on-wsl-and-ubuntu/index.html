@@ -350,12 +350,12 @@ While last time we installed the latest PowerShell 7 on a container, sometimes w
 To enable it, open PowerShell as Administrator and run the following command:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-PowerShell" data-lang="PowerShell"><span style="display:flex;"><span>Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
 </span></span></code></pre></div><p><div class="not-prose">
-<figure>
-    <img src="../images/image.png"
-      alt="Enable WSL"  title="Enable WSL on Windows" 
-      loading="lazy"
-    ><figcaption class="text-sm text-center text-slate-500 dark:text-slate-300">Enable WSL on Windows</figcaption>
-  </figure></div>
+<picture>
+    <source type="image/webp" srcset="/posts/install-powershell-7-on-wsl-and-ubuntu/images/image_hu205a99f6f2d61c8b268f476099f9c157_14292_320x0_resize_q75_h2_box_3.webp 320w, /posts/install-powershell-7-on-wsl-and-ubuntu/images/image_hu205a99f6f2d61c8b268f476099f9c157_14292_640x0_resize_q75_h2_box_3.webp 640w, /posts/install-powershell-7-on-wsl-and-ubuntu/images/image_hu205a99f6f2d61c8b268f476099f9c157_14292_960x0_resize_q75_h2_box_3.webp 960w" sizes="(min-width: 1024px) 100vw, 50vw" />
+    <source type="image/jpeg" srcset="/posts/install-powershell-7-on-wsl-and-ubuntu/images/image_hu205a99f6f2d61c8b268f476099f9c157_14292_320x0_resize_q75_bgffffff_box_3.jpg 320w, /posts/install-powershell-7-on-wsl-and-ubuntu/images/image_hu205a99f6f2d61c8b268f476099f9c157_14292_640x0_resize_q75_bgffffff_box_3.jpg 640w, /posts/install-powershell-7-on-wsl-and-ubuntu/images/image_hu205a99f6f2d61c8b268f476099f9c157_14292_960x0_resize_q75_bgffffff_box_3.jpg 960w" sizes="(min-width: 1024px) 100vw, 50vw" />
+    <img class="h-auto max-w-full rounded-lg" src="/posts/install-powershell-7-on-wsl-and-ubuntu/images/image_hu205a99f6f2d61c8b268f476099f9c157_14292_640x0_resize_q75_bgffffff_box_3.jpg" width="1166" height="266" alt="Enable WSL" title="Enable WSL" loading="lazy" />
+  </picture><p class="text-sm text-center text-slate-500 dark:text-slate-300">Enable WSL on Windows</p>
+</div>
 </p>
 <p>Confirm and restart your Computer</p>
 <h2 id="installing-a-linux-distribution">Installing A Linux Distribution</h2>
@@ -369,12 +369,12 @@ We can do it by the Microsoft Store or with PowerShell.</p>
 <li>Click on Get or Install (if you already had it)</li>
 </ol>
 <p><div class="not-prose">
-<figure>
-    <img src="../images/image-1.png"
-      alt="Getting Ubuntu for WSL from Microsoft Store"  title="Installing Ubuntu for WSL from Microsoft Store" 
-      loading="lazy"
-    ><figcaption class="text-sm text-center text-slate-500 dark:text-slate-300">Installing Ubuntu for WSL from Microsoft Store</figcaption>
-  </figure></div>
+<picture>
+    <source type="image/webp" srcset="/posts/install-powershell-7-on-wsl-and-ubuntu/images/image-1_hu8de794bde027e3298b9f7e3d4246b3b0_61053_320x0_resize_q75_h2_box_3.webp 320w, /posts/install-powershell-7-on-wsl-and-ubuntu/images/image-1_hu8de794bde027e3298b9f7e3d4246b3b0_61053_640x0_resize_q75_h2_box_3.webp 640w, /posts/install-powershell-7-on-wsl-and-ubuntu/images/image-1_hu8de794bde027e3298b9f7e3d4246b3b0_61053_960x0_resize_q75_h2_box_3.webp 960w" sizes="(min-width: 1024px) 100vw, 50vw" />
+    <source type="image/jpeg" srcset="/posts/install-powershell-7-on-wsl-and-ubuntu/images/image-1_hu8de794bde027e3298b9f7e3d4246b3b0_61053_320x0_resize_q75_bgffffff_box_3.jpg 320w, /posts/install-powershell-7-on-wsl-and-ubuntu/images/image-1_hu8de794bde027e3298b9f7e3d4246b3b0_61053_640x0_resize_q75_bgffffff_box_3.jpg 640w, /posts/install-powershell-7-on-wsl-and-ubuntu/images/image-1_hu8de794bde027e3298b9f7e3d4246b3b0_61053_960x0_resize_q75_bgffffff_box_3.jpg 960w" sizes="(min-width: 1024px) 100vw, 50vw" />
+    <img class="h-auto max-w-full rounded-lg" src="/posts/install-powershell-7-on-wsl-and-ubuntu/images/image-1_hu8de794bde027e3298b9f7e3d4246b3b0_61053_640x0_resize_q75_bgffffff_box_3.jpg" width="1154" height="617" alt="Getting Ubuntu for WSL from Microsoft Store" title="Getting Ubuntu for WSL from Microsoft Store" loading="lazy" />
+  </picture><p class="text-sm text-center text-slate-500 dark:text-slate-300">Installing Ubuntu for WSL from Microsoft Store</p>
+</div>
 </p>
 <h3 id="install-wsl-linux-distribution-with-powershell">Install WSL Linux Distribution With PowerShell</h3>
 <p>Similarly, we can install a Linux distribution with PowerShell (The only way to install it on LTSC edition).
@@ -383,12 +383,12 @@ To do it, we first need to download the appx, in this example, we will download 
 </span></span></code></pre></div><p>Now we can use the Add-AppxPackage cmdlet to install our distribution:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-PowerShell" data-lang="PowerShell"><span style="display:flex;"><span>Add-AppxPackage .\Ubuntu.appx
 </span></span></code></pre></div><p><div class="not-prose">
-<figure>
-    <img src="../images/image-2.png"
-      alt="Add-AppxPackage"  title="Using PowerShell to run Add-AppxPackage Cmdlt" 
-      loading="lazy"
-    ><figcaption class="text-sm text-center text-slate-500 dark:text-slate-300">Using PowerShell to run Add-AppxPackage Cmdlt</figcaption>
-  </figure></div>
+<picture>
+    <source type="image/webp" srcset="/posts/install-powershell-7-on-wsl-and-ubuntu/images/image-2_hub98707f8654e92f9dcb0abb941b5ff33_8575_320x0_resize_q75_h2_box_3.webp 320w, /posts/install-powershell-7-on-wsl-and-ubuntu/images/image-2_hub98707f8654e92f9dcb0abb941b5ff33_8575_640x0_resize_q75_h2_box_3.webp 640w, /posts/install-powershell-7-on-wsl-and-ubuntu/images/image-2_hub98707f8654e92f9dcb0abb941b5ff33_8575_960x0_resize_q75_h2_box_3.webp 960w" sizes="(min-width: 1024px) 100vw, 50vw" />
+    <source type="image/jpeg" srcset="/posts/install-powershell-7-on-wsl-and-ubuntu/images/image-2_hub98707f8654e92f9dcb0abb941b5ff33_8575_320x0_resize_q75_bgffffff_box_3.jpg 320w, /posts/install-powershell-7-on-wsl-and-ubuntu/images/image-2_hub98707f8654e92f9dcb0abb941b5ff33_8575_640x0_resize_q75_bgffffff_box_3.jpg 640w, /posts/install-powershell-7-on-wsl-and-ubuntu/images/image-2_hub98707f8654e92f9dcb0abb941b5ff33_8575_960x0_resize_q75_bgffffff_box_3.jpg 960w" sizes="(min-width: 1024px) 100vw, 50vw" />
+    <img class="h-auto max-w-full rounded-lg" src="/posts/install-powershell-7-on-wsl-and-ubuntu/images/image-2_hub98707f8654e92f9dcb0abb941b5ff33_8575_640x0_resize_q75_bgffffff_box_3.jpg" width="1070" height="208" alt="Add-AppxPackage" title="Add-AppxPackage" loading="lazy" />
+  </picture><p class="text-sm text-center text-slate-500 dark:text-slate-300">Using PowerShell to run Add-AppxPackage Cmdlt</p>
+</div>
 </p>
 <p>You can find more Linux distributions on <a href="https://docs.microsoft.com/en-us/windows/wsl/install-manual#downloading-distros" target="_blank" rel="noopener">Microsoft Docs</a>
 </p>
@@ -396,21 +396,21 @@ To do it, we first need to download the appx, in this example, we will download 
 <p>Now, we can finally start our Ubuntu for the first time.
 If you downloaded it from the Store, you can press on Lunch, if you installed in with PowerShell you can find it under the <strong>Start Menu</strong>.</p>
 <p><div class="not-prose">
-<figure>
-    <img src="../images/image-3.png"
-      alt="Running WSL for the first time"  title="Image of PowerShell Terminal Running Ubuntu on WSL for the first time" 
-      loading="lazy"
-    ><figcaption class="text-sm text-center text-slate-500 dark:text-slate-300">Image of PowerShell Terminal Running Ubuntu on WSL for the first time</figcaption>
-  </figure></div>
+<picture>
+    <source type="image/webp" srcset="/posts/install-powershell-7-on-wsl-and-ubuntu/images/image-3_huff70e0e1f7d32922fb4525db4c32ffb6_25337_320x0_resize_q75_h2_box_3.webp 320w, /posts/install-powershell-7-on-wsl-and-ubuntu/images/image-3_huff70e0e1f7d32922fb4525db4c32ffb6_25337_640x0_resize_q75_h2_box_3.webp 640w, /posts/install-powershell-7-on-wsl-and-ubuntu/images/image-3_huff70e0e1f7d32922fb4525db4c32ffb6_25337_960x0_resize_q75_h2_box_3.webp 960w, /posts/install-powershell-7-on-wsl-and-ubuntu/images/image-3_huff70e0e1f7d32922fb4525db4c32ffb6_25337_1280x0_resize_q75_h2_box_3.webp 1280w" sizes="(min-width: 1024px) 100vw, 50vw" />
+    <source type="image/jpeg" srcset="/posts/install-powershell-7-on-wsl-and-ubuntu/images/image-3_huff70e0e1f7d32922fb4525db4c32ffb6_25337_320x0_resize_q75_bgffffff_box_3.jpg 320w, /posts/install-powershell-7-on-wsl-and-ubuntu/images/image-3_huff70e0e1f7d32922fb4525db4c32ffb6_25337_640x0_resize_q75_bgffffff_box_3.jpg 640w, /posts/install-powershell-7-on-wsl-and-ubuntu/images/image-3_huff70e0e1f7d32922fb4525db4c32ffb6_25337_960x0_resize_q75_bgffffff_box_3.jpg 960w, /posts/install-powershell-7-on-wsl-and-ubuntu/images/image-3_huff70e0e1f7d32922fb4525db4c32ffb6_25337_1280x0_resize_q75_bgffffff_box_3.jpg 1280w" sizes="(min-width: 1024px) 100vw, 50vw" />
+    <img class="h-auto max-w-full rounded-lg" src="/posts/install-powershell-7-on-wsl-and-ubuntu/images/image-3_huff70e0e1f7d32922fb4525db4c32ffb6_25337_640x0_resize_q75_bgffffff_box_3.jpg" width="1587" height="676" alt="Running WSL for the first time" title="Running WSL for the first time" loading="lazy" />
+  </picture><p class="text-sm text-center text-slate-500 dark:text-slate-300">Image of PowerShell Terminal Running Ubuntu on WSL for the first time</p>
+</div>
 </p>
 <p>After WSL finish installing our Ubuntu, it will ask us to set up Username and Password for our root user, go ahead and fill in yours.</p>
 <p><div class="not-prose">
-<figure>
-    <img src="../images/image-4.png"
-      alt="Setting up initial configuration"  title="Image of PowerShell Terminal Setting up initial configuration" 
-      loading="lazy"
-    ><figcaption class="text-sm text-center text-slate-500 dark:text-slate-300">Image of PowerShell Terminal Setting up initial configuration</figcaption>
-  </figure></div>
+<picture>
+    <source type="image/webp" srcset="/posts/install-powershell-7-on-wsl-and-ubuntu/images/image-4_hue125b9aaebd497ae946540338bed02d9_27700_320x0_resize_q75_h2_box_3.webp 320w, /posts/install-powershell-7-on-wsl-and-ubuntu/images/image-4_hue125b9aaebd497ae946540338bed02d9_27700_640x0_resize_q75_h2_box_3.webp 640w, /posts/install-powershell-7-on-wsl-and-ubuntu/images/image-4_hue125b9aaebd497ae946540338bed02d9_27700_960x0_resize_q75_h2_box_3.webp 960w, /posts/install-powershell-7-on-wsl-and-ubuntu/images/image-4_hue125b9aaebd497ae946540338bed02d9_27700_1280x0_resize_q75_h2_box_3.webp 1280w" sizes="(min-width: 1024px) 100vw, 50vw" />
+    <source type="image/jpeg" srcset="/posts/install-powershell-7-on-wsl-and-ubuntu/images/image-4_hue125b9aaebd497ae946540338bed02d9_27700_320x0_resize_q75_bgffffff_box_3.jpg 320w, /posts/install-powershell-7-on-wsl-and-ubuntu/images/image-4_hue125b9aaebd497ae946540338bed02d9_27700_640x0_resize_q75_bgffffff_box_3.jpg 640w, /posts/install-powershell-7-on-wsl-and-ubuntu/images/image-4_hue125b9aaebd497ae946540338bed02d9_27700_960x0_resize_q75_bgffffff_box_3.jpg 960w, /posts/install-powershell-7-on-wsl-and-ubuntu/images/image-4_hue125b9aaebd497ae946540338bed02d9_27700_1280x0_resize_q75_bgffffff_box_3.jpg 1280w" sizes="(min-width: 1024px) 100vw, 50vw" />
+    <img class="h-auto max-w-full rounded-lg" src="/posts/install-powershell-7-on-wsl-and-ubuntu/images/image-4_hue125b9aaebd497ae946540338bed02d9_27700_640x0_resize_q75_bgffffff_box_3.jpg" width="1585" height="329" alt="Setting up initial configuration" title="Setting up initial configuration" loading="lazy" />
+  </picture><p class="text-sm text-center text-slate-500 dark:text-slate-300">Image of PowerShell Terminal Setting up initial configuration</p>
+</div>
 </p>
 <p><strong>TIP</strong>: you can now launch Ubuntu directly from your PowerShell session with <strong>wsl.exe</strong></p>
 <h2 id="installing-powershell-7">Installing PowerShell 7</h2>
@@ -435,22 +435,22 @@ To do so, we need to edit our user profile file, it’s a file named <strong>.pr
 </span></span></code></pre></div><p>Add the following line in the end of the file:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>PATH<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;</span>$PATH<span style="color:#e6db74">:/usr/share/PowerShell&#34;</span>
 </span></span></code></pre></div><p><div class="not-prose">
-<figure>
-    <img src="../images/image-5.png"
-      alt="Adding PowerShell folder to our environmental path"  title="Image of PowerShell Terminal Adding PowerShell folder to our environmental path" 
-      loading="lazy"
-    ><figcaption class="text-sm text-center text-slate-500 dark:text-slate-300">Image of PowerShell Terminal Adding PowerShell folder to our environmental path</figcaption>
-  </figure></div>
+<picture>
+    <source type="image/webp" srcset="/posts/install-powershell-7-on-wsl-and-ubuntu/images/image-5_huabe534140eb30806a11df79217af31e8_49825_320x0_resize_q75_h2_box_3.webp 320w, /posts/install-powershell-7-on-wsl-and-ubuntu/images/image-5_huabe534140eb30806a11df79217af31e8_49825_640x0_resize_q75_h2_box_3.webp 640w, /posts/install-powershell-7-on-wsl-and-ubuntu/images/image-5_huabe534140eb30806a11df79217af31e8_49825_960x0_resize_q75_h2_box_3.webp 960w, /posts/install-powershell-7-on-wsl-and-ubuntu/images/image-5_huabe534140eb30806a11df79217af31e8_49825_1280x0_resize_q75_h2_box_3.webp 1280w" sizes="(min-width: 1024px) 100vw, 50vw" />
+    <source type="image/jpeg" srcset="/posts/install-powershell-7-on-wsl-and-ubuntu/images/image-5_huabe534140eb30806a11df79217af31e8_49825_320x0_resize_q75_bgffffff_box_3.jpg 320w, /posts/install-powershell-7-on-wsl-and-ubuntu/images/image-5_huabe534140eb30806a11df79217af31e8_49825_640x0_resize_q75_bgffffff_box_3.jpg 640w, /posts/install-powershell-7-on-wsl-and-ubuntu/images/image-5_huabe534140eb30806a11df79217af31e8_49825_960x0_resize_q75_bgffffff_box_3.jpg 960w, /posts/install-powershell-7-on-wsl-and-ubuntu/images/image-5_huabe534140eb30806a11df79217af31e8_49825_1280x0_resize_q75_bgffffff_box_3.jpg 1280w" sizes="(min-width: 1024px) 100vw, 50vw" />
+    <img class="h-auto max-w-full rounded-lg" src="/posts/install-powershell-7-on-wsl-and-ubuntu/images/image-5_huabe534140eb30806a11df79217af31e8_49825_640x0_resize_q75_bgffffff_box_3.jpg" width="1362" height="957" alt="Adding PowerShell folder to our environmental path" title="Adding PowerShell folder to our environmental path" loading="lazy" />
+  </picture><p class="text-sm text-center text-slate-500 dark:text-slate-300">Image of PowerShell Terminal Adding PowerShell folder to our environmental path</p>
+</div>
 </p>
 <p>All that left now, is to restart WSL, and run <strong>pwsh</strong>!
 congrats, you just run PowerShell 7 on Ubuntu inside your Windows 10 device!</p>
 <p><div class="not-prose">
-<figure>
-    <img src="../images/image-7.png"
-      alt="PowerShell 7 on Ubuntu"  title="Image of PowerShell Terminal with PowerShell 7 on Ubuntu" 
-      loading="lazy"
-    ><figcaption class="text-sm text-center text-slate-500 dark:text-slate-300">Image of PowerShell Terminal with PowerShell 7 on Ubuntu</figcaption>
-  </figure></div>
+<picture>
+    <source type="image/webp" srcset="/posts/install-powershell-7-on-wsl-and-ubuntu/images/image-7_hu39cd5cd336f167b543dfea89d5c47168_40936_320x0_resize_q75_h2_box_3.webp 320w, /posts/install-powershell-7-on-wsl-and-ubuntu/images/image-7_hu39cd5cd336f167b543dfea89d5c47168_40936_640x0_resize_q75_h2_box_3.webp 640w, /posts/install-powershell-7-on-wsl-and-ubuntu/images/image-7_hu39cd5cd336f167b543dfea89d5c47168_40936_960x0_resize_q75_h2_box_3.webp 960w, /posts/install-powershell-7-on-wsl-and-ubuntu/images/image-7_hu39cd5cd336f167b543dfea89d5c47168_40936_1280x0_resize_q75_h2_box_3.webp 1280w" sizes="(min-width: 1024px) 100vw, 50vw" />
+    <source type="image/jpeg" srcset="/posts/install-powershell-7-on-wsl-and-ubuntu/images/image-7_hu39cd5cd336f167b543dfea89d5c47168_40936_320x0_resize_q75_bgffffff_box_3.jpg 320w, /posts/install-powershell-7-on-wsl-and-ubuntu/images/image-7_hu39cd5cd336f167b543dfea89d5c47168_40936_640x0_resize_q75_bgffffff_box_3.jpg 640w, /posts/install-powershell-7-on-wsl-and-ubuntu/images/image-7_hu39cd5cd336f167b543dfea89d5c47168_40936_960x0_resize_q75_bgffffff_box_3.jpg 960w, /posts/install-powershell-7-on-wsl-and-ubuntu/images/image-7_hu39cd5cd336f167b543dfea89d5c47168_40936_1280x0_resize_q75_bgffffff_box_3.jpg 1280w" sizes="(min-width: 1024px) 100vw, 50vw" />
+    <img class="h-auto max-w-full rounded-lg" src="/posts/install-powershell-7-on-wsl-and-ubuntu/images/image-7_hu39cd5cd336f167b543dfea89d5c47168_40936_640x0_resize_q75_bgffffff_box_3.jpg" width="1362" height="957" alt="PowerShell 7 on Ubuntu" title="PowerShell 7 on Ubuntu" loading="lazy" />
+  </picture><p class="text-sm text-center text-slate-500 dark:text-slate-300">Image of PowerShell Terminal with PowerShell 7 on Ubuntu</p>
+</div>
 </p>
 <h3 id="clean-up">Clean up</h3>
 <p>Now that we finished installing our PowerShell, we can remove the zipped file by running:</p>

@@ -32,7 +32,7 @@ I’m sitting in my hotel room, it’s very late, hoping not to get sick.
 It’s my first day in India, as my company has an office here in New Delhi.
 If you wonder why I hope not to get sick, well, this was my dinner today:
 
-![Would you eat it?](../images/IndiaDinner.jpeg  "Image of my indian dinner")
+![Would you eat it?](./images/IndiaDinner.jpeg  "Image of my indian dinner")
 
 To be honest, it was very nice, not the best I had, but far from my worst one.
 If you didn’t notice, it had chicken inside.

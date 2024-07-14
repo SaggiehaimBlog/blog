@@ -16,7 +16,7 @@
       <link>//localhost:8080/posts/create-vmware-snapshots-report/</link>
       <pubDate>Sun, 28 Oct 2018 00:00:00 +0000</pubDate><author>contact@saggiehaim.net (Saggie Haim)</author>
       <guid>//localhost:8080/posts/create-vmware-snapshots-report/</guid>
-      <description>Konichiwa Yujin,&#xA;Sorry for not posting for so long, I been to Japan for a work trip. While Japan is amazing, the state of the ESXi in the office wasn’t so great. The ESXi crushed, and after investigation, we notice that he had no free space on HDD’s, which was weird. we have 100TB, and only 4 VM’s. the first suspect? Snapshots!&#xA;Japanese Garden building Snapshots are great, but they can be your worst enemy if you don’t use them correctly.</description>
+      <description>Konichiwa Yujin,&#xA;Sorry for not posting for so long, I been to Japan for a work trip. While Japan is amazing, the state of the ESXi in the office wasn’t so great. The ESXi crushed, and after investigation, we notice that he had no free space on HDD’s, which was weird. we have 100TB, and only 4 VM’s. the first suspect? Snapshots!&#xA;Japanese Garden building&#xA;Snapshots are great, but they can be your worst enemy if you don’t use them correctly.</description>
     </item>
   </channel>
 </rss>

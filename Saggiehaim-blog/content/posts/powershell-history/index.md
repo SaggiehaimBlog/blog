@@ -34,7 +34,7 @@ Unfortunately, the big California fire started… so things ware little tense du
 While working there, my colleague asks me about some cmdlets I ran in the last site we visited.
 I had a few PowerShell Sessions open, and I wasn’t sure in which one I ran the cmdlets, so I had to bring my investigator glasses.
 
-![I will see myself out](../images/invest.jpg  "bad eel joke meme")
+![I will see myself out](./images/invest.jpg  "bad eel joke meme")
 
 So, let’s talk about PowerShell history. Technically, PowerShell has two type of commands history.
 One is the command line buffer, which is part of the graphical terminal application.
@@ -61,7 +61,7 @@ Not what you looked for? press F8 again to further search the list.
 
 We can increase the size of the buffer easily if we want, but pressing the right click on the PowerShell Title Bar, select “Defaults”, under the “Options” tab, change the value under “Buffer Size”
 
-![ ](../images/buffer.png  "PowerShell Terminal buffer setting")
+![ ](./images/buffer.png  "PowerShell Terminal buffer setting")
 
 ### PowerShell History Cmdlet
 
@@ -142,7 +142,7 @@ First, we need to check the ID of the cmdlet we want to run from history, then w
 Invoke-History -Id #
 ```
 
-![Invoke-History in action ](../images/invoke.png  "PowerShell Terminal running the Invoke-History")
+![Invoke-History in action ](./images/invoke.png  "PowerShell Terminal running the Invoke-History")
 
 If needed, we can run more than one cmdlet:
 

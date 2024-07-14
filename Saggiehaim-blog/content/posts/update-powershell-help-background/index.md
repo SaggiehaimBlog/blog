@@ -32,7 +32,7 @@ I think it's the first thing everyone should master before they jump into PowerS
 By default, PowerShell ships without the help files, so first you have to update the PowerShell help database to unlock its power.
 Over the time, you will collect more modules and updates, so keeping it up to date is a challenge.
 
-![Running Get-Help without help files](../images/get-help.png  "Image PowerShell terminal running Get-Help")
+![Running Get-Help without help files](./images/get-help.png  "Image PowerShell terminal running Get-Help")
 
 When you run PowerShell in a new computer, and try to use the Get-Help cmdlet, PowerShell will ask you if you want to update help first, if you choose not to, the help you will get will be very limited.
 

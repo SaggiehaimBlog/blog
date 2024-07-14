@@ -9,7 +9,8 @@
   name="description"
   content="Konichiwa Yujin,
 Sorry for not posting for so long, I been to Japan for a work trip. While Japan is amazing, the state of the ESXi in the office wasn’t so great. The ESXi crushed, and after investigation, we notice that he had no free space on HDD’s, which was weird. we have 100TB, and only 4 VM’s. the first suspect? Snapshots!
-Japanese Garden building Snapshots are great, but they can be your worst enemy if you don’t use them correctly."
+Japanese Garden building
+Snapshots are great, but they can be your worst enemy if you don’t use them correctly."
 />
 <meta
   name="keywords"
@@ -354,12 +355,12 @@ While Japan is amazing, the state of the ESXi in the office wasn’t so great.
 The ESXi crushed, and after investigation, we notice that he had no free space on HDD’s, which was weird.
 we have 100TB, and only 4 VM’s. the first suspect? Snapshots!</p>
 <p><div class="not-prose">
-<figure>
-    <img src="../images/Japan-1024x768.jpeg"
-      alt="One of the many beautiful things in Japan"  title="Japanese Garden building" 
-      loading="lazy"
-    ><figcaption class="text-sm text-center text-slate-500 dark:text-slate-300">Japanese Garden building</figcaption>
-  </figure></div>
+<picture>
+    <source type="image/webp" srcset="/posts/create-vmware-snapshots-report/images/Japan-1024x768_hudb6afd277d7e4b7f5f46233cd8d13645_225817_320x0_resize_q75_h2_box.webp 320w, /posts/create-vmware-snapshots-report/images/Japan-1024x768_hudb6afd277d7e4b7f5f46233cd8d13645_225817_640x0_resize_q75_h2_box.webp 640w, /posts/create-vmware-snapshots-report/images/Japan-1024x768_hudb6afd277d7e4b7f5f46233cd8d13645_225817_960x0_resize_q75_h2_box.webp 960w" sizes="(min-width: 1024px) 100vw, 50vw" />
+    <source type="image/jpeg" srcset="/posts/create-vmware-snapshots-report/images/Japan-1024x768_hudb6afd277d7e4b7f5f46233cd8d13645_225817_320x0_resize_q75_box.jpeg 320w, /posts/create-vmware-snapshots-report/images/Japan-1024x768_hudb6afd277d7e4b7f5f46233cd8d13645_225817_640x0_resize_q75_box.jpeg 640w, /posts/create-vmware-snapshots-report/images/Japan-1024x768_hudb6afd277d7e4b7f5f46233cd8d13645_225817_960x0_resize_q75_box.jpeg 960w" sizes="(min-width: 1024px) 100vw, 50vw" />
+    <img class="h-auto max-w-full rounded-lg" src="/posts/create-vmware-snapshots-report/images/Japan-1024x768_hudb6afd277d7e4b7f5f46233cd8d13645_225817_640x0_resize_q75_box.jpeg" width="1024" height="768" alt="One of the many beautiful things in Japan" title="One of the many beautiful things in Japan" loading="lazy" />
+  </picture><p class="text-sm text-center text-slate-500 dark:text-slate-300">Japanese Garden building</p>
+</div>
 </p>
 <p>Snapshots are great, but they can be your worst enemy if you don’t use them correctly.
 The “issue” with snapshots is that they save your delta’s.
@@ -378,12 +379,12 @@ We can create a report, that give us all the information needed to manage the sn
 <p>Installing PowerCLI is easy, we can get it directly from the PowerShell Gallery:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-PowerShell" data-lang="PowerShell"><span style="display:flex;"><span>Install-Module -Name VMware.PowerCLI -Scope CurrentUser
 </span></span></code></pre></div><p><div class="not-prose">
-<figure>
-    <img src="../images/Install-PowerCLI.png"
-      alt="Easy as that"  title="Terminal Window with PowerCLI installation" 
-      loading="lazy"
-    ><figcaption class="text-sm text-center text-slate-500 dark:text-slate-300">Terminal Window with PowerCLI installation</figcaption>
-  </figure></div>
+<picture>
+    <source type="image/webp" srcset="/posts/create-vmware-snapshots-report/images/Install-PowerCLI_hu5041b12b675a059cbd3f3722762cd2fc_17806_320x0_resize_q75_h2_box_3.webp 320w, /posts/create-vmware-snapshots-report/images/Install-PowerCLI_hu5041b12b675a059cbd3f3722762cd2fc_17806_640x0_resize_q75_h2_box_3.webp 640w, /posts/create-vmware-snapshots-report/images/Install-PowerCLI_hu5041b12b675a059cbd3f3722762cd2fc_17806_960x0_resize_q75_h2_box_3.webp 960w" sizes="(min-width: 1024px) 100vw, 50vw" />
+    <source type="image/jpeg" srcset="/posts/create-vmware-snapshots-report/images/Install-PowerCLI_hu5041b12b675a059cbd3f3722762cd2fc_17806_320x0_resize_q75_bgffffff_box_3.jpg 320w, /posts/create-vmware-snapshots-report/images/Install-PowerCLI_hu5041b12b675a059cbd3f3722762cd2fc_17806_640x0_resize_q75_bgffffff_box_3.jpg 640w, /posts/create-vmware-snapshots-report/images/Install-PowerCLI_hu5041b12b675a059cbd3f3722762cd2fc_17806_960x0_resize_q75_bgffffff_box_3.jpg 960w" sizes="(min-width: 1024px) 100vw, 50vw" />
+    <img class="h-auto max-w-full rounded-lg" src="/posts/create-vmware-snapshots-report/images/Install-PowerCLI_hu5041b12b675a059cbd3f3722762cd2fc_17806_640x0_resize_q75_bgffffff_box_3.jpg" width="979" height="512" alt="Easy as that" title="Easy as that" loading="lazy" />
+  </picture><p class="text-sm text-center text-slate-500 dark:text-slate-300">Terminal Window with PowerCLI installation</p>
+</div>
 </p>
 <h2 id="step-2--connect-to-the-vcenter-or-esxi">Step 2 – Connect to the VCenter or ESXi</h2>
 <p>Before we can run any command in PowerCLI, we need to connect the VCenter or ESXi.
@@ -523,12 +524,12 @@ We will create an HTML report, so it will be easy to use it in different scenari
 <p>now that we have our report ready, we need to decide how to publish it.
 either by mail or as an HTML page, you choose.</p>
 <p><div class="not-prose">
-<figure>
-    <img src="../images/VMsSnapshotsReport.png"
-      alt="Example of the report"  title="Image of the report" 
-      loading="lazy"
-    ><figcaption class="text-sm text-center text-slate-500 dark:text-slate-300">Image of the report</figcaption>
-  </figure></div>
+<picture>
+    <source type="image/webp" srcset="/posts/create-vmware-snapshots-report/images/VMsSnapshotsReport_hu45aceb5ba8505db1026fb625c2414f30_22960_320x0_resize_q75_h2_box_3.webp 320w, /posts/create-vmware-snapshots-report/images/VMsSnapshotsReport_hu45aceb5ba8505db1026fb625c2414f30_22960_640x0_resize_q75_h2_box_3.webp 640w, /posts/create-vmware-snapshots-report/images/VMsSnapshotsReport_hu45aceb5ba8505db1026fb625c2414f30_22960_960x0_resize_q75_h2_box_3.webp 960w, /posts/create-vmware-snapshots-report/images/VMsSnapshotsReport_hu45aceb5ba8505db1026fb625c2414f30_22960_1280x0_resize_q75_h2_box_3.webp 1280w" sizes="(min-width: 1024px) 100vw, 50vw" />
+    <source type="image/jpeg" srcset="/posts/create-vmware-snapshots-report/images/VMsSnapshotsReport_hu45aceb5ba8505db1026fb625c2414f30_22960_320x0_resize_q75_bgffffff_box_3.jpg 320w, /posts/create-vmware-snapshots-report/images/VMsSnapshotsReport_hu45aceb5ba8505db1026fb625c2414f30_22960_640x0_resize_q75_bgffffff_box_3.jpg 640w, /posts/create-vmware-snapshots-report/images/VMsSnapshotsReport_hu45aceb5ba8505db1026fb625c2414f30_22960_960x0_resize_q75_bgffffff_box_3.jpg 960w, /posts/create-vmware-snapshots-report/images/VMsSnapshotsReport_hu45aceb5ba8505db1026fb625c2414f30_22960_1280x0_resize_q75_bgffffff_box_3.jpg 1280w" sizes="(min-width: 1024px) 100vw, 50vw" />
+    <img class="h-auto max-w-full rounded-lg" src="/posts/create-vmware-snapshots-report/images/VMsSnapshotsReport_hu45aceb5ba8505db1026fb625c2414f30_22960_640x0_resize_q75_bgffffff_box_3.jpg" width="1365" height="270" alt="Example of the report" title="Example of the report" loading="lazy" />
+  </picture><p class="text-sm text-center text-slate-500 dark:text-slate-300">Image of the report</p>
+</div>
 </p>
 <h3 id="create-html-file">Create HTML File</h3>
 <p>If you want to create an HTML file, just pipe your report to out-file</p>

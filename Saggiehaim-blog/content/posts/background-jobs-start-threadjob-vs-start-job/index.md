@@ -70,7 +70,7 @@ Get-Job
 Get-Job | Receive-Job
 ```
 
-![Simple Job](../images/Start-Job-2.jpg  "PowerShell Session Showing Background Job with Start-Job")
+![Simple Job](./images/Start-Job-2.jpg  "PowerShell Session Showing Background Job with Start-Job")
 
 Additionally, as I said in the beginning, Some cmdlet has -Asjob switch. Use Get-Help to check if your cmdlet has the -Asjob switch.
 
@@ -85,7 +85,7 @@ Get-Job
 Get-Job | Receive-Job
 ```
 
-![-Asjob Switch](../images/asjob-2.jpg  "PowerShell Session Showing Background Job with -AsJob Switch")
+![-Asjob Switch](./images/asjob-2.jpg  "PowerShell Session Showing Background Job with -AsJob Switch")
 
 Update: Thanks to [@jkavanagh58](https://twitter.com/jkavanagh58) who raised the option to find cmdlet with -Asjob switch with the Get-Command cmdlet.
 
@@ -117,7 +117,7 @@ Get-Job
 Get-Job | Receive-Job
 ```
 
-![ ](../images/Start-ThreadJob-2.jpg  "PowerShell Session Showing Background Job with Start-ThreadJob")
+![ ](./images/Start-ThreadJob-2.jpg  "PowerShell Session Showing Background Job with Start-ThreadJob")
 
 ## Start-Job vs Start-ThreadJob – Performance
 
@@ -140,7 +140,7 @@ During the tests, we’ll see the difference in each condition. The impact on th
 
 Starting with the obvious, the default behavior when we don’t use any background job.
 
-![ ](../images/No-Job-Impact-1.jpg  "PowerShell Session Showing measuring a simple iteration with no background jobs.")
+![ ](./images/No-Job-Impact-1.jpg  "PowerShell Session Showing measuring a simple iteration with no background jobs.")
 
 Running ten times and pausing for three seconds each time, set the benchmark to 30 seconds as expected.
 
@@ -148,7 +148,7 @@ Running ten times and pausing for three seconds each time, set the benchmark to 
 
 Now, running with the native Start-Job, we can see the increased performance as it took only 5.4 seconds to finish.
 
-![ ](../images/Start-Job-Impact.jpg  "PowerShell Session Showing measuring a simple iteration with Process explorer.")
+![ ](./images/Start-Job-Impact.jpg  "PowerShell Session Showing measuring a simple iteration with Process explorer.")
 
 However, with each iterate, a new PowerShell process started.
 What will happen if we iterate 1 million times?
@@ -158,7 +158,7 @@ What will happen if we iterate 1 million times?
 Last, we use Start-Threadjob.
 This time finishing in 0.245 seconds!
 
-![ ](../images/Start-ThreadJob-Impact.jpg  "PowerShell Session Showing measuring a simple iteration with Process explorer.")
+![ ](./images/Start-ThreadJob-Impact.jpg  "PowerShell Session Showing measuring a simple iteration with Process explorer.")
 
 Opposite to the Start-Job method, this time, we stayed in the same process.
 

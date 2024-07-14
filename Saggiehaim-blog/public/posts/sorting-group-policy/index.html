@@ -357,7 +357,7 @@ Its ok burning meme Last week I saw a post from my good friend Omer a Microsoft 
 It’s almost the same in every company. it’s historical, contain a lot of Group Policy and if you ever try to touch it, half of the systems stop working.</p>
 <p><div class="not-prose">
 <figure>
-    <img src="../images/GPOFeatureImage.jpg"
+    <img src="./images/GPOFeatureImage.jpg"
       alt=" "  title="Its ok burning meme" 
       loading="lazy"
     ><figcaption class="text-sm text-center text-slate-500 dark:text-slate-300">Its ok burning meme</figcaption>
@@ -428,12 +428,12 @@ Maybe we can merge the settings with another GPO?</p>
 </span></span><span style="display:flex;"><span>        
 </span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><p><div class="not-prose">
-<figure>
-    <img src="../images/image-1.png"
-      alt="Result of the Get-GPODisabled"  title="PowerShell Terminal with the result of running the Get-GPODisabled" 
-      loading="lazy"
-    ><figcaption class="text-sm text-center text-slate-500 dark:text-slate-300">PowerShell Terminal with the result of running the Get-GPODisabled</figcaption>
-  </figure></div>
+<picture>
+    <source type="image/webp" srcset="/posts/sorting-group-policy/images/image-1_huddbaae1ef1317d7dec4208e95e6fd6de_7024_320x0_resize_q75_h2_box_3.webp 320w" sizes="(min-width: 1024px) 100vw, 50vw" />
+    <source type="image/jpeg" srcset="/posts/sorting-group-policy/images/image-1_huddbaae1ef1317d7dec4208e95e6fd6de_7024_320x0_resize_q75_bgffffff_box_3.jpg 320w" sizes="(min-width: 1024px) 100vw, 50vw" />
+    <img class="h-auto max-w-full rounded-lg" src="/posts/sorting-group-policy/images/image-1_huddbaae1ef1317d7dec4208e95e6fd6de_7024_640x0_resize_q75_bgffffff_box_3.jpg" width="520" height="191" alt="Result of the Get-GPODisabled" title="Result of the Get-GPODisabled" loading="lazy" />
+  </picture><p class="text-sm text-center text-slate-500 dark:text-slate-300">PowerShell Terminal with the result of running the Get-GPODisabled</p>
+</div>
 </p>
 <h2 id="empty-gpos">Empty GPO’s</h2>
 <p>In this test, we will look for empty GPO’s, that means that the GPO has no setting configured on it.</p>
@@ -445,12 +445,12 @@ We don’t need them in our environment.</p>
 one common mistake people do, is they check the “User version” and “Computer version”, while it true that a new GPO start with version 0 on both of them and changed in each modification.
 but if you take an old GPO and remove all settings, the version won’t reset to 0, and you will miss those GPO’s!</p>
 <p><div class="not-prose">
-<figure>
-    <img src="../images/GPO.png"
-      alt="Empty GPO with computer version 4."  title="Example of GPO settings" 
-      loading="lazy"
-    ><figcaption class="text-sm text-center text-slate-500 dark:text-slate-300">Example of GPO settings</figcaption>
-  </figure></div>
+<picture>
+    <source type="image/webp" srcset="/posts/sorting-group-policy/images/GPO_hu76271612db5202da32f0b261438d73c5_14964_320x0_resize_q75_h2_box_3.webp 320w, /posts/sorting-group-policy/images/GPO_hu76271612db5202da32f0b261438d73c5_14964_640x0_resize_q75_h2_box_3.webp 640w" sizes="(min-width: 1024px) 100vw, 50vw" />
+    <source type="image/jpeg" srcset="/posts/sorting-group-policy/images/GPO_hu76271612db5202da32f0b261438d73c5_14964_320x0_resize_q75_bgffffff_box_3.jpg 320w, /posts/sorting-group-policy/images/GPO_hu76271612db5202da32f0b261438d73c5_14964_640x0_resize_q75_bgffffff_box_3.jpg 640w" sizes="(min-width: 1024px) 100vw, 50vw" />
+    <img class="h-auto max-w-full rounded-lg" src="/posts/sorting-group-policy/images/GPO_hu76271612db5202da32f0b261438d73c5_14964_640x0_resize_q75_bgffffff_box_3.jpg" width="870" height="310" alt="Empty GPO with computer version 4." title="Empty GPO with computer version 4." loading="lazy" />
+  </picture><p class="text-sm text-center text-slate-500 dark:text-slate-300">Example of GPO settings</p>
+</div>
 </p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-PowerShell" data-lang="PowerShell"><span style="display:flex;"><span><span style="color:#66d9ef">function</span> Get-GPOEmpty {
 </span></span><span style="display:flex;"><span>    [cmdletbinding()]
@@ -490,12 +490,12 @@ but if you take an old GPO and remove all settings, the version won’t reset to
 </span></span><span style="display:flex;"><span>    }
 </span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><p><div class="not-prose">
-<figure>
-    <img src="../images/image-2.png"
-      alt="Result of the Get-GPOEmpty"  title="PowerShell Terminal with the result of running the Get-GPOEmpty" 
-      loading="lazy"
-    ><figcaption class="text-sm text-center text-slate-500 dark:text-slate-300">PowerShell Terminal with the result of running the Get-GPOEmpty</figcaption>
-  </figure></div>
+<picture>
+    <source type="image/webp" srcset="/posts/sorting-group-policy/images/image-2_hu32e822b58bbc720133826e2147b6978a_3281_320x0_resize_q75_h2_box_3.webp 320w" sizes="(min-width: 1024px) 100vw, 50vw" />
+    <source type="image/jpeg" srcset="/posts/sorting-group-policy/images/image-2_hu32e822b58bbc720133826e2147b6978a_3281_320x0_resize_q75_bgffffff_box_3.jpg 320w" sizes="(min-width: 1024px) 100vw, 50vw" />
+    <img class="h-auto max-w-full rounded-lg" src="/posts/sorting-group-policy/images/image-2_hu32e822b58bbc720133826e2147b6978a_3281_640x0_resize_q75_bgffffff_box_3.jpg" width="520" height="88" alt="Result of the Get-GPOEmpty" title="Result of the Get-GPOEmpty" loading="lazy" />
+  </picture><p class="text-sm text-center text-slate-500 dark:text-slate-300">PowerShell Terminal with the result of running the Get-GPOEmpty</p>
+</div>
 </p>
 <h2 id="unlinked-gpos">Unlinked GPO’s</h2>
 <p>In this test, we will have the most results, as it&rsquo;s the most common case.
@@ -540,12 +540,12 @@ In my company, there was GPO’s from 2008. I guess we won’t use it anymore �
 </span></span><span style="display:flex;"><span>    }
 </span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><p><div class="not-prose">
-<figure>
-    <img src="../images/image-3.png"
-      alt="Result of the Get-GPOUnlinked"  title="PowerShell Terminal with the result of running the Get-GPOUnlinked" 
-      loading="lazy"
-    ><figcaption class="text-sm text-center text-slate-500 dark:text-slate-300">PowerShell Terminal with the result of running the Get-GPOUnlinked</figcaption>
-  </figure></div>
+<picture>
+    <source type="image/webp" srcset="/posts/sorting-group-policy/images/image-3_hu88be08f63fa15a1683d67221d3800204_6770_320x0_resize_q75_h2_box_3.webp 320w" sizes="(min-width: 1024px) 100vw, 50vw" />
+    <source type="image/jpeg" srcset="/posts/sorting-group-policy/images/image-3_hu88be08f63fa15a1683d67221d3800204_6770_320x0_resize_q75_bgffffff_box_3.jpg 320w" sizes="(min-width: 1024px) 100vw, 50vw" />
+    <img class="h-auto max-w-full rounded-lg" src="/posts/sorting-group-policy/images/image-3_hu88be08f63fa15a1683d67221d3800204_6770_640x0_resize_q75_bgffffff_box_3.jpg" width="520" height="258" alt="Result of the Get-GPOUnlinked" title="Result of the Get-GPOUnlinked" loading="lazy" />
+  </picture><p class="text-sm text-center text-slate-500 dark:text-slate-300">PowerShell Terminal with the result of running the Get-GPOUnlinked</p>
+</div>
 </p>
 <h2 id="missing-permissions">Missing Permissions</h2>
 <p>Here we will test to see if there are GPO’s with missing Read permissions to the “Authenticated Users” or “Domain Computers” groups.</p>
@@ -593,12 +593,12 @@ he explains it better than me 😃</p>
 </span></span><span style="display:flex;"><span>    }
 </span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><p><div class="not-prose">
-<figure>
-    <img src="../images/image-4.png"
-      alt="Result of the Get-GPOMissingPermissions"  title="PowerShell Terminal with the result of running the Get-GPOMissingPermissions" 
-      loading="lazy"
-    ><figcaption class="text-sm text-center text-slate-500 dark:text-slate-300">PowerShell Terminal with the result of running the Get-GPOMissingPermissions</figcaption>
-  </figure></div>
+<picture>
+    <source type="image/webp" srcset="/posts/sorting-group-policy/images/image-4_hu452d2a02941eade7194701ea1061e0e0_4399_320x0_resize_q75_h2_box_3.webp 320w, /posts/sorting-group-policy/images/image-4_hu452d2a02941eade7194701ea1061e0e0_4399_640x0_resize_q75_h2_box_3.webp 640w" sizes="(min-width: 1024px) 100vw, 50vw" />
+    <source type="image/jpeg" srcset="/posts/sorting-group-policy/images/image-4_hu452d2a02941eade7194701ea1061e0e0_4399_320x0_resize_q75_bgffffff_box_3.jpg 320w, /posts/sorting-group-policy/images/image-4_hu452d2a02941eade7194701ea1061e0e0_4399_640x0_resize_q75_bgffffff_box_3.jpg 640w" sizes="(min-width: 1024px) 100vw, 50vw" />
+    <img class="h-auto max-w-full rounded-lg" src="/posts/sorting-group-policy/images/image-4_hu452d2a02941eade7194701ea1061e0e0_4399_640x0_resize_q75_bgffffff_box_3.jpg" width="859" height="91" alt="Result of the Get-GPOMissingPermissions" title="Result of the Get-GPOMissingPermissions" loading="lazy" />
+  </picture><p class="text-sm text-center text-slate-500 dark:text-slate-300">PowerShell Terminal with the result of running the Get-GPOMissingPermissions</p>
+</div>
 </p>
 <h2 id="doing-it-safe">Doing it Safe</h2>
 <p>Before you make any changes, I highly recommend you to backup any GPO before you change or delete.

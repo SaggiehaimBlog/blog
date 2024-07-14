@@ -229,7 +229,7 @@ The real benefits of using the PowerShell cmdlets are when you run them in scrip
 When you use the CMD commands, your output is plain text a String.
 This means that if you want to take specific info from the command, you will have to do a lot of strings manipulations that won’t be useful for 100% of the cases.
 
-![System.String objects are limited](../images/ipconfig.jpg  "Image PowerShell terminal")
+![System.String objects are limited](./images/ipconfig.jpg  "Image PowerShell terminal")
 
 Using the PowerShell cmdlets will return PowerShell Objects, Objects that contain all the information in properties we can query and pass to other cmdlets or functions, or even other scripts.
 
@@ -239,7 +239,7 @@ Using the PowerShell cmdlet, we can extract or use specific property.
 Not all properties are showing by default and its worth the time exploring them.
 we can pipeline the command to get-command cmdlet to see the object information.
 
-![PowerShell objects are the future](../images/psobject.png  "Image PowerShell terminal")
+![PowerShell objects are the future](./images/psobject.png  "Image PowerShell terminal")
 
 We can choose the properties that interesting to us, for example, I want to see only the interface that performed the ping, and if it’s succeeded or not:
 

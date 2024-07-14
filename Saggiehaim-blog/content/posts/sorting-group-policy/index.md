@@ -37,7 +37,7 @@ image = "/images/GPOFeaturedImage.png"
 So, this is the first post for 2019! Happy new year!Today I want to talk about a painful topic, the Group Policy.
 It’s almost the same in every company. it’s historical, contain a lot of Group Policy and if you ever try to touch it, half of the systems stop working.
 
-![ ](../images/GPOFeatureImage.jpg  "Its ok burning meme")
+![ ](./images/GPOFeatureImage.jpg  "Its ok burning meme")
 
 Last week I saw a post from my good friend Omer a Microsoft PFE, as he talked about [Common Mistakes in Active Directory and Domain Services](https://blogs.technet.microsoft.com/meamcs/2018/12/31/most-common-mistakes-in-active-directory-and-domain-services-part-1/).
 He points out that Removing “Authenticated Users” from the GPO Object Security Filtering is a bad thing.
@@ -115,7 +115,7 @@ function Get-GPODisabled {
 }
 ```
 
-![Result of the Get-GPODisabled](../images/image-1.png  "PowerShell Terminal with the result of running the Get-GPODisabled")
+![Result of the Get-GPODisabled](./images/image-1.png  "PowerShell Terminal with the result of running the Get-GPODisabled")
 
 ## Empty GPO’s
 
@@ -132,7 +132,7 @@ This function will check if there is GPO with the User or Computers settings emp
 one common mistake people do, is they check the “User version” and “Computer version”, while it true that a new GPO start with version 0 on both of them and changed in each modification.
 but if you take an old GPO and remove all settings, the version won’t reset to 0, and you will miss those GPO’s!
 
-![Empty GPO with computer version 4.](../images/GPO.png  "Example of GPO settings")
+![Empty GPO with computer version 4.](./images/GPO.png  "Example of GPO settings")
 
 ```PowerShell
 function Get-GPOEmpty {
@@ -174,7 +174,7 @@ function Get-GPOEmpty {
 }
 ```
 
-![Result of the Get-GPOEmpty](../images/image-2.png  "PowerShell Terminal with the result of running the Get-GPOEmpty")
+![Result of the Get-GPOEmpty](./images/image-2.png  "PowerShell Terminal with the result of running the Get-GPOEmpty")
 
 ## Unlinked GPO’s
 
@@ -226,7 +226,7 @@ function Get-GPOUnlinked {
 }
 ```
 
-![Result of the Get-GPOUnlinked](../images/image-3.png  "PowerShell Terminal with the result of running the Get-GPOUnlinked")
+![Result of the Get-GPOUnlinked](./images/image-3.png  "PowerShell Terminal with the result of running the Get-GPOUnlinked")
 
 ## Missing Permissions
 
@@ -281,7 +281,7 @@ function Get-GPOMissingPermissions {
 }
 ```
 
-![Result of the Get-GPOMissingPermissions](../images/image-4.png  "PowerShell Terminal with the result of running the Get-GPOMissingPermissions")
+![Result of the Get-GPOMissingPermissions](./images/image-4.png  "PowerShell Terminal with the result of running the Get-GPOMissingPermissions")
 
 ## Doing it Safe
 

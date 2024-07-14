@@ -81,7 +81,7 @@ We use the Docker pull command to get the image we want:
 docker pull mcr.microsoft.com/powershell:latest
 ```
 
-![Docker engine will now pull the image from Docker repository](../images/image-pull.jpg  "PowerShell terminal running the Docker pull command")
+![Docker engine will now pull the image from Docker repository](./images/image-pull.jpg  "PowerShell terminal running the Docker pull command")
 
 ### Starting a Powershell Core in a container
 
@@ -92,7 +92,7 @@ To create a container we run the following command:
 docker run --name ps-core -it mcr.microsoft.com/powershell:latest
 ```
 
-![Easy as this](../images/run-container.jpg  "PowerShell terminal running the Docker Run command")
+![Easy as this](./images/run-container.jpg  "PowerShell terminal running the Docker Run command")
 
 Congratulation! you now have a clean Powershell core in a container 😎
 
@@ -118,7 +118,7 @@ Copy the ID of the container, and pass it to the Docker rm command:
 docker rm <Container ID>
 ```
 
-![Removing containers](../images/delete-container.jpg  "PowerShell terminal running the Docker rm command")
+![Removing containers](./images/delete-container.jpg  "PowerShell terminal running the Docker rm command")
 
 ### Keep the container
 
@@ -136,7 +136,7 @@ Now in order to interact with it, we use the Docker attach command.
 docker attach ps-core
 ```
 
-![And we are in again](../images/Container-attach-1.jpg  "PowerShell terminal running the Docker attach command")
+![And we are in again](./images/Container-attach-1.jpg  "PowerShell terminal running the Docker attach command")
 
 ## Conclusion
 

@@ -455,12 +455,12 @@ The real benefits of using the PowerShell cmdlets are when you run them in scrip
 When you use the CMD commands, your output is plain text a String.
 This means that if you want to take specific info from the command, you will have to do a lot of strings manipulations that won’t be useful for 100% of the cases.</p>
 <p><div class="not-prose">
-<figure>
-    <img src="../images/ipconfig.jpg"
-      alt="System.String objects are limited"  title="Image PowerShell terminal" 
-      loading="lazy"
-    ><figcaption class="text-sm text-center text-slate-500 dark:text-slate-300">Image PowerShell terminal</figcaption>
-  </figure></div>
+<picture>
+    <source type="image/webp" srcset="/posts/ditch-cmd-for-powershell/images/ipconfig_hu09cf154aed2c93e2041318177e83fb99_27403_320x0_resize_q75_h2_box.webp 320w, /posts/ditch-cmd-for-powershell/images/ipconfig_hu09cf154aed2c93e2041318177e83fb99_27403_640x0_resize_q75_h2_box.webp 640w" sizes="(min-width: 1024px) 100vw, 50vw" />
+    <source type="image/jpeg" srcset="/posts/ditch-cmd-for-powershell/images/ipconfig_hu09cf154aed2c93e2041318177e83fb99_27403_320x0_resize_q75_box.jpg 320w, /posts/ditch-cmd-for-powershell/images/ipconfig_hu09cf154aed2c93e2041318177e83fb99_27403_640x0_resize_q75_box.jpg 640w" sizes="(min-width: 1024px) 100vw, 50vw" />
+    <img class="h-auto max-w-full rounded-lg" src="/posts/ditch-cmd-for-powershell/images/ipconfig_hu09cf154aed2c93e2041318177e83fb99_27403_640x0_resize_q75_box.jpg" width="858" height="167" alt="System.String objects are limited" title="System.String objects are limited" loading="lazy" />
+  </picture><p class="text-sm text-center text-slate-500 dark:text-slate-300">Image PowerShell terminal</p>
+</div>
 </p>
 <p>Using the PowerShell cmdlets will return PowerShell Objects, Objects that contain all the information in properties we can query and pass to other cmdlets or functions, or even other scripts.</p>
 <h2 id="the-power-of-powershell-objects">The Power of PowerShell Objects</h2>
@@ -468,12 +468,12 @@ This means that if you want to take specific info from the command, you will hav
 Not all properties are showing by default and its worth the time exploring them.
 we can pipeline the command to get-command cmdlet to see the object information.</p>
 <p><div class="not-prose">
-<figure>
-    <img src="../images/psobject.png"
-      alt="PowerShell objects are the future"  title="Image PowerShell terminal" 
-      loading="lazy"
-    ><figcaption class="text-sm text-center text-slate-500 dark:text-slate-300">Image PowerShell terminal</figcaption>
-  </figure></div>
+<picture>
+    <source type="image/webp" srcset="/posts/ditch-cmd-for-powershell/images/psobject_hu291e4695d4e490cbf7a49f48ffc06933_35804_320x0_resize_q75_h2_box_3.webp 320w, /posts/ditch-cmd-for-powershell/images/psobject_hu291e4695d4e490cbf7a49f48ffc06933_35804_640x0_resize_q75_h2_box_3.webp 640w" sizes="(min-width: 1024px) 100vw, 50vw" />
+    <source type="image/jpeg" srcset="/posts/ditch-cmd-for-powershell/images/psobject_hu291e4695d4e490cbf7a49f48ffc06933_35804_320x0_resize_q75_bgffffff_box_3.jpg 320w, /posts/ditch-cmd-for-powershell/images/psobject_hu291e4695d4e490cbf7a49f48ffc06933_35804_640x0_resize_q75_bgffffff_box_3.jpg 640w" sizes="(min-width: 1024px) 100vw, 50vw" />
+    <img class="h-auto max-w-full rounded-lg" src="/posts/ditch-cmd-for-powershell/images/psobject_hu291e4695d4e490cbf7a49f48ffc06933_35804_640x0_resize_q75_bgffffff_box_3.jpg" width="858" height="534" alt="PowerShell objects are the future" title="PowerShell objects are the future" loading="lazy" />
+  </picture><p class="text-sm text-center text-slate-500 dark:text-slate-300">Image PowerShell terminal</p>
+</div>
 </p>
 <p>We can choose the properties that interesting to us, for example, I want to see only the interface that performed the ping, and if it’s succeeded or not:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-PowerShell" data-lang="PowerShell"><span style="display:flex;"><span>PS C:\&gt; Test-NetConnection -ComputerName www.saggiehaim.net | select InterfaceAlias,PingSucceeded

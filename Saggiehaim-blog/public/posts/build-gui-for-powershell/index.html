@@ -322,12 +322,12 @@ but sometimes, a GUI for our scripts can be very useful.</p>
 While I will encourage them to learn, I can’t make them.
 As a result, I need to provide them with a GUI for some of the tools or solutions.</p>
 <p><div class="not-prose">
-<figure>
-    <img src="../images/oldladymeme.jpg"
-      alt=" "  title="Old Lady meme" 
-      loading="lazy"
-    ><figcaption class="text-sm text-center text-slate-500 dark:text-slate-300">Old Lady meme</figcaption>
-  </figure></div>
+<picture>
+    <source type="image/webp" srcset="/posts/build-gui-for-powershell/images/oldladymeme_hu9e751e59096b4ca965c7fec77afe35c5_30560_320x0_resize_q75_h2_box.webp 320w" sizes="(min-width: 1024px) 100vw, 50vw" />
+    <source type="image/jpeg" srcset="/posts/build-gui-for-powershell/images/oldladymeme_hu9e751e59096b4ca965c7fec77afe35c5_30560_320x0_resize_q75_box.jpg 320w" sizes="(min-width: 1024px) 100vw, 50vw" />
+    <img class="h-auto max-w-full rounded-lg" src="/posts/build-gui-for-powershell/images/oldladymeme_hu9e751e59096b4ca965c7fec77afe35c5_30560_640x0_resize_q75_box.jpg" width="428" height="336" alt=" " title=" " loading="lazy" />
+  </picture><p class="text-sm text-center text-slate-500 dark:text-slate-300">Old Lady meme</p>
+</div>
 </p>
 <p>First of all, let’s talk about PowerShell GUI.
 In fact, There is no such thing “PowerShell GUI” in the PowerShell world, The GUI part is part of the .NET world (which PowerShell built upon).
@@ -358,12 +358,12 @@ First, I like to start with the GUI design, it will make it easier to know what 
 For small tasks like this, I love to use <a href="https://poshgui.com/" target="_blank" rel="noopener">POSHGUI</a>
 , it’s a web tool that let you build Winforms GUI for PowerShell in minutes.</p>
 <p><div class="not-prose">
-<figure>
-    <img src="../images/ServiceAccountGUI.jpg"
-      alt="My Service Account creation GUI"  title="Image of my Service Account creation GUI" 
-      loading="lazy"
-    ><figcaption class="text-sm text-center text-slate-500 dark:text-slate-300">Image of my Service Account creation GUI</figcaption>
-  </figure></div>
+<picture>
+    <source type="image/webp" srcset="/posts/build-gui-for-powershell/images/ServiceAccountGUI_hu2fed76e5a70c2989ea3d298226af795f_21585_320x0_resize_q75_h2_box.webp 320w, /posts/build-gui-for-powershell/images/ServiceAccountGUI_hu2fed76e5a70c2989ea3d298226af795f_21585_640x0_resize_q75_h2_box.webp 640w" sizes="(min-width: 1024px) 100vw, 50vw" />
+    <source type="image/jpeg" srcset="/posts/build-gui-for-powershell/images/ServiceAccountGUI_hu2fed76e5a70c2989ea3d298226af795f_21585_320x0_resize_q75_box.jpg 320w, /posts/build-gui-for-powershell/images/ServiceAccountGUI_hu2fed76e5a70c2989ea3d298226af795f_21585_640x0_resize_q75_box.jpg 640w" sizes="(min-width: 1024px) 100vw, 50vw" />
+    <img class="h-auto max-w-full rounded-lg" src="/posts/build-gui-for-powershell/images/ServiceAccountGUI_hu2fed76e5a70c2989ea3d298226af795f_21585_640x0_resize_q75_box.jpg" width="747" height="379" alt="My Service Account creation GUI" title="My Service Account creation GUI" loading="lazy" />
+  </picture><p class="text-sm text-center text-slate-500 dark:text-slate-300">Image of my Service Account creation GUI</p>
+</div>
 </p>
 <p>I won’t include the “Office” attribute as I have all the information needed to update it myself.</p>
 <h3 id="gui-code-overview">GUI code overview</h3>

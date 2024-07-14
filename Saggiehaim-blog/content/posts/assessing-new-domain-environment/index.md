@@ -34,7 +34,7 @@ So, while I’m rushing and jumping all over Australia with my Lamborghini, I go
 When I finished the race, I called him back (yes, I’m a good friend😜).
 after a quick chit chat, he told me that he needs help to assess a new domain environment he needs to work on.
 
-![can you blame me for not answering the phone? ](../images/FH3.png  "Image of Forza Horizon game")
+![can you blame me for not answering the phone? ](./images/FH3.png  "Image of Forza Horizon game")
 
 He told me that he needs to get some basic information about those topics:
 

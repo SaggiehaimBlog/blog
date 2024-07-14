@@ -72,7 +72,7 @@
       <link>//localhost:8080/posts/create-vmware-snapshots-report/</link>
       <pubDate>Sun, 28 Oct 2018 00:00:00 +0000</pubDate><author>contact@saggiehaim.net (Saggie Haim)</author>
       <guid>//localhost:8080/posts/create-vmware-snapshots-report/</guid>
-      <description>Konichiwa Yujin,&#xA;Sorry for not posting for so long, I been to Japan for a work trip. While Japan is amazing, the state of the ESXi in the office wasn’t so great. The ESXi crushed, and after investigation, we notice that he had no free space on HDD’s, which was weird. we have 100TB, and only 4 VM’s. the first suspect? Snapshots!&#xA;Japanese Garden building Snapshots are great, but they can be your worst enemy if you don’t use them correctly.</description>
+      <description>Konichiwa Yujin,&#xA;Sorry for not posting for so long, I been to Japan for a work trip. While Japan is amazing, the state of the ESXi in the office wasn’t so great. The ESXi crushed, and after investigation, we notice that he had no free space on HDD’s, which was weird. we have 100TB, and only 4 VM’s. the first suspect? Snapshots!&#xA;Japanese Garden building&#xA;Snapshots are great, but they can be your worst enemy if you don’t use them correctly.</description>
     </item>
     <item>
       <title>Assessing New Domain Environment</title>
@@ -86,7 +86,7 @@
       <link>//localhost:8080/posts/update-powershell-help-background/</link>
       <pubDate>Sun, 16 Sep 2018 00:00:00 +0000</pubDate><author>contact@saggiehaim.net (Saggie Haim)</author>
       <guid>//localhost:8080/posts/update-powershell-help-background/</guid>
-      <description>The help system in PowerShell is great. I think it&amp;rsquo;s the first thing everyone should master before they jump into PowerShell. By default, PowerShell ships without the help files, so first you have to update the PowerShell help database to unlock its power. Over the time, you will collect more modules and updates, so keeping it up to date is a challenge.&#xA;Image PowerShell terminal running Get-Help When you run PowerShell in a new computer, and try to use the Get-Help cmdlet, PowerShell will ask you if you want to update help first, if you choose not to, the help you will get will be very limited.</description>
+      <description>The help system in PowerShell is great. I think it&amp;rsquo;s the first thing everyone should master before they jump into PowerShell. By default, PowerShell ships without the help files, so first you have to update the PowerShell help database to unlock its power. Over the time, you will collect more modules and updates, so keeping it up to date is a challenge.&#xA;Image PowerShell terminal running Get-Help&#xA;When you run PowerShell in a new computer, and try to use the Get-Help cmdlet, PowerShell will ask you if you want to update help first, if you choose not to, the help you will get will be very limited.</description>
     </item>
     <item>
       <title>Ditch Cmd for Powershell</title>
@@ -107,7 +107,7 @@
       <link>//localhost:8080/posts/automation-network-redesign/</link>
       <pubDate>Fri, 17 Aug 2018 00:00:00 +0000</pubDate><author>contact@saggiehaim.net (Saggie Haim)</author>
       <guid>//localhost:8080/posts/automation-network-redesign/</guid>
-      <description>Namaste! I’m sitting in my hotel room, it’s very late, hoping not to get sick. It’s my first day in India, as my company has an office here in New Delhi. If you wonder why I hope not to get sick, well, this was my dinner today:&#xA;Image of my indian dinner To be honest, it was very nice, not the best I had, but far from my worst one. If you didn’t notice, it had chicken inside.</description>
+      <description>Namaste! I’m sitting in my hotel room, it’s very late, hoping not to get sick. It’s my first day in India, as my company has an office here in New Delhi. If you wonder why I hope not to get sick, well, this was my dinner today:&#xA;Image of my indian dinner&#xA;To be honest, it was very nice, not the best I had, but far from my worst one. If you didn’t notice, it had chicken inside.</description>
     </item>
   </channel>
 </rss>

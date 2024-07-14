@@ -358,12 +358,12 @@ The deployment and maintenance of Azure Sentinel content are time-consuming, and
 <p>There are no additional costs associated with using Azure Lighthouse to manage Azure resources, and any Azure customer or partner can use Azure Lighthouse.</p>
 <p>Azure Lighthouse is also secured by design, as it delegating permissions to Users and/or groups from the central tenant to the resources in other tenants, which means you use the same account and can see and interact only with what exposed to you.</p>
 <p><div class="not-prose">
-<figure>
-    <img src="../images/AzureLighthouse.png"
-      alt="High Level diagram of Azure Sentinel with Azure Lighthouse"  title="Image of Azure Sentinel in a multi-tenant environment using Azure Lighthouse" 
-      loading="lazy"
-    ><figcaption class="text-sm text-center text-slate-500 dark:text-slate-300">Image of Azure Sentinel in a multi-tenant environment using Azure Lighthouse</figcaption>
-  </figure></div>
+<picture>
+    <source type="image/webp" srcset="/posts/deploy-azure-sentinel-to-a-multi-tenancy-environment/images/AzureLighthouse_hu86e87d5825707462b944893ef142d836_204512_320x0_resize_q75_h2_box_3.webp 320w, /posts/deploy-azure-sentinel-to-a-multi-tenancy-environment/images/AzureLighthouse_hu86e87d5825707462b944893ef142d836_204512_640x0_resize_q75_h2_box_3.webp 640w, /posts/deploy-azure-sentinel-to-a-multi-tenancy-environment/images/AzureLighthouse_hu86e87d5825707462b944893ef142d836_204512_960x0_resize_q75_h2_box_3.webp 960w, /posts/deploy-azure-sentinel-to-a-multi-tenancy-environment/images/AzureLighthouse_hu86e87d5825707462b944893ef142d836_204512_1280x0_resize_q75_h2_box_3.webp 1280w, /posts/deploy-azure-sentinel-to-a-multi-tenancy-environment/images/AzureLighthouse_hu86e87d5825707462b944893ef142d836_204512_1600x0_resize_q75_h2_box_3.webp 1600w" sizes="(min-width: 1024px) 100vw, 50vw" />
+    <source type="image/jpeg" srcset="/posts/deploy-azure-sentinel-to-a-multi-tenancy-environment/images/AzureLighthouse_hu86e87d5825707462b944893ef142d836_204512_320x0_resize_q75_bgffffff_box_3.jpg 320w, /posts/deploy-azure-sentinel-to-a-multi-tenancy-environment/images/AzureLighthouse_hu86e87d5825707462b944893ef142d836_204512_640x0_resize_q75_bgffffff_box_3.jpg 640w, /posts/deploy-azure-sentinel-to-a-multi-tenancy-environment/images/AzureLighthouse_hu86e87d5825707462b944893ef142d836_204512_960x0_resize_q75_bgffffff_box_3.jpg 960w, /posts/deploy-azure-sentinel-to-a-multi-tenancy-environment/images/AzureLighthouse_hu86e87d5825707462b944893ef142d836_204512_1280x0_resize_q75_bgffffff_box_3.jpg 1280w, /posts/deploy-azure-sentinel-to-a-multi-tenancy-environment/images/AzureLighthouse_hu86e87d5825707462b944893ef142d836_204512_1600x0_resize_q75_bgffffff_box_3.jpg 1600w" sizes="(min-width: 1024px) 100vw, 50vw" />
+    <img class="h-auto max-w-full rounded-lg" src="/posts/deploy-azure-sentinel-to-a-multi-tenancy-environment/images/AzureLighthouse_hu86e87d5825707462b944893ef142d836_204512_640x0_resize_q75_bgffffff_box_3.jpg" width="1876" height="1763" alt="High Level diagram of Azure Sentinel with Azure Lighthouse" title="High Level diagram of Azure Sentinel with Azure Lighthouse" loading="lazy" />
+  </picture><p class="text-sm text-center text-slate-500 dark:text-slate-300">Image of Azure Sentinel in a multi-tenant environment using Azure Lighthouse</p>
+</div>
 </p>
 <h2 id="prerequisites">Prerequisites</h2>
 <p>Before we can start, there are a few prerequisites that we need to meet:</p>
@@ -580,31 +580,31 @@ Az offers shorter commands, improved stability, and cross-platform support.</p>
  and sign in.</p>
 <p>Then on the top search bar, search for &ldquo;Deploy a custom template.&rdquo;</p>
 <p><div class="not-prose">
-<figure>
-    <img src="../images/azureportalsearch.png"
-      alt="Navigating to custom deployment"  title="Image of Azure Portal search with a Deploy search, pointing on Deploy a Custom Template" 
-      loading="lazy"
-    ><figcaption class="text-sm text-center text-slate-500 dark:text-slate-300">Image of Azure Portal search with a Deploy search, pointing on Deploy a Custom Template</figcaption>
-  </figure></div>
+<picture>
+    <source type="image/webp" srcset="/posts/deploy-azure-sentinel-to-a-multi-tenancy-environment/images/azureportalsearch_hu6a450770f877ed1626740cb444c437e3_120456_320x0_resize_q75_h2_box_3.webp 320w, /posts/deploy-azure-sentinel-to-a-multi-tenancy-environment/images/azureportalsearch_hu6a450770f877ed1626740cb444c437e3_120456_640x0_resize_q75_h2_box_3.webp 640w, /posts/deploy-azure-sentinel-to-a-multi-tenancy-environment/images/azureportalsearch_hu6a450770f877ed1626740cb444c437e3_120456_960x0_resize_q75_h2_box_3.webp 960w, /posts/deploy-azure-sentinel-to-a-multi-tenancy-environment/images/azureportalsearch_hu6a450770f877ed1626740cb444c437e3_120456_1280x0_resize_q75_h2_box_3.webp 1280w, /posts/deploy-azure-sentinel-to-a-multi-tenancy-environment/images/azureportalsearch_hu6a450770f877ed1626740cb444c437e3_120456_1600x0_resize_q75_h2_box_3.webp 1600w, /posts/deploy-azure-sentinel-to-a-multi-tenancy-environment/images/azureportalsearch_hu6a450770f877ed1626740cb444c437e3_120456_1920x0_resize_q75_h2_box_3.webp 1920w" sizes="(min-width: 1024px) 100vw, 50vw" />
+    <source type="image/jpeg" srcset="/posts/deploy-azure-sentinel-to-a-multi-tenancy-environment/images/azureportalsearch_hu6a450770f877ed1626740cb444c437e3_120456_320x0_resize_q75_bgffffff_box_3.jpg 320w, /posts/deploy-azure-sentinel-to-a-multi-tenancy-environment/images/azureportalsearch_hu6a450770f877ed1626740cb444c437e3_120456_640x0_resize_q75_bgffffff_box_3.jpg 640w, /posts/deploy-azure-sentinel-to-a-multi-tenancy-environment/images/azureportalsearch_hu6a450770f877ed1626740cb444c437e3_120456_960x0_resize_q75_bgffffff_box_3.jpg 960w, /posts/deploy-azure-sentinel-to-a-multi-tenancy-environment/images/azureportalsearch_hu6a450770f877ed1626740cb444c437e3_120456_1280x0_resize_q75_bgffffff_box_3.jpg 1280w, /posts/deploy-azure-sentinel-to-a-multi-tenancy-environment/images/azureportalsearch_hu6a450770f877ed1626740cb444c437e3_120456_1600x0_resize_q75_bgffffff_box_3.jpg 1600w, /posts/deploy-azure-sentinel-to-a-multi-tenancy-environment/images/azureportalsearch_hu6a450770f877ed1626740cb444c437e3_120456_1920x0_resize_q75_bgffffff_box_3.jpg 1920w" sizes="(min-width: 1024px) 100vw, 50vw" />
+    <img class="h-auto max-w-full rounded-lg" src="/posts/deploy-azure-sentinel-to-a-multi-tenancy-environment/images/azureportalsearch_hu6a450770f877ed1626740cb444c437e3_120456_640x0_resize_q75_bgffffff_box_3.jpg" width="3235" height="473" alt="Navigating to custom deployment" title="Navigating to custom deployment" loading="lazy" />
+  </picture><p class="text-sm text-center text-slate-500 dark:text-slate-300">Image of Azure Portal search with a Deploy search, pointing on Deploy a Custom Template</p>
+</div>
 </p>
 <p>On the Custom deployment page, click on <strong>Build your own template in the editor</strong></p>
 <p><div class="not-prose">
-<figure>
-    <img src="../images/customdeployment.png"
-      alt="Build your own template"  title="Image of Azure Portal Custom deployment page" 
-      loading="lazy"
-    ><figcaption class="text-sm text-center text-slate-500 dark:text-slate-300">Image of Azure Portal Custom deployment page</figcaption>
-  </figure></div>
+<picture>
+    <source type="image/webp" srcset="/posts/deploy-azure-sentinel-to-a-multi-tenancy-environment/images/customdeployment_hudf507fbc05178c21350f24755806e175_120666_320x0_resize_q75_h2_box_3.webp 320w, /posts/deploy-azure-sentinel-to-a-multi-tenancy-environment/images/customdeployment_hudf507fbc05178c21350f24755806e175_120666_640x0_resize_q75_h2_box_3.webp 640w, /posts/deploy-azure-sentinel-to-a-multi-tenancy-environment/images/customdeployment_hudf507fbc05178c21350f24755806e175_120666_960x0_resize_q75_h2_box_3.webp 960w, /posts/deploy-azure-sentinel-to-a-multi-tenancy-environment/images/customdeployment_hudf507fbc05178c21350f24755806e175_120666_1280x0_resize_q75_h2_box_3.webp 1280w" sizes="(min-width: 1024px) 100vw, 50vw" />
+    <source type="image/jpeg" srcset="/posts/deploy-azure-sentinel-to-a-multi-tenancy-environment/images/customdeployment_hudf507fbc05178c21350f24755806e175_120666_320x0_resize_q75_bgffffff_box_3.jpg 320w, /posts/deploy-azure-sentinel-to-a-multi-tenancy-environment/images/customdeployment_hudf507fbc05178c21350f24755806e175_120666_640x0_resize_q75_bgffffff_box_3.jpg 640w, /posts/deploy-azure-sentinel-to-a-multi-tenancy-environment/images/customdeployment_hudf507fbc05178c21350f24755806e175_120666_960x0_resize_q75_bgffffff_box_3.jpg 960w, /posts/deploy-azure-sentinel-to-a-multi-tenancy-environment/images/customdeployment_hudf507fbc05178c21350f24755806e175_120666_1280x0_resize_q75_bgffffff_box_3.jpg 1280w" sizes="(min-width: 1024px) 100vw, 50vw" />
+    <img class="h-auto max-w-full rounded-lg" src="/posts/deploy-azure-sentinel-to-a-multi-tenancy-environment/images/customdeployment_hudf507fbc05178c21350f24755806e175_120666_640x0_resize_q75_bgffffff_box_3.jpg" width="1552" height="1034" alt="Build your own template" title="Build your own template" loading="lazy" />
+  </picture><p class="text-sm text-center text-slate-500 dark:text-slate-300">Image of Azure Portal Custom deployment page</p>
+</div>
 </p>
 <p>Next, you will need to replace the empty template with the template I provided.
 The template will add the resources we want to deploy.</p>
 <p><div class="not-prose">
-<figure>
-    <img src="../images/savetemplate.png"
-      alt="Editing the template"  title="Image of Azure Portal editing a template" 
-      loading="lazy"
-    ><figcaption class="text-sm text-center text-slate-500 dark:text-slate-300">Image of Azure Portal editing a template</figcaption>
-  </figure></div>
+<picture>
+    <source type="image/webp" srcset="/posts/deploy-azure-sentinel-to-a-multi-tenancy-environment/images/savetemplate_hu3c2b6b51855b4e70abb2eb014889c5bb_338281_320x0_resize_q75_h2_box_3.webp 320w, /posts/deploy-azure-sentinel-to-a-multi-tenancy-environment/images/savetemplate_hu3c2b6b51855b4e70abb2eb014889c5bb_338281_640x0_resize_q75_h2_box_3.webp 640w, /posts/deploy-azure-sentinel-to-a-multi-tenancy-environment/images/savetemplate_hu3c2b6b51855b4e70abb2eb014889c5bb_338281_960x0_resize_q75_h2_box_3.webp 960w, /posts/deploy-azure-sentinel-to-a-multi-tenancy-environment/images/savetemplate_hu3c2b6b51855b4e70abb2eb014889c5bb_338281_1280x0_resize_q75_h2_box_3.webp 1280w, /posts/deploy-azure-sentinel-to-a-multi-tenancy-environment/images/savetemplate_hu3c2b6b51855b4e70abb2eb014889c5bb_338281_1600x0_resize_q75_h2_box_3.webp 1600w, /posts/deploy-azure-sentinel-to-a-multi-tenancy-environment/images/savetemplate_hu3c2b6b51855b4e70abb2eb014889c5bb_338281_1920x0_resize_q75_h2_box_3.webp 1920w" sizes="(min-width: 1024px) 100vw, 50vw" />
+    <source type="image/jpeg" srcset="/posts/deploy-azure-sentinel-to-a-multi-tenancy-environment/images/savetemplate_hu3c2b6b51855b4e70abb2eb014889c5bb_338281_320x0_resize_q75_bgffffff_box_3.jpg 320w, /posts/deploy-azure-sentinel-to-a-multi-tenancy-environment/images/savetemplate_hu3c2b6b51855b4e70abb2eb014889c5bb_338281_640x0_resize_q75_bgffffff_box_3.jpg 640w, /posts/deploy-azure-sentinel-to-a-multi-tenancy-environment/images/savetemplate_hu3c2b6b51855b4e70abb2eb014889c5bb_338281_960x0_resize_q75_bgffffff_box_3.jpg 960w, /posts/deploy-azure-sentinel-to-a-multi-tenancy-environment/images/savetemplate_hu3c2b6b51855b4e70abb2eb014889c5bb_338281_1280x0_resize_q75_bgffffff_box_3.jpg 1280w, /posts/deploy-azure-sentinel-to-a-multi-tenancy-environment/images/savetemplate_hu3c2b6b51855b4e70abb2eb014889c5bb_338281_1600x0_resize_q75_bgffffff_box_3.jpg 1600w, /posts/deploy-azure-sentinel-to-a-multi-tenancy-environment/images/savetemplate_hu3c2b6b51855b4e70abb2eb014889c5bb_338281_1920x0_resize_q75_bgffffff_box_3.jpg 1920w" sizes="(min-width: 1024px) 100vw, 50vw" />
+    <img class="h-auto max-w-full rounded-lg" src="/posts/deploy-azure-sentinel-to-a-multi-tenancy-environment/images/savetemplate_hu3c2b6b51855b4e70abb2eb014889c5bb_338281_640x0_resize_q75_bgffffff_box_3.jpg" width="2356" height="1742" alt="Editing the template" title="Editing the template" loading="lazy" />
+  </picture><p class="text-sm text-center text-slate-500 dark:text-slate-300">Image of Azure Portal editing a template</p>
+</div>
 </p>
 <p>Click <strong>save</strong> when you finished.</p>
 <p>Last, we need to provide the info for the template.
@@ -615,12 +615,12 @@ the information we will need to provide is:</p>
 <li><strong>Workspaces_name</strong> - The name of the Azure Log Analytics workspace</li>
 </ul>
 <p><div class="not-prose">
-<figure>
-    <img src="../images/deploytemplate.png"
-      alt="Fill in the information needed"  title="Image of Azure Portal with the deployment scope" 
-      loading="lazy"
-    ><figcaption class="text-sm text-center text-slate-500 dark:text-slate-300">Image of Azure Portal with the deployment scope</figcaption>
-  </figure></div>
+<picture>
+    <source type="image/webp" srcset="/posts/deploy-azure-sentinel-to-a-multi-tenancy-environment/images/deploytemplate_hu913612cb11a80ff775fcadc1829405b5_128855_320x0_resize_q75_h2_box_3.webp 320w, /posts/deploy-azure-sentinel-to-a-multi-tenancy-environment/images/deploytemplate_hu913612cb11a80ff775fcadc1829405b5_128855_640x0_resize_q75_h2_box_3.webp 640w, /posts/deploy-azure-sentinel-to-a-multi-tenancy-environment/images/deploytemplate_hu913612cb11a80ff775fcadc1829405b5_128855_960x0_resize_q75_h2_box_3.webp 960w, /posts/deploy-azure-sentinel-to-a-multi-tenancy-environment/images/deploytemplate_hu913612cb11a80ff775fcadc1829405b5_128855_1280x0_resize_q75_h2_box_3.webp 1280w" sizes="(min-width: 1024px) 100vw, 50vw" />
+    <source type="image/jpeg" srcset="/posts/deploy-azure-sentinel-to-a-multi-tenancy-environment/images/deploytemplate_hu913612cb11a80ff775fcadc1829405b5_128855_320x0_resize_q75_bgffffff_box_3.jpg 320w, /posts/deploy-azure-sentinel-to-a-multi-tenancy-environment/images/deploytemplate_hu913612cb11a80ff775fcadc1829405b5_128855_640x0_resize_q75_bgffffff_box_3.jpg 640w, /posts/deploy-azure-sentinel-to-a-multi-tenancy-environment/images/deploytemplate_hu913612cb11a80ff775fcadc1829405b5_128855_960x0_resize_q75_bgffffff_box_3.jpg 960w, /posts/deploy-azure-sentinel-to-a-multi-tenancy-environment/images/deploytemplate_hu913612cb11a80ff775fcadc1829405b5_128855_1280x0_resize_q75_bgffffff_box_3.jpg 1280w" sizes="(min-width: 1024px) 100vw, 50vw" />
+    <img class="h-auto max-w-full rounded-lg" src="/posts/deploy-azure-sentinel-to-a-multi-tenancy-environment/images/deploytemplate_hu913612cb11a80ff775fcadc1829405b5_128855_640x0_resize_q75_bgffffff_box_3.jpg" width="1497" height="1816" alt="Fill in the information needed" title="Fill in the information needed" loading="lazy" />
+  </picture><p class="text-sm text-center text-slate-500 dark:text-slate-300">Image of Azure Portal with the deployment scope</p>
+</div>
 </p>
 <p>Click on <strong>Review + create</strong> to deploy the resources.</p>
 <h2 id="deploy-using-powershell">Deploy Using PowerShell</h2>
@@ -735,12 +735,12 @@ use the <code>New-AzResourceGroupDeployment</code> cmdlet.</p>
 </span></span></code></pre></div><p>click on <strong>save</strong> when you finished.</p>
 <p>On the next page, it will ask you to fill in the parameters. Click on <strong>Edit parameters</strong>.</p>
 <p><div class="not-prose">
-<figure>
-    <img src="../images/editparamters.png"
-      alt="Editing the parameters"  title="Image of Azure Portal editing a template" 
-      loading="lazy"
-    ><figcaption class="text-sm text-center text-slate-500 dark:text-slate-300">Image of Azure Portal editing a template</figcaption>
-  </figure></div>
+<picture>
+    <source type="image/webp" srcset="/posts/deploy-azure-sentinel-to-a-multi-tenancy-environment/images/editparamters_hu319f2a09b25ac67ffd31d343fc83469a_139690_320x0_resize_q75_h2_box_3.webp 320w, /posts/deploy-azure-sentinel-to-a-multi-tenancy-environment/images/editparamters_hu319f2a09b25ac67ffd31d343fc83469a_139690_640x0_resize_q75_h2_box_3.webp 640w, /posts/deploy-azure-sentinel-to-a-multi-tenancy-environment/images/editparamters_hu319f2a09b25ac67ffd31d343fc83469a_139690_960x0_resize_q75_h2_box_3.webp 960w, /posts/deploy-azure-sentinel-to-a-multi-tenancy-environment/images/editparamters_hu319f2a09b25ac67ffd31d343fc83469a_139690_1280x0_resize_q75_h2_box_3.webp 1280w, /posts/deploy-azure-sentinel-to-a-multi-tenancy-environment/images/editparamters_hu319f2a09b25ac67ffd31d343fc83469a_139690_1600x0_resize_q75_h2_box_3.webp 1600w" sizes="(min-width: 1024px) 100vw, 50vw" />
+    <source type="image/jpeg" srcset="/posts/deploy-azure-sentinel-to-a-multi-tenancy-environment/images/editparamters_hu319f2a09b25ac67ffd31d343fc83469a_139690_320x0_resize_q75_bgffffff_box_3.jpg 320w, /posts/deploy-azure-sentinel-to-a-multi-tenancy-environment/images/editparamters_hu319f2a09b25ac67ffd31d343fc83469a_139690_640x0_resize_q75_bgffffff_box_3.jpg 640w, /posts/deploy-azure-sentinel-to-a-multi-tenancy-environment/images/editparamters_hu319f2a09b25ac67ffd31d343fc83469a_139690_960x0_resize_q75_bgffffff_box_3.jpg 960w, /posts/deploy-azure-sentinel-to-a-multi-tenancy-environment/images/editparamters_hu319f2a09b25ac67ffd31d343fc83469a_139690_1280x0_resize_q75_bgffffff_box_3.jpg 1280w, /posts/deploy-azure-sentinel-to-a-multi-tenancy-environment/images/editparamters_hu319f2a09b25ac67ffd31d343fc83469a_139690_1600x0_resize_q75_bgffffff_box_3.jpg 1600w" sizes="(min-width: 1024px) 100vw, 50vw" />
+    <img class="h-auto max-w-full rounded-lg" src="/posts/deploy-azure-sentinel-to-a-multi-tenancy-environment/images/editparamters_hu319f2a09b25ac67ffd31d343fc83469a_139690_640x0_resize_q75_bgffffff_box_3.jpg" width="1682" height="1418" alt="Editing the parameters" title="Editing the parameters" loading="lazy" />
+  </picture><p class="text-sm text-center text-slate-500 dark:text-slate-300">Image of Azure Portal editing a template</p>
+</div>
 </p>
 <p>in this screen, you will need to copy the following JSON file:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
@@ -792,22 +792,22 @@ use the <code>New-AzResourceGroupDeployment</code> cmdlet.</p>
 </span></span><span style="display:flex;"><span>    }
 </span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><p><div class="not-prose">
-<figure>
-    <img src="../images/saveeditparamaters.png"
-      alt="Editing the parameters"  title="Image of Azure Portal editing a template" 
-      loading="lazy"
-    ><figcaption class="text-sm text-center text-slate-500 dark:text-slate-300">Image of Azure Portal editing a template</figcaption>
-  </figure></div>
+<picture>
+    <source type="image/webp" srcset="/posts/deploy-azure-sentinel-to-a-multi-tenancy-environment/images/saveeditparamaters_hu875c07e0b7a9da86ac498d5636d4118f_274568_320x0_resize_q75_h2_box_3.webp 320w, /posts/deploy-azure-sentinel-to-a-multi-tenancy-environment/images/saveeditparamaters_hu875c07e0b7a9da86ac498d5636d4118f_274568_640x0_resize_q75_h2_box_3.webp 640w, /posts/deploy-azure-sentinel-to-a-multi-tenancy-environment/images/saveeditparamaters_hu875c07e0b7a9da86ac498d5636d4118f_274568_960x0_resize_q75_h2_box_3.webp 960w, /posts/deploy-azure-sentinel-to-a-multi-tenancy-environment/images/saveeditparamaters_hu875c07e0b7a9da86ac498d5636d4118f_274568_1280x0_resize_q75_h2_box_3.webp 1280w, /posts/deploy-azure-sentinel-to-a-multi-tenancy-environment/images/saveeditparamaters_hu875c07e0b7a9da86ac498d5636d4118f_274568_1600x0_resize_q75_h2_box_3.webp 1600w, /posts/deploy-azure-sentinel-to-a-multi-tenancy-environment/images/saveeditparamaters_hu875c07e0b7a9da86ac498d5636d4118f_274568_1920x0_resize_q75_h2_box_3.webp 1920w" sizes="(min-width: 1024px) 100vw, 50vw" />
+    <source type="image/jpeg" srcset="/posts/deploy-azure-sentinel-to-a-multi-tenancy-environment/images/saveeditparamaters_hu875c07e0b7a9da86ac498d5636d4118f_274568_320x0_resize_q75_bgffffff_box_3.jpg 320w, /posts/deploy-azure-sentinel-to-a-multi-tenancy-environment/images/saveeditparamaters_hu875c07e0b7a9da86ac498d5636d4118f_274568_640x0_resize_q75_bgffffff_box_3.jpg 640w, /posts/deploy-azure-sentinel-to-a-multi-tenancy-environment/images/saveeditparamaters_hu875c07e0b7a9da86ac498d5636d4118f_274568_960x0_resize_q75_bgffffff_box_3.jpg 960w, /posts/deploy-azure-sentinel-to-a-multi-tenancy-environment/images/saveeditparamaters_hu875c07e0b7a9da86ac498d5636d4118f_274568_1280x0_resize_q75_bgffffff_box_3.jpg 1280w, /posts/deploy-azure-sentinel-to-a-multi-tenancy-environment/images/saveeditparamaters_hu875c07e0b7a9da86ac498d5636d4118f_274568_1600x0_resize_q75_bgffffff_box_3.jpg 1600w, /posts/deploy-azure-sentinel-to-a-multi-tenancy-environment/images/saveeditparamaters_hu875c07e0b7a9da86ac498d5636d4118f_274568_1920x0_resize_q75_bgffffff_box_3.jpg 1920w" sizes="(min-width: 1024px) 100vw, 50vw" />
+    <img class="h-auto max-w-full rounded-lg" src="/posts/deploy-azure-sentinel-to-a-multi-tenancy-environment/images/saveeditparamaters_hu875c07e0b7a9da86ac498d5636d4118f_274568_640x0_resize_q75_bgffffff_box_3.jpg" width="2245" height="1623" alt="Editing the parameters" title="Editing the parameters" loading="lazy" />
+  </picture><p class="text-sm text-center text-slate-500 dark:text-slate-300">Image of Azure Portal editing a template</p>
+</div>
 </p>
 <p>Click <strong>Save</strong> when you finish copying the script.</p>
 <p>You&rsquo;ll be sent back to the previous page, but this time, you will have all the parameters filled in from the template lets have a quick overview, so you will understand what you are deploying:</p>
 <p><div class="not-prose">
-<figure>
-    <img src="../images/lighthouseparameters.png"
-      alt="Lighthouse deployment scope"  title="Image of Azure Portal editing a template" 
-      loading="lazy"
-    ><figcaption class="text-sm text-center text-slate-500 dark:text-slate-300">Image of Azure Portal editing a template</figcaption>
-  </figure></div>
+<picture>
+    <source type="image/webp" srcset="/posts/deploy-azure-sentinel-to-a-multi-tenancy-environment/images/lighthouseparameters_hu191783352a966979169336530a2e510f_110829_320x0_resize_q75_h2_box_3.webp 320w, /posts/deploy-azure-sentinel-to-a-multi-tenancy-environment/images/lighthouseparameters_hu191783352a966979169336530a2e510f_110829_640x0_resize_q75_h2_box_3.webp 640w, /posts/deploy-azure-sentinel-to-a-multi-tenancy-environment/images/lighthouseparameters_hu191783352a966979169336530a2e510f_110829_960x0_resize_q75_h2_box_3.webp 960w, /posts/deploy-azure-sentinel-to-a-multi-tenancy-environment/images/lighthouseparameters_hu191783352a966979169336530a2e510f_110829_1280x0_resize_q75_h2_box_3.webp 1280w, /posts/deploy-azure-sentinel-to-a-multi-tenancy-environment/images/lighthouseparameters_hu191783352a966979169336530a2e510f_110829_1600x0_resize_q75_h2_box_3.webp 1600w" sizes="(min-width: 1024px) 100vw, 50vw" />
+    <source type="image/jpeg" srcset="/posts/deploy-azure-sentinel-to-a-multi-tenancy-environment/images/lighthouseparameters_hu191783352a966979169336530a2e510f_110829_320x0_resize_q75_bgffffff_box_3.jpg 320w, /posts/deploy-azure-sentinel-to-a-multi-tenancy-environment/images/lighthouseparameters_hu191783352a966979169336530a2e510f_110829_640x0_resize_q75_bgffffff_box_3.jpg 640w, /posts/deploy-azure-sentinel-to-a-multi-tenancy-environment/images/lighthouseparameters_hu191783352a966979169336530a2e510f_110829_960x0_resize_q75_bgffffff_box_3.jpg 960w, /posts/deploy-azure-sentinel-to-a-multi-tenancy-environment/images/lighthouseparameters_hu191783352a966979169336530a2e510f_110829_1280x0_resize_q75_bgffffff_box_3.jpg 1280w, /posts/deploy-azure-sentinel-to-a-multi-tenancy-environment/images/lighthouseparameters_hu191783352a966979169336530a2e510f_110829_1600x0_resize_q75_bgffffff_box_3.jpg 1600w" sizes="(min-width: 1024px) 100vw, 50vw" />
+    <img class="h-auto max-w-full rounded-lg" src="/posts/deploy-azure-sentinel-to-a-multi-tenancy-environment/images/lighthouseparameters_hu191783352a966979169336530a2e510f_110829_640x0_resize_q75_bgffffff_box_3.jpg" width="1706" height="925" alt="Lighthouse deployment scope" title="Lighthouse deployment scope" loading="lazy" />
+  </picture><p class="text-sm text-center text-slate-500 dark:text-slate-300">Image of Azure Portal editing a template</p>
+</div>
 </p>
 <ul>
 <li><strong>Subscription</strong>: The Subscription where we deployed our Log Analytics and Sentinel.</li>
@@ -821,12 +821,12 @@ use the <code>New-AzResourceGroupDeployment</code> cmdlet.</p>
 <p>Now, you can press on <strong>Review + Create</strong> button.
 If all validations pass, you&rsquo;ll be able to deploy the template and successfully onboard your resource group.</p>
 <p><div class="not-prose">
-<figure>
-    <img src="../images/validationpass.png"
-      alt="Validation passed and we can deploy the template"  title="Image of Azure Portal editing a template" 
-      loading="lazy"
-    ><figcaption class="text-sm text-center text-slate-500 dark:text-slate-300">Image of Azure Portal editing a template</figcaption>
-  </figure></div>
+<picture>
+    <source type="image/webp" srcset="/posts/deploy-azure-sentinel-to-a-multi-tenancy-environment/images/validationpass_hu26e495dd9327cbe8efe1d4c70df0efe8_327851_320x0_resize_q75_h2_box_3.webp 320w, /posts/deploy-azure-sentinel-to-a-multi-tenancy-environment/images/validationpass_hu26e495dd9327cbe8efe1d4c70df0efe8_327851_640x0_resize_q75_h2_box_3.webp 640w, /posts/deploy-azure-sentinel-to-a-multi-tenancy-environment/images/validationpass_hu26e495dd9327cbe8efe1d4c70df0efe8_327851_960x0_resize_q75_h2_box_3.webp 960w, /posts/deploy-azure-sentinel-to-a-multi-tenancy-environment/images/validationpass_hu26e495dd9327cbe8efe1d4c70df0efe8_327851_1280x0_resize_q75_h2_box_3.webp 1280w, /posts/deploy-azure-sentinel-to-a-multi-tenancy-environment/images/validationpass_hu26e495dd9327cbe8efe1d4c70df0efe8_327851_1600x0_resize_q75_h2_box_3.webp 1600w" sizes="(min-width: 1024px) 100vw, 50vw" />
+    <source type="image/jpeg" srcset="/posts/deploy-azure-sentinel-to-a-multi-tenancy-environment/images/validationpass_hu26e495dd9327cbe8efe1d4c70df0efe8_327851_320x0_resize_q75_bgffffff_box_3.jpg 320w, /posts/deploy-azure-sentinel-to-a-multi-tenancy-environment/images/validationpass_hu26e495dd9327cbe8efe1d4c70df0efe8_327851_640x0_resize_q75_bgffffff_box_3.jpg 640w, /posts/deploy-azure-sentinel-to-a-multi-tenancy-environment/images/validationpass_hu26e495dd9327cbe8efe1d4c70df0efe8_327851_960x0_resize_q75_bgffffff_box_3.jpg 960w, /posts/deploy-azure-sentinel-to-a-multi-tenancy-environment/images/validationpass_hu26e495dd9327cbe8efe1d4c70df0efe8_327851_1280x0_resize_q75_bgffffff_box_3.jpg 1280w, /posts/deploy-azure-sentinel-to-a-multi-tenancy-environment/images/validationpass_hu26e495dd9327cbe8efe1d4c70df0efe8_327851_1600x0_resize_q75_bgffffff_box_3.jpg 1600w" sizes="(min-width: 1024px) 100vw, 50vw" />
+    <img class="h-auto max-w-full rounded-lg" src="/posts/deploy-azure-sentinel-to-a-multi-tenancy-environment/images/validationpass_hu26e495dd9327cbe8efe1d4c70df0efe8_327851_640x0_resize_q75_bgffffff_box_3.jpg" width="1679" height="1766" alt="Validation passed and we can deploy the template" title="Validation passed and we can deploy the template" loading="lazy" />
+  </picture><p class="text-sm text-center text-slate-500 dark:text-slate-300">Image of Azure Portal editing a template</p>
+</div>
 </p>
 <h2 id="deploy-using-powershell-1">Deploy Using PowerShell</h2>
 <p>This time we will have also provide the TemplateParameterFile.

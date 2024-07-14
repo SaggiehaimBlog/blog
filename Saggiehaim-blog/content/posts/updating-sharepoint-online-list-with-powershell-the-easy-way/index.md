@@ -35,7 +35,7 @@ But now I’m back! And I want to share with you my experience with PowerShell a
 To be honest, I never worked with SharePoint before.
 I got a request from the SharePoint team to update a list weekly from a CSV report that HR provides (Weekly employees birthdays, nothing exciting).
 
-![ ](../images/2porh9.jpg  "You have no power here meme")
+![ ](./images/2porh9.jpg  "You have no power here meme")
 
 First thing to do? Jump head-on to google and understand what my tools are.
 I found this task to be really easy, but it took me a while to find what I needed.
