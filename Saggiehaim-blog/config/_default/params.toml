@@ -1,6 +1,17 @@
 # SEO keywords and description for your site.
-keywords = "Saggiehaim, PowerShell, Azure, Saggie Haim, Automate Everything, Microsoft Sentinel"
-subtitle = "Powershell, DevOps, Security, and automation."
+keywords = [
+  "PowerShell",
+  "DevOps",
+  "IT Automation",
+  "Cybersecurity",
+  "Cloud Security",
+  "Microsoft Sentinel",
+  "Network Automation",
+  "IT Infrastructure",
+  "System Administration",
+  "PowerShell Scripting",
+]
+subtitle = "PowerShell, DevOps, Security, and Automation Expert."
 
 # dir name of your blog content (default is `content/posts`).
 # the list of set content will show up on your index page (baseurl).
