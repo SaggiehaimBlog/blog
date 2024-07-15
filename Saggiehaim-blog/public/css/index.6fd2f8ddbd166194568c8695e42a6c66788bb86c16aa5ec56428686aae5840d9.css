@@ -3140,6 +3140,14 @@ video {
   background-color: rgb(203 213 225 / var(--tw-bg-opacity));
 }
 
-.m-2 {
-  margin: 1.5rem;
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.justify-items-end {
+  justify-items: center;
 }
