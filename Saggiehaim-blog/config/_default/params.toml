@@ -13,6 +13,8 @@ keywords = [
 ]
 subtitle = "PowerShell, DevOps, Security, and Automation Expert."
 
+description = "Explore expert insights on PowerShell, DevOps, IT automation, cybersecurity, and cloud security by Saggie Haim. Learn how to streamline IT infrastructure, enhance system administration, and automate tasks with comprehensive guides and tutorials."
+
 # dir name of your blog content (default is `content/posts`).
 # the list of set content will show up on your index page (baseurl).
 contentTypeName = "posts"
