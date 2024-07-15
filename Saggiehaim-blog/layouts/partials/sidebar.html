@@ -25,11 +25,7 @@
   </span>
 </div>
 
-{{ range $taxonomy, $terms := site.Taxonomies }}
-  {{ if $terms }}
-  {{ partial "block/sidebar_section.html" (dict "Context" $terms "Taxonomy" $taxonomy "Limit" 10) }}
-  {{ end }}
-{{ end }}
+{{ partial "block/sidebar_section.html" (dict "Context" site.Taxonomies.categories "Taxonomy" "categories" "Limit" 10) }}
 
 <section class="flex flex-col w-full gap-y-3 pl-6 py-3 mt-6 text-slate-800 dark:text-slate-200">
     <h2 class="flex flex-row pl-1 uppercase place-self-center">Community</h2>

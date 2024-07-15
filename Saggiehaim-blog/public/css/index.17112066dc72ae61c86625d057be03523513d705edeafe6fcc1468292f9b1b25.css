@@ -3135,7 +3135,7 @@ video {
   color: rgb(203 213 225 / var(--tw-text-opacity));
 }
 
-.bg-slate-300 {
+.bg-red-400 {
   --tw-bg-opacity: 1;
-  background-color: rgb(203 213 225 / var(--tw-bg-opacity));
-}
+  background-color: rgb(17 114 185 / var(--tw-bg-opacity));
+}bg-slate-300

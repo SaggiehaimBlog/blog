@@ -2,6 +2,11 @@
 {{- $context := .Context -}}
 {{- $limit := .Limit -}}
 {{ $icon := (index site.Params.taxonomies.icons $taxonomy) | default "tags" }}
+{{ $type := .Type }}
+{{ range $key, $value := .Data.Terms.ByCount }}
+{{ $term := .Term }}
+{{ $count := .Count }}
+{{ end }}
 
 <section class="flex flex-col w-full gap-y-3 pl-6 py-3 mt-6 text-slate-800 dark:text-slate-200">
   <div class=" place-self-center ">
@@ -13,14 +18,18 @@
     </a>
   </div>
 
-  <ul class="flex flex-col flex-wrap"> 
+  <ul class="flex flex-col flex-wrap">
     {{ range first 5 $context.ByCount }}
-    <li class="mt-2 mr-2 flex items-center saturate-150 rightness-50 blur-up rounded" style="background-image: url('/images/TAG_BG-1.png'); background-size: 100% 100%; background-position: center; background-repeat: no-repeat; min-width: 310px; min-height: 90px;"> 
-      <a href="{{ .Page.RelPermalink }}"
-        class="block w-full justify-center rounded px-2 py-1 text-lg font-bold tracking-wide text-slate-200 dark:text-slate-300 ring-slate-50/5 dark:ring-slate-50/5">
-        {{ .Page.Title }}
+    <li class="mt-2 mr-2 flex items-center saturate-150 brightness-50 blur-up rounded relative">
+      <a href="{{ .Page.RelPermalink }}" class="block w-full h-full">
+        <img src="/images/TAG_BG-1.png" alt="{{ $taxonomy }}" class="w-full h-full rounded object-cover">
+        <div class="absolute top-0 left-0 w-full h-full flex items-center justify-center rounded" style="background-color: rgba(0, 0, 0, 0.5);">
+          <span class="text-slate-300 dark:text-slate-300 text-lg font-bold mr-2">{{ .Page.Title }}</span>
+          <span class="rounded-full text-sm px-2 bg-slate-300 text-slate-800 dark:text-slate-800"> {{ .Count }}</span>
+        </div>
       </a>
     </li>
     {{ end }}
   </ul>
 </section>
+
