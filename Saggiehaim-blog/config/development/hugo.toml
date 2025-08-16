@@ -5,3 +5,7 @@ theme = "tailwind"
 category = "categories"
 tags = "tags"
 #series = "series"
+
+
+[markup]
+  _merge = "deep"
