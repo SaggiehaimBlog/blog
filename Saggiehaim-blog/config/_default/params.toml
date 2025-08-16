@@ -1,19 +1,25 @@
 # SEO keywords and description for your site.
 keywords = [
-  "PowerShell",
-  "DevOps",
-  "IT Automation",
-  "Cybersecurity",
+  "AI Security",
   "Cloud Security",
+  "Security for AI",
   "Microsoft Sentinel",
-  "Network Automation",
-  "IT Infrastructure",
-  "System Administration",
-  "PowerShell Scripting",
+  "Microsoft Defender for Cloud",
+  "Microsoft Security",
+  "Detection Engineering",
+  "SOC Modernization",
+  "Incident Response",
+  "PowerShell Automation",
+  "Azure Security",
+  "SIEM",
+  "XDR",
+  "CNAPP"
 ]
-subtitle = "PowerShell, DevOps, Security, and Automation Expert."
 
-description = "Explore expert insights on PowerShell, DevOps, IT automation, cybersecurity, and cloud security by Saggie Haim. Learn how to streamline IT infrastructure, enhance system administration, and automate tasks with comprehensive guides and tutorials."
+subtitle = "Cloud and AI security, Microsoft Sentinel, automation with PowerShell."
+
+# Keep meta descriptions near 155 characters
+description = "Practical cloud and AI security, Microsoft Sentinel and Defender for Cloud, detection engineering, and automation with PowerShell by Saggie Haim."
 
 # dir name of your blog content (default is `content/posts`).
 # the list of set content will show up on your index page (baseurl).
