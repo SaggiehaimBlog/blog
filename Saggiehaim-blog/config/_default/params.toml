@@ -16,7 +16,7 @@ keywords = [
   "CNAPP"
 ]
 
-subtitle = "Cloud and AI security"
+subtitle = "Cloud and AI security, Microsoft Sentinel and Defender for Cloud, detection engineering, incident response, and PowerShell automation that teams trust"
 # Keep meta descriptions near 155 characters
 description = "Practical cloud and AI security, Microsoft Sentinel and Defender for Cloud, detection engineering, and automation with PowerShell by Saggie Haim."
 
@@ -57,3 +57,8 @@ showReadingTime = true
     title = 'Github'
     icon = 'brand-github'
     link = 'https://github.com/SaggehaimBlog'
+
+[pwa]
+  enabled = true
+  icon = "white_logo.png" # should be in assets
+  icon_sizes = [192, 512]
