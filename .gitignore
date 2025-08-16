@@ -28,3 +28,17 @@ personal.md
 .DS_Store
 
 Saggiehaim-blog/config/development/*
+
+Saggiehaim-blog/resources
+
+Saggiehaim-blog/public
+
+Saggiehaim-blog/.hugo_build.lock
+
+Saggiehaim-blog/hugo_stats.json
+
+# Node and tooling
+Saggiehaim-blog/node_modules/
+Saggiehaim-blog/.cache/
+Saggiehaim-blog/dist/
+Saggiehaim-blog/.sass-cache/

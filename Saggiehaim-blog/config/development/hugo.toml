@@ -7,5 +7,23 @@ tags = "tags"
 #series = "series"
 
 
+
+
 [markup]
   _merge = "deep"
+  [markup.goldmark]
+    [markup.goldmark.parser]
+      autoHeadingID = true
+      [markup.goldmark.parser.attribute]
+        block = true
+        inline = true
+    [markup.goldmark.renderer]
+      unsafe = true
+    [markup.goldmark.extensions]
+      table = true
+      strikethrough = true
+      linkify = true
+      taskList = true
+      definitionList = true
+      footnote = true
+      typographer = true

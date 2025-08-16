@@ -6,29 +6,25 @@ author = "Saggie Haim"
 toc = false
 +++
 
-![Azure Sentinel – Microsoft first MSSP’s event in ILDC](../images/ILDCspeaker.jpeg)
+{{< figure
+  src="images/googlespeaking.JPG"
+  alt="Google First Security Meeting in Irvine, California – Modernizing TI for SOC"
+  caption="Modernizing TI for SOC - Google Offices"
+  class="h-full max-h-1/2"
+>}}
 
-Hi, I’m Saggie, a Cloud Security Solution Director, a blogger and tech trainer.
-My experience in Microsoft systems, Security, Monitoring and, Networking help me design better projects and solutions.
+![Google First Security Meeting in Irvine, California – Modernizing TI for SOC](images/googlespeaking.JPG "Modernizing TI for SOC - Google Offices")
 
-I’m motivated by my passion for troubleshooting and Powershell.
-Eager to keep learning every day.
-Improving my skill sets to better understand the constraints in every project or the challenges I face every day.
+Hi, I am Saggie, a cloud and AI security architect, blogger, and trainer. I help large international enterprises design modern SOC architectures and move to the cloud securely and in line with compliance.
 
-My hunger for knowledge and love of challenges, helped me build and execute the Enterprise Monitoring solution in Elbit systems.
-Where we implemented the Microsoft SCOM, monitored the entire company.
-This project helped raise the total uptime of the businesses applications.
-And to find to the root cause for common issues. I also led the troubleshooting team in the company.
-Helped developers and systems admins find the cause of performance and malfunction issues.
+Today I am a Cloud Solution Architect at Microsoft. I lead demos and proofs of concept for Microsoft Security, help customers adopt Defender for Cloud and Sentinel, and drive Security for AI practices with practical presentations and solutions.
 
-Meanwhile, I vastly improved the security and productivity of Lumenis LTD IT.
-Planning and implementing vast projects as changing the entire networking.
-moving from flat network to full segmentation and implementing Aruba latest Wireless, Switches and NAC solutions supporting 802.1X and GRE Tunneling.
-Doing a complete overview of the enterprise domain environment, and providing automation solutions such as User-Life Cycle events and more.
+Previously I led cloud security programs at CyberProof, partnering with some of the biggest enterprises in the world. I built flexible log collection and automation for Azure Sentinel, improved delivery with infrastructure as code, and created repeatable playbooks that teams could run with confidence.
 
-These days I teach at CyberControl Academy about Operation systems, Networking, and Security Fundamentals.
-Working at CyberProof, and writing about IT in my blog.
+I enjoy troubleshooting and teaching. I write a lot of PowerShell, refine detections, and focus on results that stick.
 
-![Aruba ClearPass workshop](../images/Arubaspeaker.jpeg)
+This blog shares lessons from real projects across cloud security, AI security, Sentinel, and automation.
+
+![Aruba ClearPass workshop](images/Arubaspeaker.jpeg)
 
 Hope you enjoy my blogging! Feel free to [Contact me](/contact)
