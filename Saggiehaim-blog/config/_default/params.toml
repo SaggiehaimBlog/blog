@@ -16,9 +16,7 @@ keywords = [
   "CNAPP"
 ]
 
-subtitle = "Cloud and AI security
-
-"
+subtitle = "Cloud and AI security"
 
 # Keep meta descriptions near 155 characters
 description = "Practical cloud and AI security, Microsoft Sentinel and Defender for Cloud, detection engineering, and automation with PowerShell by Saggie Haim."
