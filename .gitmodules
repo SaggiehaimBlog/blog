@@ -1,0 +1,3 @@
+[submodule "Saggiehaim-blog/themes/tailwind"]
+	path = Saggiehaim-blog/themes/tailwind
+	url = https://github.com/tomowang/hugo-theme-tailwind.git
