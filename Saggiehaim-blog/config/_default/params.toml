@@ -20,6 +20,10 @@ subtitle = "Cloud and AI security, Microsoft Sentinel and Defender for Cloud, de
 # Keep meta descriptions near 155 characters
 description = "Practical cloud and AI security, Microsoft Sentinel and Defender for Cloud, detection engineering, and automation with PowerShell by Saggie Haim."
 
+jsonLD = true
+
+showAuthor = true
+
 # dir name of your blog content (default is `content/posts`).
 # the list of set content will show up on your index page (baseurl).
 contentTypeName = "posts"
@@ -62,3 +66,7 @@ showReadingTime = true
   enabled = true
   icon = "white_logo.png" # should be in assets
   icon_sizes = [192, 512]
+  
+  [manifest]
+  description = "Add The blog to never miss a post"
+  categories = ["Cloud Security", "AI Security", "Tech Blog"]
