@@ -3143,3 +3143,76 @@ video {
 .m-2 {
   margin: 1.5rem;
 }
+/* ==========================================================================
+   Verge-inspired typography (font + text only — no color/layout changes)
+   Substitutes per DESIGN.md: Manuka -> Oswald, PolySans -> Space Grotesk,
+   PolySans Mono -> Space Mono, FK Roman -> Newsreader.
+   ========================================================================== */
+:root {
+  --font-display: 'Oswald', Impact, 'Helvetica Neue', sans-serif;
+  --font-sans: 'Space Grotesk', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --font-mono: 'Space Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+  --font-serif: 'Newsreader', Georgia, 'Times New Roman', serif;
+}
+
+body {
+  font-family: var(--font-sans) !important;
+  font-weight: 500;
+  line-height: 1.60;
+}
+
+code, kbd, samp, pre,
+.prose code, .prose pre, .prose kbd, .prose samp {
+  font-family: var(--font-mono) !important;
+}
+
+header h1, header h1 a {
+  font-family: var(--font-display) !important;
+  font-weight: 900;
+  letter-spacing: 0.05em;
+  line-height: 0.95;
+}
+
+article h1, article h2, article h3,
+.prose h1, .prose h2, .prose h3,
+section h2.text-4xl, section h2 a,
+main h1, main h2.text-4xl {
+  font-family: var(--font-display) !important;
+  font-weight: 900;
+  line-height: 0.95;
+  letter-spacing: 0.01em;
+}
+
+.prose p, .prose li, .prose dd, .prose dt {
+  font-family: var(--font-sans) !important;
+  font-weight: 500;
+  line-height: 1.60;
+}
+
+.prose blockquote {
+  font-family: var(--font-serif) !important;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 1.30;
+  letter-spacing: -0.01em;
+}
+
+aside h2,
+nav a,
+button,
+label,
+.taxonomy-tag, .tag, .category,
+header nav, header a {
+  font-family: var(--font-mono) !important;
+}
+
+aside h2 {
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+nav a, header a:not(header h1 a) {
+  font-family: var(--font-mono) !important;
+  text-transform: uppercase;
+  letter-spacing: 0.10em;
+}
