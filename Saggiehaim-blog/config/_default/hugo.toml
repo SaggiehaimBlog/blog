@@ -24,6 +24,9 @@ category = "categories"
 # tag = "tags"
 # series = "series"
 
+[permalinks]
+posts = "/posts/:slug/"
+
 [menu]
 [[menu.main]]
   identifier = "home"
