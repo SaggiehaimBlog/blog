@@ -3,7 +3,6 @@ theme = "tailwind"
 
 languageCode = 'en-us'
 title = 'Saggie Haim - Automate Everything'
-author = "Saggie Haim"
 DefaultContentLanguage = "en"
 copyright = "Saggie Haim"
 # SEO keywords and description for your site.
